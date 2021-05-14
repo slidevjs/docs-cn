@@ -21,6 +21,10 @@ const props = defineProps({
   ranges: {
     default: () => [],
   },
+  at: {
+    type: Number,
+    default: undefined,
+  },
 })
 
 const clicks = inject(injectionClicks)!
@@ -40,7 +44,7 @@ const el = ref<HTMLDivElement>()
 const vm = getCurrentInstance()
 
 onMounted(() => {
-  const prev = elements.value.length
+  const prev = props.at == null ? elements.value.length : props.at
   const index = computed(() => {
     if (disabled.value)
       return props.ranges.length - 1

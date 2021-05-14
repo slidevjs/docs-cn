@@ -8,6 +8,7 @@ import { slash } from '@antfu/utils'
 import mila from 'markdown-it-link-attributes'
 // @ts-expect-error
 import Katex from 'markdown-it-katex'
+import type { KatexOptions } from 'katex'
 import { ResolvedSlidevOptions, SlidevPluginOptions } from '../options'
 import { loadSetups } from './setupNode'
 import Prism from './markdown-it-prism'
@@ -38,6 +39,8 @@ export async function createMarkdownPlugin(
     setups.push(md => md.use(Prism))
   }
 
+  const KatexOptions: KatexOptions = await loadSetups(roots, 'katex.ts', {}, {}, false)
+
   return Markdown({
     wrapperClasses: '',
     headEnabled: false,
@@ -56,7 +59,7 @@ export async function createMarkdownPlugin(
         },
       })
 
-      md.use(Katex)
+      md.use(Katex, KatexOptions)
 
       setups.forEach(i => i(md))
     },
@@ -101,9 +104,11 @@ export function truncateMancoMark(code: string) {
  * Transform Monaco code block to component
  */
 export function transformHighlighter(md: string) {
-  return md.replace(/^```(\w+?)\s*{([\d\w*,\|-]+)}[\s\n]*([\s\S]+?)^```/mg, (full, lang = '', rangeStr: string, code: string) => {
+  return md.replace(/^```(\w+?)\s*{([\d\w*,\|-]+)}\s*?({.*?})?\s*?\n([\s\S]+?)^```/mg, (full, lang = '', rangeStr: string, options = '', code: string) => {
     const ranges = rangeStr.split(/\|/g).map(i => i.trim())
-    return `\n<CodeHighlightController :ranges='${JSON.stringify(ranges)}'>\n\n\`\`\`${lang}\n${code}\n\`\`\`\n\n</CodeHighlightController>`
+    code = code.trimEnd()
+    options = options.trim() || '{}'
+    return `\n<CodeHighlightController v-bind="${options}" :ranges='${JSON.stringify(ranges)}'>\n\n\`\`\`${lang}\n${code}\n\`\`\`\n\n</CodeHighlightController>`
   })
 }
 

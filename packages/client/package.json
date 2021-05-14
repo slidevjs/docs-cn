@@ -1,6 +1,6 @@
 {
   "name": "@slidev/client",
-  "version": "0.9.6",
+  "version": "0.10.0",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -15,10 +15,10 @@
   "homepage": "https://sli.dev",
   "bugs": "https://github.com/slidevjs/slidev/issues",
   "dependencies": {
-    "@antfu/utils": "^0.1.5",
+    "@antfu/utils": "^0.1.6",
     "@slidev/parser": "workspace:*",
     "@slidev/types": "workspace:*",
-    "@vueuse/core": "^4.10.0",
+    "@vueuse/core": "^4.11.0",
     "@vueuse/head": "^0.5.1",
     "@vueuse/motion": "^1.5.5",
     "codemirror": "^5.61.0",
@@ -32,6 +32,6 @@
     "recordrtc": "^5.6.2",
     "vue": "^3.0.11",
     "vue-router": "^4.0.8",
-    "windicss": "^3.0.2"
+    "windicss": "^3.0.4"
   }
 }
