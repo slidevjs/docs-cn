@@ -1,0 +1,25 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: site
+          
+      - run: /usr/bin/git submodule init
+      - run: /usr/bin/git submodule update --remote
+      
+      - name: Commit to GitHub
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: docs-cn
+          branch: site
+          message: "docs(cn): update submodule"
