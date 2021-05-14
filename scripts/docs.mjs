@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename)
 
 await installBrowsersWithProgressBar()
 
+await $`git submodule init`
+await $`git submodule update --remote`
 await $`npm run build`
 cd(path.resolve(__dirname, '../docs-cn'))
 await $`npx vitepress build`
