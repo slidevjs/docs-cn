@@ -62,9 +62,9 @@ $ yarn create slidev
 ```json
 {
   "scripts": {
-    "dev": "slidev", // start dev server
-    "build": "slidev build", // build for production SPA
-    "export": "slidev export" // export slides to pdf
+    "dev": "slidev", //  启动 dev server
+    "build": "slidev build", // 构建生产环境的单页面应用
+    "export": "slidev export" // 将幻灯片导出为 pdf 格式
   }
 }
 ```
