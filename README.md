@@ -12,14 +12,20 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/@slidev/cli" target="__blank"><img src="https://img.shields.io/npm/v/@slidev/cli?color=2B90B6&label=" alt="NPM version"></a>
 <a href="https://www.npmjs.com/package/@slidev/cli" target="__blank"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@slidev/cli?color=349dbe&label="></a>
-<a href="https://sli.dev/" target="__blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=45b8cd" alt="Docs & Demos"></a>
-<a href="https://sli.dev/themes/gallery.html" target="__blank"><img src="https://img.shields.io/static/v1?label=&message=themes&color=4ec5d4" alt="Themes"></a>
+<a href="https://cn.sli.dev/" target="__blank"><img src="https://img.shields.io/static/v1?label=&message=%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3&color=45b8cd" alt="Docs & Demos"></a>
+<a href="https://cn.sli.dev/themes/gallery.html" target="__blank"><img src="https://img.shields.io/static/v1?label=&message=%E4%B8%BB%E9%A2%98&color=4ec5d4" alt="Themes"></a>
 <br>
 <a href="https://github.com/slidevjs/slidev" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/slidevjs/slidev?style=social"></a>
 </p>
 
+<br>
+<p align="center">
+  <b>简体中文</b> ｜ <a href="https://github.com/slidevjs/slidev#readme">English</a>
+</p>
+<br>
+<br>
 
-# Slidev 中文文档
+## Slidev 中文文档
 
 - 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
 - 🧑‍💻 [**对开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
@@ -36,13 +42,13 @@
 - ⚡️ [**快速**](https://vitejs.dev) —— 基于 [Vite](https://vitejs.dev) 的即时重载
 - 🛠 [**可配置**](/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
 
-## 📨 与官网文档同步
+### 📨 与官网文档同步
 
 目前 Slidev 中文文档正在翻译校对过程中(WIP)。
 
 **同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的官网文档](https://github.com/slidevjs/slidev) 的内容，并发起到 `sync-docs` 分支的 PR。仓库维护者需要每天检查该类型的 PR：如无冲突，可以直接 merge 到 到 `sync-docs` 中 ；若有冲突，需要先解决冲突，再 merge 到 `sync-docs` 中。
 
-## 📝 参与贡献
+### 📝 参与贡献
 
 贡献者首先 fork 本仓库，基于 `main` 创建新的翻译分支，进行翻译。翻译完成后，发起到 `main` 的 PR，等待 review，review 通过，仓库维护者将 PR merge。
 
