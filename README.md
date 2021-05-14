@@ -24,7 +24,7 @@
 - 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
 - 🧑‍💻 [**对开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
 - 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
-- 🌈 [**时尚**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
+- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
 - 🤹 [**交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
 - 🎙 [**演示者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
 - 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公示的支持
