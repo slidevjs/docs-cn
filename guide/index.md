@@ -88,7 +88,7 @@ Hello World
 
 ---
 
-# 页面 2
+# 第 2 页
 
 直接使用代码块，能够实现代码高亮
 
@@ -98,7 +98,7 @@ console.log('Hello, World!')
 
 ---
 
-# 页面 3
+# 第 3 页
 ~~~
 
 请阅读 [语法指南](/guide/syntax) 获取更多关于 Slidev Markdown 语法的内容。
