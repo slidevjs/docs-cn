@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename)
 await installBrowsersWithProgressBar()
 
 await $`npm run build`
-cd(path.resolve(__dirname, '../docs'))
+cd(path.resolve(__dirname, '../docs-cn'))
 await $`npx vitepress build`
 
 const starterMd = path.resolve(__dirname, '../demo/starter/slides.md')
