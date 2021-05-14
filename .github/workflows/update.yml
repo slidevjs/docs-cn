@@ -4,16 +4,22 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  release:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: git checkout -b site origin/site
-      - run: git submodule init
-      - run: git submodule update --remote
-      - run: git commit -m 'docs(cn): update submodule'
-      - run: git push
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: site
+          
+      - run: /usr/bin/git submodule init
+      - run: /usr/bin/git submodule update --remote
+      
+      - name: Commit to GitHub
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: docs-cn
+          branch: site
+          message: "docs(cn): update submodule"
