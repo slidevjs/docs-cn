@@ -1,0 +1,19 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git checkout -b site origin/site
+      - run: git submodule init
+      - run: git submodule update --remote
+      - run: git commit -m 'docs(cn): update submodule'
+      - run: git push
