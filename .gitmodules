@@ -1,0 +1,4 @@
+[submodule "docs-cn"]
+	path = docs-cn
+	url = https://github.com/slidevjs/docs-cn.git
+	branch = main
