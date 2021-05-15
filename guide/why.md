@@ -1,8 +1,12 @@
 # 为什么选择 Slidev {#why-slidev}
 
+<<<<<<< HEAD
 有很多功能丰富的、通用的、所见即所得的幻灯片制作工具，例如[微软 PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 和 [苹果 Keynote](https://www.apple.com/keynote/). 它们在制作带有动画、图表和许多其他漂亮的幻灯片方面效果相当好，同时非常直观和容易学习。那么，为什么要费心制作 Slidev 呢？
 
 Slidev旨在为开发者提供灵活性和交互性，通过使用他们已经熟悉的工具和技术，使他们的演示文稿更加有趣、更具表现力和吸引力。 
+=======
+There are a lot of feature-rich, general-purpose, WYSIWYG slides makers like [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) and [Apple Keynote](https://www.apple.com/keynote/). They work pretty well for making nice slides with animations, charts, and many other things, while being very intuitive and easy to learn. So why bother making Slidev?
+>>>>>>> 0908d5f3e7a186dea34456304767cd1830c7a950
 
 当使用所见即所得的编辑器时，人们很容易被样式选项所干扰。Slidev通过分离内容和视觉效果来弥补这一点。这使你能够一次专注于一件事，同时也能够重复使用社区中的主题。Slidev并不寻求完全取代其他幻灯片制作工具。相反，它专注于迎合开发者社区的需求。
 
