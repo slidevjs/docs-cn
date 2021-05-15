@@ -2,93 +2,93 @@
 
 const Guide = [
   {
-    text: 'Why Slidev',
+    text: '为什么选择 Slidev',
     link: '/guide/why',
   },
   {
-    text: 'Getting Started',
+    text: '开始使用',
     link: '/guide/',
   },
   {
-    text: 'Installation',
+    text: '安装',
     link: '/guide/install',
   },
   {
-    text: 'Markdown Syntax',
+    text: 'Markdown 语法',
     link: '/guide/syntax',
   },
   {
-    text: 'Navigation',
+    text: '导航',
     link: '/guide/navigation',
   },
   {
-    text: 'Animations',
+    text: '动画',
     link: '/guide/animations',
   },
   {
-    text: 'Exporting',
+    text: '导出',
     link: '/guide/exporting',
   },
   {
-    text: 'Record Presentation',
+    text: '演讲录制',
     link: '/guide/recording',
   },
   {
-    text: 'Presenter Mode',
+    text: '演示者模式',
     link: '/guide/presenter-mode',
   },
   {
-    text: 'Editor Integrations',
+    text: '编辑器整合',
     link: '/guide/editors',
   },
 ]
 
 const Theme = [
   {
-    text: 'Use Theme',
+    text: '使用主题',
     link: '/themes/use',
   },
   {
-    text: 'Theme Gallery',
+    text: '主题集合',
     link: '/themes/gallery',
   },
   {
-    text: 'Write a Theme',
+    text: '编写主题',
     link: '/themes/write-a-theme',
   },
 ]
 
 const Customizations = [
   {
-    text: 'Customizations',
+    text: '自定义',
     link: '/custom/',
   },
   {
-    text: 'Directory Structure',
+    text: '项目结构',
     link: '/custom/directory-structure',
   },
   {
-    text: 'Highlighters',
+    text: '语法高亮器',
     link: '/custom/highlighters',
   },
   {
-    text: 'Configure Vite',
+    text: '配置 Vite',
     link: '/custom/config-vite',
   },
   {
-    text: 'Configure Windi CSS',
+    text: '配置 Windi CSS',
     link: '/custom/config-windicss',
   },
   {
-    text: 'Configure Monaco',
+    text: '配置 Monaco',
     link: '/custom/config-monaco',
   },
   {
-    text: 'Configure KaTeX',
+    text: '配置 KaTeX',
     link: '/custom/config-katex',
   },
   {
-    text: 'Configure Mermaid',
+    text: '配置 Mermaid',
     link: '/custom/config-mermaid',
   },
 ]
@@ -99,33 +99,33 @@ const Resources = [
     link: '/showcases',
   },
   {
-    text: 'Curated Covers',
+    text: '精选封面',
     link: '/resources/covers',
   },
 ]
 
 const slidebars = [
   {
-    text: 'Guide',
+    text: '指南',
     children: Guide,
   },
   {
-    text: 'Themes',
+    text: '主题',
     children: Theme,
   },
   {
-    text: 'Customizations',
+    text: '自定义',
     children: Customizations,
   },
   {
-    text: 'Built-in',
+    text: '内置',
     children: [
       {
-        text: 'Components',
+        text: '组件',
         link: '/builtin/components',
       },
       {
-        text: 'Layouts',
+        text: '布局',
         link: '/builtin/layouts',
       },
     ],
@@ -137,13 +137,13 @@ const slidebars = [
  */
 module.exports = {
   title: 'Slidev',
-  description: 'Presentation slides for developers',
+  description: '为开发者打造的演示文稿工具',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'author', content: 'Anthony Fu' }],
     ['meta', { property: 'og:title', content: 'Slidev' }],
     ['meta', { property: 'og:image', content: 'https://sli.dev/og-image.png' }],
-    ['meta', { property: 'og:description', content: 'Presentation slides for developers' }],
+    ['meta', { property: 'og:description', content: '为开发者打造的演示文稿工具' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@slidevjs' }],
     ['meta', { name: 'twitter:image', content: 'https://sli.dev/og-image.png' }],
@@ -152,28 +152,28 @@ module.exports = {
     ['link', { href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&family=Inter:wght@200;400;500;600', rel: 'stylesheet' }],
   ],
   themeConfig: {
-    repo: 'slidevjs/slidev',
+    repo: 'slidevjs/docs-cn',
     logo: '/logo.svg',
-    docsDir: 'docs',
+    docsDir: '',
     docsBranch: 'main',
     editLinks: true,
-    editLinkText: 'Suggest changes to this page',
+    editLinkText: '改进翻译',
 
     nav: [
       {
-        text: 'Guide',
+        text: '指南',
         items: Guide,
       },
       {
-        text: 'Theme',
+        text: '主题',
         items: Theme,
       },
       {
-        text: 'Customize',
+        text: '自定义',
         items: Customizations,
       },
       {
-        text: 'Resources',
+        text: '资源',
         items: Resources,
       },
     ],

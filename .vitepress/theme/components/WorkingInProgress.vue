@@ -17,7 +17,7 @@ const dismissed = useStorage('sldiev-docs-wip-dismissed', false)
     border="~ orange-400 rounded-md"
   >
     <div class="m-auto">
-      Slidev is still under heavy development. API and usages are not set in stone yet.
+      目前 Slidev 中文文档正在翻译校对过程中 (WIP)
     </div>
     <div
       class="cursor-pointer"
