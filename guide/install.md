@@ -22,7 +22,7 @@ $ yarn create slidev@latest
 
 同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
-## Install Manually {#install-manually}
+## 手动安装 {#install-manually}
 
 如果你倾向于手动安装 Slidev，或者想把它集成到你已有的项目中，你可以执行如下操作：
 
