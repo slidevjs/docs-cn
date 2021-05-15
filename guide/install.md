@@ -2,7 +2,7 @@
 
 ## 初始模板 {#starter-template}
 
-> Slidev 需要 [**Node.js >=14.0**](https://nodejs.org/) 的版本
+> Slidev 需要 [Node.js](https://nodejs.org/) 的版本 **>=14.0.0**
 
 快速开始最好的方式就是使用官方的初始模板。
 
@@ -18,7 +18,7 @@ $ npm init slidev@latest
 $ yarn create slidev@latest
 ```
 
-默认情况下，它将自动为你打开幻灯片，网址是 http://localhost:3030/。
+跟随命令行的提示，它将自动为你打开幻灯片，网址是 http://localhost:3030/。
 
 同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
