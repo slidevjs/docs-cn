@@ -225,24 +225,24 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 This is the cover page.
 ```
 
-Learn more about [frontmatter configurations](/custom/#frontmatter-configures).
+欲了解更多，请参阅 [frontmatter 配置](/custom/#frontmatter-configures) 章节。
 
-## LaTeX
+## LaTeX {#latex}
 
-Slidev comes with LaTeX support out-of-box, powered by [KaTeX](https://katex.org/).
+Slidev 开箱即有对 LaTeX 的支持，这完全得益于 [KaTeX](https://katex.org/)。
 
-### Inline
+### 内联 {#inline}
 
-Surround your LaTeX with a single `$` on each side for inline rendering.
+在你的 LaTeX 语法左右各加一个 `$`，用于内联渲染。
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-### Block
+### 块 {#block}
 
-Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
-the result.
+当使用两个 (`$$`) 时，会进行块级渲染。这种模式会使用更大的符号，
+并将结果居中。
 
 ```md
 $$
