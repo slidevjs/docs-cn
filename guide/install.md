@@ -1,30 +1,30 @@
-# Installation
+# 安装 {#installation}
 
-## Starter Template
+## 初始模板 {#starter-template}
 
-> Slidev requires [**Node.js >=14.0**](https://nodejs.org/)
+> Slidev 需要 [Node.js](https://nodejs.org/) 的版本 **>=14.0.0**
 
-The best way to get started is using our official starter template.
+快速开始最好的方式就是使用官方的初始模板。
 
-With NPM:
+使用 NPM：
 
 ```bash
 $ npm init slidev@latest
 ```
 
-With Yarn:
+使用 Yarn：
 
 ```bash
 $ yarn create slidev@latest
 ```
 
-Follow the prompts and it will open up the slideshow at http://localhost:3030/ automatically for you.
+跟随命令行的提示，它将自动为你打开幻灯片，网址是 http://localhost:3030/。
 
-It also contains the basic setup and a short demo with instructions on how to get started with Slidev.
+同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
-## Install Manually
+## 手动安装 {#install-manually}
 
-If you still prefer to install Slidev manually or would like to integrate it into your existing projects, you can do:
+如果你倾向于手动安装 Slidev，或者想把它集成到你已有的项目中，你可以执行如下操作：
 
 ```bash
 $ npm install @slidev/cli @slidev/theme-default
@@ -36,14 +36,14 @@ $ touch slides.md
 $ npx slidev
 ```
 
-> Please note if you are using [pnpm](https://pnpm.io), you will need to enable [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) option for Slidev to work properly:
+> 请注意⚠️，如果你使用的是 [pnpm](https://pnpm.io)，请先启用 [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) 选项，才能使得 Slidev 正常工作。
 >
 > ```bash
 > echo 'shamefully-flatten=true' >> .npmrc
 > ```
 
-## Install on Docker
+## 在 Docker 上安装 {#install-on-docker}
 
-If you need a rapid way to run a presentation with containers, you can use the prebuilt [docker](https://hub.docker.com/r/stig124/slidev) image maintained by [stig124](https://github.com/Stig124), or build your own.
+如果你需要快速的在容器上部署你的演示文稿，你可以使用由 [stig124](https://github.com/Stig124) 维护的预构建 [docker](https://hub.docker.com/r/stig124/slidev) 镜像，或者自行构建。
 
-Refer to the [slidevjs/container repo](https://github.com/slidevjs/container) for more details.
+关于容器的更多详细信息，请参考 [slidevjs/container 仓库](https://github.com/slidevjs/container)。
