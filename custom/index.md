@@ -36,12 +36,12 @@ info: |
 
 Slidev 使用特定的目录结构来减少配置的复杂度，并使功能扩展更加的灵活和直观。
 
-具体请参考[目录结构](/custom/directory-structure)部分。
+具体请参考[目录结构](/custom/directory-structure)章节。
 
 ## `vite.config.ts` {#vite-config-ts}
 
-请参考[Vite 配置](/custom/config-vite)部分。
+请参考[Vite 配置](/custom/config-vite)章节。
 
 ## `windicss.config.ts` {#windicss-config-ts}
 
-请参考[Windi CSS 配置](/custom/config-windicss)部分。
+请参考[Windi CSS 配置](/custom/config-windicss)章节。
