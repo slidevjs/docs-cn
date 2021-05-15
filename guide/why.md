@@ -1,6 +1,6 @@
 # 为什么选择 Slidev
 
-有很多功能丰富的、通用的、所见即所得的幻灯片制作工具，例如[微软 PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 和 [苹果 Keynote](https://www.apple.com/keynote/). 它们在制作带有动画、图表和许多其他漂亮的幻灯片方面效果相当好，同时非常直观和容易学习。那么，为什么要费心制作Slidev呢？
+有很多功能丰富的、通用的、所见即所得的幻灯片制作工具，例如[微软 PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 和 [苹果 Keynote](https://www.apple.com/keynote/). 它们在制作带有动画、图表和许多其他漂亮的幻灯片方面效果相当好，同时非常直观和容易学习。那么，为什么要费心制作 Slidev 呢？
 
 Slidev旨在为开发者提供灵活性和交互性，通过使用他们已经熟悉的工具和技术，使他们的演示文稿更加有趣、更具表现力和吸引力。 
 
@@ -10,23 +10,23 @@ Slidev旨在为开发者提供灵活性和交互性，通过使用他们已经�
 
 ![](/screenshots/cover.png)
 
-以下是Slidev的一些最酷的功能:
+以下是 Slidev 的一些最酷的功能:
 
 ## 支持Markdown语法
 
-Slidev使用一种扩展的Markdown格式，在一个纯文本文件中存储和组织你的幻灯片。这让你专注于制作内容。而且由于内容和样式是分开的，这也使得在不同的主题之间毫不费力地切换成为可能。
+Slidev使用一种扩展的 Markdown 格式，在一个纯文本文件中存储和组织你的幻灯片。这让你专注于制作内容。而且由于内容和样式是分开的，这也使得在不同的主题之间毫不费力地切换成为可能。
 
-了解更多关于 [Slidev's Markdown语法](/guide/syntax)。
+了解更多关于 [Slidev 的 Markdown 语法](/guide/syntax)。
 
 ## 可定制主题
 
-Slidev的主题可以使用npm包来分享和安装。你只需要使用一行配置就可以应用它们。
+Slidev的主题可以使用 `npm` 包来分享和安装。你只需要使用一行配置就可以应用它们。
 
 点击查看 [主题库](/themes/gallery) 或者 [学习如何制作一个主题](/themes/write-a-theme)。
 
 ## 对开发者友好
 
-Slidev为开发者提供了一流的代码片段支持。它同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki) 以获得像素级的完美语法高亮，并且能够随时修改代码。通过内置的[Monaco editor](https://microsoft.github.io/monaco-editor/)，它还能让你在演示文稿中进行现场编码/演示，并支持自动补全、类型悬停、甚至是TypeScript类型检查。
+Slidev为开发者提供了一流的代码片段支持。它同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki) 以获得像素级的完美语法高亮，并且能够随时修改代码。通过内置的[Monaco editor](https://microsoft.github.io/monaco-editor/)，它还能让你在演示文稿中进行现场编码/演示，并支持自动补全、类型悬停、甚至是 `TypeScript` 类型检查。
 
 了解更多关于 [语法高亮](/custom/highlighters) 和 [Monaco配置](/custom/config-monaco)。
 
@@ -38,27 +38,27 @@ Slidev由[Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) 和 [Windi 
 
 ## 互动性 & 直观表达
 
-你可以编写自定义的Vue组件并直接在你的markdown文件中使用它们。你也可以在演示文稿中与它们互动，以更深入和直观的方式表达你的想法。
+你可以编写自定义的Vue组件并直接在你的MarkDown文件中使用它们。你也可以在演示文稿中与它们互动，以更深入和直观的方式表达你的想法。
 
 ## 支持录制
 
-Slidev提供了内置的录音和摄像头视图。你可以将你的演示文稿与你的相机视图一起分享，或者为你的屏幕和相机分别录制和保存它们。所有这些都是一次性的，不需要额外的工具。
+Slidev提供了内置的录音和摄像头视图。你可以将你的演示文稿与你的相机视图一起分享，或者为你的屏幕和相机分别录制并保存。所有这些都是内置的，不需要额外的工具。
 
 了解更多关于 [录制](/guide/recording)。
 
-## 跨平台
+## 可移植性
 
-用一个命令就可以将你的幻灯片导出为`PDF`、`PNG`，甚至是可托管的单页应用程序（SPA），并在任何地方分享它们。
+用一个命令就可以将你的幻灯片导出为 PDF 或 PNG，甚至是可托管的单页应用程序（SPA），并在任何地方分享它们。
 
-在这里了解更过关于跨平台的信息 [导出文档](/guide/exporting)。
+欲了解更多，请参阅 [导出文档](/guide/exporting)。
 
 ## 可配置
 
-由于采用了web技术，所以任何可以在web应用中完成的事情，Slidev也可以做到。例如，`WebGL`、`API请求`、`iframes`，甚至是实时共享。这取决于你的想象力!
+由于 Slidev 基于 Web 技术，任何可以在 Web 应用中完成的事情，Slidev 也可以做到。例如，`WebGL`、`API请求`、`iframes`，甚至是实时共享。完全取决于你的想象力!
 
 ## 试一试吧
 
-开始一个Slidev项目不需要长篇大论。你只需要一个命令就可以了:
+开始一个 Slidev 项目不需要长篇大论。你只需要一个命令就可以了:
 
 ```bash
 $ npm init slidev
