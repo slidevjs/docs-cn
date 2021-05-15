@@ -6,12 +6,12 @@
 
 ## 自定义组件
 
-在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里同名地使用它啦！
+在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里使用该组件啦！
 
-想要了解更多，请去 [自定义](/custom/directory-structure#components) 环节。
+欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
 
 ## 主题提供的组件
 
 主题也提供组件。请阅读它们各自的文档，以知晓它们提供了什么。
 
-想要了解更多，阅读 [路径结构](/custom/directory-structure) 部分。
+欲了解更多，请参阅 [路径结构](/custom/directory-structure) 章节。
