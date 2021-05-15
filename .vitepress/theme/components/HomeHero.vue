@@ -9,9 +9,7 @@
           <br />
         </p>
         <div class="description !-mt-4">
-          Presentation
-          <b>Sli</b>des for
-          <b>Dev</b>elopers
+          为<b>开发者</b>打造的<b>演示文稿</b>工具
           <sup class="opacity-50">Beta</sup>
         </div>
 
@@ -31,7 +29,7 @@
 
         <div class="mt-5 flex">
           <div class="mx-auto">
-            <p>or try it now</p>
+            <p>即刻体验</p>
             <div class="language-bash mt-2">
               <pre><code><span class="opacity-50">$ </span><span class="token function">npm init</span> <span class="token text-[#408c9e] font-500">slidev</span></code></pre>
             </div>
