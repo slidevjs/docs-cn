@@ -34,7 +34,7 @@ const Guide = [
     link: '/guide/recording',
   },
   {
-    text: '演示者模式',
+    text: '演讲者模式',
     link: '/guide/presenter-mode',
   },
   {
