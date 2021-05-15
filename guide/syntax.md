@@ -32,7 +32,7 @@ You can directly use Windi CSS and Vue components to style and enrich your slide
 
 ## 扉页及布局 {#front-matter-layouts}
 
-你可以通过将分隔符转换为 [扉页块](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局(layout)和其他元数据。每个扉页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
+你可以通过将分隔符转换为 [扉页块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个扉页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
 
 ~~~md
 ---
@@ -64,7 +64,7 @@ This is a default page without any additional metadata.
 
 ## 代码块 {#code-blocks}
 
-我建立 Slidev 一个非常重要的原因就是可以让我的代码在幻灯片中看起来恰到好处。如你所见，你可以使用 Markdown 风格的代码块，以使得你的代码高亮。
+建立 Slidev 一个非常重要的原因就是为了让代码在幻灯片中拥有正确的高亮。如你所见，你可以使用 Markdown 风格的代码块，以使得你的代码高亮。
 
 ~~~ts
 //```ts
@@ -104,7 +104,7 @@ function add(
 
 ### Monaco 编辑器 {#monaco-editor}
 
-当你需要在演示文稿中做修改时，只需在语言 id 后添加 `{monaco}` —— 即可将该代码块变为一个功能齐全的 monaco 编辑器。
+当你需要在演示文稿中做修改时，只需在语言 id 后添加 `{monaco}` —— 即可将该代码块变为一个功能齐全的 Monaco 编辑器。
 
 ~~~ts
 //```ts {monaco}
@@ -114,7 +114,7 @@ console.log('HelloWorld')
 
 欲了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
 
-## Embedded Styles {#embedded-styles}
+## 内联样式 {#embedded-styles}
 
 你可以在 Markdown 中直接使用 `<style>` 标签来覆盖**当前幻灯片**的样式。
 
@@ -132,7 +132,7 @@ h1 {
 # Next slide is not affected
 ```
 
-Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [自定义章节](/custom/directory-structure#style)。
+Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
 由 [Windi CSS](https://windicss.org) 提供支持，你可以直接使用嵌套的 css 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
 
@@ -182,9 +182,9 @@ This is another note
 
 ## Icons {#icons}
 
-Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的 iconsets。这完全得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
+Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
 
-命名规则遵循 [Iconify](https://iconify.design/) 的转换方式 `{collection-name}-{icon-name}`。例如：
+图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
 
 - 使用 [Material Design Icons](https://github.com/Templarian/MaterialDesign)，其规则为 `<mdi-account-circle />` - <mdi-account-circle />
 - 使用 [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)，其规则为 `<carbon-badge />` - <carbon-badge />
@@ -195,9 +195,9 @@ Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的 iconset
 
 你可以通过 [Icônes](https://icones.js.org/) 来浏览访问所有可用的图标。
 
-### Icons 样式 {#styling-icons}
+### 调整图标样式 {#styling-icons}
 
-你可以像其他 HTML 元素一样对 Icons 进行样式修改。例如：
+你可以像其他 HTML 元素一样对图标的样式进行修改。例如：
 
 ```html
 <uim-rocket />
@@ -225,11 +225,11 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 This is the cover page.
 ```
 
-欲了解更多，请参阅 [frontmatter 配置](/custom/#frontmatter-configures) 章节。
+欲了解更多，请参阅 [扉页配置](/custom/#frontmatter-configures) 章节。
 
 ## LaTeX {#latex}
 
-Slidev 开箱即有对 LaTeX 的支持，这完全得益于 [KaTeX](https://katex.org/)。
+Slidev 开箱即有对 LaTeX 的支持，得益于 [KaTeX](https://katex.org/)。
 
 ### 内联 {#inline}
 
@@ -241,8 +241,7 @@ $\sqrt{3x-1}+(1+x)^2$
 
 ### 块 {#block}
 
-当使用两个 (`$$`) 时，会进行块级渲染。这种模式会使用更大的符号，
-并将结果居中。
+当使用两个 (`$$`) 时，会进行块级渲染。这种模式会使用更大的符号，并将结果居中。
 
 ```md
 $$
@@ -263,9 +262,9 @@ $$
 
 ## 图表 {#diagrams}
 
-你也可以在 Markdown 的文本描述中创建图形或图表，这完全得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
+你也可以在 Markdown 的文本描述中创建图形或图表，得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
 
-例如，被标记为 `mermaid` 的代码块将被转换为图形，例如：
+被标记为 `mermaid` 的代码块将被转换为图形，例如：
 
 ~~~md
 //```mermaid
