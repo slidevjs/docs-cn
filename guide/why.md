@@ -20,29 +20,29 @@ Slidev 使用一种扩展的 Markdown 格式，在一个纯文本文件中存储
 
 ## 可定制主题 {#themable}
 
-Slidev的主题可以使用 `npm` 包来分享和安装。你只需要使用一行配置就可以应用它们。
+Slidev 的主题可以通过 `npm` 包的形式来分享和安装。你只需要使用一行配置就可以应用它们。
 
 点击查看 [主题库](/themes/gallery) 或者 [学习如何制作一个主题](/themes/write-a-theme)。
 
 ## 对开发者友好 {#developer-friendly}
 
-Slidev为开发者提供了一流的代码片段支持。它同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki) 以获得像素级的完美语法高亮，并且能够随时修改代码。通过内置的[Monaco editor](https://microsoft.github.io/monaco-editor/)，它还能让你在演示文稿中进行现场编码/演示，并支持自动补全、类型悬停、甚至是 `TypeScript` 类型检查。
+Slidev 为开发者提供了一流的代码片段支持。它同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki) 以获得像素级的完美语法高亮，并且能够随时修改代码。通过内置的 [Monaco 编辑器](https://microsoft.github.io/monaco-editor/)，它还能让你在演示文稿中进行现场编码/演示，并支持自动补全、类型悬停、甚至是 `TypeScript` 类型检查。
 
-欲了解更多，请参阅 [语法高亮](/custom/highlighters) 和 [Monaco配置](/custom/config-monaco)。
+欲了解更多，请参阅 [语法高亮](/custom/highlighters) 和 [Monaco 配置](/custom/config-monaco)。
 
 ## 快速 {#fast}
 
-Slidev由[Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) 和 [Windi CSS](https://windicss.org/)驱动, 它们能够给你带来最美妙的创作体验。你所做的每一个改变都会立即反映到你的幻灯片上 **instantly**.
+Slidev 得益于 [Vite](https://vitejs.dev/)，[Vue 3](https://v3.vuejs.org/) 和 [Windi CSS](https://windicss.org/)，为你带来了最美妙的创作体验。你所做的每一个改变都会**立即反映**到你的幻灯片上。
 
 查找更多关于 [技术栈](/guide/#tech-stack).
 
 ## 互动性 & 直观表达 {#interactive-expressive}
 
-你可以编写自定义的Vue组件并直接在你的MarkDown文件中使用它们。你也可以在演示文稿中与它们互动，以更深入和直观的方式表达你的想法。
+你可以编写自定义的 Vue 组件并直接在你的 MarkDown 文件中使用它们。你也可以在演示文稿中与它们互动，以更深入和直观的方式表达你的想法。
 
 ## 支持录制 {#recording-support}
 
-Slidev提供了内置的录音和摄像头视图。你可以将你的演示文稿与你的相机视图一起分享，或者为你的屏幕和相机分别录制并保存。所有这些都是内置的，不需要额外的工具。
+Slidev 提供了内置的录音和摄像头视图。你可以将你的演示文稿与你的相机视图一起分享，或者为你的屏幕和相机分别录制并保存。所有这些都是内置的，不需要额外的工具。
 
 欲了解更多，请参阅 [录制](/guide/recording)。
 
