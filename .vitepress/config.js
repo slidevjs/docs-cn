@@ -187,4 +187,13 @@ module.exports = {
       '/': slidebars,
     },
   },
+
+  markdown: {
+    anchor: {
+      renderPermalink: require('./plugins/render-perma-link')
+    },
+    config: (md) => {
+      md.use(require('./plugins/markdown-it-custom-anchor'))
+    }
+  },
 }
