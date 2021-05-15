@@ -1,17 +1,18 @@
-# Components
+# 组件
 
-## Built-in Components
+## 内置组件
 
-> The documentations of this section is still working in progress. Before that, you can take a look at the [source code](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin) directly.
+> 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
 
-## Custom Components
+## 自定义组件
 
-Create a directory `components/` under your project root, and simply put your custom Vue components under it, then you can use it with the same name in your markdown file!
+在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里同名地使用它啦！
 
-Read more in the [Customization](/custom/directory-structure#components) section.
+想要了解更多，请去 [自定义](/custom/directory-structure#components) 环节。
 
-## Theme-provided Components
+## 主题提供的组件
 
-Themes can provide components as well. Please read their documentations for what they have provided.
+主题也提供组件。请阅读它们各自的文档，以知晓它们提供了什么。
 
-Check more in the [directory structure](/custom/directory-structure) section.
+想要了解更多，阅读 [路径结构](/custom/directory-structure) 部分。
+
