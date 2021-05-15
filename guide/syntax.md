@@ -1,8 +1,8 @@
-# Markdown Syntax
+# Markdown 语法 {#markdown-syntax}
 
-Slides are written within **a single markdown file** (by default `./slides.md`). 
+幻灯片通过 **一个 markdown 文件** 编写而成 (默认会使用 `./slides.md`)。
 
-You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [Windi CSS](https://windicss.org) is also supported. Use `---` padded with a new line to separate your slides. 
+你可以像平时编写 markdown 一样使用 [Markdown 的相关特性](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，同时还支持内联的 HTML 和 Vue 组件。也支持使用 [Windi CSS](https://windicss.org) 来编写样式。使用 `---` 添加分隔符来分隔你的幻灯片。
 
 ~~~md
 # Slidev
@@ -30,9 +30,9 @@ You can directly use Windi CSS and Vue components to style and enrich your slide
 </div>
 ~~~
 
-## Front Matter & Layouts
+## 扉页及布局 {#front-matter-layouts}
 
-You can specify layouts and other metadata for each slide by converting the separators into [front matter blocks](https://jekyllrb.com/docs/front-matter/). Each front matter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+你可以通过将分隔符转换为 [扉页块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个扉页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
 
 ~~~md
 ---
@@ -60,11 +60,11 @@ This is a page with the layout `center` and a background image.
 This is a default page without any additional metadata.
 ~~~
 
-Refer to [customization](/custom/) for more details.
+欲了解更多，请参阅 [自定义](/custom/) 章节。
 
-## Code Blocks
+## 代码块 {#code-blocks}
 
-One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
+建立 Slidev 一个非常重要的原因就是为了让代码在幻灯片中拥有正确的高亮。如你所见，你可以使用 Markdown 风格的代码块，以使得你的代码高亮。
 
 ~~~ts
 //```ts
@@ -72,9 +72,9 @@ console.log('Hello, World!')
 //```
 ~~~
 
-### Line Highlighting
+### 特定行高亮 {#line-highlighting}
 
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1.
+如需针对特定行进行高亮展示，只需在 `{}` 内添加对应的行号。行号从 1 开始计算。
 
 ~~~ts
 //```ts {2,3}
@@ -87,7 +87,7 @@ function add(
 //```
 ~~~
 
-To change the highlight in multiple steps, you can use `|` to separate them. For example
+如果要在多个步骤中改变高亮，你可以用 `|` 分隔它们。比如：
 
 ~~~ts
 //```ts {2-3|5|all}
@@ -100,11 +100,11 @@ function add(
 //```
 ~~~
 
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+这段代码会先对 `a: Ref<number> | number` and `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
 
-### Monaco Editor
+### Monaco 编辑器 {#monaco-editor}
 
-Whenever you want to do some modification in the presentation, simply add `{monaco}` after the language id — it turns the block into a fully-featured Monaco editor!
+当你需要在演示文稿中做修改时，只需在语言 id 后添加 `{monaco}` —— 即可将该代码块变为一个功能齐全的 Monaco 编辑器。
 
 ~~~ts
 //```ts {monaco}
@@ -112,11 +112,11 @@ console.log('HelloWorld')
 //```
 ~~~
 
-Learn more about [configuring Monaco](/custom/config-monaco).
+欲了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
 
-## Embedded Styles
+## 内联样式 {#embedded-styles}
 
-You can use `<style>` tag in your Markdown directly to override styles for the **current slide**.
+你可以在 Markdown 中直接使用 `<style>` 标签来覆盖**当前幻灯片**的样式。
 
 ```md
 # This is Red
@@ -132,9 +132,9 @@ h1 {
 # Next slide is not affected
 ```
 
-`<style>` tag in Markdown is always [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
-Powered by [Windi CSS](https://windicss.org), you can directly use nested css and [directives](https://windicss.org/features/directives.html) (e.g. `@apply`)
+由 [Windi CSS](https://windicss.org) 提供支持，你可以直接使用嵌套的 css 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
 
 ```md
 # Slidev
@@ -150,11 +150,11 @@ blockquote {
 </style>
 ```
 
-## Notes
+## 笔记 {#notes}
 
-You can also take notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
+你也可以为每张幻灯片编写笔记。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，为你提供演示时的参考。
 
-In Markdown, the last comment block in each slide will be treated as a note.
+在 Markdown 中，每张幻灯片中的最后一个注释块将被视为笔记。
 
 ~~~md
 ---
@@ -180,24 +180,24 @@ This is another note
 -->
 ~~~
 
-## Icons
+## Icons {#icons}
 
-Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown. Powered by [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) and [Iconify](https://iconify.design/).
+Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
 
-The naming follows [Iconify](https://iconify.design/)'s conversion `{collection-name}-{icon-name}`. For example:
+图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
 
-- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign)
-- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)
-- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons)
-- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji)
-- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos)
-- And much more...
+- 使用 [Material Design Icons](https://github.com/Templarian/MaterialDesign)，其规则为 `<mdi-account-circle />` - <mdi-account-circle />
+- 使用 [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)，其规则为 `<carbon-badge />` - <carbon-badge />
+- 使用 [Unicons Monochrome](https://github.com/Iconscout/unicons)，其规则为 `<uim-rocket />` - <uim-rocket />
+- 使用 [Twemoji](https://github.com/twitter/twemoji)，其规则为 `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy />
+- 使用 [SVG Logos](https://github.com/gilbarbara/logos)，其规则为 `<logos-vue />` - <logos-vue />
+- 还有更多...
 
-You can browse and search for all the icons available with [Icônes](https://icones.js.org/).
+你可以通过 [Icônes](https://icones.js.org/) 来浏览访问所有可用的图标。
 
-### Styling Icons
+### 调整图标样式 {#styling-icons}
 
-You can style the icons just like other HTML elements. For example:
+你可以像其他 HTML 元素一样对图标的样式进行修改。例如：
 
 ```html
 <uim-rocket />
@@ -209,9 +209,9 @@ You can style the icons just like other HTML elements. For example:
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
-## Configurations
+## 配置 {#configurations}
 
-All configurations needed can be defined in the Markdown file. For example:
+依赖的所有配置都可以在 Markdown 文件中定义，比如：
 
 ```md
 ---
@@ -225,24 +225,23 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 This is the cover page.
 ```
 
-Learn more about [frontmatter configurations](/custom/#frontmatter-configures).
+欲了解更多，请参阅 [扉页配置](/custom/#frontmatter-configures) 章节。
 
-## LaTeX
+## LaTeX {#latex}
 
-Slidev comes with LaTeX support out-of-box, powered by [KaTeX](https://katex.org/).
+Slidev 开箱即有对 LaTeX 的支持，得益于 [KaTeX](https://katex.org/)。
 
-### Inline
+### 内联 {#inline}
 
-Surround your LaTeX with a single `$` on each side for inline rendering.
+在你的 LaTeX 语法左右各加一个 `$`，用于内联渲染。
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-### Block
+### 块 {#block}
 
-Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
-the result.
+当使用两个 (`$$`) 时，会进行块级渲染。这种模式会使用更大的符号，并将结果居中。
 
 ```md
 $$
@@ -259,13 +258,13 @@ $$
 $$
 ```
 
-Learn more: [Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
+了解更多：[Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-## Diagrams
+## 图表 {#diagrams}
 
-You can also create diagrams / graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
+你也可以在 Markdown 的文本描述中创建图形或图表，得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
 
-Code blocks marked as `mermaid` will be converted to digrams, for example:
+被标记为 `mermaid` 的代码块将被转换为图形，例如：
 
 ~~~md
 //```mermaid
@@ -275,7 +274,7 @@ sequenceDiagram
 //```
 ~~~
 
-You can further pass an options object to it to specify the scaling and theming. The syntax of the object is a JavaScript object literal, you will need to add quotes (`'`) for strings and use comma (`,`) between keys.
+你可以向它传递一个配置项来指定缩放和主题。该对象的语法是 JavaScript 的对象字面量，你需要对字符串添加引号 (`'`)，并在键与键之间使用(`,`)。
 
 ~~~md
 //```mermaid {theme: 'neutral', scale: 0.8}
@@ -286,4 +285,4 @@ C -->|Two| E[Result 2]
 //```
 ~~~
 
-Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+了解更多：[Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
