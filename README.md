@@ -23,6 +23,20 @@
   <b>简体中文</b> ｜ <a href="https://github.com/slidevjs/slidev#readme">English</a>
 </p>
 <br>
+
+<p align="center">
+<table>
+<tbody>
+<td align="center">
+<img width="2000" height="0"><br>
+目前 Slidev 中文文档正在翻译校对过程中 (WIP)<br>
+欢迎参与贡献，<a href="https://github.com/slidevjs/docs-cn/issues/8">翻译任务认领说明</a><br>
+<img width="2000" height="0">
+</td>
+</tbody>
+</table>
+</p>
+
 <br>
 
 ## Slidev 中文文档
