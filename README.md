@@ -41,20 +41,20 @@
 
 ## Slidev 中文文档
 
-- 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
-- 🧑‍💻 [**对开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
-- 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
-- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
-- 🤹 [**交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
-- 🎙 [**演示者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
-- 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公示的支持
-- 📰 [**图表支持**](/guide/syntax.html#diagrams) —— 使用文本描述语言创建图表
-- 🌟 [**图标**](/guide/syntax.html#icons) —— 能够直接从任意图标库中获取图标
-- 💻 [**编辑器**](/guide/editors.html) —— 集成的编辑器，或者使用 [VS Code 扩展](https://github.com/slidevjs/slidev-vscode)
-- 🎥 [**录制**](/guide/recording.html) —— 内置录制功能和摄像头视图
-- 📤 [**跨平台**](/guide/exporting.html) —— 能够导出 PDF、PNG 文件，甚至是一个可以托管的单页应用
+- 📝 [**Markdown 支持**](https://cn.sli.dev/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
+- 🧑‍💻 [**对开发者友好**](https://cn.sli.dev/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
+- 🎨 [**可定制主题**](https://cn.sli.dev/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
+- 🌈 [**灵活样式**](https://cn.sli.dev/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
+- 🤹 [**交互**](https://cn.sli.dev/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
+- 🎙 [**演示者模式**](https://cn.sli.dev/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
+- 🧮 [**LaTeX 支持**](https://cn.sli.dev/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公示的支持
+- 📰 [**图表支持**](https://cn.sli.dev/guide/syntax.html#diagrams) —— 使用文本描述语言创建图表
+- 🌟 [**图标**](https://cn.sli.dev/guide/syntax.html#icons) —— 能够直接从任意图标库中获取图标
+- 💻 [**编辑器**](https://cn.sli.dev/guide/editors.html) —— 集成的编辑器，或者使用 [VS Code 扩展](https://github.com/slidevjs/slidev-vscode)
+- 🎥 [**录制**](https://cn.sli.dev/guide/recording.html) —— 内置录制功能和摄像头视图
+- 📤 [**跨平台**](https://cn.sli.dev/guide/exporting.html) —— 能够导出 PDF、PNG 文件，甚至是一个可以托管的单页应用
 - ⚡️ [**快速**](https://vitejs.dev) —— 基于 [Vite](https://vitejs.dev) 的即时重载
-- 🛠 [**可配置**](/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
+- 🛠 [**可配置**](https://cn.sli.dev/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
 
 ### 📨 与官网文档同步
 
