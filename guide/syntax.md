@@ -150,37 +150,37 @@ blockquote {
 </style>
 ```
 
-## 笔记 {#notes}
+## 备注 {#notes}
 
-你也可以为每张幻灯片编写笔记。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，为你提供演示时的参考。
+你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，为你提供演示时的参考。
 
-在 Markdown 中，每张幻灯片中的最后一个注释块将被视为笔记。
+在 Markdown 中，每张幻灯片中的最后一个注释块将被视为备注。
 
 ~~~md
 ---
 layout: cover
 ---
 
-# Page 1
+# 第 1 页
 
 This is the cover page.
 
-<!-- This is a note -->
+<!-- 这是一条备注 -->
 
 ---
 
-# Page 2
+# 第 2 页
 
-<!-- This is NOT a note because it precedes the content of the slide -->
+<!-- 这不是一条备注，因为它在幻灯片内容前 -->
 
 The second page
 
 <!--
-This is another note
+这是另一条备注
 -->
 ~~~
 
-## Icons {#icons}
+## 图标 {#icons}
 
 Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
 
