@@ -17,7 +17,7 @@ $ npm init slidev-theme
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
 - 扩展 Windi CSS 配置
-- 配置 Monaco, Prism 等各种工具
+- 配置 Monaco, Prism 等工具
 
 ## 约定 {#conventions}
 
@@ -56,7 +56,7 @@ theme: none
 
 ## 配色方案 {#color-schema}
 
-默认情况下，Sildev 假定主题会同时支持亮色与暗色两种模式。如果希望自己的主题只以预设的配色方案展现，你需要在 `package.json` 中显式指定：
+默认情况下，Sildev 假定主题会同时支持亮色与暗色两种模式。如果希望自己的主题只以某种预设的配色方案展现，你需要在 `package.json` 中显式指定：
 
 ```json
 // package.json
@@ -94,7 +94,7 @@ html.dark {
 
 你可以选择使用其中任意一种或同时使用。可以参考默认主题配置示例中的 [`./styles/prism.css`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/styles/prism.css) 和 [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/setup/shiki.ts)。
 
-另外，不要忘记在 `package.json` 中指定支持的高亮工具：
+另外，不要忘记在 `package.json` 中指定想要支持的高亮工具：
 
 ```json
 // package.json
