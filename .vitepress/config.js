@@ -60,11 +60,11 @@ const Theme = [
 
 const Translations = [
   {
-    text: 'English',
+    text: '简体中文',
   },
   {
-    text: '简体中文',
-    link: 'https://cn.sli.dev{{pathname}}',
+    text: 'English',
+    link: 'https://sli.dev{{pathname}}',
   },
 ]
 
