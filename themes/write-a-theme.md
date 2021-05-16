@@ -8,7 +8,7 @@ $ npm init slidev-theme
 
 之后便可以尝试对主题进行改动并使用。你也可以参阅 [官方主题](/themes/gallery) 中的案例。
 
-## 自定义 {#capability}
+## 主题能力 {#capability}
 
 一个主题可以自定义以下功能：
 
