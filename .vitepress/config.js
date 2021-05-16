@@ -58,6 +58,16 @@ const Theme = [
   },
 ]
 
+const Translations = [
+  {
+    text: '简体中文',
+  },
+  {
+    text: 'English',
+    link: 'https://sli.dev{{pathname}}',
+  },
+]
+
 const Customizations = [
   {
     text: '自定义',
@@ -175,6 +185,10 @@ module.exports = {
       {
         text: '资源',
         items: Resources,
+      },
+      {
+        text: 'Translations',
+        items: Translations,
       },
     ],
 
