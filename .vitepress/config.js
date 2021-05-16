@@ -187,7 +187,7 @@ module.exports = {
         items: Resources,
       },
       {
-        text: 'Translations',
+        text: '多语言',
         items: Translations,
       },
     ],
