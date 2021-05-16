@@ -1,34 +1,34 @@
-# Write a Theme
+# 编写主题 {#write-a-theme}
 
-To get started, we recommend you use our generator for scaffolding your first theme
+首先，我们推荐你使用预设的生成器来快速搭建一个主题：
 
 ```bash
 $ npm init slidev-theme
 ```
 
-Then you can modify and play with it. You can also refer to the [official themes](/themes/gallery) as examples.
+之后便可以尝试对主题进行改动并使用。你也可以参阅 [官方主题](/themes/gallery) 中的案例。
 
-## Capability
+## 自定义 {#capability}
 
-A theme can contribute to the following points:
+一个主题可以自定义以下功能：
 
-- Global styles
-- Provide web fonts
-- Provide custom layouts or override the existing one
-- Provide custom components or override the existing one
-- Extend Windi CSS configurations
-- Configure tools like Monaco and Prism
+- 全局样式
+- web 字体
+- 自定义布局或者重写现有布局
+- 自定义组件或者重写现有组件
+- 扩展 Windi CSS 配置
+- 配置 Monaco, Prism 等各种工具
 
-## Conventions
+## 注意事项 {#conventions}
 
-Themes are published to npm registry, and they should follow the conventions below:
+主题需要发布到 npm，所以需要遵守以下约定：
 
-- Package name should starts with `slidev-theme-`, for example: `slidev-theme-awesome`
-- Add `slidev-theme` and `slidev` in the `keywords` field of your `package.json`
+- 包名应该以 `slidev-theme-` 开头，例如：`slidev-theme-awesome`
+- 在主题 `package.json` 的 `keywords` 中添加 `slidev-theme` 和 `slidev` 关键词
 
-## Setup
+## 配置说明 {#setup}
 
-To set up the testing playground for your theme, you can create `example.md` with the following frontmatter, to tell Slidev you are not inheriting from any existing theme.
+如果想要测试自己编写的主题，你可以新建 `example.md` 并在 frontmatter 中增加下行告知 Slidev 你不想使用现有的主题。
 
 ```md
 ---
@@ -36,7 +36,7 @@ theme: none
 ---
 ```
 
-Optionally, you can also add some scripts to your `packages.json`
+你还可以在 `packages.json` 增加一些脚本以方便测试：
 
 ```json
 // package.json
@@ -50,13 +50,13 @@ Optionally, you can also add some scripts to your `packages.json`
 }
 ```
 
-To publish your theme, simply run `npm publish` and you are good to go. There is no build process required (which means you can directly publish `.vue` and `.ts` files, Slidev is smart enough to understand them).
+你只需在命令行中执行 `npm publish` 就可以发布自己的主题，并不需要额外的构建过程（这意味着你可以直接发布 `.vue` 和 `.ts` 文件，Slidev 可以直接识别它们）。
 
-Theme contribution points follow the same conventions as local customization, please refer to [the docs for the naming conventions](/custom/). 
+主题可以定制的范围与自定义相一致，可以参阅 [自定义文档](/custom/)。
 
-## Color Schema
+## 配色方案 {#color-schema}
 
-By default, Slidev assumes themes support both light mode and dark mode. If you only want your theme be presented in a designed color schema, you will need to specify it explicitly in `package.json`
+默认情况下，Sildev 假定主题会同时支持亮色与暗色两种模式。如果希望自己的主题只以预设的配色方案展现，你需要在 `package.json` 中显式指定：
 
 ```json
 // package.json
@@ -67,34 +67,34 @@ By default, Slidev assumes themes support both light mode and dark mode. If you 
     "slidev"
   ],
   "slidev": {
-    "colorSchema": "light" // or "dark" or "both"
+    "colorSchema": "light" // 还可选 "dark" 或 "both"
   }
 }
 ```
 
-To access the dark mode when creating your theme styles, you can wrap the dark-mode-specific css inside a `dark` class:
+当在编写自己的主题样式时，如果需要设置暗色模式下的样式，你可以将特定使用在暗色模式下的样式放置在指定的 `dark` 类下：
 
 ```css
-/* general css here */
+/* 共通 css 样式 */
 
 html:not(.dark) {
-  /* light mode css here */
+  /* 亮色模式 css 样式 */
 }
 
 html.dark {
-  /* dark mode css here */
+  /* 暗色模式 css 样式 */
 }
 ```
 
-Slidev toggles a `dark` class on the page's `html` element for switching color schema.
+在切换配色方案时 Slidev 会同时切换页面中的 `html` 元素是否含有 `dark` 类。
 
-## Highlighter
+## 高亮工具 {#highlighter}
 
-Syntax highlighting colors are also provided in the theme. We support both [Prism](https://prismjs.com/) and [Shiki](https://github.com/shikijs/shiki). For more information please refer to [the syntax highlighting docs](/custom/highlighters).
+主题中也可以设置代码高亮配色，我们同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki)。欲了解更多，请参阅 [语法高亮文档](/custom/highlighters)。
 
-You can support either one of them, or both. Refer to the default theme for configurations examples [`./styles/prism.css`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/styles/prism.css) / [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/setup/shiki.ts).
+你可以选择使用其中任意一种或同时使用。可以参考默认主题配置示例中的 [`./styles/prism.css`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/styles/prism.css) 和 [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/setup/shiki.ts)。
 
-Also, remember to specify the supported highlighters in your `package.json`
+另外，不要忘记在 `package.json` 中指定支持的高亮工具：
 
 ```json
 // package.json
