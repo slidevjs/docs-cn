@@ -13,22 +13,22 @@ $ npm init slidev-theme
 一个主题可以自定义以下功能：
 
 - 全局样式
-- web 字体
+- 使用 Web 字体
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
 - 扩展 Windi CSS 配置
 - 配置 Monaco, Prism 等各种工具
 
-## 注意事项 {#conventions}
+## 约定 {#conventions}
 
-主题需要发布到 npm，所以需要遵守以下约定：
+主题发布到 npm，需遵循以下约定：
 
 - 包名应该以 `slidev-theme-` 开头，例如：`slidev-theme-awesome`
 - 在主题 `package.json` 的 `keywords` 中添加 `slidev-theme` 和 `slidev` 关键词
 
 ## 配置说明 {#setup}
 
-如果想要测试自己编写的主题，你可以新建 `example.md` 并在 frontmatter 中增加下行告知 Slidev 你不想使用现有的主题。
+如果想要测试自己编写的主题，你可以新建 `example.md` 并在 frontmatter 中增加以下代码，以告知 Slidev 你不想继承于其他主题。
 
 ```md
 ---
@@ -52,7 +52,7 @@ theme: none
 
 你只需在命令行中执行 `npm publish` 就可以发布自己的主题，并不需要额外的构建过程（这意味着你可以直接发布 `.vue` 和 `.ts` 文件，Slidev 可以直接识别它们）。
 
-主题可以定制的范围与自定义相一致，可以参阅 [自定义文档](/custom/)。
+主题可以定制的范围与本地自定义相一致，可以参阅 [自定义文档](/custom/)。
 
 ## 配色方案 {#color-schema}
 
