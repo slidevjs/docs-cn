@@ -56,7 +56,7 @@ Slidev 提供了内置的录音和摄像头视图。你可以将你的演示文�
 
 由于 Slidev 基于 Web 技术，任何可以在 Web 应用中完成的事情，Slidev 也可以做到。例如，`WebGL`、`API请求`、`iframes`，甚至是实时共享。完全取决于你的想象力!
 
-## 即可体验 {#give-it-a-try}
+## 即刻体验 {#give-it-a-try}
 
 开始一个 Slidev 项目无需长篇大论。只需要一个命令即可:
 
