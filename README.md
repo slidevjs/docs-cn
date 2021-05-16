@@ -60,7 +60,11 @@
 
 目前 Slidev 中文文档正在翻译校对过程中(WIP)。
 
-**同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的官网文档](https://github.com/slidevjs/slidev) 的内容，并自动合并到 `sync-docs` 分支，然后会从 `sync-docs` 分支发起自动合并或 PR 到 main 分支。仓库维护者需要每天检查该类型的 PR：如无冲突，会自动 merge 到 `main` 分支中；若有冲突，需要先解决 PR 中的冲突，再 merge 到 `main` 分支中。
+**同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的官网文档](https://github.com/slidevjs/slidev) 的内容，并自动合并到 `sync-docs` 分支，然后会从 `sync-docs` 分支发起自动合并或 PR 到 main 分支。
+
+**仓库维护者**需要**每天**检查该类型的 PR：
+- 如无冲突，会自动 merge 到 `main` 分支中；
+- 若有冲突，需要先解决 PR 中的冲突，再 merge 到 `main` 分支中。
 
 ### 📝 参与贡献
 
