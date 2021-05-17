@@ -1,4 +1,4 @@
-# 配置 Monaco
+# 配置 Monaco {#configure-monaco}
 
 > 默认情况下， Monaco 只会在开发模式下开启。如果你想在单页应用程序（SPA）中使用， 添加 `monaco: true` 到你的扉页（frontmatter）处.
 
