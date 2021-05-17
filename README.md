@@ -77,7 +77,7 @@
 $ pnpm install
 
 # 构建文档，site 分支使用了 Git 的 submodules，执行此命令会同时将 docs-cn 同步到 site 分支
-$ npm run build:docs
+$ npm run docs:build
 
 # 启动文档
 $ npm run docs
