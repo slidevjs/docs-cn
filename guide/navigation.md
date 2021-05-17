@@ -2,7 +2,7 @@
 
 ## 导航栏 {#navigation-bar}
 
-鼠标移至左下角，即可显示导航栏。
+将鼠标移至窗口左下角，即可显示导航栏。
 
 ![](/screenshots/navbar.png)
 
