@@ -1,22 +1,22 @@
-# Configure Monaco
+# 配置 Monaco {#configure-monaco}
 
-> By default, Monaco only is enabled only on dev mode. To make it work on SPA build, add `monaco: true` to your frontmatter configs.
+> 默认情况下， Monaco 只会在开发模式下开启。如果你想在单页应用（SPA）中使用， 添加 `monaco: true` 到你的扉页（frontmatter）处.
 
-Create `./setup/monaco.ts` with the following content:
+创建一份包含以下内容的 `./setup/monaco.ts` 文件：
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
 
 export default defineMonacoSetup(async (monaco) => {
-  // use `monaco` to configure
+  // 使用 `monaco` 配置
 })
 ```
 
-Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor).
+访问 [monaco-editor](https://github.com/Microsoft/monaco-editor) 了解更多关于 Monaco 配置的相关信息。
 
-## Usage
+## 用法 {#usage}
 
-To use Monaco in your slides, simply append `{monaco}` to your code snippets:
+如果你想在你的幻灯片中使用 Monaco， 只需添加 `{monaco}` 到你的代码片段中：
 
 ~~~js
 //```js
@@ -25,11 +25,11 @@ const plusOne = computed(() => count.value + 1)
 
 console.log(plusOne.value) // 2
 
-plusOne.value++ // error
+plusOne.value++ // 报错
 //```
 ~~~
 
-To
+修改为
 
 ~~~js
 //```js {monaco}
@@ -38,23 +38,23 @@ const plusOne = computed(() => count.value + 1)
 
 console.log(plusOne.value) // 2
 
-plusOne.value++ // error
+plusOne.value++ // 报错
 //```
 ~~~
 
-## Exporting
+## 导出 {#exporting}
 
-By default, Monaco will ONLY work on `dev` mode. If you would also like to have it available in the exported SPA, you can configure it in your frontmatter:
+默认情况下， Monaco 只会在开发模式开启。如果你想在导出的单页应用中使用，你需要配置你的扉页：
 
 ```yaml
 ---
-monaco: true # default "dev"
+monaco: true # 默认为 "dev"
 ---
 ```
 
-## Types Auto Installing
+## 类型自动安装 {#types-auto-installing}
 
-When you use TypeScript with Monaco, types for dependencies will be installed to the client-side automatically.
+当你使用 Monaco 编写 TypeScript 时，类型依赖将会自动安装到客户端.
 
 ~~~ts
 //```ts {monaco}
@@ -65,4 +65,4 @@ const counter = ref(0)
 //```
 ~~~
 
-In the example above, just make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest and your editor will just work!
+在上面的示例中，只需确保项目依赖（`dependencies` 或 `devDependencies`）中包含所用到的 `vue` 和 `@vueuse/core`，Slidev 将处理剩余的部分以使你的 Monaco 编辑器获得正确的类型支持。
