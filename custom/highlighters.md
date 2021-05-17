@@ -1,3 +1,7 @@
+---
+title: 语法高亮器
+---
+
 # 语法高亮器 {#highlighters}
 
 Slidev 内建了两种语法高亮器供你使用：
