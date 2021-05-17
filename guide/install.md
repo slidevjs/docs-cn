@@ -1,3 +1,7 @@
+---
+title: 安装
+---
+
 # 安装 {#installation}
 
 ## 初始模板 {#starter-template}
@@ -36,7 +40,7 @@ $ touch slides.md
 $ npx slidev
 ```
 
-> 请注意⚠️，如果你使用的是 [pnpm](https://pnpm.io)，请先启用 [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) 选项，才能使得 Slidev 正常工作。
+> 请注意，如果你使用的是 [pnpm](https://pnpm.io)，请先启用 [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) 选项，才能使得 Slidev 正常工作。
 >
 > ```bash
 > echo 'shamefully-flatten=true' >> .npmrc

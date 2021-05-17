@@ -1,3 +1,7 @@
+---
+title: Markdown 语法
+---
+
 # Markdown 语法 {#markdown-syntax}
 
 幻灯片通过 **一个 markdown 文件** 编写而成 (默认会使用 `./slides.md`)。

@@ -1,4 +1,8 @@
-# 开始 {#getting-started}
+---
+title: 开始使用
+---
+
+# 开始使用 {#getting-started}
 
 ## 总览 {#overview}
 
@@ -14,13 +18,13 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 - 🧑‍💻 [**开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
 - 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
 - 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
-- 🤹 [**交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
+- 🤹 [**可交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
 - 🎙 [**演讲者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
 - 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公示的支持
 - 📰 [**图表支持**](/guide/syntax.html#diagrams) —— 使用文本描述语言创建图表
 - 🌟 [**图标**](/guide/syntax.html#icons) —— 能够直接从任意图标库中获取图标
 - 💻 [**编辑器**](/guide/editors.html) —— 集成的编辑器，或者使用 [VS Code 扩展](https://github.com/slidevjs/slidev-vscode)
-- 🎥 [**录制**](/guide/recording.html) —— 内置录制功能和摄像头视图
+- 🎥 [**演讲录制**](/guide/recording.html) —— 内置录制功能和摄像头视图
 - 📤 [**跨平台**](/guide/exporting.html) —— 能够导出 PDF、PNG 文件，甚至是一个可以托管的单页应用
 - ⚡️ [**快速**](https://vitejs.dev) —— 基于 [Vite](https://vitejs.dev) 的即时重载
 - 🛠 [**可配置**](/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
