@@ -73,8 +73,8 @@ onMounted(() => {
       code.value = JSON.parse(JSON.stringify(block.value!.innerText.replace('|', '')))
     },
   })
-    .type('<br><span class="token title"># Welcome to Slidev!</span><br><br>', { delay: 400 })
-    .type('Presentation Slides for Developers', { delay: 400 })
+    .type('<br><span class="token title"># 欢迎使用 Slidev!</span><br><br>', { delay: 400 })
+    .type('为开发者打造的演示文稿工具', { delay: 400 })
     .move('START', { speed: 0 })
     .type('<br>')
     .move('START')
@@ -100,10 +100,10 @@ onMounted(() => {
     .type('<br><br><span class="token punctuation">---</span><br><br>', { delay: 400 })
     .exec(resume)
     .exec(() => setTimeout(() => page.value = 1))
-    .type('<span class="token title"># Page 2</span><br><br>', { delay: 400 })
-    .type('- 📄 Write slides in a single Markdown file<br>', { delay: 800 })
-    .type('- 🌈 Themes, code blocks, interactive components<br>', { delay: 800 })
-    .type('- 😎 Read the docs to learn more!', { delay: 800 })
+    .type('<span class="token title"># 第二页</span><br><br>', { delay: 400 })
+    .type('- 📄 在单一 Markdown 文件中编写幻灯片<br>', { delay: 800 })
+    .type('- 🌈 主题，代码高亮，可交互的组件，等等<br>', { delay: 800 })
+    .type('- 😎 阅读文档了解更多！', { delay: 800 })
     .exec(() => setTimeout(() => page.value = 0))
     .go()
 })
@@ -152,3 +152,12 @@ onMounted(() => {
     </DemoSlide>
   </div>
 </template>
+
+<style>
+.slidev-layout ul {
+  padding: 0;
+}
+.slidev-layout li {
+  line-height: 2.4em;
+}
+</style>
