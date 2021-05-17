@@ -65,4 +65,4 @@ const counter = ref(0)
 //```
 ~~~
 
-在上面的示例中，只需确保本地依赖项或开发依赖项包括 `vue` 和 `@vueuse/core` ，Slidev 将处理其余部分保证你的编辑器正常工作！
+在上面的示例中，只需确保项目依赖（`dependencies` 或 `devDependencies`）中包含所用到的 `vue` 和 `@vueuse/core`，Slidev 将处理剩余的部分以使你的 Monaco 编辑器获得正确的类型支持。
