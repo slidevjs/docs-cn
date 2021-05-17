@@ -1,55 +1,55 @@
-# Exporting
+# 导出 {#exporting}
 
-## PDF
+## PDF {#pdf}
 
-> Exporting to PDF or PNG relies on [Playwright](https://playwright.dev) for rendering. You will therefore need to install [`playwright-chromium`](https://playwright.dev/docs/installation#download-single-browser-binary) to use this feature.
-> If you are doing exporting in a CI environment, [the playwright CI guide](https://playwright.dev/docs/ci) can be helpful.
+> 导出为 PDF 或 PNG 的功能基于 [Playwright](https://playwright.dev) 实现渲染。因此，使用此功能前需要安装 [`playwright-chromium`](https://playwright.dev/docs/installation#download-single-browser-binary)。
+> 如果你需要在 CI 环境下进行导出，那么阅读 [playwright CI 指南](https://playwright.dev/docs/ci) 会对你有所启发。
 
-Install `playwright-chromium`
+安装 `playwright-chromium`：
 
 ```bash
 $ npm i -D playwright-chromium
 ```
 
-Now export your slides to PDF using the following command
+接着，使用如下命令即可将你的幻灯片导出为 PDF：
 
 ```bash
 $ slidev export
 ```
 
-After a few seconds, your slides will be ready at `./slides-exports.pdf`.
+稍作等待，即可在 `./slides-exports.pdf` 路径下看到你幻灯片的 PDF 文件。
 
-## PNGs
+## PNGs {#pngs}
 
-When passing in the `--format png` option, Slidev will export PNG images for each slide instead of a PDF.
+当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式。
 
 ```bash
 $ slidev export --format png
 ```
 
-## Single-Page Application (SPA)
+## 单页应用（SPA） {#single-page-application-spa}
 
-You can also build the slides into a self-hostable SPA:
+你还可以将幻灯片构建成可部署的单页应用（SPA）：
 
 ```bash
 $ slidev build
 ```
 
-The generated application will be available under `dist/` and then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever you want. Now you can share your slides with the rest of the world with a single link.
+生成的应用程序会保存在 `dist/` 目录下，然后你可以将该目录部署在 [GitHub Pages](https://pages.github.com/)，[Netlify](https://netlify.app/)，[Vercel](https://vercel.com/)，等你想部署的任何地方。接着，就可以将你幻灯片的链接分享给任何人。
 
-### Base Path
+### 配置基础路径 {#base-path}
 
-To deploy your slides under sub-routes, you will need to pass the `--base` option. For example:
+如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。例如：
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
 ```
 
-Refer to [Vite's documentation](https://vitejs.dev/guide/build.html#public-base-path) for more details.
+欲了解更多，请参阅 [Vite 的文档](https://cn.vitejs.dev/guide/build.html#public-base-path)。
 
-### Provide Downloadable PDF
+### 提供可下载的 PDF {#provide-downloadable-pdf}
 
-You can provide a downloadable PDF to the viewers of your SPA. You can enable it by the following config:
+你可以向浏览幻灯片单页应用的观众提供一个可下载的 PDF。你可以通过如下配置来启用它：
 
 ```md
 ---
@@ -57,9 +57,9 @@ download: true
 ---
 ```
 
-Now, Slidev will generate a pdf file along with the build and a download button will appear in the SPA.
+配置好后，Slidev 将生成一个 PDF 文件，并在单页应用中展示下载按钮。
 
-You can also provide a custom url to the PDF. In that case, the rendering process will be skipped.
+你也可以为 PDF 提供一个自定义的 URL。在这种情况下，PDF 的渲染过程将被忽略。
 
 ```md
 ---
@@ -67,9 +67,9 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
-### Examples
+### 示例 {#examples}
 
-Here are a few examples of the exported SPA:
+下面是几个导出为单页应用的示例：
 
 - [Starter Template](https://sli.dev/demo/starter)
 - [Composable Vue](https://talks.antfu.me/2021/composable-vue) by [Anthony Fu](https://github.com/antfu)
