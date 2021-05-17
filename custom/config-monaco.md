@@ -14,7 +14,7 @@ export default defineMonacoSetup(async (monaco) => {
 
 访问 [monaco-editor](https://github.com/Microsoft/monaco-editor) 了解更多关于 Monaco 配置的相关信息。
 
-## 用法
+## 用法 {#usage}
 
 如果你想在你的幻灯片中使用 Monaco， 只需添加 `{monaco}` 到你的代码片段中：
 
