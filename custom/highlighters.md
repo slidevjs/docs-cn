@@ -1,22 +1,26 @@
-# Highlighters
+---
+title: 语法高亮器
+---
 
-Slidev comes with two syntax highlighter for you to choose from:
+# 语法高亮器 {#highlighters}
+
+Slidev 内建了两种语法高亮器供你使用：
 
 - [Prism](https://prismjs.com/)
 - [Shiki](https://github.com/shikijs/shiki)
 
-**Prism** is one of the most popular syntax highlighters. The highlighting is done by adding token classes to the code and it's colored using CSS. You can browse through their [official themes](https://github.com/PrismJS/prism-themes), or create/customize one yourself very easily using [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars).
+**Prism** 是最受欢迎的语法高亮器之一。它在代码文本中插入标签包裹需要高亮的元素并通过 CSS 文件来设置高亮样式。你可以直接使用 Prism [官方预设的主题](https://github.com/PrismJS/prism-themes)，或者通过 [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) 快速创建自己的高亮主题。
 
-**Shiki**, on the other hand, is a TextMate grammar-powered syntax highlighter. It generates colored tokens, so there is no additional CSS needed. Since it has great grammar support, the generated colors are very accurate, just like what you will see in VS Code. Shiki also comes with [a bunch of built-in themes](https://github.com/shikijs/shiki/blob/master/docs/themes.md). The downside of Shiki is that it also requires TextMate themes (compatible with VS Code theme) to do the highlighting, which can be a bit harder to customize.
+**Shiki**，一个基于 TextMate 语法的代码高亮器。它直接生成带样式的包裹元素，所以不需要引入额外的 CSS 文件。因为基于 TextMate 语法，所以生成的高亮区块非常准确，效果类似于 VS Code。Shiki 也提供了 [很多预设主题](https://github.com/shikijs/shiki/blob/master/docs/themes.md)。不过 Shiki 需要通过 TextMate 主题（与 VS Code 主题相兼容）来自定义高亮，这相对来说会比较麻烦。
 
-Slidev themes usually support both Prism and Shiki, but depending on the theme you are using, it might only support one of them.
+Slidev 主题通常会同时支持 Prism 和 Shiki，不过需要注意有些主题可能只会支持其中一种。
 
-When you have the choice, the tradeoff is basically:
+你可以参考以下描述来选择使用哪种高亮器：
 
-- **Prism** for easier customization
-- **Shiki** for more accurate highlighting
+- **Prism** 更容易自定义样式
+- **Shiki** 生成的高亮区块更加准确
 
-By default, Slidev uses Prism. You can change it by modifying your frontmatter:
+默认情况下 Slidev 使用 Prism，你可以在 frontmatter 中修改设置：
 
 ```yaml
 ---
@@ -24,13 +28,13 @@ highlighter: shiki
 ---
 ```
 
-## Configure Prism
+## 配置 Prism {#configure-prism}
 
-To configure your Prism, you can just import the theme css or use [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) to configure themes for both light and dark mode. Refer to its docs for more details.
+直接引入预设主题或者使用 [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) 就可以配置 Prism 高亮，更多细节可以参阅相应文档。
 
-## Configure Shiki
+## 配置 Shiki {#configure-shiki}
 
-Create `./setup/shiki.ts` file with the following content
+创建 `./setup/shiki.ts` 文件并添加以下代码：
 
 ```ts
 /* ./setup/shiki.ts */
@@ -46,9 +50,9 @@ export default defineShikiSetup(() => {
 })
 ```
 
-Refer to [Shiki's docs](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes) for available theme names.
+所有可选的主题请参阅 [Shiki 文档](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes)。
 
-Or if you want to use your own theme:
+如果想使用自己的主题可以将配置文件改为：
 
 ```ts
 /* ./setup/shiki.ts */
