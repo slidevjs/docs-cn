@@ -52,7 +52,7 @@ monaco: true # 默认为 "dev"
 ---
 ```
 
-## 类型自动安装
+## 类型自动安装 {#types-auto-installing}
 
 当你使用 Monaco 编写 TypeScript 时，类型依赖将会自动安装到客户端.
 
