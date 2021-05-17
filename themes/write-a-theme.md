@@ -86,7 +86,7 @@ html.dark {
 }
 ```
 
-在切换配色方案时 Slidev 会同时切换页面中的 `html` 元素是否含有 `dark` 类。
+在切换为暗色模式时 Slidev 会为页面中的 `html` 元素添加 `dark` 类。
 
 ## 高亮工具 {#highlighter}
 
