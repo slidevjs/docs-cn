@@ -1,15 +1,15 @@
-# Layouts
+# 布局 {#layouts}
 
-## Built-in Layouts
+## 内置布局 
 
-> The documentations of this section is still working in progress. Before that, you can take a look at the [source code](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts) directly.
+> 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)。
 
-## Custom Layouts
+## 自定义布局
 
-Create a directory `layouts/` under your project root, and simply put your custom Vue layout components under it.
+在你的项目根目录里创建一个 `layouts/` 文件夹，然后直接把你的自定义 Vue 组件放进去。
 
-Read more in the [Customization](/custom/directory-structure#layouts) section.
+欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
 
-## Theme-provided Layouts
+## 主题提供的布局
 
-Themes can provide layouts or override existing ones. Please read their documentation for what they have provided.
+主题可以提供布局或者覆盖已有的。请阅读它们各自的文档，以知晓它们提供了什么。
