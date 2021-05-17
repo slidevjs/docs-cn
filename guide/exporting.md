@@ -21,7 +21,7 @@ $ slidev export
 
 ## PNGs {#pngs}
 
-当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式，而非 PDF 文件格式。
+当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式。
 
 ```bash
 $ slidev export --format png
