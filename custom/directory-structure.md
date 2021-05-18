@@ -136,7 +136,7 @@ import './layouts.css'
 }
 ```
 
-[了解更多关于语法的信息](https://windicss.org/features/directives.html)。
+[了解更多关于此语法的信息](https://windicss.org/features/directives.html)。
 
 ## `index.html` {#index-html}
 
