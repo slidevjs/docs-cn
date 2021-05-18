@@ -1,24 +1,24 @@
-# Themes Gallery
+# 主题合集 {#themes-gallery}
 
-Browse awesome themes available for Slidev here.
+此处你将看到超棒的主题合集。
 
-Read more about [how to use a theme](/themes/use), or [how to write your own](/themes/write-a-theme) and share with the community!
+阅读更多关于 [如何使用主题](/themes/use)，或 [如何编写属于你自己的主题](/themes/write-a-theme) 并与社区分享！
 
-## Official Themes
+## 官方主题 {#official-themes}
 
 <ClientOnly>
   <ThemeGallery collection="official"/>
 </ClientOnly>
 
-## Community Themes
+## 社区主题 {#community-themes}
 
-Here are the curated themes made by the community.
+下列是精选的社区主题。
 
 <!-- Edit in ./docs/.vitepress/themes.ts -->
 <ClientOnly>
   <ThemeGallery collection="community"/>
 </ClientOnly>
 
-## More Themes
+## 更多主题 {#more-themes}
 
-Find all the [themes available on NPM](https://www.npmjs.com/search?q=keywords%3Aslidev-theme).
+查找 [NPM 上所有可用的主题](https://www.npmjs.com/search?q=keywords%3Aslidev-theme)。
