@@ -12,7 +12,7 @@
 
 ## 社区主题 {#community-themes}
 
-下列是精选的由社区主题。
+下列是精选的社区主题。
 
 <!-- Edit in ./docs/.vitepress/themes.ts -->
 <ClientOnly>
