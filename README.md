@@ -43,7 +43,7 @@
 
 ### 📨 与官网文档同步
 
-目前 Slidev 中文文档已经全部翻译完成。
+目前 Slidev 中文文档翻译已全部完成。
 
 **同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的官网文档](https://github.com/slidevjs/slidev) 的内容，并自动合并到 `sync-docs` 分支，然后会从 `sync-docs` 分支发起自动合并或 PR 到 main 分支。
 

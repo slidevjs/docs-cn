@@ -17,7 +17,7 @@ const dismissed = useStorage('sldiev-docs-wip-dismissed', false)
     border="~ orange-400 rounded-md"
   >
     <div class="m-auto">
-      目前 Slidev 中文文档正在翻译校对过程中 (WIP)
+      目前 Slidev 中文文档翻译已全部完成。
     </div>
     <div
       class="cursor-pointer"
