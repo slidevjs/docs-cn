@@ -10,6 +10,6 @@
 
 欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
 
-## 主题提供的布局
+## 主题提供的布局 {#theme-provided-layouts}
 
 主题可以提供布局或者覆盖已有的。请阅读它们各自的文档，以知晓它们提供了什么。
