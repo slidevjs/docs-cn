@@ -1,6 +1,6 @@
 # 布局 {#layouts}
 
-## 内置布局 
+## 内置布局 {#built-in-layouts}
 
 > 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)。
 
