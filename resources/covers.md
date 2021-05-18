@@ -1,14 +1,14 @@
-# Curated Covers
+# 精选封面
 
-We curated a few cover images to demonstrate our starter template.
+我们精选了一些封面图片来展示我们的初始模板。
 
 ![](/screenshots/covers.png)
 
 ```yaml
 ---
-# random image from the curated collection
+# 来自精选集的随机图片
 background: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 ```
 
-If you enjoy any of them, check out our [Unsplash collection](https://unsplash.com/collections/94734566/slidev) and find out their authors.
+如果你喜欢它们中任何一个，请查阅我们的 [Unsplash系列](https://unsplash.com/collections/94734566/slidev)，并找到它们的作者。
