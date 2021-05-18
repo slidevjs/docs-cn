@@ -8,7 +8,7 @@
 
 在你的项目根目录里创建一个 `layouts/` 文件夹，然后直接把你的自定义 Vue 组件放进去。
 
-欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
+欲了解更多，请参阅 [自定义](/custom/directory-structure#layouts) 章节。
 
 ## 主题提供的布局 {#theme-provided-layouts}
 
