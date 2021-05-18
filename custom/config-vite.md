@@ -1,3 +1,7 @@
+---
+title: 配置 Vite
+---
+
 # 配置 Vite {#configure-vite}
 
 Slidev 基于 [Vite](http://vitejs.dev/) 实现。这意味着你可以利用 Vite 强大的插件系统来进一步定制你的幻灯片。

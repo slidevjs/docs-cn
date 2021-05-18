@@ -1,4 +1,8 @@
-# 编辑器支持 {#editor-support}
+---
+title: 编辑器整合
+---
+
+# 编辑器整合 {#editor-support}
 
 因为 Slidev 使用 Markdown 作为源文件，所以你可以使用任何你喜欢的编辑器。
 

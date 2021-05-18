@@ -1,3 +1,7 @@
+---
+title: 自定义
+---
+
 # 自定义 {#customizations}
 
 从样式到工具，Slidev 都是完全可以自定义的。你可以对以下这些工具进行自定义配置（ [Vite](/custom/config-vite) ， [Windi CSS](/custom/config-windicss) ， [Monaco](/custom/config-monaco) ，等等。）
