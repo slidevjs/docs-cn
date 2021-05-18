@@ -1,22 +1,22 @@
-# Animations
+# 动画 {#animations}
 
-## Click Animations
+## 点击动画 {#click-animations}
 
 ### `v-click`
 
-To apply "click animations" for elements, you can use the `v-click` directive or `<v-click>` components
+如需为元素添加 “点击动画”，你可以使用 `v-click` 指令或 `<v-click>` 组件
 
 ```md
 # Hello
 
-<!-- Component usage: this will be invisible until you press "next" -->
+<!-- 组件用法：在你按下 “下一步” 之前，这是不可见的 -->
 <v-click>
 
 Hello World
 
 </v-click>
 
-<!-- Directive usage: this will be invisible until you press "next" the second time -->
+<!-- 指令用法：在你第二次按下 “下一步” 之前，这是不可见的 -->
 <div v-click class="text-xl p-2">
 
 Hey!
@@ -26,18 +26,18 @@ Hey!
 
 ### `v-after`
 
-The usage of `v-after` is similar to `v-click` but it will turn the element visible when the previous `v-click` is triggered.
+`v-after` 和 `v-click` 用法类似，但是 `v-after` 会在上一个 `v-click` 触发后使元素可见。
 
 ```md
 <div v-click>Hello</div>
 <div v-after>World</div>
 ```
 
-When you click the "next" button, both `Hello` and `World` will show up together.
+当你点击了“下一步”按钮之后，`Hello` 和 `World` 会同时出现。
 
 ### `v-clicks`
 
-`v-clicks` is only provided as a component. It's a shorthand to apply the `v-click` directive to all its child elements. It is especially useful when working with lists.
+`v-clicks` 仅作为组件提供。它可以快速将其子元素全部添加 `v-click` 指令。它在列表中尤为实用。
 
 ```md
 <v-clicks>
@@ -50,22 +50,22 @@ When you click the "next" button, both `Hello` and `World` will show up together
 </v-clicks>
 ```
 
-An item will become visible each time you click "next".
+每次你点击“下一步”按钮时，元素会逐条依次出现。
 
-### Custom Clicks Count
+### 自定义点击数量 {#custom-clicks-count}
 
-By default, Slidev counts how many steps are needed before going to the next slide. You can override this setting by passing the `clicks` frontmatter option:
+默认情况下，Slidev 会计算进入下一张幻灯片之前需要执行多少步。你可以在 frontmatter 选项中设置 `clicks` 来覆盖该设置：
 
 ```yaml
 ---
-# 10 clicks in this slide, before going to the next
+# 在你进入下一页之前，需要点击 10 次
 clicks: 10
 ---
 ```
 
-### Ordering
+### 排序 {#ordering}
 
-Passing the click index to your directives, you can customize the order of the revealing
+通过传递点击索引，你可以自定义展示的顺序
 
 ```md
 <div v-click>1</div>
@@ -74,7 +74,7 @@ Passing the click index to your directives, you can customize the order of the r
 ```
 
 ```md
-<!-- the order is reversed -->
+<!-- 顺序颠倒了 -->
 <div v-click="3">1</div>
 <div v-click="2">2</div>
 <div v-click="1">3</div>
@@ -85,27 +85,27 @@ Passing the click index to your directives, you can customize the order of the r
 clicks: 3
 ---
 
-<!-- visible after 3 clicks -->
+<!-- 三次点击后可见 -->
 <v-clicks at="3">
   <div>Hi</div>
 </v-clicks>
 ```
 
-### Element Transitions
+### 元素过渡 {#element-transitions}
 
-When you apply the `v-click` directive to your elements, it will attach the class name `slidev-vclick-target` to it. When the elements are hidden, the class name `slidev-vclick-hidden` will also be attached. For example:
+当你在元素中应用 `v-click` 指令时，它会给该元素添加名为 `slidev-vclick-target` 的类。当元素隐藏时，还加上了 `slidev-vclick-hidden` 类。例如：
 
 ```html
 <div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
 ```
 
-After a click, it will become
+点击后，会变成：
 
 ```html
 <div class="slidev-vclick-target">Text</div>
 ```
 
-By default, a subtle opacity transition is applied to those classes:
+默认情况下，这些类都应用了半透明的过渡效果：
 
 ```css
 // the default
@@ -120,9 +120,9 @@ By default, a subtle opacity transition is applied to those classes:
 }
 ```
 
-You can override them to customize the transition effects in your custom stylesheets. 
+你可以在你的自定义样式表中自定义过渡效果来覆盖默认配置。
 
-For example, you can achieve the scaling up transitions by: 
+例如，你可以通过以下方式实现缩放过渡效果：
 
 ```css
 // styles.css
@@ -136,7 +136,7 @@ For example, you can achieve the scaling up transitions by:
 }
 ```
 
-To specify animations for only certain slide or layout
+只为某页幻灯片或布局指定动画：
 
 ```scss
 .slidev-page-7,
@@ -151,11 +151,11 @@ To specify animations for only certain slide or layout
 }
 ```
 
-Learn more about [customizing styles](/custom/directory-structure#style).
+欲了解更多详细信息，请参阅 [自定义样式](/custom/directory-structure#style)。
 
-## Motion
+## 运动 {#motion}
 
-Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use the `v-motion` directive to any elements to make apply motion on them. For example
+Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任何元素应用 `v-motion` 指令，以对它们施加运动效果。例如：
 
 ```html
 <div
@@ -166,9 +166,9 @@ Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use th
 </div>
 ```
 
-The text `Slidev` will move from `-80px` to its original position on initialization.
+文本 `Slidev` 将从其初始化位置 `-80px` 移至其原始位置。
 
-> Note: Slidev preloads the next slide for performance, which means the animations might start before you navigate to the page. To get it works properly, you can disable the preloading for the particular slide
+> 注意：Slidev 会预加载下一张幻灯片以提高性能，这意味着动画可能会在你导航到该页面之前就开始了。为了使其正常工作，你可以禁用指定幻灯片的预加载
 >
 > ```md
 > ---
@@ -176,7 +176,7 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > ---
 > ```
 >
-> Or control the element life-cycle with `v-if` to have fine-grained controls
+> 或者使用 `v-if` 控制元素的生命周期来获得对组件更细粒度的控制
 >
 > ```html
 > <div
@@ -188,8 +188,8 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > </div>
 > ```
 
-Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
+学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
 
-## Pages Transitions
+## 页面过渡 {#pages-transitions}
 
-> Built-in support for slides is NOT YET provided in the current version. We are planning to add support for them in the next major version. Before that, you can still use your custom styles and libraries to do that.
+> 当前版本尚未提供对幻灯片页面过渡功能的内置支持。我们计划在下一个主版本中增加对其的支持。在此之前，你仍然可以使用自定义样式和工具库来实现页面过渡效果。
