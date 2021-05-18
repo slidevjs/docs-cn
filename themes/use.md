@@ -1,6 +1,6 @@
 # 使用主题 {#use-theme}
 
-在 Slidev 中更换主题非常简单。在 frontmatter 中添加  `theme:` 一项就可以了。
+在 Slidev 中更换主题非常简单。在 frontmatter 中添加  `theme:` 配置即可。
 
 ```yaml
 ---
@@ -46,7 +46,7 @@ theme: ./theme
 
 ## 本地主题 {#local-theme}
 
-在前面的段落里，你可能已经发现了：在一个项目里是可以使用本地主题的。你只需要在主题说明中引入相对路径：
+通过上面的描述，你可能已经发现了：在一个项目里是可以使用本地主题的。你只需要在主题说明中引入相对路径：
 
 ```yaml
 ---
@@ -54,4 +54,4 @@ theme: ./path/to/theme
 ---
 ```
 
-有关更多详细信息，请参阅 [编写主题](/themes/write-a-theme)。
+欲了解更多详细信息，请参阅 [编写主题](/themes/write-a-theme)。
