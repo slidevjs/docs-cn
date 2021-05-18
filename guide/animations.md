@@ -4,19 +4,19 @@
 
 ### `v-click`
 
-要为元素添加“点击动画”，你可以使用 `v-click` 指令或 `<v-click>` 组件
+如需为元素添加 “点击动画”，你可以使用 `v-click` 指令或 `<v-click>` 组件
 
 ```md
 # Hello
 
-<!-- 组件用法：在你按下“下一步”之前，这是不可见的 -->
+<!-- 组件用法：在你按下 “下一步” 之前，这是不可见的 -->
 <v-click>
 
 Hello World
 
 </v-click>
 
-<!-- 指令用法：在你第二次按下“下一步”之前，这是不可见的 -->
+<!-- 指令用法：在你第二次按下 “下一步” 之前，这是不可见的 -->
 <div v-click class="text-xl p-2">
 
 Hey!
@@ -105,7 +105,7 @@ clicks: 3
 <div class="slidev-vclick-target">Text</div>
 ```
 
-默认情况下，这些类都应用了微小的透明度过渡效果：
+默认情况下，这些类都应用了半透明的过渡效果：
 
 ```css
 // the default
@@ -151,7 +151,7 @@ clicks: 3
 }
 ```
 
-欲了解更多详细信息，请参阅[自定义样式](/custom/directory-structure#style).
+欲了解更多详细信息，请参阅 [自定义样式](/custom/directory-structure#style)。
 
 ## 运动 {#motion}
 
@@ -190,6 +190,6 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
 
-## 页面过渡
+## 页面过渡 {#pages-transitions}
 
 > 当前版本尚未提供对幻灯片页面过渡功能的内置支持。我们计划在下一个主版本中增加对其的支持。在此之前，你仍然可以使用自定义样式和工具库来实现页面过渡效果。
