@@ -1,6 +1,6 @@
 # 使用主题 {#use-theme}
 
-在 Slidev 中更换主题非常简单。在扉页配置中添加 `theme:` 一项就可以了。
+在 Slidev 中更换主题非常简单。在 frontmatter 中添加 `theme:` 一项就可以了。
 
 ```yaml
 ---
@@ -34,7 +34,7 @@ $ npm install @slidev/theme-seriph
 $ slidev theme eject
 ```
 
-它会将你当前使用的主题弹出到 `./theme` 目录下，然后请将你的扉页配置修改为：
+它会将你当前使用的主题弹出到 `./theme` 目录下，然后请将你的 frontmatter 修改为：
 
 ```yaml
 ---
