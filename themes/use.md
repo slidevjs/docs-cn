@@ -1,6 +1,6 @@
 # 使用主题 {#use-theme}
 
-在 Slidev 中更换主题非常简单。在 frontmatter 中添加 `theme:` 一项就可以了。
+在 Slidev 中更换主题非常简单。在 frontmatter 中添加  `theme:` 一项就可以了。
 
 ```yaml
 ---
