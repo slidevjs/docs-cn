@@ -1,31 +1,31 @@
-# Directory Structure
+# 项目结构 {#directory-structure}
 
-Slidev employs some directory structure conventions to minimize the configuration surface and to make the functionality extensions flexible and intuitive.
+Slidev 对项目结构进行了一些约定，以尽量减少配置项，使功能扩展更加灵活直观。
 
-The basic structure is as follows:
+基本结构如下所示：
 
 ```bash
 your-slidev/
-  ├── components/       # custom components
-  ├── layouts/          # custom layouts
-  ├── public/           # static assets
-  ├── setup/            # custom setup / hooks
-  ├── styles/           # custom style
-  ├── index.html        # injections to index.html
-  ├── slides.md         # the main slides entry
-  ├── vite.config.ts    # extending vite config
-  └── windi.config.ts   # extending windicss config
+  ├── components/       # 自定义组件
+  ├── layouts/          # 自定义布局
+  ├── public/           # 静态资源
+  ├── setup/            # 自定义 setup / hooks
+  ├── styles/           # 自定义样式
+  ├── index.html        # 注入的 index.html
+  ├── slides.md         # 幻灯片主入口
+  ├── vite.config.ts    # 扩展 vite 配置
+  └── windi.config.ts   # 扩展 windicss 配置
 ```
 
-All of them are optional.
+以上所有均为可选。
 
-## Components
+## 组件 {#components}
 
-Conventions: `./components/*.{vue,js,ts,jsx,tsx}`
+约定：`./components/*.{vue,js,ts,jsx,tsx}`
 
-Components inside this directory can be directly used in the slides Markdown with the same component name as the file name.
+此目录中的组件可以在幻灯片的 Markdown 中直接使用，其组件名与文件名相同。
 
-For example:
+示例：
 
 ```bash
 your-slidev/
@@ -49,13 +49,13 @@ your-slidev/
 </hello-world>
 ```
 
-This feature is powered by [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components), learn more there.
+此特性得益于 [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)。
 
-Slidev also provides some [built-in components](/builtin/components) for you to use.
+Slidev 还提供了一些 [内置组件](/builtin/components) 供你选择。
 
-## Layouts
+## 布局 {#layouts}
 
-Conventions: `./layouts/*.{vue,js,ts,jsx,tsx}`
+约定：`./layouts/*.{vue,js,ts,jsx,tsx}`
 
 ```
 your-slidev/
@@ -65,7 +65,7 @@ your-slidev/
       └── my-cool-theme.vue
 ```
 
-You can use any filename for your layout. You then reference your layout in you YAML header using the filename.
+你可以为布局文件使用任何文件名。然后只需在你的 YAML 头部使用文件名引用你的布局。
 
 ```yaml
 ---
@@ -73,9 +73,9 @@ layout: my-cool-theme
 ---
 ```
 
-If the layout you provide has the same name as a built-in layout or a theme layout, your custom layout will take precedence over the built-in/theme layout. The priority order is `local > theme > built-in`.
+如果你提供的布局与内置布局或主题布局重名的话，你的自定义布局将优先于内置/主题布局。优先级为 `本地 > 主题 > 内置`。
 
-In the layout component, use `<slot/>` for the slide content. For example:
+在布局组件中，你可以使用 `<slot/>` 展示幻灯片内容。比如：
 
 ```html
 <!-- default.vue -->
@@ -86,17 +86,17 @@ In the layout component, use `<slot/>` for the slide content. For example:
 </template>
 ```
 
-## Public
+## 静态资源 {#public}
 
-Conventions: `./public/*`
+约定：`./public/*`
 
-Assets in this directory will be served at root path `/` during dev, and copied to the root of the dist directory as-is. Read more about [Vite's `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory).
+开发过程中，此目录中的资源文件将在 `/` 下提供，并会按原样复制到 dist 目录的根目录中。欲了解更多，请参阅 [Vite 的 `public` 目录](https://cn.vitejs.dev/guide/assets.html#the-public-directory)。
 
-## Style
+## 样式 {#style}
 
-Conventions: `./style.css` | `./styles/index.{css,js,ts}`
+约定：`./style.css` | `./styles/index.{css,js,ts}`
 
-Files following this convention will be injected to the App root. If you need to import multiple css entries, you can create the following structure and managing the import order yourself.
+遵循上述约定的文件将被注入到 App 的根目录中。如果你需要引入多个 css 入口，你可以按如下方式创建结构并自行管理引入顺序。
 
 ```bash
 your-slidev/
@@ -116,7 +116,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-Styles will be processed by [Windi CSS](http://windicss.org/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://windicss.org/features/directives.html) out-of-box. For example:
+样式得益于 [Windi CSS](http://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
 
 ```less
 .slidev-layout {
@@ -136,15 +136,15 @@ Styles will be processed by [Windi CSS](http://windicss.org/) and [PostCSS](http
 }
 ```
 
-[Learn more about the syntax](https://windicss.org/features/directives.html).
+[了解更多关于此语法的信息](https://windicss.org/features/directives.html)。
 
-## `index.html`
+## `index.html` {#index-html}
 
-Conventions: `index.html`
+约定：`index.html`
 
-The `index.html` provides the ability to inject meta tags and/or scripts to the main `index.html`
+`index.html` 提供了向主 `index.html` 中注入 meta 标签以及 scripts 标签的能力。
 
-For example, for the following custom `index.html`:
+例如，对于以下自定义 `index.html` 来说：
 
 ```html
 <!-- ./index.html -->
@@ -158,7 +158,7 @@ For example, for the following custom `index.html`:
 </body>
 ```
 
-The final hosted `index.html` will be:
+最终部署的 `index.html` 效果如下：
 
 ```html
 <!DOCTYPE html>
