@@ -1,3 +1,7 @@
+---
+title: 配置 Windi CSS
+---
+
 # 配置 Windi CSS {#configure-windi-css}
 
 Markdown 天然支持 HTML。因此，你可以按照你想要的方式对你的内容进行样式设计。为了提供一些便利，我们内置了 [Windi CSS](https://github.com/windicss/windicss)，所以你可以直接使用 Windi CSS 提供的工具类对样式进行调整。

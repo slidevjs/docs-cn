@@ -1,3 +1,7 @@
+---
+title: 组件
+---
+
 # 组件 {#components}
 
 ## 内置组件 {#built-in-components}

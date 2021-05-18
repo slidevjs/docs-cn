@@ -1,3 +1,7 @@
+---
+title: 布局
+---
+
 # 布局 {#layouts}
 
 ## 内置布局 {#built-in-layouts}
