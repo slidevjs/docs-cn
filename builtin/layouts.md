@@ -4,7 +4,7 @@
 
 > 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)。
 
-## 自定义布局
+## 自定义布局 {#custom-layouts}
 
 在你的项目根目录里创建一个 `layouts/` 文件夹，然后直接把你的自定义 Vue 组件放进去。
 
