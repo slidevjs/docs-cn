@@ -1,6 +1,6 @@
-# Use Theme
+# 使用主题 {#use-theme}
 
-Changing the theme in Slidev is surprisingly easy. All you need to do is to add the `theme:` field in your frontmatter.
+在 Slidev 中更换主题非常简单。在扉页配置中添加 `theme:` 一项就可以了。
 
 ```yaml
 ---
@@ -8,7 +8,7 @@ theme: seriph
 ---
 ```
 
-You can start the server, which will prompt you to install the theme automatically
+在服务启动后，它会自动提示你是否安装该主题：
 
 <div class="language-md">
 <pre>
@@ -16,25 +16,25 @@ You can start the server, which will prompt you to install the theme automatical
 </pre>
 </div>
 
-or install the theme manually via
+或者你也可以手动安装：
 
 ```bash
 $ npm install @slidev/theme-seriph
 ```
 
-And that's all, enjoy the new theme! For more details about the usage, you can refer to the theme's README.
+现在你就可以使用全新的主题了！你可以查阅相应主题的 README 文档以了解更多的使用细节。
 
-Want to share your theme? Learn about [how to write a theme](/themes/write-a-theme).
+想要分享你自己的主题吗？来看看如何 [编写主题](/themes/write-a-theme)。
 
-## Eject Theme
+## 弹出主题 {#eject-theme}
 
-If you want to get full control of the current theme, you can **eject** it to your local file system and modify it as you want. By running the following command
+如果你想对当前的主题拥有完全的掌控，你可以将它 **弹出** （eject）到本地的文件系统，并且随心所欲地修改它。可以使用以下命令：
 
 ```bash
 $ slidev theme eject
 ```
 
-It will eject the theme you are using currently into `./theme`, and changed your frontmatter to 
+它会将你当前使用的主题弹出到 `./theme` 目录下，然后请将你的扉页配置修改为：
 
 ```yaml
 ---
@@ -42,11 +42,11 @@ theme: ./theme
 ---
 ```
 
-This could also be helpful if you want to make a theme based on an existing one. If you do, remember to mention the original theme and the author :)
+如果你想在现有的主题上制作主题，这样会很方便。当然如果你这么做了，记得标明原主题和作者哦 :)
 
-## Local Theme
+## 本地主题 {#local-theme}
 
-As you probably found out from the previous section, you can have a local theme for your project. By having a **relative path** in your theme field.
+在前面的段落里，你可能已经发现了：在一个项目里是可以使用本地主题的。你只需要在主题说明中引入相对路径：
 
 ```yaml
 ---
@@ -54,4 +54,4 @@ theme: ./path/to/theme
 ---
 ```
 
-Refer to [how to write a theme](/themes/write-a-theme) for more details.
+有关更多详细信息，请参阅 [编写主题](/themes/write-a-theme)。
