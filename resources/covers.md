@@ -11,4 +11,4 @@ background: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 ```
 
-如果你喜欢它们的设计，可以参阅我们的 [Unsplash 系列](https://unsplash.com/collections/94734566/slidev)，并找到它们的作者。
+如果你喜欢它们的设计，可以参阅我们的 [Unsplash 系列](https://unsplash.com/collections/94734566/slidev)，同时还能了解它们的作者。
