@@ -2,7 +2,13 @@
 title: 配置 Vite
 ---
 
+<<<<<<< HEAD
 # 配置 Vite {#configure-vite}
+=======
+<Environment type="node" />
+
+Slidev is powered by [Vite](http://vitejs.dev/) under the hood. This means you can leverage Vite's great plugin system to customize your slides even further.
+>>>>>>> a6e799196a66bf932dadaf515abc6e5d24f2ab3c
 
 Slidev 基于 [Vite](http://vitejs.dev/) 实现。这意味着你可以利用 Vite 强大的插件系统来进一步定制你的幻灯片。
 

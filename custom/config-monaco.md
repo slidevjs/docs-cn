@@ -4,7 +4,13 @@ title: 配置 Monaco
 
 # 配置 Monaco {#configure-monaco}
 
+<<<<<<< HEAD
 > 默认情况下， Monaco 只会在开发模式下开启。如果你想在单页应用（SPA）中使用， 添加 `monaco: true` 到你的扉页（frontmatter）处.
+=======
+<Environment type="client" />
+
+> By default, Monaco only is enabled only on dev mode. To make it work on SPA build, add `monaco: true` to your frontmatter configs.
+>>>>>>> a6e799196a66bf932dadaf515abc6e5d24f2ab3c
 
 创建一份包含以下内容的 `./setup/monaco.ts` 文件：
 

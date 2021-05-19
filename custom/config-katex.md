@@ -2,9 +2,15 @@
 title: 配置 KaTeX
 ---
 
+<<<<<<< HEAD
 # 配置 KaTeX {#configure-katex}
 
 创建一份包含以下内容的 `./setup/katex.ts` 文件：
+=======
+<Environment type="node" />
+
+Create `./setup/katex.ts` with the following content:
+>>>>>>> a6e799196a66bf932dadaf515abc6e5d24f2ab3c
 
 ```ts
 import { defineKatexSetup } from '@slidev/types'
