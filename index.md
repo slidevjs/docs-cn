@@ -1,5 +1,6 @@
 ---
 home: true
+title: 首页
 heroImage: /logo.png
 actionText: 开始使用
 actionLink: /guide/
