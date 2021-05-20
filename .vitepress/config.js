@@ -82,6 +82,10 @@ const Customizations = [
     link: '/custom/highlighters',
   },
   {
+    text: '配置 Vue',
+    link: '/custom/config-vue',
+  },
+  {
     text: '配置 Vite',
     link: '/custom/config-vite',
   },

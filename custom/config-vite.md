@@ -4,6 +4,8 @@ title: 配置 Vite
 
 # 配置 Vite {#configure-vite}
 
+<Environment type="node" />
+
 Slidev 基于 [Vite](http://vitejs.dev/) 实现。这意味着你可以利用 Vite 强大的插件系统来进一步定制你的幻灯片。
 
 如果项目中存在 `vite.config.ts` 文件，将被读取。

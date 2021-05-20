@@ -4,6 +4,8 @@ title: 配置 KaTeX
 
 # 配置 KaTeX {#configure-katex}
 
+<Environment type="node" />
+
 创建一份包含以下内容的 `./setup/katex.ts` 文件：
 
 ```ts

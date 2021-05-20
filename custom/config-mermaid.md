@@ -4,6 +4,8 @@ title: 配置 Mermaid
 
 # 配置 Mermaid {#configure-mermaid}
 
+<Environment type="client" />
+
 创建一份包含以下内容的 `./setup/mermaid.ts` 文件：
 
 ```ts
