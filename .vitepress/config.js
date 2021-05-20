@@ -168,7 +168,6 @@ module.exports = {
   themeConfig: {
     repo: 'slidevjs/docs-cn',
     logo: '/logo.svg',
-    docsDir: '',
     docsBranch: 'main',
     editLinks: true,
     editLinkText: '改进翻译',
@@ -183,7 +182,7 @@ module.exports = {
         items: Theme,
       },
       {
-        text: '自定义',
+        text: '定制',
         items: Customizations,
       },
       {
@@ -191,7 +190,7 @@ module.exports = {
         items: Resources,
       },
       {
-        text: '多语言',
+        text: '中文',
         items: Translations,
       },
     ],
