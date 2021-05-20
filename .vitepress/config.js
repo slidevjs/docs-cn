@@ -155,7 +155,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'author', content: 'Anthony Fu' }],
-    ['meta', { property: 'og:title', content: 'Slidev' }],
+    ['meta', { property: 'og:title', content: 'Slidev 中文文档' }],
     ['meta', { property: 'og:image', content: 'https://sli.dev/og-image.png' }],
     ['meta', { property: 'og:description', content: '为开发者打造的演示文稿工具' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -166,11 +166,7 @@ module.exports = {
     ['link', { href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&family=Inter:wght@200;400;500;600', rel: 'stylesheet' }],
   ],
   themeConfig: {
-<<<<<<< HEAD
     repo: 'slidevjs/docs-cn',
-=======
-    repo: 'slidevjs/docs',
->>>>>>> c15fbaec822f4d7fb017d6041da8ac689a1d74ce
     logo: '/logo.svg',
     docsDir: '',
     docsBranch: 'main',
