@@ -66,6 +66,10 @@ const Translations = [
     text: 'English',
     link: 'https://sli.dev{{pathname}}',
   },
+  {
+    text: 'Français',
+    link: 'https://fr.sli.dev{{pathname}}',
+  },
 ]
 
 const Customizations = [
@@ -190,7 +194,11 @@ module.exports = {
         items: Resources,
       },
       {
+<<<<<<< HEAD
         text: '中文',
+=======
+        text: 'English',
+>>>>>>> b282fff7911c81dbc2b9ac6af2329b228df3bd7c
         items: Translations,
       },
     ],
