@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <br>
 <p align="center">
 <a href="https://sli.dev" target="_blank">
@@ -79,3 +80,16 @@ $ npm run docs
 | [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![Notobey](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/Notobey) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
 | ZhengX |
 |[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) | 
+=======
+# [sli.dev](https://sli.dev)
+
+Documentation for [Slidev](https://github.com/slidevjs/slidev)
+
+## Translations
+
+| | Repo | Site |
+|---|---|---:|
+| **English** | [docs](https://github.com/slidevjs/docs) | [sli.dev](https://cn.sli.dev) |
+| 简体中文 | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) |
+| Français | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) |
+>>>>>>> c15fbaec822f4d7fb017d6041da8ac689a1d74ce

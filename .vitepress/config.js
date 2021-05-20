@@ -166,7 +166,11 @@ module.exports = {
     ['link', { href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&family=Inter:wght@200;400;500;600', rel: 'stylesheet' }],
   ],
   themeConfig: {
+<<<<<<< HEAD
     repo: 'slidevjs/docs-cn',
+=======
+    repo: 'slidevjs/docs',
+>>>>>>> c15fbaec822f4d7fb017d6041da8ac689a1d74ce
     logo: '/logo.svg',
     docsDir: '',
     docsBranch: 'main',
