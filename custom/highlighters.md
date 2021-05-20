@@ -34,13 +34,9 @@ highlighter: shiki
 
 ## 配置 Shiki {#configure-shiki}
 
-<<<<<<< HEAD
-创建 `./setup/shiki.ts` 文件并添加以下代码：
-=======
 <Environment type="node" />
 
-Create `./setup/shiki.ts` file with the following content
->>>>>>> a6e799196a66bf932dadaf515abc6e5d24f2ab3c
+创建 `./setup/shiki.ts` 文件并添加以下代码：
 
 ```ts
 /* ./setup/shiki.ts */

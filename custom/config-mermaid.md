@@ -2,15 +2,11 @@
 title: 配置 Mermaid
 ---
 
-<<<<<<< HEAD
 # 配置 Mermaid {#configure-mermaid}
 
-创建一份包含以下内容的 `./setup/mermaid.ts` 文件：
-=======
 <Environment type="client" />
 
-Create `./setup/mermaid.ts` with the following content:
->>>>>>> a6e799196a66bf932dadaf515abc6e5d24f2ab3c
+创建一份包含以下内容的 `./setup/mermaid.ts` 文件：
 
 ```ts
 import { defineMermaidSetup } from '@slidev/types'
