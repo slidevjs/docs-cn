@@ -45,9 +45,10 @@
 
 目前 Slidev 中文文档翻译已全部完成。
 
-**同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的官网文档](https://github.com/slidevjs/slidev) 的内容，并自动合并到 `sync-docs` 分支，然后会从 `sync-docs` 分支发起自动合并或 PR 到 main 分支。
+**同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的英文文档](https://github.com/slidevjs/docs) 的内容，然后自动合并到 `main` 或 PR 到 `main` 分支。
 
 **仓库维护者**需要**每天**检查该类型的 PR：
+
 - 如无冲突，会自动 merge 到 `main` 分支中；
 - 若有冲突，需要先解决 PR 中的冲突，再 merge 到 `main` 分支中。
 
@@ -55,17 +56,14 @@
 
 贡献者首先 fork 本仓库，基于 `main` 创建新的翻译分支，进行翻译。翻译完成后，发起到 `main` 的 PR，等待 review，review 通过，仓库维护者将 PR merge。
 
-若需要本地查看网站效果，可以切换到 `site` 分支，并执行如下命令：
+若需要本地预览网站效果，可执行如下命令：
 
-```
+```bash
 # 安装依赖，使用 pnpm
 $ pnpm install
 
-# 构建文档，site 分支使用了 Git 的 submodules，执行此命令会同时将 docs-cn 同步到 site 分支
-$ npm run docs:build
-
 # 启动文档
-$ npm run docs
+$ pnpm dev
 ```
 
 ### 贡献者
