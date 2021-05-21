@@ -1,3 +1,7 @@
+---
+title: 配置 Vue
+---
+
 # 配置 Vue {#configure-vue}
 
 <Environment type="client" />
