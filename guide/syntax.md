@@ -235,13 +235,9 @@ This is the cover page.
 
 Slidev 开箱即有对 LaTeX 的支持，得益于 [KaTeX](https://katex.org/)。
 
-<<<<<<< HEAD
-### 内联 {#inline}
-=======
 <Tweet id="1392246507793915904" />
 
-### Inline
->>>>>>> b282fff7911c81dbc2b9ac6af2329b228df3bd7c
+### 内联 {#inline}
 
 在你的 LaTeX 语法左右各加一个 `$`，用于内联渲染。
 
