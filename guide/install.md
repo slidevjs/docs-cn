@@ -19,7 +19,7 @@ $ npm init slidev@latest
 使用 Yarn：
 
 ```bash
-$ yarn create slidev@latest
+$ yarn create slidev
 ```
 
 跟随命令行的提示，它将自动为你打开幻灯片，网址是 http://localhost:3030/。

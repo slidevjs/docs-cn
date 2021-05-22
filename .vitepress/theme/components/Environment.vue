@@ -16,7 +16,11 @@ defineProps<{ type: 'node' | 'client' }>()
         此配置仅在 Node.js 环境下运行。你可以访问 Node.js 的相关 API 了解更多。
       </span>
       <span v-else>
+<<<<<<< HEAD
         此配置仅在客户端环境下运行。在引入包时，请确保浏览器的兼容性。
+=======
+        This setup function will only run on client side. Make sure the browser compatibility when importing packages.
+>>>>>>> 953ee5694ffc44df8da634f1e6123cc1b411229b
       </span>
     </div>
   </details>

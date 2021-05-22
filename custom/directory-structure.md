@@ -25,7 +25,11 @@ your-slidev/
 
 ## 组件 {#components}
 
+<<<<<<< HEAD
 约定：`./components/*.{vue,js,ts,jsx,tsx}`
+=======
+Conventions: `./components/*.{vue,js,ts,jsx,tsx,md}`
+>>>>>>> 953ee5694ffc44df8da634f1e6123cc1b411229b
 
 此目录中的组件可以在幻灯片的 Markdown 中直接使用，其组件名与文件名相同。
 

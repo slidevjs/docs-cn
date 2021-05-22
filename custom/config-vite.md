@@ -19,4 +19,8 @@ Slidev 已经内置了以下插件：
 - [vite-plugin-icons](https://github.com/antfu/vite-plugin-icons)
 - [vite-plugin-remote-assets](https://github.com/antfu/vite-plugin-remote-assets)
 
+<<<<<<< HEAD
 可以在 [此处](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts) 了解 Slidev 的相关预设。
+=======
+Learn more about the [pre-configurations here](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts).
+>>>>>>> 953ee5694ffc44df8da634f1e6123cc1b411229b
