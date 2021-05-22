@@ -16,20 +16,31 @@ title: 自定义
 theme: 'default'
 # 幻灯片的总标题，如果没有指定，那么将以第一张拥有标题的幻灯片的标题作为总标题
 title: ''
-# 在单页（SPA）构建中启用pdf下载，也可以指定一个自定义url
+
+# 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
 download: true
 # 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
 highlighter: 'prism'
 # 启用monaco编辑器，默认情况下仅在开发者（dev）模式中启用
 monaco: 'dev'
-# 幻灯片的配色方案，可以使用 'auto'，'light" 或者 'dark'
+
+# 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
 colorSchema: 'auto'
-# vue-router的模式，可以使用 'history' 或 'hash' 模式
+# vue-router 模式，可以使用 'history' 或 'hash' 模式
 routerMode: 'history'
-# 幻灯片的一些信息，可以使用markdown语法来书写
+# 幻灯片的长宽比
+aspectRatio: '16/9'
+# canvas 的真实宽度，单位为 px
+canvasWidth: 980
+
+# 为所有幻灯片添加默认的 frontmatter
+defaults:
+  layout: 'default'
+  # ...
+
+# 幻灯片的一些信息，可以使用 markdown 语法来书写
 info: |
   ## Slidev
-
   我的第一个 [Slidev](http://sli.dev/) 演示!
 ---
 ```
