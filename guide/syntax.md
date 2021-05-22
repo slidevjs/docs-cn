@@ -104,7 +104,7 @@ function add(
 //```
 ~~~
 
-这段代码会先对 `a: Ref<number> | number` and `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
+这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
 
 ### Monaco 编辑器 {#monaco-editor}
 
@@ -138,7 +138,7 @@ h1 {
 
 Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
-由 [Windi CSS](https://windicss.org) 提供支持，你可以直接使用嵌套的 css 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
+在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 css 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
 
 ```md
 # Slidev
@@ -156,7 +156,7 @@ blockquote {
 
 ## 备注 {#notes}
 
-你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，为你提供演示时的参考。
+你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，供你在演示时参考。
 
 在 Markdown 中，每张幻灯片中的最后一个注释块将被视为备注。
 
