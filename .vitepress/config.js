@@ -41,6 +41,10 @@ const Guide = [
     text: '编辑器整合',
     link: '/guide/editors',
   },
+  {
+    text: 'FAQ',
+    link: '/guide/faq',
+  },
 ]
 
 const Theme = [
