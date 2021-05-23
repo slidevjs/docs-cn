@@ -18,6 +18,7 @@
 <a href="https://github.com/slidevjs/slidev" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/slidevjs/slidev?style=social"></a>
 </p>
 
+<<<<<<< HEAD
 <br>
 <p align="center">
   <b>简体中文</b> ｜ <a href="https://github.com/slidevjs/slidev#readme">English</a>
@@ -77,3 +78,11 @@ $ pnpm dev
 | [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![Notobey](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/Notobey) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
 | ZhengX |
 |[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) | 
+=======
+| | Repo | Site | Maintainers |
+|---|---|---:|---|
+| English | [docs](https://github.com/slidevjs/docs) | [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu) |
+| 简体中文 | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) | [@QC-L](https://github.com/QC-L) [@Ivocin](https://github.com/Ivocin) |
+| Français | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) | [@ArthurDanjou](https://github.com/ArthurDanjou) |
+| Español | [docs-es](https://github.com/slidevjs/docs-es) | [es.sli.dev](https://es.sli.dev) | [@owlnai](https://github.com/owlnai) |
+>>>>>>> 020807979e900233b46bedad66ff1b813242ae9a
