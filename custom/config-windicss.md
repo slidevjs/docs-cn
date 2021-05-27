@@ -25,6 +25,7 @@ Markdown 天然支持 HTML。因此，你可以按照你想要的方式对你的
 
 ## 配置 {#configurations}
 
+<<<<<<< HEAD
 如需配置 Windi CSS，你需要对 Windi CSS 的基本配置进行扩展。
 
 ```ts
@@ -47,4 +48,31 @@ export default mergeWindicssConfig(
     }
   })
 )
+=======
+To configure Windi CSS, create `setup/windicss.ts` with the following content to extend the builtin configurations
+
+```ts
+// setup/windicss.ts
+
+import { defineWindiSetup } from '@slidev/types'
+
+// extending the builtin windicss configurations
+export default defineWindiSetup(() => ({
+  shortcuts: {
+    // custom the default background
+    'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
+  },
+  theme: {
+    extend: {
+      // fonts can be replaced here, remember to update the web font links in `index.html`
+      fontFamily: {
+        sans: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+        mono: '"Fira Code", monospace',
+      },
+    },
+  },
+}))
+>>>>>>> 2725558a0fdb273102dde01cb9b3cfb80a5a7b43
 ```
+
+Learn more about [Windi CSS configurations](https://windicss.org/guide/configuration.html)
