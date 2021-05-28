@@ -1,10 +1,10 @@
-# FAQ
+# FAQ {#faq}
 
-## Grids
+## Grids {#grids}
 
-Since Slidev is based on the Web, you can apply any grid layouts as you want. [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), or even [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), you get the full controls.
+由于 Slidev 基于 Web 运行，因此你可以使用任何想使用的布局方式。比如 [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)，[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，甚至是 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)，都可以完美兼容。
 
-Since we have [Windi CSS](https://windicss.org/) built-in, here is one simple way for you to reference:
+由于我们内置了 [Windi CSS](https://cn.windicss.org/)，你可以参考如下方式：
 
 ```html
 <div class="grid grid-cols-2 gap-4">
@@ -21,7 +21,7 @@ The second column
 </div>
 ```
 
-Go further, you can customize the size of each columns like:
+你甚至可以定制每一列的大小，比如：
 
 ```html
 <div class="grid grid-cols-[200px,1fr,10%] gap-4">
@@ -43,13 +43,13 @@ The third column (10% width to parent container)
 </div>
 ```
 
-Learn more about [Windi CSS Grids](https://windicss.org/utilities/grid.html).
+欲了解更多，请参与 [Windi CSS 的 Grids 布局](https://cn.windicss.org/utilities/grid.html)。
 
-## Positioning
+## 定位 {#positioning}
 
-Slides are defined in fixed sizes (default `980x552px`) and scale to fit with the user screen. You can safely use absolute position in your slides as they will scale along with the screen.
+幻灯片被定义为固定尺寸（默认为 `980x552px`），并会跟随用户屏幕进行缩放。你可以安全地在你的幻灯片中使用绝对定位，因为它们会随着屏幕的缩放而变化。
 
-For example:
+例如：
 
 ```html
 <div class="absolute left-30px bottom-30px">
@@ -57,7 +57,7 @@ This is a left-bottom aligned footer
 </div>
 ```
 
-To change the canvas' actual size, you can pass the `canvasWidth` options in your first frontmatter:
+如需改变 canvas 的实际尺寸，你可以在第一张幻灯片的 frontmatter 中传递 `canvasWidth` 选项：
 
 ```yaml
 ---
@@ -65,13 +65,13 @@ canvasWidth: 800
 ---
 ```
 
-## Font Size
+## Font Size {#font-size}
 
-If you feel the font size in your slides are too small, you can adjust it in a few ways:
+如果你觉得幻灯片的字体过小，你可以通过如下方式进行调整：
 
-### Override Local Style
+### 覆盖本地样式 {#override-local-style}
 
-You can override styles for each slide with the inlined `<style>` tag.
+你可以通过内联的 `<style>` 标签来覆盖每张幻灯片的样式。
 
 ```md
 # Page 1
@@ -89,11 +89,11 @@ h1 {
 This will not be affected.
 ```
 
-Learn more: [Embedded Styles](/guide/syntax.html#embedded-styles)
+了解更多：[内联样式](/guide/syntax.html#embedded-styles)
 
-### Override Global Style
+### 覆盖全局样式
 
-You can provide custom global styles by creating `./style.css`, for example
+你可以通过创建 `./style.css` 文件的方式来提供自定义全局样式，例如：
 
 ```css
 /* style.css */ 
@@ -103,16 +103,16 @@ h1 {
 }
 ```
 
-Learn more: [Global Style](/custom/directory-structure.html#style)
+了解更多：[全局样式](/custom/directory-structure.html#style)
 
-### Scale the Canvas
+### Canvas 缩放 {#scale-the-canvas}
 
-Changing the canvas' actual size will scale all your contents(text, images, components, etc.) and slides
+改变画布的实际尺寸将缩放所有内容（文本、图片、组件等）以及幻灯片。
 
 ```yaml
 ---
 # default: 980
-# since the canvas gets smaller, the visual size will become larger
+# 由于画布变小，视觉尺寸也会变大
 canvasWidth: 800
 ---
 ```
