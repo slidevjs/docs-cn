@@ -10,7 +10,6 @@ Slidev 对项目结构进行了一些约定，以尽量减少配置项，使功�
 
 ```bash
 your-slidev/
-<<<<<<< HEAD
   ├── components/       # 自定义组件
   ├── layouts/          # 自定义布局
   ├── public/           # 静态资源
@@ -18,18 +17,7 @@ your-slidev/
   ├── styles/           # 自定义样式
   ├── index.html        # 注入的 index.html
   ├── slides.md         # 幻灯片主入口
-  ├── vite.config.ts    # 扩展 vite 配置
-  └── windi.config.ts   # 扩展 windicss 配置
-=======
-  ├── components/       # custom components
-  ├── layouts/          # custom layouts
-  ├── public/           # static assets
-  ├── setup/            # custom setup / hooks
-  ├── styles/           # custom style
-  ├── index.html        # injections to index.html
-  ├── slides.md         # the main slides entry
-  └── vite.config.ts   # extending vite config
->>>>>>> 2725558a0fdb273102dde01cb9b3cfb80a5a7b43
+  └── vite.config.ts    # 扩展 vite 配置
 ```
 
 以上所有均为可选。
