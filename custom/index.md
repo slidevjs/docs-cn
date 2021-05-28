@@ -53,10 +53,12 @@ Slidev 使用特定的目录结构来减少配置的复杂度，并使功能扩�
 
 具体请参考 [目录结构](/custom/directory-structure) 章节。
 
-## `vite.config.ts` {#vite-config-ts}
+## Config Tools {#config-tools}
 
-请参考 [Vite 配置](/custom/config-vite) 章节。
-
-## `windicss.config.ts` {#windicss-config-ts}
-
-请参考 [Windi CSS 配置](/custom/config-windicss) 章节。
+- [语法高亮器](/custom/highlighters)
+- [配置 Vue](/custom/config-vue)
+- [配置 Vite](/custom/config-vite)
+- [配置 Windi CSS](/custom/config-windicss)
+- [配置 Monaco](/custom/config-monaco)
+- [配置 KaTeX](/custom/config-katex)
+- [配置 Mermaid](/custom/config-mermaid)

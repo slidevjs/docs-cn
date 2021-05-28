@@ -25,26 +25,29 @@ Markdown 天然支持 HTML。因此，你可以按照你想要的方式对你的
 
 ## 配置 {#configurations}
 
-如需配置 Windi CSS，你需要对 Windi CSS 的基本配置进行扩展。
+如需配置 Windi CSS，请根据如下内容创建并配置 `setup/windicss.ts`，以对内部配置进行扩展：
 
 ```ts
-import { mergeWindicssConfig, defineConfig } from 'vite-plugin-windicss'
-import BaseConfig from '@slidev/client/windi.config'
-// 或者可以对主题进行扩展：
-/* import BaseConfig from '@slidev/theme-seriph/windi.config' */
+// setup/windicss.ts
 
-export default mergeWindicssConfig(
-  BaseConfig,
-  defineConfig({
-    theme: {
-      extend: {
-        colors: {
-          primary: {
-            DEFAULT: '#42b883'
-          }
-        }
-      }
-    }
-  })
-)
+import { defineWindiSetup } from '@slidev/types'
+
+// 对内部 windicss 配置进行扩展
+export default defineWindiSetup(() => ({
+  shortcuts: {
+    // 自定义默认背景
+    'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
+  },
+  theme: {
+    extend: {
+      // 字体可以被替换，请记得更新 `index.html` 中的字体链接
+      fontFamily: {
+        sans: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+        mono: '"Fira Code", monospace',
+      },
+    },
+  },
+}))
 ```
+
+欲了解更多，请参阅 [Windi CSS 配置](https://windicss.org/guide/configuration.html)。

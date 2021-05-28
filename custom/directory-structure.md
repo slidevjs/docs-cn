@@ -17,8 +17,7 @@ your-slidev/
   ├── styles/           # 自定义样式
   ├── index.html        # 注入的 index.html
   ├── slides.md         # 幻灯片主入口
-  ├── vite.config.ts    # 扩展 vite 配置
-  └── windi.config.ts   # 扩展 windicss 配置
+  └── vite.config.ts    # 扩展 vite 配置
 ```
 
 以上所有均为可选。
