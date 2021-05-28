@@ -4,7 +4,7 @@
 
 由于 Slidev 基于 Web 运行，因此你可以使用任何想使用的布局方式。比如 [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)，[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，甚至是 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)，都可以完美兼容。
 
-由于我们内置了 [Windi CSS](https://cn.windicss.org/)，你可以参考如下方式：
+由于我们内置了 [Windi CSS](https://cn.windicss.org/)，你也可以参考使用如下方式：
 
 ```html
 <div class="grid grid-cols-2 gap-4">
@@ -43,7 +43,7 @@ The third column (10% width to parent container)
 </div>
 ```
 
-欲了解更多，请参与 [Windi CSS 的 Grids 布局](https://cn.windicss.org/utilities/grid.html)。
+欲了解更多，请參考 [Windi CSS 的 Grids 布局](https://cn.windicss.org/utilities/grid.html)。
 
 ## 定位 {#positioning}
 
