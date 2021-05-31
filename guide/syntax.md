@@ -292,3 +292,94 @@ C -->|Two| E[Result 2]
 ~~~
 
 了解更多：[Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+
+## 多个入口点 {#multiple-entries}
+
+从 v0.15.0 开始，我们将支持多个入口点。这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
+
+`slides.md` :
+
+```md
+# Page 1
+
+This is a normal page
+
+---
+src: ./subpage2.md
+---
+
+<!-- this page will be loaded from './subpage2.md' -->
+Inline content will be ignored
+```
+
+`subpage2.md` :
+
+```md
+# Page 2
+
+This page is from another file
+```
+
+### 合并 Frontmatter {#frontmatter-merging}
+
+你可以为主入口点和外部 markdown 页面提供 frontmatter。如果其中有相同的 key，**主入口点的 key 拥有更高的优先级**。例如：
+
+`slides.md` :
+
+```md
+---
+src: ./cover.md
+background: https://sli.dev/bar.png
+class: text-center
+---
+```
+
+`cover.md` :
+
+```md
+---
+layout: cover
+background: https://sli.dev/foo.png
+---
+
+# Cover
+
+Cover Page
+```
+
+其效果最终与下述页面相同：
+
+```md
+---
+layout: cover
+background: https://sli.dev/bar.png
+class: text-center
+---
+
+# Cover
+
+Cover Page
+```
+
+### 页面复用 {#page-reusing}
+
+有了多入口点的加持，对页面进行重用变得很容易。例如：
+
+```yaml
+---
+src: ./cover.md
+---
+
+---
+src: ./intro.md
+---
+
+---
+src: ./content.md
+---
+
+---
+# reuse
+src: ./content.md
+---
+```
