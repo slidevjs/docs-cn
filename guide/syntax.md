@@ -291,14 +291,11 @@ C -->|Two| E[Result 2]
 //```
 ~~~
 
-<<<<<<< HEAD
 了解更多：[Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
-=======
-Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
 
-## Multiple Entries
+## 多个入口点 {#multiple-entries}
 
-From v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
+从 v0.15.0 开始，我们将支持多个入口点。这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
 
 `slides.md` :
 
@@ -323,9 +320,9 @@ Inline content will be ignored
 This page is from another file
 ```
 
-### Frontmatter Merging
+### 合并 Frontmatter {#frontmatter-merging}
 
-You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example
+你可以为主入口点和外部 markdown 页面提供 frontmatter。如果其中有相同的 key，**主入口点的 key 拥有更高的优先级**。例如：
 
 `slides.md` :
 
@@ -350,7 +347,7 @@ background: https://sli.dev/foo.png
 Cover Page
 ```
 
-They will end up being equivalent of the following page:
+其效果最终与下述页面相同：
 
 ```md
 ---
@@ -364,9 +361,9 @@ class: text-center
 Cover Page
 ```
 
-### Page Reusing
+### 页面复用 {#page-reusing}
 
-With the multi-entries support, reusing pages could be straightforward. For example:
+有了多入口点的加持，对页面进行重用变得很容易。例如：
 
 ```yaml
 ---
@@ -386,4 +383,3 @@ src: ./content.md
 src: ./content.md
 ---
 ```
->>>>>>> 6c65fa5e51f6c3d0dec02c647eaa82edecc6a81a
