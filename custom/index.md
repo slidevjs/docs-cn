@@ -45,11 +45,7 @@ info: |
 ---
 ```
 
-<<<<<<< HEAD
-你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L16) 获取到更多的配置信息。
-=======
-Check out the [type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) for more options.
->>>>>>> 441775ca56eade87b9dcfe9fc9b673f3e5a29ce1
+你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) 获取到更多的配置信息。
 
 ## 目录结构 {#directory-structure}
 
