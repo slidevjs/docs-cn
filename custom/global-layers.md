@@ -30,7 +30,7 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 如需有条件地启用它，你可以用 [Vue 全局上下文](/custom/vue-context)。
 
 ```html
-<!-- hide the footer from Page 4 -->
+<!-- 隐藏第四页页脚 -->
 <template>
   <footer
     v-if="$slidev.nav.currentPage !== 4"
@@ -42,7 +42,7 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 ```
 
 ```html
-<!-- hide the footer from "cover" layout -->
+<!-- "cover" 布局的情况下隐藏页脚 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
@@ -54,7 +54,7 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 ```
 
 ```html
-<!-- an example footer for pages -->
+<!-- 一个页脚的完整示例 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
