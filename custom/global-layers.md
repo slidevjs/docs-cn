@@ -1,18 +1,22 @@
-# Global Layers
+---
+title: 全局图层
+---
 
-> Available since v0.17
+# 全局图层 {#global-layers}
 
-Global layers allow you to have custom components that **persistent** across slides. This could be useful for having footers, cross-slides animations, global effects, etc.
+> 自 v0.17 起可用
 
-Slidev provides two layers for this usage, create `global-top.vue` or `global-bottom.vue` under your project root and it will pick up automatically.
+全局图层允许你拥有**持续存在**的跨幻灯片自定义组件。这对于有页脚、跨幻灯片动画、全局特效等来世可能很有用。
 
-Layers relationship:
+Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 `global-top.vue` 或 `global-bottom.vue` 文件，它们会被自动识别。
 
-- Global Top (`global-top.vue`)
-- Slides
-- Global Bottom (`global-bottom.vue`)
+图层关系：
 
-## Example
+- 全局顶层 (`global-top.vue`)
+- 幻灯片
+- 全局底层 (`global-bottom.vue`)
+
+## 示例 {#example}
 
 ```html
 <!-- global-top.vue -->
@@ -21,12 +25,12 @@ Layers relationship:
 </template>
 ```
 
-The text `Your Name` will appear to all your slides.
+文字 `Your Name` 将出现在你所有幻灯片中。
 
-To enabled it conditionally, you can apply it with the [Vue Global Context](/custom/vue-context).
+如需有条件地启用它，你可以用 [Vue 全局上下文](/custom/vue-context)。
 
 ```html
-<!-- hide the footer from Page 4 -->
+<!-- 在第四页时隐藏页脚 -->
 <template>
   <footer
     v-if="$slidev.nav.currentPage !== 4"
@@ -38,7 +42,7 @@ To enabled it conditionally, you can apply it with the [Vue Global Context](/cus
 ```
 
 ```html
-<!-- hide the footer from "cover" layout -->
+<!-- "cover" 布局的情况下隐藏页脚 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
@@ -50,7 +54,7 @@ To enabled it conditionally, you can apply it with the [Vue Global Context](/cus
 ```
 
 ```html
-<!-- an example footer for pages -->
+<!-- 一个显示页数的页脚示例 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
