@@ -41,7 +41,7 @@ Hey!
 
 ### `v-click-hide`
 
-Same as `v-click` but instead of making the element appear, it makes the element invisible after clicking.
+与 `v-click` 相同，但不是让元素出现，而是让元素在点击后不可见。
 
 ```md
 <div v-click-hide>Hello</div>

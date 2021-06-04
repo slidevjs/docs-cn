@@ -117,9 +117,9 @@ canvasWidth: 800
 ---
 ```
 
-### Use Transform
+### 使用 Transform {#use-transform}
 
-We provide a built-in component `<Transform />`, which is a thin wrapper of CSS transform property.
+我们提供了内置的 `<Transform />` 组件，它针对 CSS 的 transform 属性进行了简易封装。
 
 ```md
 <Tranform :scale="1.4">
