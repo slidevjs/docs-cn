@@ -1,10 +1,14 @@
-# Vue Global Context
+---
+title: Vue 全局上下文
+---
 
-Slidev injected a [global Vue context](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev` for advanced conditions or navigation controls.
+# Vue 全局上下文 {#vue-global-context}
 
-## Usage
+Slidev 注入了一个 [全局的 Vue 上下文](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev`，它用于高级的条件判断或导航控制。
 
-You can access it anywhere in your markdown and Vue template, with the ["Mustache" syntax](https://v3.vuejs.org/guide/template-syntax.html#interpolations).
+## 用法 {#usage}
+
+你可以在你的 markdown 文件以及 Vue 模板的任何位置使用 ["Mustache" 语法](https://v3.vuejs.org/guide/template-syntax.html#interpolations) 访问它。
 
 ```md
 <!-- slides.md -->
@@ -23,33 +27,33 @@ Current page is: {{ $slidev.nav.currentPage }}
 </template>
 ```
 
-## Properties
+## 属性 {#properties}
 
-### `$slidev.nav`
+### `$slidev.nav` {#slidev-nav}
 
-A reactive object holding the properties and controls of the slides navigation. For examples:
+一个响应式对象，它拥有幻灯片导航的属性以及控制权。例如：
 
 ```js
-$slidev.nav.next() // go next step
+$slidev.nav.next() // 执行下一步
 
-$slidev.nav.nextSlide() // go next slide (skip v-clicks)
+$slidev.nav.nextSlide() // 跳转下一张幻灯片 (忽略 v-clicks)
 
-$slidev.nav.go(10) // go slide #10
+$slidev.nav.go(10) // 去到幻灯片的第 10 页
 ```
 
 ```js
-$slidev.nav.currentPage // current slide number
+$slidev.nav.currentPage // 获取当前幻灯片的页数
 
-$slidev.nav.currentLayout // current layout id
+$slidev.nav.currentLayout // 当前的布局 id
 
-$slidev.nav.clicks // current clicks count
+$slidev.nav.clicks // 目前的点击次数
 ```
 
-For more properties available, refer to the [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts) exports.
+欲了解更多可用属性，请参阅 [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts) 的 exports。
 
-### `$slidev.configs`
+### `$slidev.configs` {#slidev-configs}
 
-A reactive object holding the parsed [configurations in the first frontmatter](/custom/#frontmatter-configures) of your `slides.md`. For example
+一个响应式对象，它存储着你 `slides.md` 中解析后的 [第一个 frontmatter 中的配置](/custom/#frontmatter-configures)。例如：
 
 ```yaml
 ---
@@ -61,9 +65,9 @@ title: My First Slidev!
 {{ $slidev.configs.title }} // 'My First Slidev!'
 ```
 
-### `$slidev.themeConfigs`
+### `$slidev.themeConfigs` {#slidev-themeconfigs}
 
-A reactive object holding the parsed theme configurations.
+一个响应式对象，它存储着解析后的主题配置。
 
 ```yaml
 ---
