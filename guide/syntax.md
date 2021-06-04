@@ -213,16 +213,13 @@ Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标�
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
-<<<<<<< HEAD
-## 配置 {#configurations}
-=======
-## Slots
+## 插槽 {#slots}
 
-> Available since v0.18
+> 自 v0.18 开始可用
 
-Some layouts can provide multiple contributing points using [Vue's named slots](https://v3.vuejs.org/guide/component-slots.html).
+一些布局可以使用 [Vue 的具名插槽](https://v3.vuejs.org/guide/component-slots.html)。
 
-For example, in [`two-cols` layout](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), you can have two columns left (`default` slot) and right (`right` slot) side by side.
+例如，在 [`two-cols` 布局](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue) 中，你可以采用左（`default` 插槽）右（`right` 插槽）两列的布局方式。
 
 ```md
 ---
@@ -256,7 +253,7 @@ This shows on the right
 </div>
 </div>
 
-We also provide a shorthand syntax sugar `::name::` for slot name. The following example works exactly the same as the previous one.
+我们还未具名插槽提供了一个语法糖 `::name::`。下述示例与上述示例的工作原理完全相同。
 
 ```md
 ---
@@ -274,7 +271,7 @@ This shows on the left
 This shows on the right
 ```
 
-You can also explicitly specify the default slot and provide in custom order
+你也可以明确的指定默认插槽，并按自定义顺序展示。
 
 ```md
 ---
@@ -294,8 +291,7 @@ This shows on the right
 This shows on the left
 ```
 
-## Configurations
->>>>>>> aa3bde2c57d659efb1d2071a573574c0a9e545c6
+## 配置 {#configurations}
 
 依赖的所有配置都可以在 Markdown 文件中定义，比如：
 
@@ -377,13 +373,9 @@ C -->|Two| E[Result 2]
 
 ## 多个入口点 {#multiple-entries}
 
-<<<<<<< HEAD
-从 v0.15.0 开始，我们将支持多个入口点。这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
-=======
-> Available since v0.15
+> 自 v0.15 开始可用
 
-You can split your `slides.md` into multiple files and organize them as you want.
->>>>>>> aa3bde2c57d659efb1d2071a573574c0a9e545c6
+这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
 
 `slides.md` :
 
