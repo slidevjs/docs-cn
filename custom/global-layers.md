@@ -12,9 +12,9 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 
 图层关系：
 
-- 全局头部 (`global-top.vue`)
+- 全局顶层 (`global-top.vue`)
 - 幻灯片
-- 全局底部 (`global-bottom.vue`)
+- 全局底层 (`global-bottom.vue`)
 
 ## 示例 {#example}
 
@@ -25,7 +25,7 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 </template>
 ```
 
-文案 `Your Name` 将展示在你所有幻灯片中。
+文字 `Your Name` 将出现在你所有幻灯片中。
 
 如需有条件地启用它，你可以用 [Vue 全局上下文](/custom/vue-context)。
 
