@@ -90,7 +90,15 @@ const Customizations = [
     link: '/custom/directory-structure',
   },
   {
+<<<<<<< HEAD
     text: '语法高亮器',
+=======
+    text: 'Fonts',
+    link: '/custom/fonts',
+  },
+  {
+    text: 'Highlighters',
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
     link: '/custom/highlighters',
   },
   {

@@ -33,7 +33,18 @@ aspectRatio: '16/9'
 # canvas 的真实宽度，单位为 px
 canvasWidth: 980
 
+<<<<<<< HEAD
 # 为所有幻灯片添加默认的 frontmatter
+=======
+# fonts will be auto imported from Google fonts
+# Learn more: https://sli.dev/custom/fonts
+fonts:
+  sans: 'Roboto'
+  serif: 'Roboto Slab'
+  mono: 'Fira Code'
+
+# default frontmatter applies to all slides
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 defaults:
   layout: 'default'
   # ...
