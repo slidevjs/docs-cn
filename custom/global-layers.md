@@ -54,7 +54,7 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 ```
 
 ```html
-<!-- 一个页脚的完整示例 -->
+<!-- 一个显示页数的页脚示例 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
