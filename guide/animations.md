@@ -39,6 +39,14 @@ Hey!
 
 当你点击了“下一步”按钮之后，`Hello` 和 `World` 会同时出现。
 
+### `v-click-hide`
+
+Same as `v-click` but instead of making the element appear, it makes the element invisible after clicking.
+
+```md
+<div v-click-hide>Hello</div>
+```
+
 ### `v-clicks`
 
 `v-clicks` 仅作为组件提供。它可以快速将其子元素全部添加 `v-click` 指令。它在列表中尤为实用。
