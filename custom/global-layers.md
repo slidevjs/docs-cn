@@ -30,7 +30,7 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 如需有条件地启用它，你可以用 [Vue 全局上下文](/custom/vue-context)。
 
 ```html
-<!-- 隐藏第四页页脚 -->
+<!-- 在第四页时隐藏页脚 -->
 <template>
   <footer
     v-if="$slidev.nav.currentPage !== 4"
