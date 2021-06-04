@@ -48,7 +48,9 @@ $ npx slidev
 
 ## 全局安装 {#install-globally}
 
-从 v0.14.0 开始，我们对全局安装进行了**实验性**的支持。你可以通过如下命令来安装它：
+> 自 v0.14 开始可用
+
+你可以使用如下命令在全局安装 Slidev：
 
 ```bash
 $ npm i -g @slidev/cli

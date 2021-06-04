@@ -213,6 +213,84 @@ Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标�
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
+## 插槽 {#slots}
+
+> 自 v0.18 开始可用
+
+一些布局可以使用 [Vue 的具名插槽](https://v3.vuejs.org/guide/component-slots.html)。
+
+例如，在 [`two-cols` 布局](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue) 中，你可以采用左（`default` 插槽）右（`right` 插槽）两列的布局方式。
+
+```md
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+# Left
+
+This shows on the left
+
+</template>
+<template v-slot:right>
+
+# Right
+
+This shows on the right
+
+<template>
+```
+
+<div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
+<div>
+<h3>Left</h3>
+<p>This shows on the left</p>
+</div>
+<div>
+<h3>Right</h3>
+<p>This shows on the right</p>
+</div>
+</div>
+
+我们还未具名插槽提供了一个语法糖 `::name::`。下述示例与上述示例的工作原理完全相同。
+
+```md
+---
+layout: two-cols
+---
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+```
+
+你也可以明确的指定默认插槽，并按自定义顺序展示。
+
+```md
+---
+layout: two-cols
+---
+
+::right::
+
+# Right
+
+This shows on the right
+
+::default::
+
+# Left
+
+This shows on the left
+```
+
 ## 配置 {#configurations}
 
 依赖的所有配置都可以在 Markdown 文件中定义，比如：
@@ -295,7 +373,9 @@ C -->|Two| E[Result 2]
 
 ## 多个入口点 {#multiple-entries}
 
-从 v0.15.0 开始，我们将支持多个入口点。这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
+> 自 v0.15 开始可用
+
+这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
 
 `slides.md` :
 
