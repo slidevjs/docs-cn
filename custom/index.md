@@ -33,6 +33,13 @@ aspectRatio: '16/9'
 # canvas 的真实宽度，单位为 px
 canvasWidth: 980
 
+# 字体将从 Google 字体自动导入
+# 了解更多：https://sli.dev/custom/fonts
+fonts:
+  sans: 'Roboto'
+  serif: 'Roboto Slab'
+  mono: 'Fira Code'
+
 # 为所有幻灯片添加默认的 frontmatter
 defaults:
   layout: 'default'

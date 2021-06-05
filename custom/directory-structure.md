@@ -185,6 +185,6 @@ import './layouts.css'
 
 ## 全局图层 {#global-layers}
 
-约定：`global-top.vue` / `global-bottom.vue`
+约定：`global-top.vue` | `global-bottom.vue`
 
 了解更多：[全局图层](/custom/global-layers)
