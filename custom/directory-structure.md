@@ -183,14 +183,8 @@ import './layouts.css'
 </html>
 ```
 
-<<<<<<< HEAD
 ## 全局图层 {#global-layers}
-=======
-## Global Layers
 
-Conventions: `global-top.vue` | `global-bottom.vue`
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
-
-约定：`global-top.vue` / `global-bottom.vue`
+约定：`global-top.vue` | `global-bottom.vue`
 
 了解更多：[全局图层](/custom/global-layers)

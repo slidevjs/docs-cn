@@ -16,21 +16,12 @@ $ npm init slidev-theme
 
 一个主题可以自定义以下功能：
 
-<<<<<<< HEAD
 - 全局样式
-- 使用 Web 字体
+- 提供默认配置（字体、配色方案、语法高亮器等）
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
 - 扩展 Windi CSS 配置
 - 配置 Monaco, Prism 等工具
-=======
-- Global styles
-- Provide default configurations (fonts, color schema, highlighters, etc.)
-- Provide custom layouts or override the existing one
-- Provide custom components or override the existing one
-- Extend Windi CSS configurations
-- Configure tools like Monaco and Prism
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 ## 约定 {#conventions}
 
@@ -41,11 +32,7 @@ $ npm init slidev-theme
 
 ## 配置说明 {#setup}
 
-<<<<<<< HEAD
-如果想要测试自己编写的主题，你可以新建 `example.md` 并在 frontmatter 中增加以下代码，以告知 Slidev 你不想继承于其他主题。
-=======
-To set up the testing playground for your theme, you can create `example.md` with the following frontmatter, to tell Slidev you are using the current directory as a theme.
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
+如果想要测试自己编写的主题，你可以新建 `example.md` 并在 frontmatter 中增加以下代码，以告知 Slidev 你正在使用当前目录作为一个主题。
 
 ```md
 ---
@@ -71,14 +58,11 @@ theme: ./
 
 主题可以定制的范围与本地自定义相一致，可以参阅 [自定义文档](/custom/)。
 
-<<<<<<< HEAD
-## 配色方案 {#color-schema}
-=======
-## Default Configurations
+## 默认配置 {#default-configurations}
 
-> Available since v0.19
+> 自 v0.19 起可用
 
-A theme can provide default [configurations](/custom/#frontmatter-configures) via `package.json`.
+主题可以通过 `package.json` 提供默认的 [配置](/custom/#frontmatter-configures)。
 
 ```json
 // package.json
@@ -96,14 +80,13 @@ A theme can provide default [configurations](/custom/#frontmatter-configures) vi
 }
 ```
 
-Fonts will be auto imported from [Google Fonts](https://fonts.google.com/).
+字体将从 [Google Fonts](https://fonts.google.com/) 自动导入。
 
-Learn more about [fonts](/custom/fonts) and [frontmatter configurations](/custom/#frontmatter-configures).
+欲了解更多，请参阅 [fonts](/custom/fonts) 和 [frontmatter 配置](/custom/#frontmatter-configures)。
 
-## Theme Metadata
+## 主题元数据 {#theme-metadata}
 
-### Color Schema
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
+### 配色方案 {#color-schema}
 
 默认情况下，Sildev 假定主题会同时支持亮色与暗色两种模式。如果希望自己的主题只以某种预设的配色方案展现，你需要在 `package.json` 中显式指定：
 
@@ -137,11 +120,7 @@ html.dark {
 
 在切换为暗色模式时 Slidev 会为页面中的 `html` 元素添加 `dark` 类。
 
-<<<<<<< HEAD
-## 高亮工具 {#highlighter}
-=======
-### Highlighter
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
+### 语法高亮器 {#highlighter}
 
 主题中也可以设置代码高亮配色，我们同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki)。欲了解更多，请参阅 [语法高亮文档](/custom/highlighters)。
 
@@ -158,9 +137,9 @@ html.dark {
 }
 ```
 
-### Slidev Version
+### Slidev 版本 {#slidev-version}
 
-If the theme is relying on a specific feature of Slidev that are newly introduced, you can set the minimal Slidev version required to have your theme working properly:
+如果主题依赖于 Slidev 的某项新特性，你可以为主题设置最小的 Slidev 版本，以使你的主题可以正常工作：
 
 ```json
 // package.json
@@ -171,4 +150,4 @@ If the theme is relying on a specific feature of Slidev that are newly introduce
 }
 ```
 
-If users are using older versions of Slidev, an error will be thrown.
+如果用户使用的是旧版本的 Slidev，将会抛出错误。
