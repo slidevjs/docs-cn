@@ -130,11 +130,11 @@ const Customizations = [
     link: '/custom/config-shortcuts',
   },
   {
-    text: 'Vue Global Context',
+    text: 'Vue 全局上下文',
     link: '/custom/vue-context',
   },
   {
-    text: 'Global Layers',
+    text: '全局图层',
     link: '/custom/global-layers',
   }
 ]
