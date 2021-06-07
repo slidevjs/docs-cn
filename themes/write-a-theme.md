@@ -27,8 +27,13 @@ $ npm init slidev-theme
 
 主题发布到 npm，需遵循以下约定：
 
+<<<<<<< HEAD
 - 包名应该以 `slidev-theme-` 开头，例如：`slidev-theme-awesome`
 - 在主题 `package.json` 的 `keywords` 中添加 `slidev-theme` 和 `slidev` 关键词
+=======
+- Package name should start with `slidev-theme-`, for example: `slidev-theme-awesome`
+- Add `slidev-theme` and `slidev` in the `keywords` field of your `package.json`
+>>>>>>> 010799691b5c572dba187a5a8bdae3ba6abb319d
 
 ## 配置说明 {#setup}
 
