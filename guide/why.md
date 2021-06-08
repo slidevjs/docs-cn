@@ -42,11 +42,7 @@ Slidev 得益于 [Vite](https://vitejs.dev/)，[Vue 3](https://v3.vuejs.org/) �
 
 ## 互动性 & 直观表达 {#interactive-expressive}
 
-<<<<<<< HEAD
 你可以编写自定义的 Vue 组件并直接在你的 MarkDown 文件中使用它们。你也可以在演示文稿中与它们互动，以更深入和直观的方式表达你的想法。
-=======
-You can write custom Vue components and use them directly inside your markdown file. You can also interact with them inside the presentation to express your idea in a more interesting and intuitive way.
->>>>>>> 010799691b5c572dba187a5a8bdae3ba6abb319d
 
 ## 支持录制 {#recording-support}
 
