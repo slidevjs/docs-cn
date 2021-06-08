@@ -126,7 +126,7 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
-    text: 'Configure Shortcuts',
+    text: '配置快捷键',
     link: '/custom/config-shortcuts',
   },
   {

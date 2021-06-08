@@ -1,10 +1,14 @@
-# Configure Shortcuts
+---
+title: 配置快捷键
+---
 
-> Available since v0.20
+# 配置快捷键 {#configure-shortcuts}
+
+> 自 v0.20 起可用
 
 <Environment type="client" />
 
-Create `./setup/shortcuts.ts` with the following content:
+创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
 
 ```ts
 import { defineShortcutsSetup, NavOperations } from '@slidev/types'
@@ -25,8 +29,8 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 })
 ```
 
-With the setup, you can provide the custom setting for shortcuts mentioned in [Navigation](/guide/navigation#navigation-bar). The above configuration binds next animation or slide to <kbd>enter</kbd> and previous animation or slide to <kbd>backspace</kbd>.
+在配置时，你可以添加或者一些自定义的快捷键。例如，上面的配置为 <kbd>enter</kbd> 绑定了下一动画或幻灯片，为 <kbd>backspace</kbd> 绑定了上一动画或幻灯片。
 
-The configuration function receives an object with some navigation methods, and returns an array containing some shortcut configuration. Refer to the type definitions for more details.
+配置函数会接收一个封装有导航函数的对象参数，返回一个快捷键配置信息的数组，你可以参考其类型定义获得详细信息。
 
-Refer to [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) for more details about key pressed event.
+关于键盘事件，请参考 [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/)。
