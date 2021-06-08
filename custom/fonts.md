@@ -4,7 +4,7 @@ title: 字体
 
 # 字体 {#fonts}
 
-> 自 v0.19.3 起可用
+> 自 v0.20 起可用
 
 虽然你可以使用 HTML 和 CSS 为你的幻灯片定制你想要的字体和样式，但 Slidev 提供了另一种较为便捷的方式，可以让你轻松使用它们。
 
@@ -39,6 +39,23 @@ fonts:
   local: 'Helvetica Neue'
 ---
 ```
+
+## weights 和斜体 {#weights-italic}
+
+默认情况下，Slidev 为每种字体引入了三种 weight 大小 `200`，`400`，`600`。你可以按如下方式配置它们：
+
+```yaml
+---
+fonts:
+  sans: 'Robot'
+  # 默认为
+  weights: '200,400,600'
+  # 引入斜体字体，默认 `false`
+  italic: false
+---
+```
+
+这些配置适用于所有的网络字体。如果要对每种字体的 weight 进行更细粒度的控制，你需要用 [HTML](/custom/directory-structure.html#index-html) 和 CSS 手动引入它们。
 
 ## 降级字体 {#fallbck-fonts}
 

@@ -4,7 +4,7 @@ title: 配置快捷键
 
 # 配置快捷键 {#configure-shortcuts}
 
-> Available since v0.20
+> 自 v0.20 起可用
 
 <Environment type="client" />
 
