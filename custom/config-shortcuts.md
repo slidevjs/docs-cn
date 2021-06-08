@@ -4,6 +4,8 @@ title: 配置快捷键
 
 # 配置快捷键 {#configure-shortcuts}
 
+> Available since v0.20
+
 <Environment type="client" />
 
 创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
