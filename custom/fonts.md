@@ -4,7 +4,11 @@ title: 字体
 
 # 字体 {#fonts}
 
+<<<<<<< HEAD
 > 自 v0.19.3 起可用
+=======
+> Available since v0.20
+>>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
 
 虽然你可以使用 HTML 和 CSS 为你的幻灯片定制你想要的字体和样式，但 Slidev 提供了另一种较为便捷的方式，可以让你轻松使用它们。
 
@@ -40,7 +44,28 @@ fonts:
 ---
 ```
 
+<<<<<<< HEAD
 ## 降级字体 {#fallbck-fonts}
+=======
+## Weights & Italic
+
+By default, Slidev imports three weights `200`,`400`,`600` for each font. You can configure them by:
+
+```yaml
+---
+fonts:
+  sans: 'Robot'
+  # default
+  weights: '200,400,600'
+  # import italic fonts, default `false`
+  italic: false
+---
+```
+
+This configuration applies to all web fonts. For more fine-grained controls of each font's weights, you will need to manually import them with [HTML](/custom/directory-structure.html#index-html) and CSS.
+
+## Fallback Fonts
+>>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
 
 大多数情况下，只需指定 “特殊字体” 即可，Slidev 会为你提供可降级的字体。例如：
 
