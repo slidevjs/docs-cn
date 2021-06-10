@@ -20,7 +20,7 @@ Slidev 带有一个集成的 [CodeMirror](https://codemirror.net/) 编辑器，�
 
 <p align="center">
     <a href="https://github.com/slidevjs/slidev" target="_blank">
-        <img src="https://github.com/slidevjs/slidev/blob/main/assets/logo-for-vscode.png?raw=true" alt="Slidev" width="300"/>
+        <img src="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/logo-for-vscode.png" alt="Slidev" width="300"/>
     </a>
     <br>
     <a href="https://marketplace.visualstudio.com/items?itemName=antfu.slidev" target="__blank">
