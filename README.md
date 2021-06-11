@@ -59,12 +59,18 @@
 若需要本地预览网站效果，可执行如下命令：
 
 ```bash
-# 安装依赖，使用 pnpm
-$ pnpm install
+# 全局安装 pnpm
+$ npm i -g pnpm
 
+# 安装依赖，使用 pnpm
+$ pnpm i
 # 启动文档
-$ pnpm dev
+$ pnpm run dev
 ```
+
+接着访问 `http://localhost:3000`，即可。
+
+或者安装 [基于 VSCode 的 Vite 插件](https://marketplace.visualstudio.com/items?itemName=antfu.vite) 进行编辑。
 
 ### 贡献者
 
@@ -76,4 +82,4 @@ $ pnpm dev
 | Jacob | Qiang | raintygao | 六个骨头 | Kim Yang | KnowsCount |
 | [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![Notobey](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/Notobey) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
 | ZhengX |
-|[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) | 
+|[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) |
