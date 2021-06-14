@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <br>
 <p align="center">
 <a href="https://sli.dev" target="_blank">
@@ -84,36 +83,3 @@ $ pnpm run dev
 | [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![Notobey](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/Notobey) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
 | ZhengX |
 |[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) |
-=======
-# [sli.dev](https://sli.dev)
-
-Documentation for [Slidev](https://github.com/slidevjs/slidev)
-
-## Translations
-
-| | Repo | Site | Maintainers |
-|---|---|---:|---|
-| English | [docs](https://github.com/slidevjs/docs) | [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu) |
-| 简体中文 | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) | [@QC-L](https://github.com/QC-L) [@Ivocin](https://github.com/Ivocin) |
-| Français | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) | [@ArthurDanjou](https://github.com/ArthurDanjou) |
-| Español | [docs-es](https://github.com/slidevjs/docs-es) | [es.sli.dev](https://es.sli.dev) | [@owlnai](https://github.com/owlnai) |
-| Русский | [docs-ru](https://github.com/slidevjs/docs-ru) | [ru.sli.dev](https://ru.sli.dev) | [@xesjkeee](https://github.com/xesjkeee) |
-| Việt Nam | [docs-vn](https://github.com/slidevjs/docs-vn) | [vn.sli.dev](https://vn.sli.dev) | [@bongudth](https://github.com/bongudth) |
-
-## Start Server Locally
-
-```
-npm i -g pnpm
-
-pnpm i
-pnpm run dev
-```
-
-And then visit `http://localhost:3000`
-
-Or install the [Vite extension for VS Code](https://marketplace.visualstudio.com/items?itemName=antfu.vite) to edit side-by-side.
-
-## Help on Translating
-
-See [TRANSLATIONS.md](/TRANSLATIONS.md)
->>>>>>> 3a58ccea81f0bf2144ade3b0fc40aa23cbe5d675
