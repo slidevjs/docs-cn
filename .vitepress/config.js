@@ -208,6 +208,15 @@ module.exports = {
     editLinks: true,
     editLinkText: '改进翻译',
 
+    algolia: {
+      apiKey: '1a5c5a504139c58f428974c78c55291d',
+      indexName: 'slidev',
+      searchParameters: {
+        // for translations maintainers: change the filter to your locale code (subdomain name)
+        facetFilters: ['language:en']
+      }
+    },
+
     nav: [
       {
         text: '指南',
