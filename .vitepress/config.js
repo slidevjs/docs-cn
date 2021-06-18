@@ -213,7 +213,7 @@ module.exports = {
       indexName: 'slidev',
       searchParameters: {
         // for translations maintainers: change the filter to your locale code (subdomain name)
-        facetFilters: ['language:en']
+        facetFilters: ['language:cn']
       }
     },
 
