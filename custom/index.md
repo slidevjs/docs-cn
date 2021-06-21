@@ -16,6 +16,8 @@ title: 自定义
 theme: 'default'
 # 幻灯片的总标题，如果没有指定，那么将以第一张拥有标题的幻灯片的标题作为总标题
 title: ''
+# titleTemplate for the webpage, `%s` will be replaced by the page's title
+titleTemplate: '%s - Slidev'
 
 # 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
 download: true

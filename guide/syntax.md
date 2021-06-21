@@ -154,7 +154,33 @@ blockquote {
 </style>
 ```
 
+<<<<<<< HEAD
 ## 备注 {#notes}
+=======
+## Static Assets
+
+Just like you would do in markdown, you can use images pointing to a remote or local url.
+
+For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them into the disk at the first run so you can have instant loading even for large images later on.
+
+```md
+![Remote Image](https://sli.dev/favicon.png)
+```
+
+For local assets, put them into the [`public` folder](/custom/directory-structure.html#public) and reference them with **leading slash**.
+
+```md
+![Local Image](/pic.png)
+```
+
+For you want to apply custom sizes or styles, you can convert them to the `<img>` tag 
+
+```html
+<img src="/pic.png" class="m-40 h-40 rounded shadow" />
+```
+
+## Notes
+>>>>>>> 83d754553616372f9655366cd91e125b8d17f855
 
 你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，供你在演示时参考。
 
