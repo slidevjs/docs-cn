@@ -170,7 +170,7 @@ blockquote {
 ![Local Image](/pic.png)
 ```
 
-如果你想使用自定义的尺寸和样式，你可以使用 `<img>` 标签
+如果你想使用自定义的尺寸或样式，可以使用 `<img>` 标签
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
