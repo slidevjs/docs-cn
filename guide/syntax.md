@@ -154,6 +154,28 @@ blockquote {
 </style>
 ```
 
+## 静态资源 {#static-assets}
+
+和编写 markdown 的方式一样，你可以使用本地或远程的 url 的图片。
+
+如果是远程资源，内置的 [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) 将在第一次运行时把它们缓存到磁盘中，即便是大图也能实现立即加载。
+
+```md
+![Remote Image](https://sli.dev/favicon.png)
+```
+
+如果是本地资源，请将资源放置到 [`public` 文件夹](/custom/directory-structure.html#public) 中并使用 **/** 来引用它们。
+
+```md
+![Local Image](/pic.png)
+```
+
+如果你想使用自定义的尺寸或样式，可以使用 `<img>` 标签
+
+```html
+<img src="/pic.png" class="m-40 h-40 rounded shadow" />
+```
+
 ## 备注 {#notes}
 
 你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，供你在演示时参考。

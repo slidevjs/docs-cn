@@ -23,6 +23,16 @@ $ slidev export
 
 稍作等待，即可在 `./slides-exports.pdf` 路径下看到你幻灯片的 PDF 文件。
 
+### 导出点击步骤 {#export-clicks-steps}
+
+> 自 v0.21 起可用
+
+默认情况下，Slidev 会将每张幻灯片导出为 1 页，并忽略点击动画。如果你想将多个步骤的幻灯片，分解为多个页面，请使用 `--with-clicks` 选项。
+
+```bash
+$ slidev export --with-clicks
+```
+
 ## PNGs {#pngs}
 
 当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式。
