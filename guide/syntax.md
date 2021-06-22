@@ -154,33 +154,29 @@ blockquote {
 </style>
 ```
 
-<<<<<<< HEAD
-## 备注 {#notes}
-=======
-## Static Assets
+## 静态资源 {#static-assets}
 
-Just like you would do in markdown, you can use images pointing to a remote or local url.
+和编写 markdown 的方式一样，你可以使用本地或远程的 url 的图片。
 
-For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them into the disk at the first run so you can have instant loading even for large images later on.
+如果是远程资源，内置的 [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) 将在第一次运行时把它们缓存到磁盘中，即便是大图也能实现立即加载。
 
 ```md
 ![Remote Image](https://sli.dev/favicon.png)
 ```
 
-For local assets, put them into the [`public` folder](/custom/directory-structure.html#public) and reference them with **leading slash**.
+如果是本地资源，请将资源放置到 [`public` 文件夹](/custom/directory-structure.html#public) 中并使用 **/** 来引用它们。
 
 ```md
 ![Local Image](/pic.png)
 ```
 
-For you want to apply custom sizes or styles, you can convert them to the `<img>` tag 
+如果你想使用自定义的尺寸和样式，你可以使用 `<img>` 标签
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
 ```
 
-## Notes
->>>>>>> 83d754553616372f9655366cd91e125b8d17f855
+## 备注 {#notes}
 
 你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，供你在演示时参考。
 
