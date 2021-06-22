@@ -138,7 +138,7 @@ h1 {
 
 Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
-在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 css 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
+在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 CSS 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
 
 ```md
 # Slidev
@@ -156,7 +156,7 @@ blockquote {
 
 ## 静态资源 {#static-assets}
 
-和编写 markdown 的方式一样，你可以使用本地或远程的 url 的图片。
+和编写 Markdown 的方式一样，你可以使用本地或远程的 URL 的图片。
 
 如果是远程资源，内置的 [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) 将在第一次运行时把它们缓存到磁盘中，即便是大图也能实现立即加载。
 
@@ -164,7 +164,7 @@ blockquote {
 ![Remote Image](https://sli.dev/favicon.png)
 ```
 
-如果是本地资源，请将资源放置到 [`public` 文件夹](/custom/directory-structure.html#public) 中并使用 **/** 来引用它们。
+如果是本地资源，请将资源放置到 [`public` 文件夹](/custom/directory-structure.html#public) 中并使用 **/** 开头的 URL 来引用它们。
 
 ```md
 ![Local Image](/pic.png)
