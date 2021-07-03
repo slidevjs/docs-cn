@@ -36,7 +36,11 @@ You can directly use Windi CSS and Vue components to style and enrich your slide
 
 ## 扉页及布局 {#front-matter-layouts}
 
+<<<<<<< HEAD
 你可以通过将分隔符转换为 [扉页块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个扉页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
+=======
+Specify layouts and other metadata for each slide by converting the separators into [front matter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+>>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 ~~~md
 ---
@@ -76,7 +80,13 @@ console.log('Hello, World!')
 //```
 ~~~
 
+<<<<<<< HEAD
 ### 特定行高亮 {#line-highlighting}
+=======
+We support [Prism](http://prismjs.com) and [Shiki](https://github.com/shiki/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters/) for more details.
+
+### Line Highlighting
+>>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 如需针对特定行进行高亮展示，只需在 `{}` 内添加对应的行号。行号从 1 开始计算。
 
@@ -219,7 +229,11 @@ Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标�
 - 使用 [SVG Logos](https://github.com/gilbarbara/logos)，其规则为 `<logos-vue />` - <logos-vue />
 - 还有更多...
 
+<<<<<<< HEAD
 你可以通过 [Icônes](https://icones.js.org/) 来浏览访问所有可用的图标。
+=======
+Browse and search for all the icons available with [Icônes](https://icones.js.org/).
+>>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 ### 调整图标样式 {#styling-icons}
 
@@ -261,7 +275,7 @@ This shows on the left
 
 This shows on the right
 
-<template>
+</template>
 ```
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
@@ -293,7 +307,11 @@ This shows on the left
 This shows on the right
 ```
 
+<<<<<<< HEAD
 你也可以明确的指定默认插槽，并按自定义顺序展示。
+=======
+You can also explicitly specify the default slot and provide in the custom order
+>>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 ```md
 ---
