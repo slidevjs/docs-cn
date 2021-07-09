@@ -27,11 +27,7 @@ $ slidev export
 
 > 自 v0.21 起可用
 
-<<<<<<< HEAD
 默认情况下，Slidev 会将每张幻灯片导出为 1 页，并忽略点击动画。如果你想将多个步骤的幻灯片，分解为多个页面，请使用 `--with-clicks` 选项。
-=======
-By default, Slidev exports one page per slide with clicks animations disabled. If you want export slides with multiple steps into multiple pages, pass the `--with-clicks` options.
->>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 ```bash
 $ slidev export --with-clicks
@@ -67,11 +63,7 @@ $ slidev build --base /talks/my-cool-talk/
 
 ### 提供可下载的 PDF {#provide-downloadable-pdf}
 
-<<<<<<< HEAD
 你可以向浏览幻灯片单页应用的观众提供一个可下载的 PDF。你可以通过如下配置来启用它：
-=======
-You can provide a downloadable PDF to the viewers of your SPA with the following config:
->>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 ```md
 ---
@@ -79,11 +71,7 @@ download: true
 ---
 ```
 
-<<<<<<< HEAD
 配置好后，Slidev 将生成一个 PDF 文件，并在单页应用中展示下载按钮。
-=======
-Slidev will generate a pdf file along with the build and a download button will be displayed in the SPA.
->>>>>>> fcc2f07502ee5a4c2865a8717b4ecd4bfafa05c8
 
 你也可以为 PDF 提供一个自定义的 URL。在这种情况下，PDF 的渲染过程将被忽略。
 
