@@ -76,6 +76,8 @@ console.log('Hello, World!')
 //```
 ~~~
 
+我们支持 [Prism](http://prismjs.com) 和 [Shiki](https://github.com/shiki/shiki) 作为语法高亮器。请参阅[语法高亮器](/custom/highlighters/) 获取更多细节。
+
 ### 特定行高亮 {#line-highlighting}
 
 如需针对特定行进行高亮展示，只需在 `{}` 内添加对应的行号。行号从 1 开始计算。
@@ -261,7 +263,7 @@ This shows on the left
 
 This shows on the right
 
-<template>
+</template>
 ```
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">

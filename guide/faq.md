@@ -122,7 +122,7 @@ canvasWidth: 800
 我们提供了内置的 `<Transform />` 组件，它针对 CSS 的 transform 属性进行了简易封装。
 
 ```md
-<Tranform :scale="1.4">
+<Transform :scale="1.4">
 
 - Item 1
 - Item 2
