@@ -69,4 +69,50 @@ const counter = ref(0)
 //```
 ~~~
 
+<<<<<<< HEAD
 在上面的示例中，只需确保项目依赖（`dependencies` 或 `devDependencies`）中包含所用到的 `vue` 和 `@vueuse/core`，Slidev 将处理剩余的部分以使你的 Monaco 编辑器获得正确的类型支持。
+=======
+In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically!
+
+## Configure Themes
+
+The theme is controlled by Slidev based on the light/dark theme. If you want to customize it, you can pass the theme id to the setup function:
+
+```ts
+// ./setup/monaco.ts
+import { defineMonacoSetup } from '@slidev/types'
+
+export default defineMonacoSetup(() => {
+  return {
+    theme: {
+      dark: 'vs-dark',
+      light: 'vs',
+    },
+  }
+})
+```
+
+If you want to load custom themes:
+
+```ts
+import { defineMonacoSetup } from '@slidev/types'
+
+// change to your themes
+import dark from 'theme-vitesse/themes/vitesse-dark.json'
+import light from 'theme-vitesse/themes/vitesse-light.json'
+
+export default defineMonacoSetup((monaco) => {
+  monaco.editor.defineTheme('vitesse-light', light as any)
+  monaco.editor.defineTheme('vitesse-dark', dark as any)
+
+  return {
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+  }
+})
+```
+
+> If you are creating a theme for Slidev, use dynamic `import()` inside the setup function to get better tree-shaking and code-splitting results.
+>>>>>>> d362bf9d1d39600d5b41e992cd9a76f234d9cc80
