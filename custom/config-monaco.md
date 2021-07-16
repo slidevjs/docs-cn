@@ -69,10 +69,7 @@ const counter = ref(0)
 //```
 ~~~
 
-<<<<<<< HEAD
 在上面的示例中，只需确保项目依赖（`dependencies` 或 `devDependencies`）中包含所用到的 `vue` 和 `@vueuse/core`，Slidev 将处理剩余的部分以使你的 Monaco 编辑器获得正确的类型支持。
-=======
-In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically!
 
 ## Configure Themes
 
@@ -115,4 +112,3 @@ export default defineMonacoSetup((monaco) => {
 ```
 
 > If you are creating a theme for Slidev, use dynamic `import()` inside the setup function to get better tree-shaking and code-splitting results.
->>>>>>> d362bf9d1d39600d5b41e992cd9a76f234d9cc80
