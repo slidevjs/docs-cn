@@ -24,6 +24,18 @@
 </p>
 <br>
 
+## 翻译版本
+
+| | 仓库 | 地址 | 维护者 |
+|---|---|---:|---|
+| English | [docs](https://github.com/slidevjs/docs) | [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu) |
+| 简体中文 | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) | [@QC-L](https://github.com/QC-L) [@Ivocin](https://github.com/Ivocin) |
+| Français | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) | [@ArthurDanjou](https://github.com/ArthurDanjou) |
+| Español | [docs-es](https://github.com/slidevjs/docs-es) | [es.sli.dev](https://es.sli.dev) | [@owlnai](https://github.com/owlnai) |
+| Русский | [docs-ru](https://github.com/slidevjs/docs-ru) | [ru.sli.dev](https://ru.sli.dev) | [@xesjkeee](https://github.com/xesjkeee) |
+| Việt Nam | [docs-vn](https://github.com/slidevjs/docs-vn) | [vn.sli.dev](https://vn.sli.dev) | [@bongudth](https://github.com/bongudth) |
+| Deutsch | [docs-de](https://github.com/slidevjs/docs-de) | [de.sli.dev](https://de.sli.dev) | [@fabiankachlock](https://github.com/fabiankachlock) |
+
 ## Slidev 中文文档
 
 - 📝 [**Markdown 支持**](https://cn.sli.dev/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
