@@ -23,7 +23,13 @@ titleTemplate: '%s - Slidev'
 download: true
 # 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
 highlighter: 'prism'
+<<<<<<< HEAD
 # 启用monaco编辑器，默认情况下仅在开发者（dev）模式中启用
+=======
+# show line numbers in code blocks
+lineNumbers: false
+# enable monaco editor, default to dev only
+>>>>>>> 7fcdfb6d7dee75f411c762b8d223645a5b35ab29
 monaco: 'dev'
 
 # 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
@@ -54,7 +60,11 @@ info: |
 ---
 ```
 
+<<<<<<< HEAD
 你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) 获取到更多的配置信息。
+=======
+Check out the [type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) for more options.
+>>>>>>> 7fcdfb6d7dee75f411c762b8d223645a5b35ab29
 
 ## 目录结构 {#directory-structure}
 
