@@ -8,7 +8,11 @@ title: 字体
 
 虽然你可以使用 HTML 和 CSS 为你的幻灯片定制你想要的字体和样式，但 Slidev 提供了另一种较为便捷的方式，可以让你轻松使用它们。
 
+<<<<<<< HEAD
 你可以在 fontmatter 中，添加如下配置：
+=======
+In your frontmatter, configure as following
+>>>>>>> d9b5a2ed4eea5c454b14f823f740a050ef45f079
 
 ```yaml
 ---

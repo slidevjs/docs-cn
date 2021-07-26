@@ -372,7 +372,11 @@ $$
 
 你也可以在 Markdown 的文本描述中创建图形或图表，得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
 
+<<<<<<< HEAD
 被标记为 `mermaid` 的代码块将被转换为图形，例如：
+=======
+Code blocks marked as `mermaid` will be converted to diagrams, for example:
+>>>>>>> d9b5a2ed4eea5c454b14f823f740a050ef45f079
 
 ~~~md
 //```mermaid
