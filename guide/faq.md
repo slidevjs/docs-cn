@@ -21,11 +21,7 @@ The second column
 </div>
 ```
 
-<<<<<<< HEAD
 你甚至可以定制每一列的大小，比如：
-=======
-Go further, you can customize the size of each column like:
->>>>>>> d9b5a2ed4eea5c454b14f823f740a050ef45f079
 
 ```html
 <div class="grid grid-cols-[200px,1fr,10%] gap-4">

@@ -23,7 +23,7 @@ titleTemplate: '%s - Slidev'
 download: true
 # 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
 highlighter: 'prism'
-# show line numbers in code blocks
+# 在代码块中显示行号
 lineNumbers: false
 # 启用 monaco 编辑器，默认情况下仅在开发者（dev）模式中启用
 monaco: 'dev'
