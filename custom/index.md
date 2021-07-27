@@ -25,7 +25,7 @@ download: true
 highlighter: 'prism'
 # 在代码块中显示行号
 lineNumbers: false
-# 启用monaco编辑器，默认情况下仅在开发者（dev）模式中启用
+# 启用 monaco 编辑器，默认情况下仅在开发者（dev）模式中启用
 monaco: 'dev'
 
 # 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
