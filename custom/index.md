@@ -23,6 +23,8 @@ titleTemplate: '%s - Slidev'
 download: true
 # 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
 highlighter: 'prism'
+# 在代码块中显示行号
+lineNumbers: false
 # 启用monaco编辑器，默认情况下仅在开发者（dev）模式中启用
 monaco: 'dev'
 
@@ -54,7 +56,7 @@ info: |
 ---
 ```
 
-你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) 获取到更多的配置信息。
+你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) 获取到更多的配置信息。
 
 ## 目录结构 {#directory-structure}
 
