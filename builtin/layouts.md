@@ -4,41 +4,39 @@ title: 布局
 
 # 布局 {#layouts}
 
-<<<<<<< HEAD
 ## 内置布局 {#built-in-layouts}
-=======
-> As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
+> 由于主题可能会覆盖布局的行为，因此精确理解主题的使用、参数和例子最好的方式是查阅主题文档。
 
 
 ### `center`
 
-Displays the content in the middle of the sreen.
+在屏幕中间展示内容。
 
 ### `cover`
 
-Used to display the cover page for the presentation, may contain the presentation title, contextualization, etc.
+用来展示演讲稿的封面页，可以包含演讲的标题、演讲者、时间等。
 
 ### `default`
 
-The most baisc layout, to display any kind of content.
+最基础的布局，用于展示任意类型的内容。
 
 ### `end`
 
-The final page for the presentation.
+演讲的最后一页。
 
 ### `fact`
 
-To show some fact or data with a lot of prominence on the screen.
+用来在屏幕上突出展示很多事实或数据。
 
 ### `full`
 
-Use all the space of the screen to display the content.
+使用屏幕全部空间来展示内容。
 
 ### `image-left`
 
-Shows an image on the left side of the screen, the content will be placed on the right side.
+在屏幕左侧展示图片，屏幕右侧展示内容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
@@ -54,9 +52,9 @@ class: my-cool-content-on-the-right
 
 ### `image-right`
 
-Shows an image on the right side of the screen, the content will be placed on the left side.
+在屏幕右侧展示图片，屏幕左侧展示内容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
@@ -72,9 +70,9 @@ class: my-cool-content-on-the-left
 
 ### `image`
 
-Shows an image as the main content of the page.
+将图片作为页面的主要内容进行展示。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
@@ -87,29 +85,29 @@ image: ./path/to/the/image
 
 ### `intro`
 
-To introduce the presentation, usually with the presentation title, a short description, the author, etc.
+介绍演讲稿，通​​常带有演讲稿标题、简述、作者等信息。
 
 ### `none`
 
-A layout without any existent styling.
+没有任何样式的布局。
 
 ### `quote`
 
-To display a quotation with prominience.
+突出显示引文。
 
 ### `section`
 
-Used to mark the beginning of a new presentation section.
+用来标记演讲稿的新部分的开始。
 
 ### `statement`
 
-Make an affirmation/statement as the main page content.
+将主张/声明作为主要页面内容。
 
 ### `two-cols`
 
-Separates the page content in two columns.
+将页面内容分为两列。
 
-#### Usage
+#### 用法
 
 
 ```md
@@ -127,9 +125,6 @@ This shows on the left
 
 This shows on the right
 ```
->>>>>>> 1167e7a94ea649de6b3cd27aec6585258f0d477e
-
-> 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)。
 
 ## 自定义布局 {#custom-layouts}
 
