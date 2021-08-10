@@ -5,8 +5,126 @@ title: 布局
 # 布局 {#layouts}
 
 ## 内置布局 {#built-in-layouts}
+> 由于主题可能会覆盖布局的行为，因此精确理解主题的使用、参数和例子最好的方式是查阅主题文档。
 
-> 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)。
+
+### `center`
+
+在屏幕中间展示内容。
+
+### `cover`
+
+用来展示演讲稿的封面页，可以包含演讲的标题、演讲者、时间等。
+
+### `default`
+
+最基础的布局，用于展示任意类型的内容。
+
+### `end`
+
+演讲的最后一页。
+
+### `fact`
+
+用来在屏幕上突出展示很多事实或数据。
+
+### `full`
+
+使用屏幕全部空间来展示内容。
+
+### `image-left`
+
+在屏幕左侧展示图片，屏幕右侧展示内容。
+
+#### 用法
+
+```yaml
+---
+layout: image-left
+
+# the image source
+image: ./path/to/the/image
+
+# a custom class name to the content
+class: my-cool-content-on-the-right
+---
+```
+
+### `image-right`
+
+在屏幕右侧展示图片，屏幕左侧展示内容。
+
+#### 用法
+
+```yaml
+---
+layout: image-right
+
+# the image source
+image: ./path/to/the/image
+
+# a custom class name to the content
+class: my-cool-content-on-the-left
+---
+```
+
+### `image`
+
+将图片作为页面的主要内容进行展示。
+
+#### 用法
+
+```yaml
+---
+layout: image
+
+# the image source
+image: ./path/to/the/image
+---
+```
+
+### `intro`
+
+介绍演讲稿，通​​常带有演讲稿标题、简述、作者等信息。
+
+### `none`
+
+没有任何样式的布局。
+
+### `quote`
+
+突出显示引文。
+
+### `section`
+
+用来标记演讲稿的新部分的开始。
+
+### `statement`
+
+将主张/声明作为主要页面内容。
+
+### `two-cols`
+
+将页面内容分为两列。
+
+#### 用法
+
+
+```md
+---
+layout: two-cols
+---
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+```
 
 ## 自定义布局 {#custom-layouts}
 
