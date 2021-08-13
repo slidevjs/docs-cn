@@ -157,8 +157,12 @@ const Customizations = [
 
 const Resources = [
   {
-    text: 'Showcases',
+    text: '案例展示',
     link: '/showcases',
+  },
+  {
+    text: '学习资源',
+    link: '/resources/learning',
   },
   {
     text: '精选封面',
