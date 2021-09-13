@@ -43,6 +43,7 @@ $ slidev export --format png
 
 ## 单页应用（SPA） {#single-page-application-spa}
 
+<<<<<<< HEAD
 你还可以将幻灯片构建成可部署的单页应用（SPA）：
 
 ```bash
@@ -87,3 +88,6 @@ download: 'https://myside.com/my-talk.pdf'
 
 - [Starter Template](https://sli.dev/demo/starter)
 - [Composable Vue](https://talks.antfu.me/2021/composable-vue) by [Anthony Fu](https://github.com/antfu)
+=======
+See [Static Hosting](/guide/hosting).
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440

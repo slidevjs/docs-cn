@@ -30,7 +30,15 @@ const Guide = [
     link: '/guide/exporting',
   },
   {
+<<<<<<< HEAD
     text: '演讲录制',
+=======
+    text: 'Static Hosting',
+    link: '/guide/hosting',
+  },
+  {
+    text: 'Record Presentation',
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
     link: '/guide/recording',
   },
   {
@@ -38,7 +46,15 @@ const Guide = [
     link: '/guide/presenter-mode',
   },
   {
+<<<<<<< HEAD
     text: '编辑器整合',
+=======
+    text: 'Drawing & Annonations',
+    link: '/guide/drawing',
+  },
+  {
+    text: 'Editor Integrations',
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
     link: '/guide/editors',
   },
   {

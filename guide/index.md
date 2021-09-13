@@ -14,6 +14,7 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 
 ### 功能 {#features}
 
+<<<<<<< HEAD
 - 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
 - 🧑‍💻 [**开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
 - 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
@@ -28,11 +29,29 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 - 📤 [**跨平台**](/guide/exporting.html) —— 能够导出 PDF、PNG 文件，甚至是一个可以托管的单页应用
 - ⚡️ [**快速**](https://vitejs.dev) —— 基于 [Vite](https://vitejs.dev) 的即时重载
 - 🛠 [**可配置**](/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
+=======
+- 📝 [**Markdown-based**](/guide/syntax.html) - use your favorite editors and workflow
+- 🧑‍💻 [**Developer Friendly**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
+- 🎨 [**Themable**](/themes/gallery.html) - theme can be shared and used with npm packages
+- 🌈 [**Stylish**](/guide/syntax.html#embedded-styles) - [Windi CSS](https://windicss.org/) on-demand utilities, easy-to-use embedded stylesheets
+- 🤹 [**Interactive**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
+- 🎙 [**Presenter Mode**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
+- 🎨 [**Drawing**](/guide/drawing.html) - draw and annotate on your slides
+- 🧮 [**LaTeX**](/guide/syntax.html#latex) - built-in LaTeX math equations support
+- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions 
+- 🌟 [**Icons**](/guide/syntax.html#icons) - Access to icons from any iconset directly
+- 💻 [**Editors**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
+- 🎥 [**Recording**](/guide/recording.html) - built-in recording and camera view
+- 📤 [**Portable**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
+- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
+- 🛠 [**Hackable**](/custom/config-vite.html) - using Vite plugins, Vue components, or any npm packages
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
 
 ### 技术栈 {#tech-stack}
 
 Slidev 使用了如下的工具和技术：
 
+<<<<<<< HEAD
 - [Vite](https://vitejs.dev) —— 一款极速的前端工具
 - 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
 - [Windi CSS](https://github.com/windicss/windicss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
@@ -42,6 +61,18 @@ Slidev 使用了如下的工具和技术：
 - [Iconify](https://iconify.design/) —— 图标库集合
 - [KaTeX](https://katex.org/) —— LaTeX 数学渲染
 - [Mermaid](https://mermaid-js.github.io/mermaid) —— 文本描述语言创建图表
+=======
+- [Vite](https://vitejs.dev) - An extremely fast frontend tooling
+- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - Focus on the content while having the power of HTML and Vue components whenever needed
+- [Windi CSS](https://github.com/windicss/windicss) - On-demand utility-first CSS framework, style your slides at ease
+- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - First-class code snippets support with live coding capability
+- [RecordRTC](https://recordrtc.org) - Built-in recording and camera view
+- [VueUse](https://vueuse.org) family -  [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
+- [Iconify](https://iconify.design/) - Iconsets collection.
+- [Drauu](https://github.com/antfu/drauu) - Drawing and annotations support
+- [KaTeX](https://katex.org/) - LaTeX math rendering.
+- [Mermaid](https://mermaid-js.github.io/mermaid) - Textual Diagrams.
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
 
 ### 搭建你的第一个演讲稿 {#scaffolding-your-first-presentation}
 
