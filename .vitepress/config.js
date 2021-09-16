@@ -30,12 +30,20 @@ const Guide = [
     link: '/guide/exporting',
   },
   {
+    text: '静态部署',
+    link: '/guide/hosting',
+  },
+  {
     text: '演讲录制',
     link: '/guide/recording',
   },
   {
     text: '演讲者模式',
     link: '/guide/presenter-mode',
+  },
+  {
+    text: '绘图与批注',
+    link: '/guide/drawing',
   },
   {
     text: '编辑器整合',

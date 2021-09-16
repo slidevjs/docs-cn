@@ -20,6 +20,7 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 - 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
 - 🤹 [**可交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
 - 🎙 [**演讲者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
+- 🎨 [**绘图**](/guide/drawing.html) - 在你的幻灯片上进行绘图和批注
 - 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公示的支持
 - 📰 [**图表支持**](/guide/syntax.html#diagrams) —— 使用文本描述语言创建图表
 - 🌟 [**图标**](/guide/syntax.html#icons) —— 能够直接从任意图标库中获取图标
@@ -40,6 +41,7 @@ Slidev 使用了如下的工具和技术：
 - [RecordRTC](https://recordrtc.org) —— 内置录制功能和摄像头视图
 - [VueUse](https://vueuse.org) 家族 ——  [`@vueuse/core`](https://github.com/vueuse/vueuse)、[`@vueuse/head`](https://github.com/vueuse/head)、[`@vueuse/motion`](https://github.com/vueuse/motion) 等
 - [Iconify](https://iconify.design/) —— 图标库集合
+- [Drauu](https://github.com/antfu/drauu) - 支持绘图和批注
 - [KaTeX](https://katex.org/) —— LaTeX 数学渲染
 - [Mermaid](https://mermaid-js.github.io/mermaid) —— 文本描述语言创建图表
 
