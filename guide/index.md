@@ -47,21 +47,17 @@ Slidev 使用了如下的工具和技术：
 
 ### 搭建你的第一个演讲稿 {#scaffolding-your-first-presentation}
 
-<<<<<<< HEAD
-使用 NPM：
-=======
 <br>
 
-#### Try it Online
+#### 在线试用 {#try-it-online}
 
 [sli.dev/new](https://sli.dev/new)
 
 [![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://sli.dev/new)
 
-#### Create Locally
+#### 本地创建 {#create-locally}
 
-With NPM:
->>>>>>> 7dc63d28be77f9c3b208ece23969befdc0d99204
+使用 NPM：
 
 ```bash
 $ npm init slidev

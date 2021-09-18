@@ -43,7 +43,7 @@ drawings:
 ---
 ```
 
-Only in Presenter Mode:
+仅在演讲者模式可用：
 
 ```md
 ---
@@ -52,9 +52,9 @@ drawings:
 ---
 ```
 
-## Drawing Syncing
+## 绘图同步 {#drawing-syncing}
 
-By default, Slidev syncs up your drawings across all instances. If you are sharing your slides with others, you might want to disable the syncing by:
+默认情况下，Slidev 会在所有实例中同步你的绘图。如果你在和他人共享幻灯片，你可能会需要通过以下方式禁用同步：
 
 ```md
 ---
@@ -63,6 +63,6 @@ drawings:
 ---
 ```
 
-With this config, only the drawing from the presenter instance will be able to sync with others.
+通过这个配置，只有来自演讲者实例的绘图会和其他实例同步。
 
 
