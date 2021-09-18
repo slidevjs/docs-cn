@@ -42,3 +42,27 @@ drawings:
   enabled: dev
 ---
 ```
+
+仅在演讲者模式可用：
+
+```md
+---
+drawings: 
+  presenterOnly: true
+---
+```
+
+## 绘图同步 {#drawing-syncing}
+
+默认情况下，Slidev 会在所有实例中同步你的绘图。如果你在和他人共享幻灯片，你可能会需要通过以下方式禁用同步：
+
+```md
+---
+drawings: 
+  syncAll: false
+---
+```
+
+通过这个配置，只有来自演讲者实例的绘图会和其他实例同步。
+
+
