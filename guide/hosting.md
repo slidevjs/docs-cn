@@ -75,7 +75,7 @@ download: 'https://myside.com/my-talk.pdf'
 
 接着，去 Netlify 的仪表盘，选择对应仓库并创建新的站点。
 
-## Vercel
+### Vercel
 
 - [Vercel](https://vercel.com/)
 
