@@ -42,7 +42,11 @@ const Guide = [
     link: '/guide/presenter-mode',
   },
   {
+<<<<<<< HEAD
     text: '绘图与批注',
+=======
+    text: 'Drawing & Annotations',
+>>>>>>> 152e0f6daf66b81d24969bbeae3655f23e93bcc6
     link: '/guide/drawing',
   },
   {
