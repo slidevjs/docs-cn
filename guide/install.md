@@ -43,7 +43,7 @@ $ npx slidev
 > 请注意，如果你使用的是 [pnpm](https://pnpm.io)，请先启用 [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) 选项，才能使得 Slidev 正常工作。
 >
 > ```bash
-> echo 'shamefully-flatten=true' >> .npmrc
+> echo 'shamefully-hoist=true' >> .npmrc
 > ```
 
 ## 全局安装 {#install-globally}
