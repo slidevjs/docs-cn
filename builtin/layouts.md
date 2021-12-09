@@ -18,7 +18,11 @@ title: 布局
 
 ### `default`
 
+<<<<<<< HEAD
 最基础的布局，用于展示任意类型的内容。
+=======
+The most basic layout, to display any kind of content.
+>>>>>>> fbc97d802e30cc663321c93b32fff3cee9ca7ff9
 
 ### `end`
 
