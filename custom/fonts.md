@@ -104,6 +104,6 @@ fonts:
 ```yaml
 ---
 fonts:
-  provide: 'none'
+  provider: 'none'
 ---
 ```
