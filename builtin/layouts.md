@@ -10,11 +10,7 @@ title: 布局
 
 ### `center`
 
-<<<<<<< HEAD
 在屏幕中间展示内容。
-=======
-Displays the content in the middle of the screen.
->>>>>>> a261c239adbbea08fafc043330460e1e7bb16e54
 
 ### `cover`
 
@@ -22,11 +18,7 @@ Displays the content in the middle of the screen.
 
 ### `default`
 
-<<<<<<< HEAD
 最基础的布局，用于展示任意类型的内容。
-=======
-The most basic layout, to display any kind of content.
->>>>>>> a261c239adbbea08fafc043330460e1e7bb16e54
 
 ### `end`
 
