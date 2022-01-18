@@ -124,7 +124,7 @@ html.dark {
 
 主题中也可以设置代码高亮配色，我们同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki)。欲了解更多，请参阅 [语法高亮文档](/custom/highlighters)。
 
-你可以选择使用其中任意一种或同时使用。可以参考默认主题配置示例中的 [`./styles/prism.css`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/styles/prism.css) 和 [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/theme-default/setup/shiki.ts)。
+你可以选择使用其中任意一种或同时使用。可以参考默认主题配置示例中的 [`./styles/code.css`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/styles/code.css) 和 [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts)。
 
 另外，不要忘记在 `package.json` 中指定想要支持的高亮工具：
 
