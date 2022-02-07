@@ -6,7 +6,47 @@ title: 组件
 
 ## 内置组件 {#built-in-components}
 
+<<<<<<< HEAD
 > 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
+=======
+### `TOC`
+
+Insert a Table Of Content.
+
+Titles and title levels get automatically retrieved from the first title element of each slides.
+
+You can override this automatic behaviour for a slide by using the front matter syntax:
+```yml
+---
+title: Amazing slide title
+level: 2
+---
+```
+
+Or if you prefer the slide to not appear in the TOC at all, you can use:
+```yml
+---
+hideInToc: true
+---
+```
+
+#### Usage
+~~~md
+<Toc />
+~~~
+
+Parameters:
+
+* `columns` (`string | number`, default: `1`): The number of columns of the display
+* `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
+* `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
+* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
+  * `'all'`: Display all items
+  * `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
+  * `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+
+## Custom Components
+>>>>>>> d99ebc341368cc7f6df4ae4cbd893a171a853aa6
 
 ## 自定义组件 {#custom-components}
 
