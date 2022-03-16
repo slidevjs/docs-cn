@@ -37,8 +37,15 @@ aspectRatio: '16/9'
 # canvas 的真实宽度，单位为 px
 canvasWidth: 980
 
+<<<<<<< HEAD
 # 字体将从 Google 字体自动导入
 # 了解更多：https://sli.dev/custom/fonts
+=======
+# favicon, can be a local file path or URL
+favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
+# fonts will be auto imported from Google fonts
+# Learn more: https://sli.dev/custom/fonts
+>>>>>>> 1abac97d69f2a4c1bf1ea213947287922b7adba4
 fonts:
   sans: 'Roboto'
   serif: 'Roboto Slab'
