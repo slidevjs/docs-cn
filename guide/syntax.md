@@ -76,7 +76,11 @@ console.log('Hello, World!')
 //```
 ~~~
 
+<<<<<<< HEAD
 我们支持 [Prism](http://prismjs.com) 和 [Shiki](https://github.com/shiki/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
+=======
+We support [Prism](http://prismjs.com) and [Shiki](https://github.com/shikijs/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+>>>>>>> b18d6f476b18393dabf793d2f08d22f243683948
 
 ### 特定行高亮 {#line-highlighting}
 
