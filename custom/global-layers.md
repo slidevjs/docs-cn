@@ -6,11 +6,23 @@ title: 全局图层
 
 > 自 v0.17 起可用
 
+<<<<<<< HEAD
 全局图层允许你拥有**持续存在**的跨幻灯片自定义组件。这对于有页脚、跨幻灯片动画、全局特效等来说可能很有用。
+=======
+Slidev provides three layers for this usage, create `global-top.vue`, `global-bottom.vue` or `custom-nav-controls.vue` under your project root and it will pick up automatically.
+>>>>>>> d68398ac58d3e8efc2f6d29119938f4a4382f617
 
 Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 `global-top.vue` 或 `global-bottom.vue` 文件，它们会被自动识别。
 
+<<<<<<< HEAD
 图层关系：
+=======
+- Global Top (`global-top.vue`)
+- Slides
+- Global Bottom (`global-bottom.vue`)
+- NavControls
+  - Customized Navigation Controls (`custom-nav-controls.vue`)
+>>>>>>> d68398ac58d3e8efc2f6d29119938f4a4382f617
 
 - 全局顶层 (`global-top.vue`)
 - 幻灯片
@@ -27,7 +39,22 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
 
 文字 `Your Name` 将出现在你所有幻灯片中。
 
+<<<<<<< HEAD
 如需有条件地启用它，你可以用 [Vue 全局上下文](/custom/vue-context)。
+=======
+```html
+<!-- custom-nav-controls -->
+<template>
+  <button class="icon-btn" title="Next" @click="$slidev.nav.next">
+    <carbon:arrow-right />
+  </button>
+</template>
+```
+
+The button `Next` will appear in NavControls.
+
+To enabled it conditionally, you can apply it with the [Vue Global Context](/custom/vue-context).
+>>>>>>> d68398ac58d3e8efc2f6d29119938f4a4382f617
 
 ```html
 <!-- 在第四页时隐藏页脚 -->
@@ -62,5 +89,15 @@ Slidev 为这种用法提供了两种图层，在你的项目根目录下创建 
   >
     {{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}
   </footer>
+</template>
+```
+
+```html
+<!-- custom-nav-controls -->
+<!-- hide the button in Presenter model -->
+<template>
+  <button v-if="!$slidev.nav.isPresenter" class="icon-btn" title="Next" @click="$slidev.nav.next">
+    <carbon:arrow-right />
+  </button>
 </template>
 ```

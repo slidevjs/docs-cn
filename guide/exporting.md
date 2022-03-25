@@ -23,7 +23,17 @@ $ slidev export
 
 稍作等待，即可在 `./slides-exports.pdf` 路径下看到你幻灯片的 PDF 文件。
 
+<<<<<<< HEAD
 ### 导出点击步骤 {#export-clicks-steps}
+=======
+In case you want to export your slides using the dark version of the theme, use the `--dark` option:
+
+```bash
+$ slidev export --dark
+```
+
+### Export Clicks Steps
+>>>>>>> d68398ac58d3e8efc2f6d29119938f4a4382f617
 
 > 自 v0.21 起可用
 
