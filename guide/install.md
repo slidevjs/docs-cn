@@ -83,8 +83,7 @@ docker run --name slidev --rm -it \
 你可以通过 http://localhost:3030/ 访问你的幻灯片。
 
 
-
-### 构建可部署镜像
+### 构建可部署镜像 {#build-deployable-image}
 
 你也可以把你的 slidev 幻灯片构建到一个 docker 镜像里来进行部署，Dockerfile 如下：
 
@@ -102,12 +101,12 @@ ADD . /slidev
 这时你就可用通过 http://localhost:3030/ 来打开你的幻灯片了。
 
 
-### 构建单网页应用
+### 构建单网页应用  {#build-hostable-spa-single-page-application}
 
 在前面启动的 `slidev` 容器上运行命令 `docker exec -i slidev npx slidev build` 就可以在 `dist` 目录下将你的幻灯片生成静态 HTML 文件。
 
 
-#### 使用 Github Pages 托管
+#### 使用 Github Pages 托管 {#host-on-github-pages}
 
 你可以在静态 Web 站点上托管生成的静态文件，比如 [Github pages](https://tangramor.github.io/slidev_docker/) 或 Gitlab pages。
 
@@ -116,7 +115,7 @@ ADD . /slidev
 为了防止触发 Jekyll 构建流程，你需要在静态站根目录下添加一个名为 `.nojekyll` 的空文件
 
 
-#### 使用 docker 托管
+#### 使用 docker 托管 {#host-by-docker}
 
 你当然也可以使用 docker 容器来托管生成的静态文件：
 
@@ -138,7 +137,6 @@ COPY dist /usr/share/nginx/html
 执行 `docker run --name myslides --rm -p 80:80 mystaticppt` 命令来启动容器。
 
 此时你就可以通过 http://localhost/ 来访问你的幻灯片了。
-
 
 
 关于容器的更多详细信息，请参考 [tangramor/slidev_docker 仓库](https://github.com/tangramor/slidev_docker)。

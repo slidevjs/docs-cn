@@ -23,6 +23,12 @@ $ slidev export
 
 稍作等待，即可在 `./slides-exports.pdf` 路径下看到你幻灯片的 PDF 文件。
 
+如果你想要导出使用暗色主题的幻灯片，请使用 `--dark` 选项：
+
+```bash
+$ slidev export --dark
+```
+
 ### 导出点击步骤 {#export-clicks-steps}
 
 > 自 v0.21 起可用

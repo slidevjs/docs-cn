@@ -37,6 +37,8 @@ aspectRatio: '16/9'
 # canvas 的真实宽度，单位为 px
 canvasWidth: 980
 
+# favicon 可以是本地文件路径，也可以是一个 URL
+favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
 # 字体将从 Google 字体自动导入
 # 了解更多：https://sli.dev/custom/fonts
 fonts:
