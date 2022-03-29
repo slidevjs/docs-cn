@@ -6,16 +6,15 @@ title: 组件
 
 ## 内置组件 {#built-in-components}
 
-<<<<<<< HEAD
 > 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
-=======
-### `TOC`
 
-Insert a Table Of Content.
+### `TOC` {#toc}
 
-Titles and title levels get automatically retrieved from the first title element of each slides.
+插入目录。
 
-You can override this automatic behaviour for a slide by using the front matter syntax:
+目录的标题和标题层级根据每张幻灯片上的第一个标题元素自动生成。
+
+可以使用前端语法覆盖幻灯片的这种自动生成目录行为：
 ```yml
 ---
 title: Amazing slide title
@@ -23,30 +22,27 @@ level: 2
 ---
 ```
 
-Or if you prefer the slide to not appear in the TOC at all, you can use:
+如果你不希望在幻灯片中出现目录，可以使用：
 ```yml
 ---
 hideInToc: true
 ---
 ```
 
-#### Usage
+#### 用法 {#usage}
 ~~~md
 <Toc />
 ~~~
 
-Parameters:
+参数：
 
-* `columns` (`string | number`, default: `1`): The number of columns of the display
-* `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-* `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  * `'all'`: Display all items
-  * `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  * `'onlySiblings'`: Display only items that are in current tree and their direct siblings
-
-## Custom Components
->>>>>>> d68398ac58d3e8efc2f6d29119938f4a4382f617
+* `columns` (`string | number`, 默认值：`1`)：显示的列数
+* `maxDepth` (`string | number`, 默认值：`Infinity`): 显示标题的最大层级
+* `minDepth` (`string | number`,  默认值：`1`): 显示标题的最小层级
+* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`,  默认值：`'all'`):
+  * `'all'`: 显示全部元素
+  * `'onlyCurrentTree'`: 仅显示包含当前页面的树中的元素(活动元素，活动元素的父项和子项)
+  * `'onlySiblings'`: 仅显示包含当前页面树中的元素及其兄弟元素
 
 ## 自定义组件 {#custom-components}
 
