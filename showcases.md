@@ -2,9 +2,9 @@
 sidebar: false
 ---
 
-# Showcases
+# 案例展示
 
-Talks / Presentations using Slidev.
+使用Slidev进行的会谈/演讲。
 
 <!-- Edit in ./docs/.vitepress/showcases.ts -->
 <ShowCases />
