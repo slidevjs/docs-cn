@@ -32,6 +32,6 @@ title: 导航
 
 ## 幻灯片总览 {#slides-overview}
 
-通过按下键盘按键 <kbd>o</kbd> 或者鼠标点击导航栏中的 <carbon-user-speaker class="inline-icon-btn"/> 按钮，你就可以查看全部幻灯片并方便地在它们之间跳转。
+通过按下键盘按键 <kbd>o</kbd> 或者鼠标点击导航栏中的 <carbon-apps class="inline-icon-btn"/> 按钮，你就可以查看全部幻灯片并方便地在它们之间跳转。
 
 ![](/screenshots/slides-overview.png)
