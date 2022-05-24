@@ -40,7 +40,11 @@ Slidev 为这种用法提供了三种图层，在你的项目根目录下创建 
 
 `Next` 按钮会出现在导航栏中。
 
+<<<<<<< HEAD
 如需有条件地启用它，你可以用 [Vue 全局上下文](/custom/vue-context)。
+=======
+To enable it conditionally, you can apply it with the [Vue Global Context](/custom/vue-context).
+>>>>>>> afa4515b72ea8814d0a633bdb4ec4c41734b502c
 
 ```html
 <!-- 在第四页时隐藏页脚 -->

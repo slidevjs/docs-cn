@@ -139,4 +139,94 @@ COPY dist /usr/share/nginx/html
 此时你就可以通过 http://localhost/ 来访问你的幻灯片了。
 
 
+<<<<<<< HEAD
 关于容器的更多详细信息，请参考 [tangramor/slidev_docker 仓库](https://github.com/tangramor/slidev_docker)。
+=======
+Refer to the [tangramor/slidev_docker](https://github.com/tangramor/slidev_docker) for more details.
+
+### Command Line Interface (CLI)
+
+`@slidev/cli` Expose a few commands you can use with `npx slidev ...` or by adding scripts in your `package.json`:
+```json
+{
+  "script": {
+    "dev": "slidev"
+  }
+}
+```
+
+In that case you will be able to run `npm run dev`.
+
+You can pass options to any commands:
+
+* boolean option are `true` if they are present, false otherwise (example: `slidev --open`)
+* some options can have values you can add just after the option or by using the `=` character (example: `slidev --port 8080` or `slidev --port=8080`)
+
+If you use npm scripts, don't forget to add `--` after the npm command:
+```bash
+npm run slidev -- --open
+```
+
+#### `slidev [entry]`
+
+Start a local server for Slidev.
+
+* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+
+Options:
+
+* `--port`, `-p` (`number`, default: `3030`): port number.
+* `--open`, `-o` (`boolean`, default: `false`): open in browser.
+* `--remote [password]` (`string`): listen to public host and enable remote control, if a value is passed then the presenter mode is private and only accessible by passing the given password in the URL query `password` parameter.
+* `--log` (`'error', 'warn', 'info', 'silent'`, default: `'warn'`): Log level.
+* `--force`, `-f` (`boolean`, default `false`): force the optimizer to ignore the cache and re-bundle.
+* `--theme`, `-t` (`string`): override theme.
+
+#### `slidev build [entry]`
+
+Build hostable SPA.
+
+* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+
+Options:
+
+* `--watch`, `-w` (`boolean`, default: `false`): build watch.
+* `--out`, `-o` (`string`, default: `dist`): output dir.
+* `--base` (`string`, default: `/`): base URL (see https://cli.vuejs.org/config/#publicpath)
+* `--download` (`boolean`, default: `false`): allow to download the slides as PDF inside the SPA.
+* `--theme`, `-t` (`string`): override theme.
+
+#### `slidev export [entry]`
+
+Export slides to PDF (or other format).
+
+* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+
+Options:
+
+* `--output` (`string`, default: use `exportFilename` (see https://sli.dev/custom/#frontmatter-configures) or use `[entry]-export`): path to the output.
+* `--base` (`'pdf', 'png', 'md'`, default: `'pdf'`): output format.
+* `--timeout` (`number`, default: `30000`): timeout for rendering the print page (see https://playwright.dev/docs/api/class-page#page-goto).
+* `--range` (`string`): page ranges to export (example: `'1,4-5,6'`).
+* `--dark` (`boolean`, default: `false`): export as dark theme.
+* `--with-clicks`, `-c` (`boolean`, default: `false`): export pages for every clicks (see https://sli.dev/guide/animations.html#click-animations).
+* `--theme`, `-t` (`string`): override theme.
+
+#### `slidev format [entry]`
+
+Format the markdown file.
+
+* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+
+#### `slidev theme [subcommand]`
+
+Theme related operations.
+
+Subcommands:
+
+* `eject [entry]`: Eject current theme into local file system
+  * `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+  * Options:
+    * `--dir` (`string`, default: `theme`): output dir.
+    * `--theme`, `-t` (`string`): override theme.
+>>>>>>> afa4515b72ea8814d0a633bdb4ec4c41734b502c
