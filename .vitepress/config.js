@@ -70,6 +70,17 @@ const Theme = [
   },
 ]
 
+const Addon = [
+  {
+    text: 'Use Addon',
+    link: '/addons/use',
+  },
+  {
+    text: 'Write an Addon',
+    link: '/addons/write-an-addon',
+  },
+]
+
 const Translations = [
   {
     text: '简体中文',
@@ -192,7 +203,11 @@ const slidebars = [
     children: Theme,
   },
   {
-    text: '自定义',
+    text: '附加组件',
+    children: Addon,
+  },
+  {
+    text: '定制',
     children: Customizations,
   },
   {
@@ -255,6 +270,10 @@ module.exports = {
         items: Theme,
       },
       {
+        text: '附加组件',
+        items: Addon,
+      },
+      {
         text: '定制',
         items: Customizations,
       },
@@ -271,6 +290,7 @@ module.exports = {
     sidebar: {
       '/guide/': slidebars,
       '/themes/': slidebars,
+      '/addons/': slidebars,
       '/custom/': slidebars,
       '/builtin/': slidebars,
       '/resources/': slidebars,

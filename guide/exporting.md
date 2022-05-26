@@ -21,7 +21,7 @@ $ npm i -D playwright-chromium
 $ slidev export
 ```
 
-稍作等待，即可在 `./slides-exports.pdf` 路径下看到你幻灯片的 PDF 文件。
+稍作等待，即可在 `./slides-export.pdf` 路径下看到你幻灯片的 PDF 文件。
 
 如果你想要导出使用暗色主题的幻灯片，请使用 `--dark` 选项：
 
