@@ -6,65 +6,59 @@ title: 组件
 
 ## 内置组件 {#built-in-components}
 
-<<<<<<< HEAD
 > 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
-=======
-### `Toc`
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
 
-### `TOC` {#toc}
+### `Toc` {#toc}
 
-<<<<<<< HEAD
 插入目录。
-=======
-If you want a slide to not appear in the `<Toc>` component, you can use in the front matter block of the slide:
+
+如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
 ```yml
 ---
 hideInToc: true
 ---
 ```
 
-Titles are displayed using the [`<Titles>` component](#titles)
+标题使用 [`<Titles>` 组件](#titles) 来展示
 
-#### Usage
+#### 用法 {#toc-usage}
 
 ~~~md
 <Toc />
 ~~~
 
-Parameters:
+参数：
 
-* `columns` (`string | number`, default: `1`): The number of columns of the display
-* `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
-* `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-* `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  * `'all'`: Display all items
-  * `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  * `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+* `columns` (`string | number`，默认值：`1`)：要显示的列数The number of columns of the display
+* `listClass` (`string | string[]`，默认值：`''`)：用于修饰目录的 class
+* `maxDepth` (`string | number`，默认值：`Infinity`)：要显示标题的最大深度
+* `minDepth` (`string | number`，默认值：`1`)：要显示标题的最小深度
+* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`，默认值：`'all'`):
+  * `'all'`：显示所有项目
+  * `'onlyCurrentTree'`：只显示当前树中的项目（活跃的项目，及其父节点以及子节点）
+  * `'onlySiblings'`：只显示当前树中的项目和它们的直接兄弟姐妹
 
-### `Link`
+### `Link` {#link}
 
-Insert a link you can use to navigate to a given slide.
+插入一个链接，你可以用它来导航到一个指定的幻灯片。
 
-#### Usage
+#### 用法 {#link-usage}
 
 ~~~md
 <Link to="42">Go to slide 42</Link>
 <Link to="42" title="Go to slide 42"/>
 ~~~
 
-Parameters:
+参数：
 
-* `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
-* `title` (`string`): The title to display
+* `to` (`string | number`)：幻灯片的路径，以导航到对应位置（幻灯片下标从 `1` 开始）
+* `title` (`string`)：要显示的标题
 
-### `Titles`
+### `Titles` {#titles}
 
-Insert the main title from a slide parsed as HTML.
+在一个被解析为 HTML 的幻灯片中插入主标题
 
-Titles and title levels get automatically retrieved from the first title element of each slides.
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
+标题和标题级别会自动从每张幻灯片的第一个标题元素中检索出来。
 
 目录的标题和标题层级根据每张幻灯片上的第一个标题元素自动生成。
 
@@ -76,42 +70,21 @@ level: 2
 ---
 ```
 
-<<<<<<< HEAD
-如果你不希望在幻灯片中出现目录，可以使用：
-```yml
----
-hideInToc: true
----
-```
+#### 用法 {#titles-usage}
 
-#### 用法 {#usage}
-=======
-#### Usage
-
-The `<Titles>` component is a virtual component you can import with:
+`<Titles>` 组件是一个虚拟组件，你可以使用如下方式导入：
 ```js
 import Titles from '/@slidev/titles.md'
 ```
 
-Then you can use it with:
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
+然后你可以这样使用：
 ~~~md
 <Titles no="42" />
 ~~~
 
 参数：
 
-<<<<<<< HEAD
-* `columns` (`string | number`, 默认值：`1`)：显示的列数
-* `maxDepth` (`string | number`, 默认值：`Infinity`): 显示标题的最大层级
-* `minDepth` (`string | number`,  默认值：`1`): 显示标题的最小层级
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`,  默认值：`'all'`):
-  * `'all'`: 显示全部元素
-  * `'onlyCurrentTree'`: 仅显示包含当前页面的树中的元素(活动元素，活动元素的父项和子项)
-  * `'onlySiblings'`: 仅显示包含当前页面树中的元素及其兄弟元素
-=======
-* `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
+* `no` (`string | number`): 显示标题的幻灯片编号（幻灯片下标从 `1` 开始）
 
 ## 自定义组件 {#custom-components}
 

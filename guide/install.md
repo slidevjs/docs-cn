@@ -139,14 +139,11 @@ COPY dist /usr/share/nginx/html
 此时你就可以通过 http://localhost/ 来访问你的幻灯片了。
 
 
-<<<<<<< HEAD
 关于容器的更多详细信息，请参考 [tangramor/slidev_docker 仓库](https://github.com/tangramor/slidev_docker)。
-=======
-Refer to the [tangramor/slidev_docker](https://github.com/tangramor/slidev_docker) for more details.
 
-## Command Line Interface (CLI)
+## Command Line Interface (CLI) {#command-line-interface-cli}
 
-`@slidev/cli` Expose a few commands you can use with `npx slidev ...` or by adding scripts in your `package.json`:
+`@slidev/cli` 暴露了一些命令，你可以通过 `npx slidev ...` 或者在你的 `package.json` 中添加 script 来使用它们。
 ```json
 {
   "script": {
@@ -155,78 +152,77 @@ Refer to the [tangramor/slidev_docker](https://github.com/tangramor/slidev_docke
 }
 ```
 
-In that case you will be able to run `npm run dev`.
+在这种情况下，你可以通过 `npm run dev` 来运行。
 
-You can pass options to any commands:
+你可以向任何命令传参：
 
-* boolean option are `true` if they are present, false otherwise (example: `slidev --open`)
-* some options can have values you can add just after the option or by using the `=` character (example: `slidev --port 8080` or `slidev --port=8080`)
+* boolean 选项如果存在则为 `true`，否则为 `false`（例如：`slidev --open`）
+* 一些选项可以在选项后添加数值，或者使用 `=` 字符（例如：`slidev --port 8080` 或者 `slidev --port=8080`）
 
-If you use npm scripts, don't forget to add `--` after the npm command:
+如果你使用 npm 的 script，别忘了在 npm 命令后加上 `--`：
 ```bash
 npm run slidev -- --open
 ```
 
-### `slidev [entry]`
+### `slidev [entry]` {#slidev-entry}
 
-Start a local server for Slidev.
+为 Slidev 启动一个本地服务器。
 
-* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+* `[entry]`（`string`，默认值：`slides.md`）：幻灯片 markdown 的入口文件。
+
+选项：
+
+* `--port`，`-p`（`number`，默认值：`3030`）：端口号。
+* `--open`，`-o` (`boolean`，默认值：`false`)：在浏览器打开。
+* `--remote [password]` (`string`)：监听公共主机并启用远程控制，如果传递了该值，那么演讲者模式是私有的，只有通过在 URL 查询 `password` 参数中给定的密码才能访问。
+* `--log` (`'error'，'warn'，'info'，'silent'`，默认值：`'warn'`)：日志级别。
+* `--force`，`-f` (`boolean`，默认值：`false`)：强制优化器忽略缓存，并重新构建。
+* `--theme`，`-t` (`string`)：覆盖主题。
+
+### `slidev build [entry]` {#slidev-build-entry}
+
+建立可托管的 SPA。
+
+* `[entry]`（`string`，默认值：`slides.md`）：幻灯片 markdown 的入口文件。
+
+选项：
+
+* `--watch`，`-w` (`boolean`，默认值：`false`)：构建观察。
+* `--out`，`-o` (`string`，默认值：`dist`)：要输出到的目标文件夹。
+* `--base` (`string`，默认值：`/`)：base URL（参阅 https://cli.vuejs.org/config/#publicpath）
+* `--download` (`boolean`，默认值：`false`)：允许在 SPA 内下载 PDF 格式的幻灯片。
+* `--theme`，`-t` (`string`)：覆盖主题。
+
+### `slidev export [entry]` {#slidev-export-entry}
+
+将幻灯片导出为 PDF（或者其他格式）。
+
+* `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
 
 Options:
 
-* `--port`, `-p` (`number`, default: `3030`): port number.
-* `--open`, `-o` (`boolean`, default: `false`): open in browser.
-* `--remote [password]` (`string`): listen to public host and enable remote control, if a value is passed then the presenter mode is private and only accessible by passing the given password in the URL query `password` parameter.
-* `--log` (`'error', 'warn', 'info', 'silent'`, default: `'warn'`): Log level.
-* `--force`, `-f` (`boolean`, default `false`): force the optimizer to ignore the cache and re-bundle.
-* `--theme`, `-t` (`string`): override theme.
+* `--output` (`string`，默认值：use `exportFilename` (参阅 https://sli.dev/custom/#frontmatter-configures) 或使用 `[entry]-export`)：输出的路径。
+* `--base` (`'pdf'，'png'，'md'`，默认值：`'pdf'`)：输出的格式。
+* `--timeout` (`number`，默认值：`30000`)：渲染打野页面的超时时间（参阅 https://playwright.dev/docs/api/class-page#page-goto）。
+* `--range` (`string`)：输出的页面范围（例如：`'1,4-5,6'`）。
+* `--dark` (`boolean`，默认值：`false`)：导出黑暗主题色。
+* `--with-clicks`，`-c` (`boolean`，默认值：`false`)：输出每次点击的页面（参阅 https://sli.dev/guide/animations.html#click-animations)。
+* `--theme`，`-t` (`string`)：覆盖主题。
 
-### `slidev build [entry]`
+### `slidev format [entry]` {#slidev-format-entry}
 
-Build hostable SPA.
+格式化 markdown 文件。
 
-* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+* `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
 
-Options:
+### `slidev theme [subcommand]` {#slidev-theme-subcommand}
 
-* `--watch`, `-w` (`boolean`, default: `false`): build watch.
-* `--out`, `-o` (`string`, default: `dist`): output dir.
-* `--base` (`string`, default: `/`): base URL (see https://cli.vuejs.org/config/#publicpath)
-* `--download` (`boolean`, default: `false`): allow to download the slides as PDF inside the SPA.
-* `--theme`, `-t` (`string`): override theme.
+与主题相关的业务。
 
-### `slidev export [entry]`
+子命令：
 
-Export slides to PDF (or other format).
-
-* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
-
-Options:
-
-* `--output` (`string`, default: use `exportFilename` (see https://sli.dev/custom/#frontmatter-configures) or use `[entry]-export`): path to the output.
-* `--base` (`'pdf', 'png', 'md'`, default: `'pdf'`): output format.
-* `--timeout` (`number`, default: `30000`): timeout for rendering the print page (see https://playwright.dev/docs/api/class-page#page-goto).
-* `--range` (`string`): page ranges to export (example: `'1,4-5,6'`).
-* `--dark` (`boolean`, default: `false`): export as dark theme.
-* `--with-clicks`, `-c` (`boolean`, default: `false`): export pages for every clicks (see https://sli.dev/guide/animations.html#click-animations).
-* `--theme`, `-t` (`string`): override theme.
-
-### `slidev format [entry]`
-
-Format the markdown file.
-
-* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
-
-### `slidev theme [subcommand]`
-
-Theme related operations.
-
-Subcommands:
-
-* `eject [entry]`: Eject current theme into local file system
-  * `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
-  * Options:
-    * `--dir` (`string`, default: `theme`): output dir.
-    * `--theme`, `-t` (`string`): override theme.
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
+* `eject [entry]`：将当前主题弹出到本地文件系统中
+  * `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
+  * 选项：
+    * `--dir` (`string`，默认值：`theme`)：要输出到的目标文件夹。
+    * `--theme`，`-t` (`string`)：覆盖主题。

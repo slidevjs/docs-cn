@@ -203,15 +203,11 @@ const slidebars = [
     children: Theme,
   },
   {
-<<<<<<< HEAD
-    text: '自定义',
-=======
-    text: 'Addons',
+    text: '附加组件',
     children: Addon,
   },
   {
-    text: 'Customizations',
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
+    text: '定制',
     children: Customizations,
   },
   {
@@ -274,15 +270,11 @@ module.exports = {
         items: Theme,
       },
       {
-<<<<<<< HEAD
-        text: '定制',
-=======
-        text: 'Addon',
+        text: '附加组件',
         items: Addon,
       },
       {
-        text: 'Customize',
->>>>>>> 18216961c9b829103d7ee5bc6c426cb525c3d51c
+        text: '定制',
         items: Customizations,
       },
       {
