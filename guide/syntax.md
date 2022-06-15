@@ -76,7 +76,11 @@ console.log('Hello, World!')
 //```
 ~~~
 
+<<<<<<< HEAD
 我们支持 [Prism](http://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
+=======
+We support [Prism](https://prismjs.com) and [Shiki](https://github.com/shikijs/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+>>>>>>> 55faf79109ec7628fa7fd3ed717d79edc91e9433
 
 ### 特定行高亮 {#line-highlighting}
 
@@ -106,7 +110,24 @@ function add(
 //```
 ~~~
 
+<<<<<<< HEAD
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
+=======
+To skip highlighting any lines, you can set the line number to `0`. For example
+
+~~~ts {0}
+//```ts {0}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+>>>>>>> 55faf79109ec7628fa7fd3ed717d79edc91e9433
 
 ### Monaco 编辑器 {#monaco-editor}
 
@@ -210,7 +231,11 @@ The second page
 
 ## 图标 {#icons}
 
+<<<<<<< HEAD
 Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
+=======
+Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
+>>>>>>> 55faf79109ec7628fa7fd3ed717d79edc91e9433
 
 图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
 
