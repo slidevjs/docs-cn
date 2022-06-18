@@ -4,9 +4,13 @@ title: 导航
 
 # 导航 {#navigation}
 
+<<<<<<< HEAD
 ## 导航栏 {#navigation-bar}
 
 将鼠标移至窗口左下角，即可显示导航栏。
+=======
+Move your mouse to the bottom left corner of Slidev page to make the navigation bar appear.
+>>>>>>> 893d0b65c494856dc47a8834adc01480dbf6a161
 
 ![](/screenshots/navbar.png)
 

@@ -6,7 +6,11 @@ title: 配置 Vite
 
 <Environment type="node" />
 
+<<<<<<< HEAD
 Slidev 基于 [Vite](http://vitejs.dev/) 实现。这意味着你可以利用 Vite 强大的插件系统来进一步定制你的幻灯片。
+=======
+Slidev is powered by [Vite](https://vitejs.dev/) under the hood. This means you can leverage Vite's great plugin system to customize your slides even further.
+>>>>>>> 893d0b65c494856dc47a8834adc01480dbf6a161
 
 如果项目中存在 `vite.config.ts` 文件，将被读取。
 
