@@ -10,6 +10,7 @@ Slidev 对项目结构进行了一些约定，以尽量减少配置项，使功�
 
 ```bash
 your-slidev/
+<<<<<<< HEAD
   ├── components/       # 自定义组件
   ├── layouts/          # 自定义布局
   ├── public/           # 静态资源
@@ -18,6 +19,16 @@ your-slidev/
   ├── index.html        # 注入的 index.html
   ├── slides.md         # 幻灯片主入口
   └── vite.config.ts    # 扩展 vite 配置
+=======
+  ├── components/       # custom components
+  ├── layouts/          # custom layouts
+  ├── public/           # static assets
+  ├── setup/            # custom setup / hooks
+  ├── styles/           # custom style
+  ├── index.html        # injections to index.html
+  ├── slides.md         # the main slides entry
+  └── vite.config.ts    # extending vite config
+>>>>>>> c8121c161efd5a726d336648d2b101540c346dd2
 ```
 
 以上所有均为可选。
@@ -119,7 +130,11 @@ import './code.css'
 import './layouts.css'
 ```
 
+<<<<<<< HEAD
 样式得益于 [Windi CSS](http://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
+=======
+Styles will be processed by [Windi CSS](https://windicss.org/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://windicss.org/features/directives.html) out-of-box. For example:
+>>>>>>> c8121c161efd5a726d336648d2b101540c346dd2
 
 ```less
 .slidev-layout {
