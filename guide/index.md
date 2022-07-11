@@ -17,7 +17,7 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 - 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
 - 🧑‍💻 [**开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
 - 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
-- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
+- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和 [UnoCSS](https://github.com/unocss/unocss)
 - 🤹 [**可交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
 - 🎙 [**演讲者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
 - 🎨 [**绘图**](/guide/drawing.html) - 在你的幻灯片上进行绘图和批注
@@ -36,7 +36,7 @@ Slidev 使用了如下的工具和技术：
 
 - [Vite](https://vitejs.dev) —— 一款极速的前端工具
 - 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
-- [Windi CSS](https://github.com/windicss/windicss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
+- [Windi CSS](https://github.com/windicss/windicss) 或 [UnoCSS](https://github.com/unocss/unocss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
 - [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) —— 具有实时编码能力的一流代码片段支持
 - [RecordRTC](https://recordrtc.org) —— 内置录制功能和摄像头视图
 - [VueUse](https://vueuse.org) 家族 ——  [`@vueuse/core`](https://github.com/vueuse/vueuse)、[`@vueuse/head`](https://github.com/vueuse/head)、[`@vueuse/motion`](https://github.com/vueuse/motion) 等

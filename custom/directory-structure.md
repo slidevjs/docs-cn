@@ -52,7 +52,7 @@ your-slidev/
 </hello-world>
 ```
 
-此特性得益于 [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)。
+此特性得益于 [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)。
 
 Slidev 还提供了一些 [内置组件](/builtin/components) 供你选择。
 
@@ -119,7 +119,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-样式得益于 [Windi CSS](http://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
+样式得益于 [Windi CSS](https://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
 
 ```less
 .slidev-layout {

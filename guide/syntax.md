@@ -76,7 +76,7 @@ console.log('Hello, World!')
 //```
 ~~~
 
-我们支持 [Prism](http://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
+我们支持 [Prism](https://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
 
 ### 特定行高亮 {#line-highlighting}
 
@@ -97,6 +97,19 @@ function add(
 
 ~~~ts
 //```ts {2-3|5|all}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+你可以使用行号 `0` 来跳过高亮。比如：
+
+~~~ts {0}
+//```ts {0}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
@@ -210,7 +223,7 @@ The second page
 
 ## 图标 {#icons}
 
-Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
+Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`unplugin-icons`](https://github.com/antfu/unplugin-icons) 和 [Iconify](https://iconify.design/)。
 
 图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
 
