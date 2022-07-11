@@ -12,30 +12,12 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 
 你可以在 [为什么选 Slidev](/guide/why) 部分了解更多关于本项目的设计初衷。
 
-<<<<<<< HEAD
 ### 功能 {#features}
-=======
-- 📝 [**Markdown-based**](/guide/syntax.html) - use your favorite editors and workflow
-- 🧑‍💻 [**Developer Friendly**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
-- 🎨 [**Themable**](/themes/gallery.html) - theme can be shared and used with npm packages
-- 🌈 [**Stylish**](/guide/syntax.html#embedded-styles) - on-demand utilities via [Windi CSS](https://windicss.org/) or [UnoCSS](https://github.com/unocss/unocss).
-- 🤹 [**Interactive**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
-- 🎙 [**Presenter Mode**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
-- 🎨 [**Drawing**](/guide/drawing.html) - draw and annotate on your slides
-- 🧮 [**LaTeX**](/guide/syntax.html#latex) - built-in LaTeX math equations support
-- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions 
-- 🌟 [**Icons**](/guide/syntax.html#icons) - Access to icons from any iconset directly
-- 💻 [**Editors**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
-- 🎥 [**Recording**](/guide/recording.html) - built-in recording and camera view
-- 📤 [**Portable**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
-- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
-- 🛠 [**Hackable**](/custom/config-vite.html) - using Vite plugins, Vue components, or any npm packages
->>>>>>> eca0155fb4af5e8138c24bec4161ae66d22663fe
 
 - 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
 - 🧑‍💻 [**开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
 - 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
-- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和易用的内嵌样式表
+- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和 [UnoCSS](https://github.com/unocss/unocss)
 - 🤹 [**可交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
 - 🎙 [**演讲者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
 - 🎨 [**绘图**](/guide/drawing.html) - 在你的幻灯片上进行绘图和批注
@@ -50,24 +32,11 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 
 ### 技术栈 {#tech-stack}
 
-<<<<<<< HEAD
 Slidev 使用了如下的工具和技术：
-=======
-- [Vite](https://vitejs.dev) - An extremely fast frontend tooling
-- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - Focus on the content while having the power of HTML and Vue components whenever needed
-- [Windi CSS](https://github.com/windicss/windicss) or [UnoCSS](https://github.com/unocss/unocss) - On-demand utility-first CSS framework, style your slides at ease
-- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - First-class code snippets support with live coding capability
-- [RecordRTC](https://recordrtc.org) - Built-in recording and camera view
-- [VueUse](https://vueuse.org) family -  [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
-- [Iconify](https://iconify.design/) - Iconsets collection.
-- [Drauu](https://github.com/antfu/drauu) - Drawing and annotations support
-- [KaTeX](https://katex.org/) - LaTeX math rendering.
-- [Mermaid](https://mermaid-js.github.io/mermaid) - Textual Diagrams.
->>>>>>> eca0155fb4af5e8138c24bec4161ae66d22663fe
 
 - [Vite](https://vitejs.dev) —— 一款极速的前端工具
 - 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
-- [Windi CSS](https://github.com/windicss/windicss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
+- [Windi CSS](https://github.com/windicss/windicss) 或 [UnoCSS](https://github.com/unocss/unocss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
 - [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) —— 具有实时编码能力的一流代码片段支持
 - [RecordRTC](https://recordrtc.org) —— 内置录制功能和摄像头视图
 - [VueUse](https://vueuse.org) 家族 ——  [`@vueuse/core`](https://github.com/vueuse/vueuse)、[`@vueuse/head`](https://github.com/vueuse/head)、[`@vueuse/motion`](https://github.com/vueuse/motion) 等
