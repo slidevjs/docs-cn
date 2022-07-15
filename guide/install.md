@@ -22,7 +22,7 @@ $ npm init slidev@latest
 $ yarn create slidev
 ```
 
-跟随命令行的提示，它将自动为你打开幻灯片，网址是 http://localhost:3030/。
+跟随命令行的提示，它将自动为你打开幻灯片，网址是 `http://localhost:3030/`。
 
 同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
@@ -80,7 +80,7 @@ docker run --name slidev --rm -it \
 
 如果你的工作目录为空，容器会在目录下自动创建 `slides.md` 文件和其它相关文件，并基于 `3030` 端口启动 slidev 服务。
 
-你可以通过 http://localhost:3030/ 访问你的幻灯片。
+你可以通过 `http://localhost:3030/` 访问你的幻灯片。
 
 
 ### 构建可部署镜像 {#build-deployable-image}
@@ -98,7 +98,7 @@ ADD . /slidev
 
 执行 `docker run --name myslides --rm --user node -p 3030:3030 myppt` 命令来运行镜像。
 
-这时你就可用通过 http://localhost:3030/ 来打开你的幻灯片了。
+这时你就可用通过 `http://localhost:3030/` 来打开你的幻灯片了。
 
 
 ### 构建单网页应用  {#build-hostable-spa-single-page-application}
@@ -129,7 +129,6 @@ docker run --name myslides --rm -p 80:80 -v ${PWD}/dist:/usr/share/nginx/html ng
 FROM nginx:alpine
 
 COPY dist /usr/share/nginx/html
-
 ```
 
 运行 `docker build -t mystaticppt .` 来构建镜像
@@ -137,7 +136,6 @@ COPY dist /usr/share/nginx/html
 执行 `docker run --name myslides --rm -p 80:80 mystaticppt` 命令来启动容器。
 
 此时你就可以通过 http://localhost/ 来访问你的幻灯片了。
-
 
 关于容器的更多详细信息，请参考 [tangramor/slidev_docker 仓库](https://github.com/tangramor/slidev_docker)。
 
