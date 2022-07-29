@@ -106,6 +106,8 @@ function add(
 //```
 ~~~
 
+这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
+
 你可以使用行号 `0` 来跳过高亮。比如：
 
 ~~~ts {0}
@@ -119,7 +121,21 @@ function add(
 //```
 ~~~
 
-这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
+如果代码在一张幻灯片展示不下，你可以传递一个额外的 maxHeight 选项，
+该选项将为代码段设置固定高度并启用滚动：
+
+~~~ts {2|3|7|12}
+//```ts {2|3|7|12} {maxHeight:'100'}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+/// ...as many lines as you want
+const c = add(1, 2)
+//```
+~~~
 
 ### Monaco 编辑器 {#monaco-editor}
 
