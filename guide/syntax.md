@@ -106,13 +106,9 @@ function add(
 //```
 ~~~
 
-<<<<<<< HEAD
-你可以使用行号 `0` 来跳过高亮。比如：
-=======
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
 
-To skip highlighting any lines, you can set the line number to `0`. For example
->>>>>>> ea87df4ac396a62567b3083d52e9bee2768b32bd
+你可以使用行号 `0` 来跳过高亮。比如：
 
 ~~~ts {0}
 //```ts {0}
@@ -125,11 +121,8 @@ function add(
 //```
 ~~~
 
-<<<<<<< HEAD
-这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
-=======
-If the code doesn't fit into one slide, you can pass an extra maxHeight option which will set fixed height
-and enable scrolling
+如果代码在一张幻灯片展示不下，你可以传递一个额外的 maxHeight 选项，
+该选项将为代码段设置固定高度并启用滚动：
 
 ~~~ts {2|3|7|12}
 //```ts {2|3|7|12} {maxHeight:'100'}
@@ -143,7 +136,6 @@ function add(
 const c = add(1, 2)
 //```
 ~~~
->>>>>>> ea87df4ac396a62567b3083d52e9bee2768b32bd
 
 ### Monaco 编辑器 {#monaco-editor}
 
