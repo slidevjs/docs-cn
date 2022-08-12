@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # 静态部署 {#static-hosting}
+=======
+
+# Static Hosting
+>>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
 
 ## 构建单页应用（SPA） {#build-single-page-application-spa}
 
@@ -95,7 +100,13 @@ download: 'https://myside.com/my-talk.pdf'
 
 - [GitHub Pages](https://pages.github.com/)
 
+<<<<<<< HEAD
 创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。
+=======
+To deploy your slides on GitHub Pages:
+- upload all the files of the project in your repo (i.e. named `name_of_repo`)
+- create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions. In this file, replace `<name_of_repo>`with `name_of_repo`.
+>>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
 
 ```yaml
 name: Deploy pages
@@ -110,8 +121,10 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install
+      - name: Install slidev
+        run:  npm i -g @slidev/cli
       - name: Build
-        run: npm run build
+        run: slidev build --base <name_of_repo>
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
@@ -119,3 +132,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+- In your repository, go to Setting>Pages. Under "Build and deployment", select "Deploy from a branch", select  "gh- pages" and "root". Click on save.
+- Finally, after all workflows is executed, a link to the slides should appear under Setting>Pages.
