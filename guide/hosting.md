@@ -1,3 +1,4 @@
+
 # 静态部署 {#static-hosting}
 
 ## 构建单页应用（SPA） {#build-single-page-application-spa}
@@ -95,7 +96,9 @@ download: 'https://myside.com/my-talk.pdf'
 
 - [GitHub Pages](https://pages.github.com/)
 
-创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。
+将你的幻灯片部署到 GitHub Pages：
+- 上传你的仓库里该项目的全部文件（例如，名字为 `name_of_repo`）
+- 创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。在该文件中，用 `name_of_repo` 替换 `<name_of_repo>`。
 
 ```yaml
 name: Deploy pages
@@ -110,8 +113,10 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install
+      - name: Install slidev
+        run:  npm i -g @slidev/cli
       - name: Build
-        run: npm run build
+        run: slidev build --base <name_of_repo>
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
@@ -119,3 +124,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+- 在你的仓库里，选择 “Setting > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
+- 最终，在全部工作流执行之后，在 “Setting > Pages” 下会出现幻灯片的链接。
