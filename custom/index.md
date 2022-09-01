@@ -24,15 +24,9 @@ info: false
 
 # 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
 download: false
-<<<<<<< HEAD
 # 要导出文件的文件名称
-exportFilename: 'slidev-exported.pdf'
-# 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
-=======
-# filename of the export file
 exportFilename: 'slidev-exported'
-# syntax highlighter, can be 'prism' or 'shiki'
->>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
+# 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
 highlighter: 'prism'
 # 在代码块中显示行号
 lineNumbers: false

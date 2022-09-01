@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-# 静态部署 {#static-hosting}
-=======
 
-# Static Hosting
->>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
+# 静态部署 {#static-hosting}
 
 ## 构建单页应用（SPA） {#build-single-page-application-spa}
 
@@ -100,13 +96,9 @@ download: 'https://myside.com/my-talk.pdf'
 
 - [GitHub Pages](https://pages.github.com/)
 
-<<<<<<< HEAD
-创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。
-=======
-To deploy your slides on GitHub Pages:
-- upload all the files of the project in your repo (i.e. named `name_of_repo`)
-- create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions. In this file, replace `<name_of_repo>`with `name_of_repo`.
->>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
+将你的幻灯片部署到 GitHub Pages：
+- 上传你的仓库里该项目的全部文件（例如，名字为 `name_of_repo`）
+- 创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。在该文件中，用 `name_of_repo` 替换 `<name_of_repo>`。
 
 ```yaml
 name: Deploy pages
@@ -132,5 +124,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-- In your repository, go to Setting>Pages. Under "Build and deployment", select "Deploy from a branch", select  "gh- pages" and "root". Click on save.
-- Finally, after all workflows is executed, a link to the slides should appear under Setting>Pages.
+- 在你的仓库里，选择 “Setting > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
+- 最终，在全部工作流执行之后，在 “Setting > Pages” 下会出现幻灯片的链接。
