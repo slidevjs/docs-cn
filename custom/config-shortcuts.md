@@ -6,15 +6,19 @@ title: 配置快捷键
 
 > 自 v0.20 起可用
 
+> Since v0.35.6 (excluded), you decide which base shortcuts to keep (see `...base,` below).
+
 <Environment type="client" />
 
 创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
 
 ```ts
-import { defineShortcutsSetup, NavOperations } from '@slidev/types'
+import type { NavOperations, ShortcutOptions } from '@slidev/types'
+import { defineShortcutsSetup } from '@slidev/types'
 
-export default defineShortcutsSetup((nav: NavOperations) => {
+export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
   return [
+    ...base, // keep the existing shortcuts
     {
       key: 'enter',
       fn: () => nav.next(),
@@ -36,10 +40,12 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 该 `key` 仅支持字符串类型，但你也可以使用如下约定绑定多个快捷键：
 
 ```ts
-import { defineShortcutsSetup, NavOperations } from '@slidev/types'
+import type { NavOperations, ShortcutOptions } from '@slidev/types'
+import { defineShortcutsSetup } from '@slidev/types'
 
-export default defineShortcutsSetup((nav: NavOperations) => {
+export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
   return [
+    ...base,
     {
       key: 'ShiftLeft+ArrowRight',
       fn: () => nav.next(),
