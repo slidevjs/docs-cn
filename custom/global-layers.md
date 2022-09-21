@@ -21,7 +21,7 @@ Slidev 为这种用法提供了三种图层，在你的项目根目录下创建 
 ## 示例 {#example}
 
 ```html
-<!-- global-top.vue -->
+<!-- global-bottom.vue -->
 <template>
   <footer class="absolute bottom-0 left-0 right-0 p-2">Your Name</footer>
 </template>
