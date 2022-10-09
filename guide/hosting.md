@@ -31,15 +31,9 @@ download: true
 ---
 ```
 
-<<<<<<< HEAD
 配置好后，Slidev 将生成一个 PDF 文件，并在单页应用中展示下载按钮。
 
 你也可以为 PDF 提供一个自定义的 URL。在这种情况下，PDF 的渲染过程将被忽略。
-=======
-Slidev will generate a PDF file along with the build, and a download button will be displayed in the SPA.
-
-You can also provide a custom URL for the PDF. In that case, the rendering process will be skipped.
->>>>>>> a9706e023e005538c02c8ba9f36d03876f65dacb
 
 ```md
 ---
@@ -58,11 +52,7 @@ download: 'https://myside.com/my-talk.pdf'
 
 ## 部署
 
-<<<<<<< HEAD
-我们建议使用 `npm init slidev@lastest` 来为你初始化你的项目，它包含了部署服务开箱即用的配置文件。
-=======
-We recommend to use `npm init slidev@latest` to scaffold your project, which contains the necessary configuration files for hosting services out-of-the-box.
->>>>>>> a9706e023e005538c02c8ba9f36d03876f65dacb
+我们建议使用 `npm init slidev@latest` 来为你初始化你的项目，它包含了部署服务开箱即用的配置文件。
 
 ### Netlify
 
@@ -84,11 +74,7 @@ We recommend to use `npm init slidev@latest` to scaffold your project, which con
   status = 200
 ```
 
-<<<<<<< HEAD
 接着，去 Netlify 的仪表盘，选择对应仓库并创建新的站点。
-=======
-Then go to your Netlify dashboard and create a new site with the repository.
->>>>>>> a9706e023e005538c02c8ba9f36d03876f65dacb
 
 ### Vercel
 
@@ -104,25 +90,15 @@ Then go to your Netlify dashboard and create a new site with the repository.
 }
 ```
 
-<<<<<<< HEAD
 接着，去 Vercel 的仪表盘，选择对应仓库并创建新的站点。
-=======
-Then go to your Vercel dashboard and create a new site with the repository.
->>>>>>> a9706e023e005538c02c8ba9f36d03876f65dacb
 
 ## GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
-<<<<<<< HEAD
 将你的幻灯片部署到 GitHub Pages：
 - 上传你的仓库里该项目的全部文件（例如，名字为 `name_of_repo`）
 - 创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。在该文件中，用 `name_of_repo` 替换 `<name_of_repo>`。
-=======
-To deploy your slides on GitHub Pages:
-- upload all the files of the project in your repo (i.e. named `name_of_repo`)
-- create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions. In this file, replace `<name_of_repo>` with `name_of_repo`.
->>>>>>> a9706e023e005538c02c8ba9f36d03876f65dacb
 
 ```yaml
 name: Deploy pages
@@ -148,10 +124,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-<<<<<<< HEAD
-- 在你的仓库里，选择 “Setting > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
-- 最终，在全部工作流执行之后，在 “Setting > Pages” 下会出现幻灯片的链接。
-=======
-- In your repository, go to Settings>Pages. Under "Build and deployment", select "Deploy from a branch", select "gh-pages" and "root". Click on save.
-- Finally, after all workflows are executed, a link to the slides should appear under Settings>Pages.
->>>>>>> a9706e023e005538c02c8ba9f36d03876f65dacb
+- 在你的仓库里，选择 “Settings > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
+- 最终，在全部工作流执行之后，在 “Settings > Pages” 下会出现幻灯片的链接。
