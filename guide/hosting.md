@@ -52,7 +52,7 @@ download: 'https://myside.com/my-talk.pdf'
 
 ## 部署
 
-我们建议使用 `npm init slidev@lastest` 来为你初始化你的项目，它包含了部署服务开箱即用的配置文件。
+我们建议使用 `npm init slidev@latest` 来为你初始化你的项目，它包含了部署服务开箱即用的配置文件。
 
 ### Netlify
 
@@ -124,5 +124,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-- 在你的仓库里，选择 “Setting > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
-- 最终，在全部工作流执行之后，在 “Setting > Pages” 下会出现幻灯片的链接。
+- 在你的仓库里，选择 “Settings > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
+- 最终，在全部工作流执行之后，在 “Settings > Pages” 下会出现幻灯片的链接。
