@@ -132,6 +132,17 @@ export const showcases: ShowCaseInfo[] = [
     at: 'OpenFunction Tutorial Sharing',
     datetime: '2022-05-08',
   },
+  {
+    title: 'Blazing slidev ppt template with naive-ui',
+    author: {
+      name: 'godkun',
+    },
+    at: 'personal sharing',
+    slidesLink: 'https://ppt.godkun.top',
+    sourceLink: 'https://github.com/godkun/ppt-template',
+    cover: 'https://github.com/godkun/ppt-template/raw/main/public/show.gif',
+    datetime: '2022-10-24',
+  },
   // Add yours here!
   {
     title: 'Yours?',
