@@ -2,7 +2,13 @@
 title: 导出
 ---
 
+<<<<<<< HEAD
 # 导出 {#exporting}
+=======
+## Slides
+
+### PDF
+>>>>>>> 276185826c2f774c4c27838d374730dd54986752
 
 ## PDF {#pdf}
 
@@ -29,7 +35,11 @@ $ slidev export
 $ slidev export --dark
 ```
 
+<<<<<<< HEAD
 ### 导出点击步骤 {#export-clicks-steps}
+=======
+#### Export Clicks Steps
+>>>>>>> 276185826c2f774c4c27838d374730dd54986752
 
 > 自 v0.21 起可用
 
@@ -39,7 +49,11 @@ $ slidev export --dark
 $ slidev export --with-clicks
 ```
 
+<<<<<<< HEAD
 ## PNGs {#pngs}
+=======
+### PNGs
+>>>>>>> 276185826c2f774c4c27838d374730dd54986752
 
 当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式。
 
@@ -47,6 +61,22 @@ $ slidev export --with-clicks
 $ slidev export --format png
 ```
 
+<<<<<<< HEAD
 ## 单页应用（SPA） {#single-page-application-spa}
 
 请参阅 [静态部署](/guide/hosting) 章节。
+=======
+### Single-Page Application (SPA)
+
+See [Static Hosting](/guide/hosting).
+
+## Presenter notes
+
+> Available since v0.36.8
+
+Export only the presenter notes (the last comment block for each slide) into a text document in PDF.
+
+```bash
+$ slidev export-notes
+```
+>>>>>>> 276185826c2f774c4c27838d374730dd54986752
