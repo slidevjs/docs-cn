@@ -132,6 +132,20 @@ export const showcases: ShowCaseInfo[] = [
     at: 'OpenFunction Tutorial Sharing',
     datetime: '2022-05-08',
   },
+<<<<<<< HEAD
+=======
+    {
+    title: 'Is it Okay to Pursue Functional Programming on Frontend?',
+    author: {
+      name: 'Minsu Kim , Changhui Lee',
+    },
+    at: '2022 JSConf Korea',
+    slidesLink: 'https://moonlit-nougat-422445.netlify.app/1',
+    sourceLink: 'https://github.com/alstn2468/2022-jsconf-presentation',
+    cover: 'https://raw.githubusercontent.com/alstn2468/2022-jsconf-presentation/main/public/images/og.png',
+    datetime: '2022-09-16',
+  },
+>>>>>>> 5cffe3bca749ea2af7b370223f0f442d15d88d8e
   {
     title: 'Blazing slidev ppt template with naive-ui',
     author: {
