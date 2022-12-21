@@ -10,7 +10,13 @@ title: 配置快捷键
 
 <Environment type="client" />
 
+<<<<<<< HEAD
 创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
+=======
+## Getting started
+
+Create `./setup/shortcuts.ts` with the following content:
+>>>>>>> c32272eee9133102e2913c79e771691761502cce
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -37,7 +43,13 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 
 配置函数会接收一个封装有导航函数的对象参数，返回一个快捷键配置信息的数组，你可以参考其类型定义获得详细信息。
 
+<<<<<<< HEAD
 该 `key` 仅支持字符串类型，但你也可以使用如下约定绑定多个快捷键：
+=======
+## Advanced key binding
+
+The `key` type only allows for strings, but you can still bind multiple keys by using following convention:
+>>>>>>> c32272eee9133102e2913c79e771691761502cce
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -55,4 +67,30 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 })
 ```
 
+<<<<<<< HEAD
 关于键盘事件，请参考 [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/)。
+=======
+## Advanced navigation features
+
+The `nav` navigation operations allows you to access some functionalities than basic _next slide_ or _previous slide_. See the following for use-cases:
+
+```ts
+import { defineShortcutsSetup, NavOperations } from '@slidev/types'
+
+export default defineShortcutsSetup((nav: NavOperations) => {
+  return [
+    {
+      key: 'e',
+      
+      // Set the `e` keyboard shortcut to be used as a bookmark
+      // or quick-access of sorts, to navigate specifically to
+      // slide number 42
+      fn: () => nav.go(42),
+      autoRepeat: true,
+    }
+  ]
+})
+```
+
+Refer to [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) for more details about key pressed event.
+>>>>>>> c32272eee9133102e2913c79e771691761502cce
