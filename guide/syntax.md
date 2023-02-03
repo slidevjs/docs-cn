@@ -125,7 +125,7 @@ function add(
 该选项将为代码段设置固定高度并启用滚动：
 
 ~~~ts {2|3|7|12}
-//```ts {2|3|7|12} {maxHeight:'100'}
+//```ts {2|3|7|12} {maxHeight:'100px'}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
