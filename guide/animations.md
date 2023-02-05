@@ -202,6 +202,84 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
 
+<<<<<<< HEAD
 ## 页面过渡 {#pages-transitions}
 
 > 当前版本尚未提供对幻灯片页面过渡功能的内置支持。我们计划在下一个主版本中增加对其的支持。在此之前，你仍然可以使用自定义样式和工具库来实现页面过渡效果。
+=======
+## Slide Transitions
+
+<div id="pages-transitions" />
+
+> Available since v0.39.0
+
+Slidev supports slide transitions out of the box. You can enable it by setting the `transition` frontmatter option:
+
+```md
+---
+transition: slide-left
+---
+```
+
+This will give you a nice sliding effects on slide switching. Setting it in the frontmatter will apply to all slides. You can also set different transition per slide.
+
+### Builtin Transitions
+
+- `fade` - Crossfade in/out
+- `fade-out` - Fade out and then fade in
+- `slide-left` - Slides to the left (slide to right when going backward)
+- `slide-right` - Slides to the right (slide to left when going backward)
+- `slide-top` - Slides to the top (slide to bottom when going backward)
+- `slide-bottom` - Slides to the bottom (slide to top when going backward)
+
+### Custom Transitions
+
+Slidev's slide transitions are powered by [Vue Transition](https://vuejs.org/guide/built-ins/transition.html). You can provide your custom transitions by:
+
+```md
+---
+transition: my-transition
+---
+```
+
+and then in your custom stylesheets:
+
+```css
+.my-transition-enter-active,
+.my-transition-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.my-transition-enter-from,
+.my-transition-leave-to {
+  opacity: 0;
+}
+```
+
+Learn more how it works in [Vue Transition](https://vuejs.org/guide/built-ins/transition.html).
+
+### Forward & Backward Transitions
+
+You can specify different transitions for forward and backward navigation using `|` as a separator in the transition name:
+
+```md
+---
+transition: go-forward | go-backward
+---
+```
+
+With this, when you go from slide 1 to slide 2, the `go-forward` transition will be applied. When you go from slide 2 to slide 1, the `go-backward` transition will be applied.
+
+### Advanced Usage
+
+The `transition` field accepts an option that will passed to the [`<TransitionGroup>`](https://vuejs.org/api/built-in-components.html#transition) component. For example:
+
+```md
+---
+transition:
+  name: my-transition
+  enterFromClass: custom-enter-from
+  enterActiveClass: custom-enter-active
+---
+```
+>>>>>>> 8ffa1fd2a7c795eb019785595170c2cc8d47c39b
