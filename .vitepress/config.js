@@ -165,7 +165,15 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
+<<<<<<< HEAD
     text: '配置快捷键',
+=======
+    text: 'Configure Parser',
+    link: '/custom/config-parser',
+  },
+  {
+    text: 'Configure Shortcuts',
+>>>>>>> dbdc820c8574243d4ae38131ae2a53f6a35a9104
     link: '/custom/config-shortcuts',
   },
   {

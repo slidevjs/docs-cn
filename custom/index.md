@@ -22,7 +22,13 @@ titleTemplate: '%s - Slidev'
 # information for your slides, can be a markdown string
 info: false
 
+<<<<<<< HEAD
 # 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
+=======
+# enable presenter mode, can be boolean, 'dev' or 'build'
+presenter: true
+# enabled pdf downloading in SPA build, can also be a custom url
+>>>>>>> dbdc820c8574243d4ae38131ae2a53f6a35a9104
 download: false
 # 要导出文件的文件名称
 exportFilename: 'slidev-exported'
