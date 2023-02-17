@@ -2,7 +2,13 @@
 title: 导出
 ---
 
+<<<<<<< HEAD
 # 导出 {#exporting}
+=======
+## Slides
+
+### PDF
+>>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
 
 ## PDF {#pdf}
 
@@ -29,7 +35,11 @@ $ slidev export
 $ slidev export --dark
 ```
 
+<<<<<<< HEAD
 ### 导出点击步骤 {#export-clicks-steps}
+=======
+#### Export Clicks Steps
+>>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
 
 > 自 v0.21 起可用
 
@@ -39,7 +49,11 @@ $ slidev export --dark
 $ slidev export --with-clicks
 ```
 
+<<<<<<< HEAD
 ## PNGs {#pngs}
+=======
+### PNGs
+>>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
 
 当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式。
 
@@ -47,6 +61,32 @@ $ slidev export --with-clicks
 $ slidev export --format png
 ```
 
+<<<<<<< HEAD
 ## 单页应用（SPA） {#single-page-application-spa}
+=======
+### Export a range of slides
+
+By default, all slides in the presentation are exported. If you want to export a specific slide or a range of slides you can set the `--range` option and specify which slides you would like to export. 
+
+```bash
+$ slidev export --range 1,6-8,10
+```
+
+This option accepts both specific slide numbers and ranges.
+
+The example above would export slides 1,6,7,8, and 10. 
+
+## Presenter notes
+
+> Available since v0.36.8
+
+Export only the presenter notes (the last comment block for each slide) into a text document in PDF.
+
+```bash
+$ slidev export-notes
+```
+
+## Single-Page Application (SPA)
+>>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
 
 请参阅 [静态部署](/guide/hosting) 章节。
