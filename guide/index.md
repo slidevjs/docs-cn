@@ -21,7 +21,7 @@ Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> 是基于 Web 的幻灯片制作
 - 🤹 [**可交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
 - 🎙 [**演讲者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
 - 🎨 [**绘图**](/guide/drawing.html) - 在你的幻灯片上进行绘图和批注
-- 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公示的支持
+- 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公式的支持
 - 📰 [**图表支持**](/guide/syntax.html#diagrams) —— 使用文本描述语言创建图表
 - 🌟 [**图标**](/guide/syntax.html#icons) —— 能够直接从任意图标库中获取图标
 - 💻 [**编辑器**](/guide/editors.html) —— 集成的编辑器，或者使用 [VS Code 扩展](https://github.com/slidevjs/slidev-vscode)
