@@ -18,14 +18,11 @@ export default defineMermaidSetup(() => {
 })
 ```
 
-<<<<<<< HEAD
 在配置时，你可以为 [Mermaid](https://mermaid-js.github.io/) 提供一些自定义的设置。关于更多配置详情，请参考其类型定义和相关文档。
-=======
-With the setup, you can provide a custom default setting for [Mermaid](https://mermaid-js.github.io/). Refer to the type definitions and its documentation for more details.
 
-## Custom theme/styles
+## 配置 theme/styles {#custom-theme-styles}
 
-In case you want to create your custom Mermaid themes or styles, you can do this by defining `themeVariables` like in the following example:
+如果你想要创建自定义的 Mermaid 主题或样式，可以通过定义 `themeVariables` 实现，如下例所示:
 
 ```ts
 import { defineMermaidSetup } from '@slidev/types'
@@ -51,5 +48,4 @@ export default defineMermaidSetup(() => {
 })
 ```
 
-You can find all theme variables on the [Mermaid Theme Configuration](https://mermaid.js.org/config/theming.html) page.
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
+你可以在 [Mermaid 主题配置](https://mermaid.js.org/config/theming.html) 上找到全部的主题变量。

@@ -132,8 +132,6 @@ export const showcases: ShowCaseInfo[] = [
     at: 'OpenFunction Tutorial Sharing',
     datetime: '2022-05-08',
   },
-<<<<<<< HEAD
-=======
     {
     title: 'Is it Okay to Pursue Functional Programming on Frontend?',
     author: {
@@ -145,7 +143,6 @@ export const showcases: ShowCaseInfo[] = [
     cover: 'https://raw.githubusercontent.com/alstn2468/2022-jsconf-presentation/main/public/images/og.png',
     datetime: '2022-09-16',
   },
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
   {
     title: 'Blazing slidev ppt template with naive-ui',
     author: {
@@ -157,8 +154,6 @@ export const showcases: ShowCaseInfo[] = [
     cover: 'https://github.com/godkun/ppt-template/raw/main/public/show.gif',
     datetime: '2022-10-24',
   },
-<<<<<<< HEAD
-=======
   {
     title: 'Building a Polite Popup with Nuxt 3',
     author: {
@@ -183,7 +178,6 @@ export const showcases: ShowCaseInfo[] = [
     at: 'Internal Tech Talk',
     datetime: '2022-12-01',
   },
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
   // Add yours here!
   {
     title: 'Yours?',

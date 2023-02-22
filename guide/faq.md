@@ -43,11 +43,7 @@ The third column (10% width to parent container)
 </div>
 ```
 
-<<<<<<< HEAD
-欲了解更多，请參考 [Windi CSS 的 Grids 布局](https://cn.windicss.org/utilities/grid.html)。
-=======
-Learn more about [Windi CSS Grids](https://windicss.org/utilities/layout/grid.html).
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
+欲了解更多，请參考 [Windi CSS 的 Grids 布局](https://cn.windicss.org/utilities/layout/grid.html)。
 
 ## 定位 {#positioning}
 

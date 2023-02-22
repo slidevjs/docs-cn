@@ -10,13 +10,9 @@ title: 配置快捷键
 
 <Environment type="client" />
 
-<<<<<<< HEAD
-创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
-=======
-## Getting started
+## 开始使用 {#getting-started}
 
-Create `./setup/shortcuts.ts` with the following content:
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
+创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -43,13 +39,9 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 
 配置函数会接收一个封装有导航函数的对象参数，返回一个快捷键配置信息的数组，你可以参考其类型定义获得详细信息。
 
-<<<<<<< HEAD
-该 `key` 仅支持字符串类型，但你也可以使用如下约定绑定多个快捷键：
-=======
-## Advanced key binding
+## 高级键盘绑定 {#advanced-key-binding}
 
-The `key` type only allows for strings, but you can still bind multiple keys by using following convention:
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
+该 `key` 仅支持字符串类型，但你也可以使用如下约定绑定多个快捷键：
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -67,12 +59,9 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 })
 ```
 
-<<<<<<< HEAD
-关于键盘事件，请参考 [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/)。
-=======
-## Advanced navigation features
+## 高级导航功能 {#advanced-navigation-features}
 
-The `nav` navigation operations allows you to access some functionalities than basic _next slide_ or _previous slide_. See the following for use-cases:
+导航操作 `nav` 比下一张或上一张幻灯片这样的基础功能更加强大。请参阅下面的用例:
 
 ```ts
 import { defineShortcutsSetup, NavOperations } from '@slidev/types'
@@ -92,5 +81,4 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 })
 ```
 
-Refer to [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) for more details about key pressed event.
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
+关于键盘事件，请参考 [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/)。

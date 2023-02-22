@@ -202,18 +202,13 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
 
-<<<<<<< HEAD
-## 页面过渡 {#pages-transitions}
-
-> 当前版本尚未提供对幻灯片页面过渡功能的内置支持。我们计划在下一个主版本中增加对其的支持。在此之前，你仍然可以使用自定义样式和工具库来实现页面过渡效果。
-=======
-## Slide Transitions
+## 幻灯片过渡 {#slide-transitions}
 
 <div id="pages-transitions" />
 
-> Available since v0.39.0
+> 自 v0.39.0 开始可用
 
-Slidev supports slide transitions out of the box. You can enable it by setting the `transition` frontmatter option:
+Slidev 支持开箱即用的幻灯片过渡，你可以通过设置  `transition` 扉页配置项来启用它:
 
 ```md
 ---
@@ -221,20 +216,20 @@ transition: slide-left
 ---
 ```
 
-This will give you a nice sliding effects on slide switching. Setting it in the frontmatter will apply to all slides. You can also set different transition per slide.
+这将给你一个很好的滑动幻灯片切换效果。将其设置在扉页会应用到所有幻灯片。你还可以为每张幻灯片设置不同的过渡。
 
-### Builtin Transitions
+### 内置过渡 {#builtin-transitions}
 
-- `fade` - Crossfade in/out
-- `fade-out` - Fade out and then fade in
-- `slide-left` - Slides to the left (slide to right when going backward)
-- `slide-right` - Slides to the right (slide to left when going backward)
-- `slide-up` - Slides to the top (slide to bottom when going backward)
-- `slide-down` - Slides to the bottom (slide to top when going backward)
+- `fade` - 淡入/淡出
+- `fade-out` - 淡出，然后淡入
+- `slide-left` - 向左滑动 (后退时向右滑动)
+- `slide-right` - 向右滑动 (后退时向左滑动)
+- `slide-up` - 向上滑动 (后退时向下滑动)
+- `slide-down` - 向下滑动 (后退时向上滑动)
 
-### Custom Transitions
+### 自定义过渡 {#custom-transitions}
 
-Slidev's slide transitions are powered by [Vue Transition](https://vuejs.org/guide/built-ins/transition.html). You can provide your custom transitions by:
+Slidev 的幻灯片过渡是由 [Vue 过渡](https://vuejs.org/guide/built-ins/transition.html)驱动的，你可以通过以下方式提供自定义过渡:
 
 ```md
 ---
@@ -242,7 +237,7 @@ transition: my-transition
 ---
 ```
 
-and then in your custom stylesheets:
+然后在你的自定义样式表中如下配置:
 
 ```css
 .my-transition-enter-active,
@@ -256,11 +251,11 @@ and then in your custom stylesheets:
 }
 ```
 
-Learn more how it works in [Vue Transition](https://vuejs.org/guide/built-ins/transition.html).
+在 [Vue 过渡](https://vuejs.org/guide/built-ins/transition.html)中了解更多。
 
-### Forward & Backward Transitions
+### 向前和向后过渡 {#forward-backward-transitions}
 
-You can specify different transitions for forward and backward navigation using `|` as a separator in the transition name:
+你可以使用 `|` 作为过渡名称中的分隔符来指定向前和向后导航的不同过渡属性:
 
 ```md
 ---
@@ -268,11 +263,11 @@ transition: go-forward | go-backward
 ---
 ```
 
-With this, when you go from slide 1 to slide 2, the `go-forward` transition will be applied. When you go from slide 2 to slide 1, the `go-backward` transition will be applied.
+这样，当你从幻灯片 1 到幻灯片 2 时， `go-forward` 过渡生效；从幻灯片 2 到幻灯片 1 时，`go-backward` 过渡生效。
 
-### Advanced Usage
+### 高级用法 {#advanced-usage}
 
-The `transition` field accepts an option that will passed to the [`<TransitionGroup>`](https://vuejs.org/api/built-in-components.html#transition) component. For example:
+`transition` 字段还可以是一个选项，该选项会传递给 [`<TransitionGroup>`](https://vuejs.org/api/built-in-components.html#transition) 组件：
 
 ```md
 ---
@@ -282,4 +277,3 @@ transition:
   enterActiveClass: custom-enter-active
 ---
 ```
->>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
