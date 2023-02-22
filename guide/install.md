@@ -201,7 +201,7 @@ Options:
 
 * `--output` (`string`，默认值：use `exportFilename` (参阅 https://sli.dev/custom/#frontmatter-configures) 或使用 `[entry]-export`)：输出的路径。
 * `--base` (`'pdf'，'png'，'md'`，默认值：`'pdf'`)：输出的格式。
-* `--timeout` (`number`，默认值：`30000`)：渲染打野页面的超时时间（参阅 https://playwright.dev/docs/api/class-page#page-goto）。
+* `--timeout` (`number`，默认值：`30000`)：渲染打印页面的超时时间（参阅 https://playwright.dev/docs/api/class-page#page-goto）。
 * `--range` (`string`)：输出的页面范围（例如：`'1,4-5,6'`）。
 * `--dark` (`boolean`，默认值：`false`)：导出黑暗主题色。
 * `--with-clicks`，`-c` (`boolean`，默认值：`false`)：输出每次点击的页面（参阅 https://sli.dev/guide/animations.html#click-animations)。
