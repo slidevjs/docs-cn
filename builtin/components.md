@@ -86,6 +86,49 @@ import Titles from '/@slidev/titles.md'
 
 * `no` (`string | number`): 显示标题的幻灯片编号（幻灯片下标从 `1` 开始）
 
+### `LightOrDark` {#lightordark}
+
+使用 `LightOrDark` 组件来根据当前的亮色或暗色主题来显示指定内容。
+
+#### 用法 {#usage}
+
+使用 `#dark` 和 `#light` 两个具名插槽:
+~~~md
+<LightOrDark>
+  <template #dark>Dark mode is on</template>
+  <template #light>Light mode is on</template>
+</LightOrDark>
+~~~
+
+`LightOrDark` 组件提供的 props 能够通过作用域插槽 props 获取到：
+~~~md
+<LightOrDark width="100" alt="some image">
+  <template #dark="props">
+    <img src="/dark.png" v-bind="props"/>
+  </template>
+  <template #light="props">
+    <img src="/light.png" v-bind="props"/>
+  </template>
+</LightOrDark>
+~~~
+
+可以在插槽中使用 markdown 语法，但是需要在内容前后增加空行：
+~~~md
+<LightOrDark>
+  <template #dark>
+  
+![dark](/dark.png)
+
+  </template>
+  <template #light>
+  
+![light](/light.png)
+
+  </template>
+</LightOrDark>
+~~~
+
+
 ## 自定义组件 {#custom-components}
 
 在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里使用该组件啦！

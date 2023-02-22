@@ -202,6 +202,78 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
 
-## 页面过渡 {#pages-transitions}
+## 幻灯片过渡 {#slide-transitions}
 
-> 当前版本尚未提供对幻灯片页面过渡功能的内置支持。我们计划在下一个主版本中增加对其的支持。在此之前，你仍然可以使用自定义样式和工具库来实现页面过渡效果。
+<div id="pages-transitions" />
+
+> 自 v0.39.0 开始可用
+
+Slidev 支持开箱即用的幻灯片过渡，你可以通过设置  `transition` 扉页配置项来启用它:
+
+```md
+---
+transition: slide-left
+---
+```
+
+这将给你一个很好的滑动幻灯片切换效果。将其设置在扉页会应用到所有幻灯片。你还可以为每张幻灯片设置不同的过渡。
+
+### 内置过渡 {#builtin-transitions}
+
+- `fade` - 淡入/淡出
+- `fade-out` - 淡出，然后淡入
+- `slide-left` - 向左滑动 (后退时向右滑动)
+- `slide-right` - 向右滑动 (后退时向左滑动)
+- `slide-up` - 向上滑动 (后退时向下滑动)
+- `slide-down` - 向下滑动 (后退时向上滑动)
+
+### 自定义过渡 {#custom-transitions}
+
+Slidev 的幻灯片过渡是由 [Vue 过渡](https://vuejs.org/guide/built-ins/transition.html)驱动的，你可以通过以下方式提供自定义过渡:
+
+```md
+---
+transition: my-transition
+---
+```
+
+然后在你的自定义样式表中如下配置:
+
+```css
+.my-transition-enter-active,
+.my-transition-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.my-transition-enter-from,
+.my-transition-leave-to {
+  opacity: 0;
+}
+```
+
+在 [Vue 过渡](https://vuejs.org/guide/built-ins/transition.html)中了解更多。
+
+### 向前和向后过渡 {#forward-backward-transitions}
+
+你可以使用 `|` 作为过渡名称中的分隔符来指定向前和向后导航的不同过渡属性:
+
+```md
+---
+transition: go-forward | go-backward
+---
+```
+
+这样，当你从幻灯片 1 到幻灯片 2 时， `go-forward` 过渡生效；从幻灯片 2 到幻灯片 1 时，`go-backward` 过渡生效。
+
+### 高级用法 {#advanced-usage}
+
+`transition` 字段还可以是一个选项，该选项会传递给 [`<TransitionGroup>`](https://vuejs.org/api/built-in-components.html#transition) 组件：
+
+```md
+---
+transition:
+  name: my-transition
+  enterFromClass: custom-enter-from
+  enterActiveClass: custom-enter-active
+---
+```

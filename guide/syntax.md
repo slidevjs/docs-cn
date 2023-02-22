@@ -125,7 +125,7 @@ function add(
 该选项将为代码段设置固定高度并启用滚动：
 
 ~~~ts {2|3|7|12}
-//```ts {2|3|7|12} {maxHeight:'100'}
+//```ts {2|3|7|12} {maxHeight:'100px'}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
@@ -167,7 +167,7 @@ h1 {
 # Next slide is not affected
 ```
 
-Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
+Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。子选择器 (如 `.a > .b`) 在这里不起作用。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
 在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 CSS 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
 

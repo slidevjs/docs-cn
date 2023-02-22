@@ -17,11 +17,13 @@ title: 自定义
 theme: 'default'
 # 幻灯片的总标题，如果没有指定，那么将以第一张拥有标题的幻灯片的标题作为总标题
 title: 'Slidev'
-# titleTemplate for the webpage, `%s` will be replaced by the page's title
+# 网页的标题模板，`%s` 会被页面的标题替换
 titleTemplate: '%s - Slidev'
-# information for your slides, can be a markdown string
+# 幻灯片信息，可以是一个 markdown 字符串
 info: false
 
+# 激活演讲者模式，可以是 boolean 类型、'dev' 或 'build'
+presenter: true
 # 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
 download: false
 # 要导出文件的文件名称

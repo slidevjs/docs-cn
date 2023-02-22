@@ -10,6 +10,8 @@ title: 配置快捷键
 
 <Environment type="client" />
 
+## 开始使用 {#getting-started}
+
 创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
 
 ```ts
@@ -37,6 +39,8 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 
 配置函数会接收一个封装有导航函数的对象参数，返回一个快捷键配置信息的数组，你可以参考其类型定义获得详细信息。
 
+## 高级键盘绑定 {#advanced-key-binding}
+
 该 `key` 仅支持字符串类型，但你也可以使用如下约定绑定多个快捷键：
 
 ```ts
@@ -49,6 +53,28 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
     {
       key: 'ShiftLeft+ArrowRight',
       fn: () => nav.next(),
+      autoRepeat: true,
+    }
+  ]
+})
+```
+
+## 高级导航功能 {#advanced-navigation-features}
+
+导航操作 `nav` 比下一张或上一张幻灯片这样的基础功能更加强大。请参阅下面的用例:
+
+```ts
+import { defineShortcutsSetup, NavOperations } from '@slidev/types'
+
+export default defineShortcutsSetup((nav: NavOperations) => {
+  return [
+    {
+      key: 'e',
+      
+      // Set the `e` keyboard shortcut to be used as a bookmark
+      // or quick-access of sorts, to navigate specifically to
+      // slide number 42
+      fn: () => nav.go(42),
       autoRepeat: true,
     }
   ]
