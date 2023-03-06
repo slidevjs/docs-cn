@@ -182,6 +182,17 @@ const Customizations = [
   }
 ]
 
+const BuiltIn = [
+  {
+    text: 'Components',
+    link: '/builtin/components',
+  },
+  {
+    text: 'Layouts',
+    link: '/builtin/layouts',
+  },
+]
+
 const Resources = [
   {
     text: '案例展示',
@@ -215,6 +226,7 @@ const slidebars = [
     children: Customizations,
   },
   {
+<<<<<<< HEAD
     text: '内置',
     children: [
       {
@@ -226,6 +238,10 @@ const slidebars = [
         link: '/builtin/layouts',
       },
     ],
+=======
+    text: 'Built-in',
+    children: BuiltIn,
+>>>>>>> 46f11048bbcb1c239aeff6e3b8061dbba0f779ed
   },
 ]
 
@@ -283,7 +299,15 @@ module.exports = {
         items: Customizations,
       },
       {
+<<<<<<< HEAD
         text: '资源',
+=======
+        text: 'Built-in',
+        items: BuiltIn,
+      },
+      {
+        text: 'Resources',
+>>>>>>> 46f11048bbcb1c239aeff6e3b8061dbba0f779ed
         items: Resources,
       },
       {
