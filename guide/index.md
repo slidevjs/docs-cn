@@ -69,7 +69,17 @@ $ npm init slidev
 $ yarn create slidev
 ```
 
+<<<<<<< HEAD
 根据提示开始创建你的幻灯片吧！想要了解更多关于 Markdown 的语法，请阅读 [语法指南](/guide/syntax)。
+=======
+With pnpm:
+
+```bash
+$ pnpm create slidev
+```
+
+Follow the prompts and start making your slides now! For more details about the markdown syntax, read through the [syntax guide](/guide/syntax).
+>>>>>>> 1317cbcaae63868c5cfbb66bcf4560be7f9c5fbf
 
 ### 命令行界面 {#command-line-interface}
 
