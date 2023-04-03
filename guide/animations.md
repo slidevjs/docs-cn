@@ -64,7 +64,26 @@ Hey!
 
 每次你点击“下一步”按钮时，元素会逐条依次出现。
 
+<<<<<<< HEAD
 ### 自定义点击数量 {#custom-clicks-count}
+=======
+It accepts a `depth` props for nested list:
+
+```md
+<v-clicks depth="2">
+
+- Item 1
+  - Item 1.1
+  - Item 1.2
+- Item 2
+  - Item 2.1
+  - Item 2.2
+
+</v-clicks>
+```
+
+### Custom Clicks Count
+>>>>>>> c2931a4b1de23de51866bfc76636cc1667f323b4
 
 默认情况下，Slidev 会计算进入下一张幻灯片之前需要执行多少步。你可以在 frontmatter 选项中设置 `clicks` 来覆盖该设置：
 
