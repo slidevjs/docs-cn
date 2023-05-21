@@ -11,7 +11,7 @@ Markdown 天然支持 HTML。因此，你可以按照你想要的方式对你的
 示例：
 
 ```html
-<div class="grid pt-4 gap-4 grids-cols-[100px,1fr]">
+<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
 
 ### Name
 

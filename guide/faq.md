@@ -24,7 +24,7 @@ The second column
 你甚至可以定制每一列的大小，比如：
 
 ```html
-<div class="grid grid-cols-[200px,1fr,10%] gap-4">
+<div class="grid grid-cols-[200px_1fr_10%] gap-4">
 <div>
 
 The first column (200px)

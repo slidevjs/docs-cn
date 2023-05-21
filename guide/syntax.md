@@ -149,7 +149,31 @@ console.log('HelloWorld')
 
 欲了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
 
+<<<<<<< HEAD
 ## 内联样式 {#embedded-styles}
+=======
+### Monaco diff
+
+Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+
+```md
+//```ts {monaco-diff}
+This line is removed on the right.
+just some text
+abcd
+efgh
+Some more text
+~~~
+just some text
+abcz
+zzzzefgh
+Some more text.
+This line is removed on the left.
+//```
+```
+
+## Embedded Styles
+>>>>>>> d29625cb3633171f7cf2087a777e68a1cd76ea6f
 
 你可以在 Markdown 中直接使用 `<style>` 标签来覆盖**当前幻灯片**的样式。
 
