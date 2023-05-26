@@ -22,7 +22,17 @@ $ npm init slidev@latest
 $ yarn create slidev
 ```
 
+<<<<<<< HEAD
 跟随命令行的提示，它将自动为你打开幻灯片，网址是 `http://localhost:3030/`。
+=======
+With PNPM:
+
+```bash
+$ pnpm create slidev
+```
+
+Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
+>>>>>>> 19d3ad78801d41f8e35b2c2f4cbeecc8b90afaea
 
 同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
