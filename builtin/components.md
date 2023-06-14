@@ -4,6 +4,7 @@ title: 组件
 
 # 组件 {#components}
 
+<<<<<<< HEAD
 ## 内置组件 {#built-in-components}
 
 > 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
@@ -20,15 +21,27 @@ hideInToc: true
 ```
 
 标题使用 [`<Titles>` 组件](#titles) 来展示
+=======
+### `Arrow`
+
+Draw an arrow.
+>>>>>>> 281e164b346b52adc3a71e21d96d17965b799d59
 
 #### 用法 {#toc-usage}
 
 ~~~md
-<Toc />
+<Arrow x1="10" y1="20" x2="100" y2="200" />
+~~~
+
+Or:
+
+~~~md
+<Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />
 ~~~
 
 参数：
 
+<<<<<<< HEAD
 * `columns` (`string | number`，默认值：`1`)：要显示的列数The number of columns of the display
 * `listClass` (`string | string[]`，默认值：`''`)：用于修饰目录的 class
 * `maxDepth` (`string | number`，默认值：`Infinity`)：要显示标题的最大深度
@@ -41,16 +54,30 @@ hideInToc: true
 ### `Link` {#link}
 
 插入一个链接，你可以用它来导航到一个指定的幻灯片。
+=======
+* `x1` (`string | number`, required): start point x position
+* `y1` (`string | number`, required): start point y position
+* `x2` (`string | number`, required): end point x position
+* `y2` (`string | number`, required): end point x position
+* `width` (`string | number`, default: `2`): line width
+* `color` (`string`, default: `'currentColor'`): line color
+
+### `AutoFitText`
+
+> Experimental
+
+Box inside which the font size will automatically adapt to fit the content. Similar to PowerPoint or Keynote TextBox.
+>>>>>>> 281e164b346b52adc3a71e21d96d17965b799d59
 
 #### 用法 {#link-usage}
 
 ~~~md
-<Link to="42">Go to slide 42</Link>
-<Link to="42" title="Go to slide 42"/>
+<AutoFitText :max="200" :min="100" modelValue="Some text"/>
 ~~~
 
 参数：
 
+<<<<<<< HEAD
 * `to` (`string | number`)：幻灯片的路径，以导航到对应位置（幻灯片下标从 `1` 开始）
 * `title` (`string`)：要显示的标题
 
@@ -85,6 +112,11 @@ import Titles from '/@slidev/titles.md'
 参数：
 
 * `no` (`string | number`): 显示标题的幻灯片编号（幻灯片下标从 `1` 开始）
+=======
+* `max` (`string | number`, default `100`): Maximum font size
+* `min` (`string | number`, default `30`): Minimum font size
+* `modelValue` (`string`, default `''`): text content
+>>>>>>> 281e164b346b52adc3a71e21d96d17965b799d59
 
 ### `LightOrDark` {#lightordark}
 
@@ -128,6 +160,169 @@ import Titles from '/@slidev/titles.md'
 </LightOrDark>
 ~~~
 
+### `Link`
+
+Insert a link you can use to navigate to a given slide.
+
+#### Usage
+
+~~~md
+<Link to="42">Go to slide 42</Link>
+<Link to="42" title="Go to slide 42"/>
+~~~
+
+Parameters:
+
+* `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
+* `title` (`string`): The title to display
+
+### `RenderWhen`
+
+Render slot only when the context match (for example when we are in presenter view).
+
+#### Usage
+
+~~~md
+<RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
+~~~
+
+Context type: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+
+Parameters:
+
+* `context` (`Context | Context[]`): context or array of contexts you want the slot to be rendered
+
+### `SlideCurrentNo`
+
+Current slide number.
+
+#### Usage
+
+~~~md
+<SlideCurrentNo />
+~~~
+
+### `SlidesTotal`
+
+Total number of slides.
+
+#### Usage
+
+~~~md
+<SlidesTotal />
+~~~
+
+### `Titles`
+
+Insert the main title from a slide parsed as HTML.
+
+Titles and title levels get automatically retrieved from the first title element of each slides.
+
+You can override this automatic behaviour for a slide by using the front matter syntax:
+```yml
+---
+title: Amazing slide title
+level: 2
+---
+```
+
+#### Usage
+
+The `<Titles>` component is a virtual component you can import with:
+```js
+import Titles from '/@slidev/titles.md'
+```
+
+Then you can use it with:
+~~~md
+<Titles no="42" />
+~~~
+
+Parameters:
+
+* `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
+
+### `Toc`
+
+Insert a Table Of Content.
+
+If you want a slide to not appear in the `<Toc>` component, you can use in the front matter block of the slide:
+```yml
+---
+hideInToc: true
+---
+```
+
+Titles are displayed using the [`<Titles>` component](#titles)
+
+#### Usage
+
+~~~md
+<Toc />
+~~~
+
+Parameters:
+
+* `columns` (`string | number`, default: `1`): The number of columns of the display
+* `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
+* `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
+* `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
+* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
+  * `'all'`: Display all items
+  * `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
+  * `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+
+### `Transform`
+
+Apply scaling or transforming to elements.
+
+#### Usage
+
+~~~md
+<Transform :scale="0.5">
+  <YourElements />
+</Transform>
+~~~
+
+Parameters:
+
+* `scale` (`number | string`, default `1`): transform scale value
+* `origin` (`string`, default `'top left'`): transform origin value
+
+### `Tweet`
+
+Embed a tweet.
+
+#### Usage
+
+~~~md
+<Tweet id="20" />
+~~~
+
+Parameters:
+
+* `id` (`number | string`, required): id of the tweet
+* `scale` (`number | string`, default `1`): transform scale value
+* `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+
+### `VAfter`, `VClick` and `VClicks`
+
+See https://sli.dev/guide/animations.html
+### `Youtube`
+
+Embed a youtube video.
+
+#### Usage
+
+~~~md
+<Youtube id="luoMHjh-XcQ" />
+~~~
+
+Parameters:
+
+* `id` (`string`, required): id of the youtube video
+* `width` (`number`): width of the video
+* `height` (`number`): height of the video
 
 ## 自定义组件 {#custom-components}
 
