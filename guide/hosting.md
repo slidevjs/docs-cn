@@ -9,7 +9,15 @@
 $ slidev build
 ```
 
+<<<<<<< HEAD
 生成的应用程序会保存在 `dist/` 目录下，然后你可以将该目录部署在 [GitHub Pages](https://pages.github.com/)，[Netlify](https://netlify.app/)，[Vercel](https://vercel.com/)，等你想部署的任何地方。接着，就可以将你幻灯片的链接分享给任何人。
+=======
+The generated application will be available under `dist/`.
+
+You can test the generated build using a web server (Apache, NGINX, Caddy...etc.) or in the project you can directly run: `npx vite preview`.
+
+Then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever you want. Now you can share your slides with the rest of the world with a single link.
+>>>>>>> 8f99a82395e76f73b91f8a377d7462fdcd67120d
 
 ### 配置基础路径 {#base-path}
 
@@ -41,7 +49,54 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
+<<<<<<< HEAD
 ### 示例 {#examples}
+=======
+This can also be done with the CLI option `--download` (`boolean` only).
+
+```bash
+$ slidev build --download
+```
+
+When using the download option, you can also provide the export options:
+
+* By using [CLI export options](/guide/exporting.html)
+* Or [frontmatter export options](/custom/#frontmatter-configures)
+
+### Output directory
+
+You can change the output directory using `--out`.
+
+```bash
+$ slidev build --out my-build-folder
+```
+
+### Watch mode
+
+By passing the `--watch` option the build will run in watch mode and will rebuild anytime the source changes.
+
+```bash
+$ slidev build --watch
+```
+
+### Multiple entries
+
+You can also build multiple slides at once.
+
+```bash
+$ slidev build slides1.md slides1.md
+```
+
+Or
+
+```bash
+$ slidev build *.md
+```
+
+In this case, each input file will generate a folder containing the build in the output directory.
+
+## Examples
+>>>>>>> 8f99a82395e76f73b91f8a377d7462fdcd67120d
 
 下面是几个导出为单页应用的示例：
 
@@ -102,27 +157,51 @@ download: 'https://myside.com/my-talk.pdf'
 
 ```yaml
 name: Deploy pages
-on: push
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: 'lts/*'
+
       - name: Install dependencies
         run: npm install
+
       - name: Install slidev
         run:  npm i -g @slidev/cli
+
       - name: Build
         run: slidev build --base <name_of_repo>
-      - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+
+      - uses: actions/configure-pages@v3
+
+      - uses: actions/upload-pages-artifact@v1
         with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v2
 ```
 - 在你的仓库里，选择 “Settings > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
 - 最终，在全部工作流执行之后，在 “Settings > Pages” 下会出现幻灯片的链接。
