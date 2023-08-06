@@ -36,7 +36,11 @@ Slidev 为开发者提供了一流的代码片段支持。它同时支持 [Prism
 
 ## 快速 {#fast}
 
+<<<<<<< HEAD
 Slidev 得益于 [Vite](https://vitejs.dev/)，[Vue 3](https://v3.vuejs.org/) 和 [Windi CSS](https://windicss.org/)，为你带来了最美妙的创作体验。你所做的每一个改变都会**立即反映**到你的幻灯片上。
+=======
+Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [UnoCSS](https://unocss.dev/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+>>>>>>> 8e6b3c049cecb5d4a489bcc06e01f4659bce41c5
 
 查找更多关于 [技术栈](/guide/#tech-stack).
 
