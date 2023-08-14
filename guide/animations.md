@@ -64,7 +64,26 @@ Hey!
 
 每次你点击“下一步”按钮时，元素会逐条依次出现。
 
+<<<<<<< HEAD
 ### 自定义点击数量 {#custom-clicks-count}
+=======
+It accepts a `depth` props for nested list:
+
+```md
+<v-clicks depth="2">
+
+- Item 1
+  - Item 1.1
+  - Item 1.2
+- Item 2
+  - Item 2.1
+  - Item 2.2
+
+</v-clicks>
+```
+
+### Custom Clicks Count
+>>>>>>> a6243d6b7389324ffcacb2e5b7e628eda6c656a5
 
 默认情况下，Slidev 会计算进入下一张幻灯片之前需要执行多少步。你可以在 frontmatter 选项中设置 `clicks` 来覆盖该设置：
 
@@ -200,7 +219,11 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 > </div>
 > ```
 
+<<<<<<< HEAD
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
+=======
+Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
+>>>>>>> a6243d6b7389324ffcacb2e5b7e628eda6c656a5
 
 ## 幻灯片过渡 {#slide-transitions}
 
