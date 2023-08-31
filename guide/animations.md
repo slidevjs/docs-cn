@@ -64,7 +64,26 @@ Hey!
 
 每次你点击“下一步”按钮时，元素会逐条依次出现。
 
+<<<<<<< HEAD
 ### 自定义点击数量 {#custom-clicks-count}
+=======
+It accepts a `depth` props for nested list:
+
+```md
+<v-clicks depth="2">
+
+- Item 1
+  - Item 1.1
+  - Item 1.2
+- Item 2
+  - Item 2.1
+  - Item 2.2
+
+</v-clicks>
+```
+
+### Custom Clicks Count
+>>>>>>> 8024ec4e94d2cd81bc6d4a3efee822dde30d9054
 
 默认情况下，Slidev 会计算进入下一张幻灯片之前需要执行多少步。你可以在 frontmatter 选项中设置 `clicks` 来覆盖该设置：
 
@@ -103,7 +122,21 @@ clicks: 3
 </v-clicks>
 ```
 
+<<<<<<< HEAD
 ### 元素过渡 {#element-transitions}
+=======
+### Enter & Leave
+
+> Available since v0.43.0
+
+You can also specify the enter and leave index for the `v-click` directive by passing an array. The end index is exclusive.
+
+```md
+<div v-click="[2, 4]">This will be shown on the 2nd and 3rd clicks, and hide again after the 4th.</div>
+```
+
+### Element Transitions
+>>>>>>> 8024ec4e94d2cd81bc6d4a3efee822dde30d9054
 
 当你在元素中应用 `v-click` 指令时，它会给该元素添加名为 `slidev-vclick-target` 的类。当元素隐藏时，还加上了 `slidev-vclick-hidden` 类。例如：
 
@@ -200,7 +233,11 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 > </div>
 > ```
 
+<<<<<<< HEAD
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
+=======
+Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
+>>>>>>> 8024ec4e94d2cd81bc6d4a3efee822dde30d9054
 
 ## 幻灯片过渡 {#slide-transitions}
 
