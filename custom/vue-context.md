@@ -29,7 +29,19 @@ Current page is: {{ $slidev.nav.currentPage }}
 
 ## 属性 {#properties}
 
+<<<<<<< HEAD
 ### `$slidev.nav` {#slidev-nav}
+=======
+### `$clicks`
+
+`$clicks` hold a number of clicks on the current slide. Can be used conditionally to show different content on clicks.
+
+```html
+<div v-if="$clicks > 3">Content</div>
+```
+
+### `$slidev.nav`
+>>>>>>> 2fe32c406cbcd27bcfe2100a4d8c08d7cc42adc4
 
 一个响应式对象，它拥有幻灯片导航的属性以及控制权。例如：
 
@@ -44,14 +56,24 @@ $slidev.nav.go(10) // 去到幻灯片的第 10 页
 ```js
 $slidev.nav.currentPage // 获取当前幻灯片的页数
 
+<<<<<<< HEAD
 $slidev.nav.currentLayout // 当前的布局 id
 
 $slidev.nav.clicks // 目前的点击次数
+=======
+$slidev.nav.currentLayout // current layout id
+>>>>>>> 2fe32c406cbcd27bcfe2100a4d8c08d7cc42adc4
 ```
 
 欲了解更多可用属性，请参阅 [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts) 的 exports。
 
+<<<<<<< HEAD
 ### `$slidev.configs` {#slidev-configs}
+=======
+> Note: `$slidev.nav.clicks` is a global state while `$clicks` is local to each slide. It's recommended to **use `$clicks` over `$slidev.nav.clicks`** to avoid clicks changed been triggered on page transitions.
+
+### `$slidev.configs`
+>>>>>>> 2fe32c406cbcd27bcfe2100a4d8c08d7cc42adc4
 
 一个响应式对象，它存储着你 `slides.md` 中解析后的 [第一个 frontmatter 中的配置](/custom/#frontmatter-configures)。例如：
 
@@ -80,3 +102,9 @@ themeConfig:
 ```
 {{ $slidev.themeConfigs.primary }} // '#213435'
 ```
+
+### `$nav`
+
+> Available since v0.43.0
+
+A shorthand of `$slidev.nav`.

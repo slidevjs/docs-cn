@@ -8,7 +8,15 @@ title: 编写扩展插件
 
 ## 扩展插件能力 {#capability}
 
+<<<<<<< HEAD
 一个扩展插件可以自定义以下功能：
+=======
+- Global styles (use with caution has it is more the role of [themes](/themes/use))
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS/Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> 2fe32c406cbcd27bcfe2100a4d8c08d7cc42adc4
 
 - 全局样式（谨慎使用，它更通常作为 [主题](/themes/use) 的能力）
 - 自定义布局或者重写现有布局
