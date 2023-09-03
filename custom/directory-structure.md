@@ -119,7 +119,11 @@ import './code.css'
 import './layouts.css'
 ```
 
+<<<<<<< HEAD
 样式得益于 [Windi CSS](https://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
+=======
+Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://windicss.org/features/directives.html) out-of-box. For example:
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 ```less
 .slidev-layout {
