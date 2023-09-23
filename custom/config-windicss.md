@@ -6,12 +6,27 @@ title: 配置 Windi CSS
 
 <Environment type="node" />
 
+<<<<<<< HEAD
 Markdown 天然支持 HTML。因此，你可以按照你想要的方式对你的内容进行样式设计。为了提供一些便利，我们内置了 [Windi CSS](https://github.com/windicss/windicss)，所以你可以直接使用 Windi CSS 提供的工具类对样式进行调整。
+=======
+::: warning
+Since Slidev v0.42.0, [UnoCSS](/custom/config-unocss) become the default CSS framework for Slidev.
+
+You can still use Windi CSS by setting `css: windicss` in the frontmatter.
+```md
+---
+css: windicss
+---
+```
+:::
+
+Markdown naturally supports embedded HTML markups. You can therefore style your content the way you want.
+>>>>>>> 0c897047096b0c05c5b5d3c2a8c99912c5a33056
 
 示例：
 
 ```html
-<div class="grid pt-4 gap-4 grids-cols-[100px,1fr]">
+<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
 
 ### Name
 

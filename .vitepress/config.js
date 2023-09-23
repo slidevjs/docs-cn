@@ -149,7 +149,15 @@ const Customizations = [
     link: '/custom/config-vite',
   },
   {
+<<<<<<< HEAD
     text: '配置 Windi CSS',
+=======
+    text: 'Configure UnoCSS',
+    link: '/custom/config-unocss',
+  },
+  {
+    text: 'Configure Windi CSS',
+>>>>>>> 0c897047096b0c05c5b5d3c2a8c99912c5a33056
     link: '/custom/config-windicss',
   },
   {
@@ -180,6 +188,17 @@ const Customizations = [
     text: '全局图层',
     link: '/custom/global-layers',
   }
+]
+
+const BuiltIn = [
+  {
+    text: 'Components',
+    link: '/builtin/components',
+  },
+  {
+    text: 'Layouts',
+    link: '/builtin/layouts',
+  },
 ]
 
 const Resources = [
@@ -215,6 +234,7 @@ const slidebars = [
     children: Customizations,
   },
   {
+<<<<<<< HEAD
     text: '内置',
     children: [
       {
@@ -226,6 +246,10 @@ const slidebars = [
         link: '/builtin/layouts',
       },
     ],
+=======
+    text: 'Built-in',
+    children: BuiltIn,
+>>>>>>> 0c897047096b0c05c5b5d3c2a8c99912c5a33056
   },
 ]
 
@@ -283,7 +307,15 @@ module.exports = {
         items: Customizations,
       },
       {
+<<<<<<< HEAD
         text: '资源',
+=======
+        text: 'Built-in',
+        items: BuiltIn,
+      },
+      {
+        text: 'Resources',
+>>>>>>> 0c897047096b0c05c5b5d3c2a8c99912c5a33056
         items: Resources,
       },
       {

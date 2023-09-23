@@ -179,7 +179,38 @@ This shows on the left
 This shows on the right
 ```
 
+<<<<<<< HEAD
 ## 自定义布局 {#custom-layouts}
+=======
+### `two-cols-header`
+
+Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+
+#### Usage
+
+
+```md
+---
+layout: two-cols-header
+---
+
+This spans both
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+```
+
+## Custom Layouts
+>>>>>>> 0c897047096b0c05c5b5d3c2a8c99912c5a33056
 
 在你的项目根目录里创建一个 `layouts/` 文件夹，然后直接把你的自定义 Vue 组件放进去。
 
