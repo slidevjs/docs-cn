@@ -4,7 +4,11 @@ title: 安装
 
 # 安装 {#installation}
 
+<<<<<<< HEAD
 ## 初始模板 {#starter-template}
+=======
+> Slidev requires [**Node.js >=18.0**](https://nodejs.org/)
+>>>>>>> cbaf809403e519ee40e0980dc672c57d90c1dea2
 
 > Slidev 需要 [Node.js](https://nodejs.org/) 的版本 **>=14.0.0**
 
@@ -22,7 +26,17 @@ $ npm init slidev@latest
 $ yarn create slidev
 ```
 
+<<<<<<< HEAD
 跟随命令行的提示，它将自动为你打开幻灯片，网址是 `http://localhost:3030/`。
+=======
+With PNPM:
+
+```bash
+$ pnpm create slidev
+```
+
+Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
+>>>>>>> cbaf809403e519ee40e0980dc672c57d90c1dea2
 
 同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
@@ -219,8 +233,42 @@ Options:
 
 子命令：
 
+<<<<<<< HEAD
 * `eject [entry]`：将当前主题弹出到本地文件系统中
   * `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
   * 选项：
     * `--dir` (`string`，默认值：`theme`)：要输出到的目标文件夹。
     * `--theme`，`-t` (`string`)：覆盖主题。
+=======
+Export slides to PDF (or other format).
+
+* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+
+Options:
+
+* `--output` (`string`, default: use `exportFilename` (see https://sli.dev/custom/#frontmatter-configures) or use `[entry]-export`): path to the output.
+* `--format` (`'pdf', 'png', 'md'`, default: `'pdf'`): output format.
+* `--timeout` (`number`, default: `30000`): timeout for rendering the print page (see https://playwright.dev/docs/api/class-page#page-goto).
+* `--range` (`string`): page ranges to export (example: `'1,4-5,6'`).
+* `--dark` (`boolean`, default: `false`): export as dark theme.
+* `--with-clicks`, `-c` (`boolean`, default: `false`): export pages for every clicks (see https://sli.dev/guide/animations.html#click-animations).
+* `--theme`, `-t` (`string`): override theme.
+
+### `slidev format [entry]`
+
+Format the markdown file.
+
+* `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+
+### `slidev theme [subcommand]`
+
+Theme related operations.
+
+Subcommands:
+
+* `eject [entry]`: Eject current theme into local file system
+  * `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
+  * Options:
+    * `--dir` (`string`, default: `theme`): output dir.
+    * `--theme`, `-t` (`string`): override theme.
+>>>>>>> cbaf809403e519ee40e0980dc672c57d90c1dea2
