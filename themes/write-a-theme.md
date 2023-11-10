@@ -16,12 +16,21 @@ $ npm init slidev-theme
 
 一个主题可以自定义以下功能：
 
+<<<<<<< HEAD
 - 全局样式
 - 提供默认配置（字体、配色方案、语法高亮器等）
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
 - 扩展 Windi CSS 配置
 - 配置 Monaco, Prism 等工具
+=======
+- Global styles
+- Provide default configurations (fonts, color schema, highlighters, etc.)
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS/Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> 32ffb9e79f43a405236e06473aaf65d3cf6e9aa7
 
 ## 约定 {#conventions}
 
@@ -68,7 +77,7 @@ theme: ./
 // package.json
 {
   "slidev": {
-    "default": {
+    "defaults": {
       "aspectRatio": "16/9",
       "canvasWidth": 980,
       "fonts": {
@@ -132,7 +141,7 @@ html.dark {
 // package.json
 {
   "slidev": {
-    "highlighter": "shiki" // or "prism" or "all"
+    "highlighter": "shiki" // or "prism" or "both"
   }
 }
 ```
