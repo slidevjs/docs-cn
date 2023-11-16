@@ -64,7 +64,26 @@ Hey!
 
 每次你点击“下一步”按钮时，元素会逐条依次出现。
 
+<<<<<<< HEAD
 ### 自定义点击数量 {#custom-clicks-count}
+=======
+It accepts a `depth` props for nested list:
+
+```md
+<v-clicks depth="2">
+
+- Item 1
+  - Item 1.1
+  - Item 1.2
+- Item 2
+  - Item 2.1
+  - Item 2.2
+
+</v-clicks>
+```
+
+### Custom Clicks Count
+>>>>>>> 5c3b2e72641bb22ec8f567c57e56ad4d873d45ea
 
 默认情况下，Slidev 会计算进入下一张幻灯片之前需要执行多少步。你可以在 frontmatter 选项中设置 `clicks` 来覆盖该设置：
 
@@ -103,7 +122,21 @@ clicks: 3
 </v-clicks>
 ```
 
+<<<<<<< HEAD
 ### 元素过渡 {#element-transitions}
+=======
+### Enter & Leave
+
+> Available since v0.43.0
+
+You can also specify the enter and leave index for the `v-click` directive by passing an array. The end index is exclusive.
+
+```md
+<div v-click="[2, 4]">This will be shown on the 2nd and 3rd clicks, and hide again after the 4th.</div>
+```
+
+### Element Transitions
+>>>>>>> 5c3b2e72641bb22ec8f567c57e56ad4d873d45ea
 
 当你在元素中应用 `v-click` 指令时，它会给该元素添加名为 `slidev-vclick-target` 的类。当元素隐藏时，还加上了 `slidev-vclick-hidden` 类。例如：
 
@@ -200,7 +233,11 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任�
 > </div>
 > ```
 
+<<<<<<< HEAD
 学习模式： [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
+=======
+Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
+>>>>>>> 5c3b2e72641bb22ec8f567c57e56ad4d873d45ea
 
 ## 幻灯片过渡 {#slide-transitions}
 
@@ -220,12 +257,46 @@ transition: slide-left
 
 ### 内置过渡 {#builtin-transitions}
 
+<<<<<<< HEAD
 - `fade` - 淡入/淡出
 - `fade-out` - 淡出，然后淡入
 - `slide-left` - 向左滑动 (后退时向右滑动)
 - `slide-right` - 向右滑动 (后退时向左滑动)
 - `slide-up` - 向上滑动 (后退时向下滑动)
 - `slide-down` - 向下滑动 (后退时向上滑动)
+=======
+- `fade` - Crossfade in/out
+- `fade-out` - Fade out and then fade in
+- `slide-left` - Slides to the left (slide to right when going backward)
+- `slide-right` - Slides to the right (slide to left when going backward)
+- `slide-up` - Slides to the top (slide to bottom when going backward)
+- `slide-down` - Slides to the bottom (slide to top when going backward)
+- `view-transition` - Slides with the view transitions API
+
+### View Transitions
+
+> Available since v0.43.0
+
+The **View Transitions API** provides a mechanism for easily creating animated transitions between different DOM states. Learn more how it works in [View Transitions API - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API).
+
+:::warning
+Experimental: This is not supported by all browsers. Check the [Browser compatibility table](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#browser_compatibility) carefully before using this.
+:::
+
+You can use the `view-transition-name` CSS property to name view transitions, which creates connections between different page elements and smooth transitions when switching slides.
+
+You can enable [MDC (Markdown Component) Syntax](https://content.nuxtjs.org/guide/writing/mdc) support to conveniently name view-transitions:
+
+```md
+---
+transition: view-transition
+mdc: true
+---
+# View Transition {.inline-block.view-transition-title}
+---
+# View Transition {.inline-block.view-transition-title}
+```
+>>>>>>> 5c3b2e72641bb22ec8f567c57e56ad4d873d45ea
 
 ### 自定义过渡 {#custom-transitions}
 
