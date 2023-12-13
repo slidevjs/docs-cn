@@ -4,9 +4,13 @@ title: Markdown 语法
 
 # Markdown 语法 {#markdown-syntax}
 
+<<<<<<< HEAD
 幻灯片通过 **一个 markdown 文件** 编写而成 (默认会使用 `./slides.md`)。
 
 你可以像平时编写 markdown 一样使用 [Markdown 的相关特性](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，同时还支持内联的 HTML 和 Vue 组件。也支持使用 [Windi CSS](https://windicss.org) 来编写样式。使用 `---` 添加分隔符来分隔你的幻灯片。
+=======
+You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides. 
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 ~~~md
 # Slidev
@@ -66,7 +70,38 @@ This is a default page without any additional metadata.
 
 欲了解更多，请参阅 [自定义](/custom/) 章节。
 
+<<<<<<< HEAD
 ## 代码块 {#code-blocks}
+=======
+> The custom syntax might not be compactible with some formatters like Prettier. To improve that, we also support using a direct `yaml` code block to define the frontmatter:
+>
+> ~~~markdown
+> ---
+> layout: cover
+> ---
+> 
+> # Slidev
+> 
+> This is the cover page.
+> 
+> ---
+> 
+> ```yaml
+> # The first yaml block will be treated as the frontmatter of that slide
+> layout: center
+> background: './images/background-1.png'
+> class: 'text-white'
+> ```
+> 
+> # Page 2
+> 
+> This is a page with the layout `center` and a background image.
+> ~~~
+>
+> (Available since v0.44.0)
+
+## Code Blocks
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 建立 Slidev 一个非常重要的原因就是为了让代码在幻灯片中拥有正确的高亮。如你所见，你可以使用 Markdown 风格的代码块，以使得你的代码高亮。
 
@@ -76,11 +111,19 @@ console.log('Hello, World!')
 //```
 ~~~
 
+<<<<<<< HEAD
 我们支持 [Prism](https://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
+=======
+We support [Prism](https://prismjs.com), [Shiki](https://github.com/shikijs/shiki) and [Shikiji](https://github.com/antfu/shikiji) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 ### 特定行高亮 {#line-highlighting}
 
+<<<<<<< HEAD
 如需针对特定行进行高亮展示，只需在 `{}` 内添加对应的行号。行号从 1 开始计算。
+=======
+To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 ~~~ts
 //```ts {2,3}
@@ -93,7 +136,37 @@ function add(
 //```
 ~~~
 
+<<<<<<< HEAD
 如果要在多个步骤中改变高亮，你可以用 `|` 分隔它们。比如：
+=======
+You can enable line number to all slides by setting `lineNumbers: true` on the config or enable each code block individually by setting `lines:true`. In case you want to disable the numbering for an specific block when `lineNumbers: true` you can set `lines:false` for that block:
+
+~~~ts
+//```ts {2,3} {lines:true}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+You can also set the starting line for each code block and highlight the lines accordingly, defaults to 1:
+
+~~~ts
+//```ts {6,7} {lines:true, startLine:5}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+To change the highlight in multiple steps, you can use `|` to separate them. For example
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 ~~~ts
 //```ts {2-3|5|all}
@@ -108,7 +181,26 @@ function add(
 
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
 
+<<<<<<< HEAD
 你可以使用行号 `0` 来跳过高亮。比如：
+=======
+You can start the highlight at a specific click:
+
+~~~ts
+//```ts {2-3|5|all} {at:0}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+This is especially useful when you need to sync different animations (when using `two-cols` layout and list animation for instance).
+
+To skip highlighting any lines, you can set the line number to `0`. For example
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 ~~~ts {0}
 //```ts {0}
@@ -149,7 +241,31 @@ console.log('HelloWorld')
 
 欲了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
 
+<<<<<<< HEAD
 ## 内联样式 {#embedded-styles}
+=======
+### Monaco diff
+
+Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+
+```md
+//```ts {monaco-diff}
+This line is removed on the right.
+just some text
+abcd
+efgh
+Some more text
+~~~
+just some text
+abcz
+zzzzefgh
+Some more text.
+This line is removed on the left.
+//```
+```
+
+## Embedded Styles
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 你可以在 Markdown 中直接使用 `<style>` 标签来覆盖**当前幻灯片**的样式。
 
@@ -169,7 +285,11 @@ h1 {
 
 Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。子选择器 (如 `.a > .b`) 在这里不起作用。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
+<<<<<<< HEAD
 在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 CSS 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
+=======
+Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://windicss.org/features/directives.html) (e.g. `@apply`)
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 ```md
 # Slidev
@@ -397,7 +517,28 @@ $$
 
 了解更多：[Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
+<<<<<<< HEAD
 ## 图表 {#diagrams}
+=======
+### LaTex line highlighting
+
+> Available since v0.43.1
+
+To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+
+```md
+$$ {1|3|all}
+\begin{array}{c}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{array}
+$$
+```
+
+## Diagrams
+>>>>>>> a6529b60e6a2f963398d169ce543df66469f74df
 
 你也可以在 Markdown 的文本描述中创建图形或图表，得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
 
@@ -516,3 +657,27 @@ src: ./content.md
 src: ./content.md
 ---
 ```
+
+## MDC Syntax
+
+> Available since v0.43.0
+
+Slidev has and experimental support for [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
+
+You can enable it by add `mdc: true` to the frontmatter of your markdown file.
+
+```md
+---
+mdc: true
+---
+
+This is a [red text]{style="color:red"} :inline-component{prop="value"}
+
+![](/image.png){width=500px lazy}
+
+::block-component{prop="value"}
+The **default** slot
+::
+```
+
+Learn more about [the syntax](https://content.nuxtjs.org/guide/writing/mdc).
