@@ -76,7 +76,7 @@ console.log('Hello, World!')
 //```
 ~~~
 
-我们支持 [Prism](http://prismjs.com) 和 [Shiki](https://github.com/shiki/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
+我们支持 [Prism](https://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
 
 ### 特定行高亮 {#line-highlighting}
 
@@ -108,6 +108,35 @@ function add(
 
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
 
+你可以使用行号 `0` 来跳过高亮。比如：
+
+~~~ts {0}
+//```ts {0}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+如果代码在一张幻灯片展示不下，你可以传递一个额外的 maxHeight 选项，
+该选项将为代码段设置固定高度并启用滚动：
+
+~~~ts {2|3|7|12}
+//```ts {2|3|7|12} {maxHeight:'100px'}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+/// ...as many lines as you want
+const c = add(1, 2)
+//```
+~~~
+
 ### Monaco 编辑器 {#monaco-editor}
 
 当你需要在演示文稿中做修改时，只需在语言 id 后添加 `{monaco}` —— 即可将该代码块变为一个功能齐全的 Monaco 编辑器。
@@ -138,7 +167,7 @@ h1 {
 # Next slide is not affected
 ```
 
-Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
+Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。子选择器 (如 `.a > .b`) 在这里不起作用。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
 在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 CSS 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
 
@@ -210,7 +239,7 @@ The second page
 
 ## 图标 {#icons}
 
-Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) 和 [Iconify](https://iconify.design/)。
+Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`unplugin-icons`](https://github.com/antfu/unplugin-icons) 和 [Iconify](https://iconify.design/)。
 
 图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
 

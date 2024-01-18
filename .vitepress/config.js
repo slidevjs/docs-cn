@@ -70,6 +70,17 @@ const Theme = [
   },
 ]
 
+const Addon = [
+  {
+    text: 'Use Addon',
+    link: '/addons/use',
+  },
+  {
+    text: 'Write an Addon',
+    link: '/addons/write-an-addon',
+  },
+]
+
 const Translations = [
   {
     text: '简体中文',
@@ -105,6 +116,10 @@ const Translations = [
   {
     text: 'Ελληνικά',
     link: 'https://el.sli.dev{{pathname}}',
+  },
+  {
+    text: '日本語',
+    link: 'https://ja.sli.dev{{pathname}}',
   },
 ]
 
@@ -150,6 +165,10 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
+    text: '配置解析器',
+    link: '/custom/config-parser',
+  },
+  {
     text: '配置快捷键',
     link: '/custom/config-shortcuts',
   },
@@ -188,7 +207,11 @@ const slidebars = [
     children: Theme,
   },
   {
-    text: '自定义',
+    text: '附加组件',
+    children: Addon,
+  },
+  {
+    text: '定制',
     children: Customizations,
   },
   {
@@ -233,7 +256,8 @@ module.exports = {
     editLinkText: '改进翻译',
 
     algolia: {
-      apiKey: '1a5c5a504139c58f428974c78c55291d',
+      appId: 'LCBV6MIFS6',
+      apiKey: '1ff173fe73b20edc962c1c24c0b1c160',
       indexName: 'slidev',
       searchParameters: {
         // for translations maintainers: change the filter to your locale code (subdomain name)
@@ -249,6 +273,10 @@ module.exports = {
       {
         text: '主题',
         items: Theme,
+      },
+      {
+        text: '附加组件',
+        items: Addon,
       },
       {
         text: '定制',
@@ -267,6 +295,7 @@ module.exports = {
     sidebar: {
       '/guide/': slidebars,
       '/themes/': slidebars,
+      '/addons/': slidebars,
       '/custom/': slidebars,
       '/builtin/': slidebars,
       '/resources/': slidebars,

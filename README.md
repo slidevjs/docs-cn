@@ -37,6 +37,7 @@
 | Deutsch | [docs-de](https://github.com/slidevjs/docs-de) | [de.sli.dev](https://de.sli.dev) | [@fabiankachlock](https://github.com/fabiankachlock) |
 | Português (BR) | [docs-br](https://github.com/slidevjs/docs-br) | [br.sli.dev](https://br.sli.dev) | [@luisfelipesdn12](https://github.com/luisfelipesdn12) |
 | Ελληνικά | [docs-el](https://github.com/slidevjs/docs-el) | [el.sli.dev](https://el.sli.dev) | [@GeopJr](https://github.com/GeopJr) |
+| 日本語 | [docs-ja](https://github.com/slidevjs/docs-el) | [ja.sli.dev](https://ja.sli.dev) | [@IkumaTadokoro](https://github.com/IkumaTadokoro) |
 
 ## Slidev 中文文档
 
@@ -94,6 +95,6 @@ $ pnpm run dev
 | :-----: | :-------: | :-----: | :-----: | :-----: | :-----: |
 | [![antfu](https://avatars.githubusercontent.com/u/11247099?s=120&v=4)](https://github.com/antfu) | [![QC-L](https://avatars.githubusercontent.com/u/13861040?s=120&v=4)](https://github.com/QC-L) | [![Ivocin](https://avatars.githubusercontent.com/u/16836801?s=120&v=4)](https://github.com/Ivocin) | [![ChuanfengZhang](https://avatars.githubusercontent.com/u/18238800?s=120&v=4)](https://github.com/ChuanfengZhang) | [![songhn233](https://avatars.githubusercontent.com/u/47357585?s=120&v=4)](https://github.com/songhn233) | [![ArcherGu](https://avatars.githubusercontent.com/u/34826812?s=120&v=4)](https://github.com/ArcherGu) | [![KimYang](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat)|
 | Jacob | Qiang | raintygao | 六个骨头 | Kim Yang | KnowsCount |
-| [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![Notobey](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/Notobey) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
+| [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![iDestin](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/iDestin) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
 | ZhengX |
 |[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) |

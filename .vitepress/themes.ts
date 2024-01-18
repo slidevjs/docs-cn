@@ -193,6 +193,27 @@ export const community: ThemeInfo[] = [
     ],
   },
   {
+    id: 'slidev-theme-eloc',
+    name: 'Eloc',
+    description: 'Focus on writing, present in a concise style.',
+    author: {
+      name: 'Amio',
+      link: 'https://github.com/amio',
+    },
+    repo: 'https://github.com/zthxxx/slides/tree/master/packages/slidev-theme-eloc',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/zthxxx/slides@master/packages/slidev-theme-eloc/screenshot/01.png',
+      'https://cdn.jsdelivr.net/gh/zthxxx/slides@master/packages/slidev-theme-eloc/screenshot/02.png',
+      'https://cdn.jsdelivr.net/gh/zthxxx/slides@master/packages/slidev-theme-eloc/screenshot/03.png',
+      'https://cdn.jsdelivr.net/gh/zthxxx/slides@master/packages/slidev-theme-eloc/screenshot/04.png',
+      'https://cdn.jsdelivr.net/gh/zthxxx/slides@master/packages/slidev-theme-eloc/screenshot/05.png',
+    ],
+    tags: [
+      'dark',
+      'light',
+    ],
+  },
+  {
     id: 'slidev-theme-purplin',
     name: 'Purplin',
     description: 'Theme with bar bottom component. Based on purple color',
@@ -313,6 +334,96 @@ export const community: ThemeInfo[] = [
     ],
     tags: [
       'light',
+    ],
+  },
+  {
+    id: 'slidev-theme-academic',
+    name: 'Academic',
+    description: 'Academic presentations with Slidev made simple',
+    author: {
+      name: 'Alexander Eble',
+      link: 'https://github.com/alexanderdavide',
+    },
+    repo: 'https://github.com/alexanderdavide/slidev-theme-academic',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/01.png',
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/02.png',
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/08.png',
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/04.png',
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/05.png',
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/06.png',
+      'https://cdn.jsdelivr.net/gh/alexanderdavide/slidev-theme-academic@assets/example-export/07.png',
+    ],
+    tags: [
+      'dark',
+      'light',
+    ],
+  },
+  {
+    id: 'slidev-theme-mokkapps',
+    name: 'Mokkapps',
+    description: 'A theme for my personal brand "Mokkapps"',
+    author: {
+      name: 'Michael Hoffmann',
+      link: 'https://github.com/mokkapps',
+    },
+    repo: 'https://github.com/mokkapps/slidev-theme-mokkapps',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/001.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/002.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/003.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/004.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/005.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/006.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/007.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/008.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/009.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/010.png',
+      'https://cdn.jsdelivr.net/gh/mokkapps/slidev-theme-mokkapps@master/screenshots/dark/011.png',
+    ],
+    tags: [
+      'dark',
+      'light',
+    ],
+  },
+  {
+    id: 'slidev-theme-the-unnamed',
+    name: 'The unnamed',
+    description: 'A theme based on The unnamed VS Code theme',
+    author: {
+      name: 'Elio Struyf',
+      link: 'https://elio.dev',
+    },
+    repo: 'https://github.com/estruyf/slidev-theme-the-unnamed',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/estruyf/slidev-theme-the-unnamed@main/assets/cover.png',
+      'https://cdn.jsdelivr.net/gh/estruyf/slidev-theme-the-unnamed@main/assets/about-me.png',
+      'https://cdn.jsdelivr.net/gh/estruyf/slidev-theme-the-unnamed@main/assets/default.png',
+      'https://cdn.jsdelivr.net/gh/estruyf/slidev-theme-the-unnamed@main/assets/section.png',
+    ],
+    tags: [
+      'dark'
+    ],
+  },
+  {
+    id: 'slidev-theme-dracula',
+    name: 'Dracula',
+    description: 'One the best dark theme meets slidev',
+    author: {
+      name: 'JD Solanki (jd-solanki)',
+      link: 'https://github.com/jd-solanki',
+    },
+    repo: 'https://github.com/jd-solanki/slidev-theme-dracula',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/jd-solanki/slidev-theme-dracula/screenshots/screenshot-1.png',
+      'https://cdn.jsdelivr.net/gh/jd-solanki/slidev-theme-dracula/screenshots/screenshot-2.png',
+      'https://cdn.jsdelivr.net/gh/jd-solanki/slidev-theme-dracula/screenshots/screenshot-3.png',
+      'https://cdn.jsdelivr.net/gh/jd-solanki/slidev-theme-dracula/screenshots/screenshot-4.png',
+      'https://cdn.jsdelivr.net/gh/jd-solanki/slidev-theme-dracula/screenshots/screenshot-5.png',
+    ],
+    tags: [
+      'dark',
+      'minimalism',
     ],
   },
   // Add yours here!

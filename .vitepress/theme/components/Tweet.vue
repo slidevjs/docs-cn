@@ -1,5 +1,5 @@
 <!--
-A simple wrapper for embeded Tweet
+A simple wrapper for embedded Tweet
 
 Usage:
 
@@ -8,7 +8,7 @@ Usage:
 
 <script setup lang="ts">
 import { useScriptTag, isClient } from '@vueuse/core'
-import { defineProps, getCurrentInstance, onMounted, ref } from 'vue'
+import { getCurrentInstance, onMounted, ref } from 'vue'
 import { isDark } from '../composables/dark'
 
 const props = defineProps<{
