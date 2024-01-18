@@ -74,3 +74,23 @@ $ slidev export-notes
 ## 单页应用（SPA） {#single-page-application-spa}
 
 请参阅 [静态部署](/guide/hosting) 章节。
+
+
+## 支持导出功能的镜像
+
+为了支持 Slidev 的导出功能，这里还提供了另一个更大的镜像，带有 **playwright** 标签。在你的工作目录下运行下面的命令：
+
+```bash
+docker run --name slidev -d --rm -it \
+    -v ${PWD}:/slidev \
+    -p 3030:3030 \
+    -e NPM_MIRROR="https://registry.npmmirror.com" \
+    tangramor/slidev:playwright
+```
+
+然后你可以你的工作目录下像这样使用 Slidev 的导出功能：
+
+```bash
+docker exec -i slidev npx slidev export --timeout 2m --output slides.pdf
+```
+

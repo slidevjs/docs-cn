@@ -75,8 +75,11 @@ docker run --name slidev --rm -it \
     --user node \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
+    -e NPM_MIRROR="https://registry.npmmirror.com" \
     tangramor/slidev:latest
 ```
+
+***注意***：你可以用 `NPM_MIRROR` 环境变量来指定一个 npm 镜像以加速安装过程。
 
 如果你的工作目录为空，容器会在目录下自动创建 `slides.md` 文件和其它相关文件，并基于 `3030` 端口启动 slidev 服务。
 
@@ -138,6 +141,7 @@ COPY dist /usr/share/nginx/html
 此时你就可以通过 http://localhost/ 来访问你的幻灯片了。
 
 关于容器的更多详细信息，请参考 [tangramor/slidev_docker 仓库](https://github.com/tangramor/slidev_docker)。
+
 
 ## Command Line Interface (CLI) {#command-line-interface-cli}
 
