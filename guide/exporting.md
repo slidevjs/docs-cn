@@ -58,7 +58,7 @@ docker run --name slidev -d --rm -it \
     tangramor/slidev:playwright
 ```
 
-然后你可以你的工作目录下像这样使用 Slidev 的[导出功能](https://sli.dev/guide/exporting)：
+然后你可以你的工作目录下像这样使用 Slidev 的导出功能：
 
 ```bash
 docker exec -i slidev npx slidev export --timeout 2m --output slides.pdf
