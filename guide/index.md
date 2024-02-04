@@ -1,15 +1,25 @@
 ---
+<<<<<<< HEAD
 title: 开始使用
 ---
 
 # 开始使用 {#getting-started}
 
 ## 总览 {#overview}
+=======
+outline: deep
+---
+
+# Getting Started
+
+Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.
+>>>>>>> 9bbccbb1bd2d1d93f3d376ed06c73986710dd518
 
 Slidev <sup>(slide + dev, **/slʌɪdɪv/**)</sup> 是基于 Web 的幻灯片制作和演示工具。它旨在让开发者专注在 Markdown 中编写内容，同时拥有支持 HTML 和 Vue 组件的能力，并且能够呈现像素级完美的布局，还在你的演讲稿中内置了互动的演示样例。
 
 它使用了功能丰富的 markdown 文件来生成精美的幻灯片，具有即时重载的体验。它还拥有很多内置的集成功能，如实时编码、导出 PDF、演讲录制等。由于 Slidev 是由 web 驱动的，因此你可以使用它进行任何操作 —— 具有无限的可能性。
 
+<<<<<<< HEAD
 你可以在 [为什么选 Slidev](/guide/why) 部分了解更多关于本项目的设计初衷。
 
 ### 功能 {#features}
@@ -58,11 +68,43 @@ Slidev 使用了如下的工具和技术：
 #### 本地创建 {#create-locally}
 
 使用 NPM：
+=======
+## Features
 
-```bash
-$ npm init slidev
+- 📝 [**Markdown-based**](/guide/syntax.html) - use your favorite editors and workflow
+- 🧑‍💻 [**Developer Friendly**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
+- 🎨 [**Themable**](/themes/gallery.html) - theme can be shared and used with npm packages
+- 🌈 [**Stylish**](/guide/syntax.html#embedded-styles) - on-demand utilities via [UnoCSS](https://github.com/unocss/unocss).
+- 🤹 [**Interactive**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
+- 🎙 [**Presenter Mode**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
+- 🎨 [**Drawing**](/guide/drawing.html) - draw and annotate on your slides
+- 🧮 [**LaTeX**](/guide/syntax.html#latex) - built-in LaTeX math equations support
+- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions
+- 🌟 [**Icons**](/guide/syntax.html#icons) - Access to icons from any iconset directly
+- 💻 [**Editors**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
+- 🎥 [**Recording**](/guide/recording.html) - built-in recording and camera view
+- 📤 [**Portable**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
+- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
+- 🛠 [**Hackable**](/custom/config-vite.html) - using Vite plugins, Vue components, or any npm packages
+
+## Scaffolding Your First Presentation
+
+### Try it Online
+
+Start Slidev right in your browser: [sli.dev/new](https://sli.dev/new)
+
+[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://sli.dev/new)
+
+### Create Locally
+
+::: code-group
+>>>>>>> 9bbccbb1bd2d1d93f3d376ed06c73986710dd518
+
+```bash [npm]
+npm init slidev@latest
 ```
 
+<<<<<<< HEAD
 使用 Yarn：
 
 ```bash
@@ -72,6 +114,21 @@ $ yarn create slidev
 根据提示开始创建你的幻灯片吧！想要了解更多关于 Markdown 的语法，请阅读 [语法指南](/guide/syntax)。
 
 ### 命令行界面 {#command-line-interface}
+=======
+```bash [yarn]
+yarn create slidev
+```
+
+```bash [pnpm]
+pnpm create slidev
+```
+
+:::
+
+Follow the prompts and start making your slides now! For more details about the markdown syntax, read through the [syntax guide](/guide/syntax).
+
+## Command Line Interface
+>>>>>>> 9bbccbb1bd2d1d93f3d376ed06c73986710dd518
 
 在安装了 Slidev 的项目里，你可以在你的 npm scripts 里使用 `slidev` 命令。
 
@@ -93,7 +150,11 @@ $ npx slidev
 
 执行 `slidev --help` 命令获取更多选项的详细信息。
 
+<<<<<<< HEAD
 ### Markdown 语法 {#markdown-syntax}
+=======
+## Markdown Syntax
+>>>>>>> 9bbccbb1bd2d1d93f3d376ed06c73986710dd518
 
 Slidev 会读取位于项目根目录的 `slides.md` 文件，并将其转换为幻灯片。每当你修改 Markdown 文件，幻灯片的内容都会立刻随之更新。例如：
 
@@ -108,13 +169,32 @@ Hello World
 
 直接使用代码块，能够实现代码高亮
 
-//```ts
+```ts
 console.log('Hello, World!')
-//```
+```
 
 ---
 
 # 第 3 页
 ~~~
 
+<<<<<<< HEAD
 请阅读 [语法指南](/guide/syntax) 获取更多关于 Slidev Markdown 语法的内容。
+=======
+Read more about the Slidev Markdown syntax in the [syntax guide](/guide/syntax).
+
+## Tech Stack
+
+Slidev is made possible by combining these tools and technologies.
+
+- [Vite](https://vitejs.dev) - An extremely fast frontend tooling
+- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - Focus on the content while having the power of HTML and Vue components whenever needed
+- [UnoCSS](https://github.com/unocss/unocss) - On-demand utility-first CSS framework, style your slides at ease
+- [Shiki](https://github.com/shikijs/shiki), [Prism](https://github.com/PrismJS/prism), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - First-class code snippets support with live coding capability
+- [RecordRTC](https://recordrtc.org) - Built-in recording and camera view
+- [VueUse](https://vueuse.org) family -  [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
+- [Iconify](https://iconify.design/) - Iconsets collection.
+- [Drauu](https://github.com/antfu/drauu) - Drawing and annotations support
+- [KaTeX](https://katex.org/) - LaTeX math rendering.
+- [Mermaid](https://mermaid-js.github.io/mermaid) - Textual Diagrams.
+>>>>>>> 9bbccbb1bd2d1d93f3d376ed06c73986710dd518
