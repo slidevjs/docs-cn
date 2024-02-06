@@ -24,12 +24,15 @@ Slidev 通过三步解析演示文档(如 `slides.md`) :
 
 预解析器(上面的步骤 1)是高度可扩展的，并且允许为 md 文件实现自定义语法。扩展预解析器是一个**高级特性**，由于语法的隐式更改，它很容易破坏[编辑器集成](/guide/editors) 。
 
+<<<<<<< HEAD
 要对其进行定制，请创建一个 `./setup/preparser.ts` 文件，内容如下:
 
+=======
+>>>>>>> e52d01f8924fc2746acb41ca2510db795a7b0c4a
 ```ts
 import { definePreparserSetup } from '@slidev/types'
 
-export default definePreparserSetup(({filepath, headmatter}) => {
+export default definePreparserSetup(({ filepath, headmatter }) => {
   return [
     {
       transformRawLines(lines) {
@@ -59,7 +62,6 @@ export default definePreparserSetup(({filepath, headmatter}) => {
 设想一种情况，你的演示文稿(部分)主要显示封面图片，并包括其他 md 文件。你可能希望有一种紧凑的符号表示法，其中的实例（部分） `slides.md` 如下所示:
 
 ```md
-
 @cover: /nice.jpg
 # Welcome
 @src: page1.md
@@ -69,10 +71,13 @@ export default definePreparserSetup(({filepath, headmatter}) => {
 @cover: https://source.unsplash.com/collection/94734566/1920x1080
 # Questions?
 see you next time
-
 ```
 
+<<<<<<< HEAD
 为了支持这些 `@src:` 和 `@cover:` 语法，创建一个 `./setup/preparser.ts` 文件，其内容如下:
+=======
+To allow these `@src:` and `@cover:` syntaxes, create a `./setup/preparser.ts` file with the following content:
+>>>>>>> e52d01f8924fc2746acb41ca2510db795a7b0c4a
 
 ```ts
 import { definePreparserSetup } from '@slidev/types'
@@ -85,20 +90,26 @@ export default definePreparserSetup(() => {
         while (i < lines.length) {
           const l = lines[i]
           if (l.match(/^@cover:/i)) {
-            lines.splice(i, 1,
+            lines.splice(
+              i,
+              1,
               '---',
               'layout: cover',
               `background: ${l.replace(/^@cover: */i, '')}`,
               '---',
-              '')
+              ''
+            )
             continue
           }
           if (l.match(/^@src:/i)) {
-            lines.splice(i, 1,
+            lines.splice(
+              i,
+              1,
               '---',
               `src: ${l.replace(/^@src: */i, '')}`,
               '---',
-              '')
+              ''
+            )
             continue
           }
           i++
@@ -111,15 +122,16 @@ export default definePreparserSetup(() => {
 
 就是这样。
 
+<<<<<<< HEAD
 
 ### 用例2: 使用自定义扉页来包装幻灯片 {#use-case-2-using-custom-frontmatter-to-wrap-slides}
+=======
+### Use case 2: using custom frontmatter to wrap slides
+>>>>>>> e52d01f8924fc2746acb41ca2510db795a7b0c4a
 
 设想一种情况，你经常想要缩放您的一些幻灯片，但是仍然想要使用各种现有的布局，因此创建一个新的布局将不适合。例如，你可能希望按如下方式编写 `slides.md`：
 
 ```md
-
-
-
 ---
 layout: quote
 _scale: 0.75
@@ -144,13 +156,19 @@ _scale: 2.5
 ---
 # Questions?
 see you next time
-
 ```
 
+<<<<<<< HEAD
 在这里，我们使用了一个下划线 `_scale` 以避免与现有的扉页属性发生可能的冲突(实际上，如果使用没有下划线的 `scale`，会导致潜在的问题)。
 
 要处理扉页中的 `_scale: ...` 语法，创建一个 `./setup/preparser.ts` 文件，其内容如下:
 
+=======
+Here we used an underscore in `_scale` to avoid possible conflicts with existing frontmatter properties (indeed, the case of `scale`, without underscore would cause potential problems).
+
+To handle this `_scale: ...` syntax in the frontmatter, create a `./setup/preparser.ts` file with the following content:
+
+>>>>>>> e52d01f8924fc2746acb41ca2510db795a7b0c4a
 ```ts
 import { definePreparserSetup } from '@slidev/types'
 
@@ -160,7 +178,7 @@ export default definePreparserSetup(() => {
       transformSlide(content, frontmatter) {
         if ('_scale' in frontmatter) {
           return [
-            `<Transform :scale=${frontmatter['_scale']}>`,
+            `<Transform :scale=${frontmatter._scale}>`,
             '',
             content,
             '',
