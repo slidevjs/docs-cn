@@ -6,7 +6,7 @@
 
 你可以通过点击工具栏上的 <carbon-pen class="inline-icon-btn"/> 图标来启用。它也可以在 [演讲者模式](/guide/presenter-mode) 中使用。你创建的绘图和批注都会实时**自动同步**起来。
 
-<Tweet id="1424027510342250499" />
+<TheTweet id="1424027510342250499" />
 
 ## 与触控笔一同使用 {#use-with-stylus-pen}
 
@@ -18,7 +18,7 @@ frontmatter 中的配置可以把你得到绘图作为 SVG 保存在 `.slidev/dr
 
 ```md
 ---
-drawings: 
+drawings:
   persist: true
 ---
 ```
@@ -29,7 +29,7 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   enabled: false
 ---
 ```
@@ -38,7 +38,7 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   enabled: dev
 ---
 ```
@@ -47,7 +47,7 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   presenterOnly: true
 ---
 ```
@@ -58,11 +58,15 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   syncAll: false
 ---
 ```
 
+<<<<<<< HEAD
 通过这个配置，只有来自演讲者实例的绘图会和其他实例同步。
 
 
+=======
+With this config, only the drawing from the presenter instance will be able to sync with others.
+>>>>>>> dbfb0168dc2a10c37d04f991ec135a402b411f02
