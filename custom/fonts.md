@@ -13,12 +13,21 @@ title: 字体
 ```yaml
 ---
 fonts:
+<<<<<<< HEAD
   # 基础字体
   sans: 'Robot'
   # 与 windicss 的 `font-serif` css 类一同使用
   serif: 'Robot Slab'
   # 用于代码块、内联代码等
   mono: 'Fira Code'
+=======
+  # basically the text
+  sans: Robot
+  # use with `font-serif` css class from UnoCSS
+  serif: Robot Slab
+  # for code blocks, inline code, etc.
+  mono: Fira Code
+>>>>>>> 5bb36b886ae9009e4661ee060cce1d86954d7280
 ---
 ```
 
@@ -28,15 +37,24 @@ fonts:
 
 ## 本地字体 {#local-fonts}
 
+<<<<<<< HEAD
 默认情况下，Slidev 会认为 `fonts` 配置的所有字体均来自 Google Fonts。如果你想使用本地字体，可以指定 `fonts.local` 字段来选择不使用自动引入的字体。
+=======
+By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing.
+>>>>>>> 5bb36b886ae9009e4661ee060cce1d86954d7280
 
 ```yaml
 ---
 fonts:
   # 与 css 中的 font-family 一致，你可以使用 `,` 来分割字体名，便于降级
   sans: 'Helvetica Neue,Robot'
+<<<<<<< HEAD
   # 将 'Helvetica Neue' 作为本地字体
   local: 'Helvetica Neue'
+=======
+  # mark 'Helvetica Neue' as local font
+  local: Helvetica Neue
+>>>>>>> 5bb36b886ae9009e4661ee060cce1d86954d7280
 ---
 ```
 
@@ -47,8 +65,13 @@ fonts:
 ```yaml
 ---
 fonts:
+<<<<<<< HEAD
   sans: 'Robot'
   # 默认为
+=======
+  sans: Robot
+  # default
+>>>>>>> 5bb36b886ae9009e4661ee060cce1d86954d7280
   weights: '200,400,600'
   # 引入斜体字体，默认 `false`
   italic: false
@@ -64,13 +87,17 @@ fonts:
 ```yaml
 ---
 fonts:
-  sans: 'Robot'
-  serif: 'Robot Slab'
-  mono: 'Fira Code'
+  sans: Robot
+  serif: Robot Slab
+  mono: Fira Code
 ---
 ```
 
+<<<<<<< HEAD
 其结果为：
+=======
+will result in
+>>>>>>> 5bb36b886ae9009e4661ee060cce1d86954d7280
 
 ```css
 .font-sans {
@@ -104,6 +131,6 @@ fonts:
 ```yaml
 ---
 fonts:
-  provider: 'none'
+  provider: none
 ---
 ```
