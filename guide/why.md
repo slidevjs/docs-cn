@@ -4,7 +4,11 @@ title: 为什么选择 Slidev
 
 # 为什么选择 Slidev {#why-slidev}
 
+<<<<<<< HEAD
 有很多功能丰富的、通用的、所见即所得的幻灯片制作工具，例如 [微软 PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 或 [苹果 Keynote](https://www.apple.com/keynote/). 它们在制作带有动画、图表和许多其他漂亮的幻灯片方面效果相当好，同时非常直观和容易学习。那么，为什么要费心制作 Slidev 呢？
+=======
+Slidev aims to provide the flexibility and interactivity for developers to make their presentations even more interesting, expressive, and attractive by using the tools and technologies they are already familiar with.
+>>>>>>> c3c1774bdf48295664f5b30d7ba7bfbda5a0f3d2
 
 Slidev 旨在为开发者提供灵活性和交互性，通过使用他们已经熟悉的工具和技术，使他们的演示文稿更加有趣、更具表现力和吸引力。 
 
@@ -36,7 +40,11 @@ Slidev 为开发者提供了一流的代码片段支持。它同时支持 [Prism
 
 ## 快速 {#fast}
 
+<<<<<<< HEAD
 Slidev 得益于 [Vite](https://vitejs.dev/)，[Vue 3](https://v3.vuejs.org/) 和 [Windi CSS](https://windicss.org/)，为你带来了最美妙的创作体验。你所做的每一个改变都会**立即反映**到你的幻灯片上。
+=======
+Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [UnoCSS](https://unocss.dev/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+>>>>>>> c3c1774bdf48295664f5b30d7ba7bfbda5a0f3d2
 
 查找更多关于 [技术栈](/guide/#tech-stack).
 
@@ -70,6 +78,4 @@ $ npm init slidev
 
 或者你也可以通过下方的视频进行快速预览:
 
-<div class="aspect-9/16 relative">
-<iframe class="rounded w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<iframe class="aspect-16/9 rounded-xl w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

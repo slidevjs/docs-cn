@@ -17,7 +17,6 @@ Slidev 已经内置了以下插件：
 - [unplugin-icons](https://github.com/antfu/unplugin-icons)
 - [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
 - [vite-plugin-remote-assets](https://github.com/antfu/vite-plugin-remote-assets)
-- [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss)
 - [unocss/vite](https://github.com/unocss/unocss/tree/main/packages/vite)
 
 可以在 [此处](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts) 了解 Slidev 的相关预设。
