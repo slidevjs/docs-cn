@@ -82,6 +82,7 @@ $ slidev export-notes
 
 ```bash
 docker run --name slidev --rm -it \
+
     -v ${PWD}:/slidev \
     -p 3030:3030 \
     -e NPM_MIRROR="https://registry.npmmirror.com" \
