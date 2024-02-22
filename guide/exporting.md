@@ -81,7 +81,7 @@ $ slidev export-notes
 为了支持 Slidev 的导出功能，这里还提供了另一个更大的镜像，带有 **playwright** 标签。在你的工作目录下运行下面的命令：
 
 ```bash
-docker run --name slidev -d --rm -it \
+docker run --name slidev --rm -it \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
     -e NPM_MIRROR="https://registry.npmmirror.com" \
