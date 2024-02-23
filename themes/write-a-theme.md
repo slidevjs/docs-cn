@@ -16,12 +16,21 @@ $ npm init slidev-theme
 
 一个主题可以自定义以下功能：
 
+<<<<<<< HEAD
 - 全局样式
 - 提供默认配置（字体、配色方案、语法高亮器等）
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
 - 扩展 Windi CSS 配置
 - 配置 Monaco, Prism 等工具
+=======
+- Global styles
+- Provide default configurations (fonts, color schema, highlighters, etc.)
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS/Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> 1d54c861642c679ca01887a28e187047fedcbc83
 
 ## 约定 {#conventions}
 
@@ -56,7 +65,11 @@ theme: ./
 
 你只需在命令行中执行 `npm publish` 就可以发布自己的主题，并不需要额外的构建过程（这意味着你可以直接发布 `.vue` 和 `.ts` 文件，Slidev 可以直接识别它们）。
 
+<<<<<<< HEAD
 主题可以定制的范围与本地自定义相一致，可以参阅 [自定义文档](/custom/)。
+=======
+Theme contribution points follow the same conventions as local customization, please refer to [the docs for the naming conventions](/custom/).
+>>>>>>> 1d54c861642c679ca01887a28e187047fedcbc83
 
 ## 默认配置 {#default-configurations}
 
@@ -68,7 +81,7 @@ theme: ./
 // package.json
 {
   "slidev": {
-    "default": {
+    "defaults": {
       "aspectRatio": "16/9",
       "canvasWidth": 980,
       "fonts": {
@@ -122,7 +135,11 @@ html.dark {
 
 ### 语法高亮器 {#highlighter}
 
+<<<<<<< HEAD
 主题中也可以设置代码高亮配色，我们同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki)。欲了解更多，请参阅 [语法高亮文档](/custom/highlighters)。
+=======
+Syntax highlighting colors are also provided in the theme. We support both [Prism](https://prismjs.com/), [Shiki](https://github.com/shikijs/shiki). For more information please refer to [the syntax highlighting docs](/custom/highlighters).
+>>>>>>> 1d54c861642c679ca01887a28e187047fedcbc83
 
 你可以选择使用其中任意一种或同时使用。可以参考默认主题配置示例中的 [`./styles/code.css`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/styles/code.css) 和 [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts)。
 
@@ -132,7 +149,7 @@ html.dark {
 // package.json
 {
   "slidev": {
-    "highlighter": "shiki" // or "prism" or "all"
+    "highlighter": "shiki" // or "prism" or "both"
   }
 }
 ```
