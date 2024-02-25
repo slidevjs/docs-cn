@@ -132,7 +132,7 @@ export const showcases: ShowCaseInfo[] = [
     at: 'OpenFunction Tutorial Sharing',
     datetime: '2022-05-08',
   },
-    {
+  {
     title: 'Is it Okay to Pursue Functional Programming on Frontend?',
     author: {
       name: 'Minsu Kim , Changhui Lee',
@@ -177,6 +177,18 @@ export const showcases: ShowCaseInfo[] = [
     sourceLink: 'https://github.com/alexanderdavide/dev-environment-as-code',
     at: 'Internal Tech Talk',
     datetime: '2022-12-01',
+  },
+  {
+    title: 'Exploring Social Engineering',
+    cover: 'https://raw.githubusercontent.com/zyf722/exploring-social-engineering-slides/main/assets/Screenshot_Cover.png',
+    author: {
+      name: 'zyf722',
+      link: 'https://github.com/zyf722',
+    },
+    slidesLink: 'https://zyf722.github.io/exploring-social-engineering-slides/',
+    sourceLink: 'https://github.com/zyf722/exploring-social-engineering-slides',
+    at: 'Presentation on Social Engineering in Computers in Society class',
+    datetime: '2023-10-20',
   },
   // Add yours here!
   {
