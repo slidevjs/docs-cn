@@ -8,7 +8,11 @@ title: 编辑器整合
 
 如果你想对幻灯片进行一些高级管理，我们为你提供了以下编辑器集成！
 
+<<<<<<< HEAD
 ## 编辑器集成 {#integrated-editor}
+=======
+Slidev comes with an integrated [CodeMirror](https://codemirror.net/) editor that will instantly reload and save the changes to your file.
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Slidev 带有一个集成的 [CodeMirror](https://codemirror.net/) 编辑器，可以立即重新加载并保存更改到文件中。
 
@@ -44,4 +48,8 @@ VS Code 插件提供一些特性，这些特性可以帮你更好的组织幻灯
 
 ![](https://user-images.githubusercontent.com/11247099/116809994-cc2caa00-ab73-11eb-879f-60585747c3c9.png)
 
-<Tweet id="1395333405345148930" />
+<TheTweet id="1395333405345148930" />
+
+## Prettier Plugin
+
+Slidev also provides a Prettier plugin to format your slides. You can use it with your favorite editor that supports Prettier. Docs for the plugin can be found [here](https://github.com/slidevjs/prettier-plugin).

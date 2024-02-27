@@ -7,7 +7,6 @@ title: 布局
 ## 内置布局 {#built-in-layouts}
 > 由于主题可能会覆盖布局的行为，因此精确理解主题的使用、参数和例子最好的方式是查阅主题文档。
 
-
 ### `center`
 
 在屏幕中间展示内容。
@@ -83,6 +82,23 @@ image: ./path/to/the/image
 ---
 ```
 
+You can change the default background size (`cover`) by adding the `backgroundSize` attribute:
+
+```yaml
+---
+layout: image
+image: ./path/to/the/image
+backgroundSize: contain
+---
+```
+
+```yaml
+---
+layout: image-left
+image: ./path/to/the/image
+backgroundSize: 20em 70%
+---
+```
 
 ### `iframe-left`
 
@@ -135,7 +151,6 @@ url: https://github.com/slidevjs/slidev
 ---
 ```
 
-
 ### `intro`
 
 介绍演讲稿，通​​常带有演讲稿标题、简述、作者等信息。
@@ -162,7 +177,6 @@ url: https://github.com/slidevjs/slidev
 
 #### 用法
 
-
 ```md
 ---
 layout: two-cols
@@ -179,7 +193,37 @@ This shows on the left
 This shows on the right
 ```
 
+<<<<<<< HEAD
 ## 自定义布局 {#custom-layouts}
+=======
+### `two-cols-header`
+
+Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+
+#### Usage
+
+```md
+---
+layout: two-cols-header
+---
+
+This spans both
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+```
+
+## Custom Layouts
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 在你的项目根目录里创建一个 `layouts/` 文件夹，然后直接把你的自定义 Vue 组件放进去。
 
