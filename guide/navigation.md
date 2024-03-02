@@ -32,6 +32,10 @@ title: 导航
 
 ## 幻灯片总览 {#slides-overview}
 
+<<<<<<< HEAD
 通过按下键盘按键 <kbd>o</kbd> 或者鼠标点击导航栏中的 <carbon-apps class="inline-icon-btn"/> 按钮，你就可以查看全部幻灯片并方便地在它们之间跳转。
+=======
+By pressing <kbd>o</kbd> or clicking the <carbon-apps class="inline-icon-btn"/> button in the navigation bar, you can have the overview of your slides so you can jump between them easily.
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 
 ![](/screenshots/slides-overview.png)

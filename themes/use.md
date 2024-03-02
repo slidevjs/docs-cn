@@ -12,7 +12,14 @@ theme: seriph
 ---
 ```
 
+<<<<<<< HEAD
 在服务启动后，它会自动提示你是否安装该主题：
+=======
+> **Note**
+> To install a theme from a scoped package, you will have to give the full namespace e.g `@organization/slidev-theme-name`
+
+You can start the server, which will prompt you to install the theme automatically
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 
 <div class="language-md">
 <pre>
@@ -38,7 +45,11 @@ $ npm install @slidev/theme-seriph
 $ slidev theme eject
 ```
 
+<<<<<<< HEAD
 它会将你当前使用的主题弹出到 `./theme` 目录下，然后请将你的 frontmatter 修改为：
+=======
+It will eject the theme you are using currently into `./theme`, and changed your frontmatter to
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 
 ```yaml
 ---
