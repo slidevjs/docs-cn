@@ -119,18 +119,22 @@ import './code.css'
 import './layouts.css'
 ```
 
+<<<<<<< HEAD
 样式得益于 [Windi CSS](https://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
+=======
+Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://unocss.dev/transformers/directives#apply) out-of-box. For example:
+>>>>>>> ee683ae81a2021c44b278d720a418ee0c6ddb537
 
 ```less
 .slidev-layout {
-  @apply px-14 py-10 text-[1.1rem];
+  --uno: px-14 py-10 text-[1.1rem];
 
   h1, h2, h3, h4, p, div {
-    @apply select-none;
+    --uno: select-none;
   }
 
   pre, code {
-    @apply select-text;
+    --uno: select-text;
   }
 
   a {
@@ -139,7 +143,11 @@ import './layouts.css'
 }
 ```
 
+<<<<<<< HEAD
 [了解更多关于此语法的信息](https://windicss.org/features/directives.html)。
+=======
+[Learn more about the syntax](https://unocss.dev/transformers/directives#apply).
+>>>>>>> ee683ae81a2021c44b278d720a418ee0c6ddb537
 
 ## `index.html` {#index-html}
 
@@ -185,6 +193,12 @@ import './layouts.css'
 
 ## 全局图层 {#global-layers}
 
+<<<<<<< HEAD
 约定：`global-top.vue` | `global-bottom.vue`
 
 了解更多：[全局图层](/custom/global-layers)
+=======
+Conventions: `global-top.vue` | `global-bottom.vue`
+
+Learn more: [Global Layers](/custom/global-layers)
+>>>>>>> ee683ae81a2021c44b278d720a418ee0c6ddb537
