@@ -64,13 +64,13 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 导航操作 `nav` 比下一张或上一张幻灯片这样的基础功能更加强大。请参阅下面的用例:
 
 ```ts
-import { defineShortcutsSetup, NavOperations } from '@slidev/types'
+import { NavOperations, defineShortcutsSetup } from '@slidev/types'
 
 export default defineShortcutsSetup((nav: NavOperations) => {
   return [
     {
       key: 'e',
-      
+
       // Set the `e` keyboard shortcut to be used as a bookmark
       // or quick-access of sorts, to navigate specifically to
       // slide number 42
