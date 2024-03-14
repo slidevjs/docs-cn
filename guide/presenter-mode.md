@@ -21,11 +21,13 @@ presenter: false
 ```
 
 或者，可以通过在配置中设置所需的模式，只为 `dev` 或 `build` 模式启用它:
+
 ```md
 ---
 presenter: dev
 ---
 ```
+
 在这种情况下，只有在运行 `slidev` 时才会使用演讲者模式，而在运行 `slidev build` 时则不开启演讲者模式。
 
 ## 远程访问限制 {#remote-restricted-access}

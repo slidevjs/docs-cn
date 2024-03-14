@@ -119,18 +119,20 @@ import './code.css'
 import './layouts.css'
 ```
 
-样式得益于 [Windi CSS](https://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
+样式得益于 [UnoCSS](https://unocss.dev/) 和 [PostCSS](https://postcss.org/)，你拥有开箱即用的 css 嵌套和 [at-directives](https://unocss.dev/transformers/directives#apply)。示例：
+
+<!-- eslint-skip -->
 
 ```less
 .slidev-layout {
-  @apply px-14 py-10 text-[1.1rem];
+  --uno: px-14 py-10 text-[1.1rem];
 
   h1, h2, h3, h4, p, div {
-    @apply select-none;
+    --uno: select-none;
   }
 
   pre, code {
-    @apply select-text;
+    --uno: select-text;
   }
 
   a {
@@ -139,7 +141,7 @@ import './layouts.css'
 }
 ```
 
-[了解更多关于此语法的信息](https://windicss.org/features/directives.html)。
+[了解更多关于此语法的信息](https://unocss.dev/transformers/directives#apply)。
 
 ## `index.html` {#index-html}
 

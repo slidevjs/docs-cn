@@ -4,39 +4,93 @@ title: 组件
 
 # 组件 {#components}
 
-## 内置组件 {#built-in-components}
+### `Arrow`
 
-> 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
+绘制一个箭头。
 
-### `Toc` {#toc}
+#### 用法 {#arrow-usage}
 
-插入目录。
-
-如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
-```yml
----
-hideInToc: true
----
+```md
+<Arrow x1="10" y1="20" x2="100" y2="200" />
 ```
 
-标题使用 [`<Titles>` 组件](#titles) 来展示
+Or:
 
-#### 用法 {#toc-usage}
-
-~~~md
-<Toc />
-~~~
+```md
+<Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />
+```
 
 参数：
 
-* `columns` (`string | number`，默认值：`1`)：要显示的列数The number of columns of the display
-* `listClass` (`string | string[]`，默认值：`''`)：用于修饰目录的 class
-* `maxDepth` (`string | number`，默认值：`Infinity`)：要显示标题的最大深度
-* `minDepth` (`string | number`，默认值：`1`)：要显示标题的最小深度
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`，默认值：`'all'`):
-  * `'all'`：显示所有项目
-  * `'onlyCurrentTree'`：只显示当前树中的项目（活跃的项目，及其父节点以及子节点）
-  * `'onlySiblings'`：只显示当前树中的项目和它们的直接兄弟姐妹
+- `x1` (`string | number`, required): start point x position
+- `y1` (`string | number`, required): start point y position
+- `x2` (`string | number`, required): end point x position
+- `y2` (`string | number`, required): end point x position
+- `width` (`string | number`, default: `2`): line width
+- `color` (`string`, default: `'currentColor'`): line color
+
+### `AutoFitText`
+
+> Experimental
+
+Box inside which the font size will automatically adapt to fit the content. Similar to PowerPoint or Keynote TextBox.
+
+#### Usage
+
+```md
+<AutoFitText :max="200" :min="100" modelValue="Some text"/>
+```
+
+Parameters:
+
+- `max` (`string | number`, default `100`): Maximum font size
+- `min` (`string | number`, default `30`): Minimum font size
+- `modelValue` (`string`, default `''`): text content
+
+### `LightOrDark`
+
+Use it to display one thing or another depending on the active light or dark theme.
+
+#### Usage
+
+Use it with the two named Slots `#dark` and `#light`:
+
+```md
+<LightOrDark>
+  <template #dark>Dark mode is on</template>
+  <template #light>Light mode is on</template>
+</LightOrDark>
+```
+
+Provided props on `LightOrDark` component will be available using scoped slot props:
+
+```md
+<LightOrDark width="100" alt="some image">
+  <template #dark="props">
+    <img src="/dark.png" v-bind="props"/>
+  </template>
+  <template #light="props">
+    <img src="/light.png" v-bind="props"/>
+  </template>
+</LightOrDark>
+```
+
+You can provide markdown in the slots, but you will need to surround the content with blank lines:
+
+```md
+<LightOrDark>
+  <template #dark>
+
+![dark](/dark.png)
+
+  </template>
+  <template #light>
+
+![light](/light.png)
+
+  </template>
+</LightOrDark>
+```
 
 ### `Link` {#link}
 
@@ -44,15 +98,62 @@ hideInToc: true
 
 #### 用法 {#link-usage}
 
-~~~md
+```md
 <Link to="42">Go to slide 42</Link>
 <Link to="42" title="Go to slide 42"/>
-~~~
+<Link to="solutions" title="Go to solutions"/>
+```
 
 参数：
 
-* `to` (`string | number`)：幻灯片的路径，以导航到对应位置（幻灯片下标从 `1` 开始）
-* `title` (`string`)：要显示的标题
+- `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
+- `title` (`string`): The title to display
+
+One can use a string as `to`, provided the corresponding route exists, e.g.
+
+```md
+---
+routeAlias: solutions
+---
+
+# Now some solutions!
+```
+
+### `RenderWhen`
+
+Render slot only when the context match (for example when we are in presenter view).
+
+#### Usage
+
+```md
+<RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
+```
+
+Context type: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+
+Parameters:
+
+- `context` (`Context | Context[]`): context or array of contexts you want the slot to be rendered
+
+### `SlideCurrentNo`
+
+Current slide number.
+
+#### Usage
+
+```md
+<SlideCurrentNo />
+```
+
+### `SlidesTotal`
+
+Total number of slides.
+
+#### Usage
+
+```md
+<SlidesTotal />
+```
 
 ### `Titles` {#titles}
 
@@ -60,9 +161,8 @@ hideInToc: true
 
 标题和标题级别会自动从每张幻灯片的第一个标题元素中检索出来。
 
-目录的标题和标题层级根据每张幻灯片上的第一个标题元素自动生成。
+You can override this automatic behaviour for a slide by using the front matter syntax:
 
-可以使用前端语法覆盖幻灯片的这种自动生成目录行为：
 ```yml
 ---
 title: Amazing slide title
@@ -72,62 +172,108 @@ level: 2
 
 #### 用法 {#titles-usage}
 
-`<Titles>` 组件是一个虚拟组件，你可以使用如下方式导入：
+The `<Titles>` component is a virtual component you can import with:
+
 ```js
 import Titles from '/@slidev/titles.md'
 ```
 
-然后你可以这样使用：
-~~~md
+Then you can use it with:
+
+```md
 <Titles no="42" />
-~~~
+```
 
 参数：
 
-* `no` (`string | number`): 显示标题的幻灯片编号（幻灯片下标从 `1` 开始）
+- `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
 
-### `LightOrDark` {#lightordark}
+### `Toc`
 
-使用 `LightOrDark` 组件来根据当前的亮色或暗色主题来显示指定内容。
+插入目录
 
-#### 用法 {#usage}
+如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
 
-使用 `#dark` 和 `#light` 两个具名插槽:
-~~~md
-<LightOrDark>
-  <template #dark>Dark mode is on</template>
-  <template #light>Light mode is on</template>
-</LightOrDark>
-~~~
+```yml
+---
+hideInToc: true
+---
+```
 
-`LightOrDark` 组件提供的 props 能够通过作用域插槽 props 获取到：
-~~~md
-<LightOrDark width="100" alt="some image">
-  <template #dark="props">
-    <img src="/dark.png" v-bind="props"/>
-  </template>
-  <template #light="props">
-    <img src="/light.png" v-bind="props"/>
-  </template>
-</LightOrDark>
-~~~
+标题使用 [`<Titles>` 组件](#titles) 来展示。
 
-可以在插槽中使用 markdown 语法，但是需要在内容前后增加空行：
-~~~md
-<LightOrDark>
-  <template #dark>
-  
-![dark](/dark.png)
+#### 用法 {#toc-usage}
 
-  </template>
-  <template #light>
-  
-![light](/light.png)
+```md
+<Toc />
+```
 
-  </template>
-</LightOrDark>
-~~~
+Parameters:
 
+- `columns` (`string | number`, default: `1`): The number of columns of the display
+- `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
+- `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
+- `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
+- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
+  - `'all'`: Display all items
+  - `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
+  - `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+
+### `Transform`
+
+Apply scaling or transforming to elements.
+
+#### Usage
+
+```md
+<Transform :scale="0.5">
+  <YourElements />
+</Transform>
+```
+
+Parameters:
+
+- `scale` (`number | string`, default `1`): transform scale value
+- `origin` (`string`, default `'top left'`): transform origin value
+
+### `Tweet`
+
+Embed a tweet.
+
+#### Usage
+
+```md
+<Tweet id="20" />
+```
+
+Parameters:
+
+- `id` (`number | string`, required): id of the tweet
+- `scale` (`number | string`, default `1`): transform scale value
+- `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `cards` (`'hidden' | 'visible'`, default `'visible'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+
+### `VAfter`, `VClick` and `VClicks`
+
+See https://sli.dev/guide/animations.html
+
+### `Youtube`
+
+Embed a youtube video.
+
+#### Usage
+
+```md
+<Youtube id="luoMHjh-XcQ" />
+```
+
+Parameters:
+
+- `id` (`string`, required): id of the youtube video
+- `width` (`number`): width of the video
+- `height` (`number`): height of the video
+
+You can also make the video start at specific time if you add `?start=1234` to the id value (where 1234 are seconds),
 
 ## 自定义组件 {#custom-components}
 

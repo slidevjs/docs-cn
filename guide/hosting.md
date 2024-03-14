@@ -1,4 +1,3 @@
-
 # 静态部署 {#static-hosting}
 
 ## 构建单页应用（SPA） {#build-single-page-application-spa}
@@ -11,9 +10,11 @@ $ slidev build
 
 生成的应用程序会保存在 `dist/` 目录下，然后你可以将该目录部署在 [GitHub Pages](https://pages.github.com/)，[Netlify](https://netlify.app/)，[Vercel](https://vercel.com/)，等你想部署的任何地方。接着，就可以将你幻灯片的链接分享给任何人。
 
+You can test the generated build using a web server (Apache, NGINX, Caddy...etc.) or in the project you can directly run: `npx vite preview`.
+
 ### 配置基础路径 {#base-path}
 
-如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。例如：
+如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。The `--base` path **must begin and end** with a slash `/`; for example:
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
@@ -41,6 +42,49 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
+This can also be done with the CLI option `--download` (`boolean` only).
+
+```bash
+$ slidev build --download
+```
+
+When using the download option, you can also provide the export options:
+
+- By using [CLI export options](/guide/exporting.html)
+- Or [frontmatter export options](/custom/#frontmatter-configures)
+
+### Output directory
+
+You can change the output directory using `--out`.
+
+```bash
+$ slidev build --out my-build-folder
+```
+
+### Watch mode
+
+By passing the `--watch` option the build will run in watch mode and will rebuild anytime the source changes.
+
+```bash
+$ slidev build --watch
+```
+
+### Multiple entries
+
+You can also build multiple slides at once.
+
+```bash
+$ slidev build slides1.md slides1.md
+```
+
+Or
+
+```bash
+$ slidev build *.md
+```
+
+In this case, each input file will generate a folder containing the build in the output directory.
+
 ### 示例 {#examples}
 
 下面是几个导出为单页应用的示例：
@@ -60,18 +104,18 @@ download: 'https://myside.com/my-talk.pdf'
 
 在你项目的根目录创建 `netlify.toml` 文件，其内容如下：
 
-```ts
-[build.environment]
-  NODE_VERSION = "14"
-
+```toml
 [build]
-  publish = "dist"
-  command = "npm run build"
+publish = 'dist'
+command = 'npm run build'
+
+[build.environment]
+NODE_VERSION = '20'
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = '/*'
+to = '/index.html'
+status = 200
 ```
 
 接着，去 Netlify 的仪表盘，选择对应仓库并创建新的站点。
@@ -92,7 +136,7 @@ download: 'https://myside.com/my-talk.pdf'
 
 接着，去 Vercel 的仪表盘，选择对应仓库并创建新的站点。
 
-## GitHub Pages
+### GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
@@ -102,27 +146,49 @@ download: 'https://myside.com/my-talk.pdf'
 
 ```yaml
 name: Deploy pages
-on: push
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: 'lts/*'
+
       - name: Install dependencies
         run: npm install
-      - name: Install slidev
-        run:  npm i -g @slidev/cli
+
       - name: Build
-        run: slidev build --base <name_of_repo>
-      - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+        run: npm run build -- --base /<name_of_repo>/
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
 ```
+
 - 在你的仓库里，选择 “Settings > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
 - 最终，在全部工作流执行之后，在 “Settings > Pages” 下会出现幻灯片的链接。

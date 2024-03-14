@@ -7,7 +7,6 @@ title: 布局
 ## 内置布局 {#built-in-layouts}
 > 由于主题可能会覆盖布局的行为，因此精确理解主题的使用、参数和例子最好的方式是查阅主题文档。
 
-
 ### `center`
 
 在屏幕中间展示内容。
@@ -83,6 +82,23 @@ image: ./path/to/the/image
 ---
 ```
 
+你可以使用 `backgroundSize` 选项来控制背景图片的大小：
+
+```yaml
+---
+layout: image
+image: ./path/to/the/image
+backgroundSize: contain
+---
+```
+
+```yaml
+---
+layout: image-left
+image: ./path/to/the/image
+backgroundSize: 20em 70%
+---
+```
 
 ### `iframe-left`
 
@@ -135,7 +151,6 @@ url: https://github.com/slidevjs/slidev
 ---
 ```
 
-
 ### `intro`
 
 介绍演讲稿，通​​常带有演讲稿标题、简述、作者等信息。
@@ -162,7 +177,6 @@ url: https://github.com/slidevjs/slidev
 
 #### 用法
 
-
 ```md
 ---
 layout: two-cols
@@ -170,13 +184,39 @@ layout: two-cols
 
 # Left
 
-This shows on the left
+显示在左侧
 
 ::right::
 
 # Right
 
-This shows on the right
+显示在右侧
+```
+
+### `two-cols-header`
+
+将页面内容分为两列，上方和下方的内容分开，第二行将左右两列分开。
+
+#### 用法
+
+```md
+---
+layout: two-cols-header
+---
+
+显示在上方
+
+::left::
+
+# Left
+
+显示在左侧
+
+::right::
+
+# Right
+
+显示在右侧
 ```
 
 ## 自定义布局 {#custom-layouts}

@@ -20,7 +20,7 @@ $ npm init slidev-theme
 - 提供默认配置（字体、配色方案、语法高亮器等）
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
-- 扩展 Windi CSS 配置
+- 扩展 UnoCSS/Windi CSS 配置
 - 配置 Monaco, Prism 等工具
 
 ## 约定 {#conventions}
@@ -56,7 +56,7 @@ theme: ./
 
 你只需在命令行中执行 `npm publish` 就可以发布自己的主题，并不需要额外的构建过程（这意味着你可以直接发布 `.vue` 和 `.ts` 文件，Slidev 可以直接识别它们）。
 
-主题可以定制的范围与本地自定义相一致，可以参阅 [自定义文档](/custom/)。
+主题的约定与本地自定义相一致，请参阅 [命名约定](/custom/)。
 
 ## 默认配置 {#default-configurations}
 
@@ -68,7 +68,7 @@ theme: ./
 // package.json
 {
   "slidev": {
-    "default": {
+    "defaults": {
       "aspectRatio": "16/9",
       "canvasWidth": 980,
       "fonts": {
@@ -132,7 +132,7 @@ html.dark {
 // package.json
 {
   "slidev": {
-    "highlighter": "shiki" // or "prism" or "all"
+    "highlighter": "shiki" // or "prism" or "both"
   }
 }
 ```

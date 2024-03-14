@@ -6,8 +6,6 @@ title: 使用扩展插件
 
 扩展插件是你可以在演示文稿中使用的附加组件、布局、样式、配置等集。
 
-它们与 [主题](/themes/use) 相似，但总而言之：
-
 * 它们不影响幻灯片的全局样式
 * 你可以在同一演示文稿中使用多个插件
 
@@ -35,7 +33,7 @@ addons:
   "slidev": {
     "addons": [
       "slidev-addon-package1",
-      "slidev-addon-package2",
+      "slidev-addon-package2"
     ]
   }
 }

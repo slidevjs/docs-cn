@@ -1,10 +1,8 @@
 ---
-title: 开始使用
+outline: deep
 ---
 
 # 开始使用 {#getting-started}
-
-## 总览 {#overview}
 
 Slidev <sup>(slide + dev, **/slʌɪdɪv/**)</sup> 是基于 Web 的幻灯片制作和演示工具。它旨在让开发者专注在 Markdown 中编写内容，同时拥有支持 HTML 和 Vue 组件的能力，并且能够呈现像素级完美的布局，还在你的演讲稿中内置了互动的演示样例。
 
@@ -30,21 +28,6 @@ Slidev <sup>(slide + dev, **/slʌɪdɪv/**)</sup> 是基于 Web 的幻灯片制�
 - ⚡️ [**快速**](https://vitejs.dev) —— 基于 [Vite](https://vitejs.dev) 的即时重载
 - 🛠 [**可配置**](/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
 
-### 技术栈 {#tech-stack}
-
-Slidev 使用了如下的工具和技术：
-
-- [Vite](https://vitejs.dev) —— 一款极速的前端工具
-- 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
-- [Windi CSS](https://github.com/windicss/windicss) 或 [UnoCSS](https://github.com/unocss/unocss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
-- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) —— 具有实时编码能力的一流代码片段支持
-- [RecordRTC](https://recordrtc.org) —— 内置录制功能和摄像头视图
-- [VueUse](https://vueuse.org) 家族 ——  [`@vueuse/core`](https://github.com/vueuse/vueuse)、[`@vueuse/head`](https://github.com/vueuse/head)、[`@vueuse/motion`](https://github.com/vueuse/motion) 等
-- [Iconify](https://iconify.design/) —— 图标库集合
-- [Drauu](https://github.com/antfu/drauu) - 支持绘图和批注
-- [KaTeX](https://katex.org/) —— LaTeX 数学渲染
-- [Mermaid](https://mermaid-js.github.io/mermaid) —— 文本描述语言创建图表
-
 ### 搭建你的第一个演讲稿 {#scaffolding-your-first-presentation}
 
 <br>
@@ -57,17 +40,21 @@ Slidev 使用了如下的工具和技术：
 
 #### 本地创建 {#create-locally}
 
-使用 NPM：
+::: code-group
 
-```bash
-$ npm init slidev
+```bash [npm]
+npm init slidev@latest
 ```
 
-使用 Yarn：
-
-```bash
-$ yarn create slidev
+```bash [yarn]
+yarn create slidev
 ```
+
+```bash [pnpm]
+pnpm create slidev
+```
+
+:::
 
 根据提示开始创建你的幻灯片吧！想要了解更多关于 Markdown 的语法，请阅读 [语法指南](/guide/syntax)。
 
@@ -93,11 +80,11 @@ $ npx slidev
 
 执行 `slidev --help` 命令获取更多选项的详细信息。
 
-### Markdown 语法 {#markdown-syntax}
+## Markdown 语法 {#markdown-syntax}
 
 Slidev 会读取位于项目根目录的 `slides.md` 文件，并将其转换为幻灯片。每当你修改 Markdown 文件，幻灯片的内容都会立刻随之更新。例如：
 
-~~~md
+````md
 # Slidev
 
 Hello World
@@ -108,13 +95,29 @@ Hello World
 
 直接使用代码块，能够实现代码高亮
 
-//```ts
+```ts
 console.log('Hello, World!')
-//```
+```
 
 ---
 
 # 第 3 页
-~~~
+
+````
 
 请阅读 [语法指南](/guide/syntax) 获取更多关于 Slidev Markdown 语法的内容。
+
+### 技术栈 {#tech-stack}
+
+Slidev 使用了如下的工具和技术：
+
+- [Vite](https://vitejs.dev) —— 一款极速的前端工具
+- 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
+- [Windi CSS](https://github.com/windicss/windicss) 或 [UnoCSS](https://github.com/unocss/unocss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
+- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) —— 具有实时编码能力的一流代码片段支持
+- [RecordRTC](https://recordrtc.org) —— 内置录制功能和摄像头视图
+- [VueUse](https://vueuse.org) 家族 ——  [`@vueuse/core`](https://github.com/vueuse/vueuse)、[`@vueuse/head`](https://github.com/vueuse/head)、[`@vueuse/motion`](https://github.com/vueuse/motion) 等
+- [Iconify](https://iconify.design/) —— 图标库集合
+- [Drauu](https://github.com/antfu/drauu) - 支持绘图和批注
+- [KaTeX](https://katex.org/) —— LaTeX 数学渲染
+- [Mermaid](https://mermaid-js.github.io/mermaid) —— 文本描述语言创建图表

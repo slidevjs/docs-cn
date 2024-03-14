@@ -4,7 +4,7 @@
 
 由于 Slidev 基于 Web 运行，因此你可以使用任何想使用的布局方式。比如 [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)，[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，甚至是 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)，都可以完美兼容。
 
-由于我们内置了 [Windi CSS](https://cn.windicss.org/)，你也可以参考使用如下方式：
+由于我们内置了 [UnoCSS](https://unocss.dev/)，你也可以参考使用如下方式：
 
 ```html
 <div class="grid grid-cols-2 gap-4">
@@ -24,7 +24,7 @@ The second column
 你甚至可以定制每一列的大小，比如：
 
 ```html
-<div class="grid grid-cols-[200px,1fr,10%] gap-4">
+<div class="grid grid-cols-[200px_1fr_10%] gap-4">
 <div>
 
 The first column (200px)
@@ -42,8 +42,6 @@ The third column (10% width to parent container)
 </div>
 </div>
 ```
-
-欲了解更多，请參考 [Windi CSS 的 Grids 布局](https://cn.windicss.org/utilities/layout/grid.html)。
 
 ## 定位 {#positioning}
 
@@ -96,7 +94,7 @@ This will not be affected.
 你可以通过创建 `./style.css` 文件的方式来提供自定义全局样式，例如：
 
 ```css
-/* style.css */ 
+/* style.css */
 
 h1 {
   font-size: 10em !important;

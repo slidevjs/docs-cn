@@ -14,11 +14,11 @@ title: 字体
 ---
 fonts:
   # 基础字体
-  sans: 'Robot'
+  sans: Robot
   # 与 windicss 的 `font-serif` css 类一同使用
-  serif: 'Robot Slab'
+  serif: Robot Slab
   # 用于代码块、内联代码等
-  mono: 'Fira Code'
+  mono: Fira Code
 ---
 ```
 
@@ -36,7 +36,7 @@ fonts:
   # 与 css 中的 font-family 一致，你可以使用 `,` 来分割字体名，便于降级
   sans: 'Helvetica Neue,Robot'
   # 将 'Helvetica Neue' 作为本地字体
-  local: 'Helvetica Neue'
+  local: Helvetica Neue
 ---
 ```
 
@@ -47,7 +47,7 @@ fonts:
 ```yaml
 ---
 fonts:
-  sans: 'Robot'
+  sans: Robot
   # 默认为
   weights: '200,400,600'
   # 引入斜体字体，默认 `false`
@@ -64,13 +64,15 @@ fonts:
 ```yaml
 ---
 fonts:
-  sans: 'Robot'
-  serif: 'Robot Slab'
-  mono: 'Fira Code'
+  sans: Robot
+  serif: Robot Slab
+  mono: Fira Code
 ---
 ```
 
 其结果为：
+
+<!-- eslint-skip -->
 
 ```css
 .font-sans {
@@ -90,7 +92,7 @@ fonts:
 ---
 fonts:
   mono: 'Fira Code, monospace'
-  fallback: false
+  fallbacks: false
 ---
 ```
 
@@ -104,6 +106,6 @@ fonts:
 ```yaml
 ---
 fonts:
-  provider: 'none'
+  provider: none
 ---
 ```

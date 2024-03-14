@@ -128,26 +128,6 @@ export const official: ThemeInfo[] = [
 
 export const community: ThemeInfo[] = [
   {
-    id: 'slidev-theme-flayyer',
-    name: 'Flayyer',
-    description: 'This theme is inspired by the layout of Flayyer and the way that it works.',
-    author: {
-      name: 'Daniel Esteves',
-      link: 'https://github.com/danestves',
-    },
-    repo: 'https://github.com/danestves/slidev-theme-flayyer',
-    previews: [
-      'https://i.imgur.com/grKiGIK.png',
-      'https://i.imgur.com/tAvcf5S.png',
-      'https://i.imgur.com/mj42LcL.png',
-      'https://i.imgur.com/41QWv3c.png',
-    ],
-    tags: [
-      'dark',
-      'light',
-    ],
-  },
-  {
     id: 'slidev-theme-geist',
     name: 'Vercel',
     description: 'A theme based on Vercel\'s design system.',
@@ -402,7 +382,7 @@ export const community: ThemeInfo[] = [
       'https://cdn.jsdelivr.net/gh/estruyf/slidev-theme-the-unnamed@main/assets/section.png',
     ],
     tags: [
-      'dark'
+      'dark',
     ],
   },
   {
@@ -424,6 +404,45 @@ export const community: ThemeInfo[] = [
     tags: [
       'dark',
       'minimalism',
+    ],
+  },
+  {
+    id: 'slidev-theme-frankfurt',
+    name: 'Frankfurt',
+    description: 'Inspired by the Beamer theme Frankfurt',
+    author: {
+      name: 'Mu-Tsun Tsai',
+      link: 'https://github.com/MuTsunTsai',
+    },
+    repo: 'https://github.com/MuTsunTsai/slidev-theme-frankfurt',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/MuTsunTsai/slidev-theme-frankfurt/screenshots/01.png',
+      'https://cdn.jsdelivr.net/gh/MuTsunTsai/slidev-theme-frankfurt/screenshots/04.png',
+      'https://cdn.jsdelivr.net/gh/MuTsunTsai/slidev-theme-frankfurt/screenshots/06.png',
+      'https://cdn.jsdelivr.net/gh/MuTsunTsai/slidev-theme-frankfurt/screenshots/07.png',
+    ],
+    tags: [
+      'dark',
+      'light',
+    ],
+  },
+  {
+    id: 'slidev-theme-hep',
+    name: 'HEP',
+    description: 'Academic style for High Energy Physics',
+    author: {
+      name: 'Yulei ZHANG',
+      link: 'https://github.com/AvencastF',
+    },
+    repo: 'https://github.com/AvencastF/slidev-theme-hep',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/avencastf/slidev-theme-hep/screenshot/001.png',
+      'https://cdn.jsdelivr.net/gh/avencastf/slidev-theme-hep/screenshot/004.png',
+      'https://cdn.jsdelivr.net/gh/avencastf/slidev-theme-hep/screenshot/006.png',
+      'https://cdn.jsdelivr.net/gh/avencastf/slidev-theme-hep/screenshot/008.png',
+    ],
+    tags: [
+      'light',
     ],
   },
   // Add yours here!

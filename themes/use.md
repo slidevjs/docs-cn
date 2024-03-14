@@ -12,6 +12,9 @@ theme: seriph
 ---
 ```
 
+> **提示**
+> 若要从作用域包中安装主题，你需要提供完整的命名空间，例如 `@organization/slidev-theme-name`
+
 在服务启动后，它会自动提示你是否安装该主题：
 
 <div class="language-md">
@@ -38,7 +41,7 @@ $ npm install @slidev/theme-seriph
 $ slidev theme eject
 ```
 
-它会将你当前使用的主题弹出到 `./theme` 目录下，然后请将你的 frontmatter 修改为：
+这会将你当前使用的主题弹出到 `./theme` 目录下，然后自动将你的 frontmatter 修改为：
 
 ```yaml
 ---

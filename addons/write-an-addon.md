@@ -8,12 +8,11 @@ title: 编写扩展插件
 
 ## 扩展插件能力 {#capability}
 
-一个扩展插件可以自定义以下功能：
 
 - 全局样式（谨慎使用，它更通常作为 [主题](/themes/use) 的能力）
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
-- 扩展 Windi CSS 配置
+- 扩展 UnoCSS/Windi CSS 配置
 - 配置 Monaco、Prism 等工具
 
 ## 约定 {#conventions}
@@ -55,7 +54,7 @@ $ npm install -D @slidev/cli
 
 你只需在命令行中执行 `npm publish` 就可以发布自己的扩展插件，并不需要额外的构建过程（这意味着你可以直接发布 `.vue` 和 `.ts` 文件，Slidev 可以直接识别它们）。
 
-扩展插件可以定制的范围与本地自定义相一致，可以参阅 [自定义文档](/custom/)。
+扩展插件的约定与本地自定义相一致，请参阅 [命名约定](/custom/)。
 
 ## 扩展插件原数据 {#addon-metadata}
 
