@@ -14,13 +14,7 @@ Slidev 通过三步解析演示文档(如 `slides.md`) :
 
 配置步骤 2 中使用的 markdown 解析器可以通过 [配置 Vite 内部插件](/custom/config-vite#configure-internal-plugins)来完成。
 
-<<<<<<< HEAD
-## 预解析器扩展 {#preparser-extensions}
-
-> 自 v0.37.0 起可用
-=======
 > Available since v0.37.0.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 :::warning
 重要：当你修改预解析器配置时，需要停止并重新启动 slidev (重新启动可能不够)。
@@ -28,11 +22,6 @@ Slidev 通过三步解析演示文档(如 `slides.md`) :
 
 预解析器(上面的步骤 1)是高度可扩展的，并且允许为 md 文件实现自定义语法。扩展预解析器是一个**高级特性**，由于语法的隐式更改，它很容易破坏[编辑器集成](/guide/editors) 。
 
-<<<<<<< HEAD
-要对其进行定制，请创建一个 `./setup/preparser.ts` 文件，内容如下:
-
-=======
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```ts
 import { definePreparserSetup } from '@slidev/types'
 
@@ -50,16 +39,6 @@ export default definePreparserSetup(({ filepath, headmatter, mode }) => {
 })
 ```
 
-<<<<<<< HEAD
-这个示例系统地将所有 `@@@` 行替换成了 `hello`。它说明了预解析器配置文件的结构和涉及到的一些主要概念:
-- 必须使用函数作为参数来调用 `definePreparserSetup`。
-- 该函数接收文件路径(演示文稿的跟路径)和头文件(来自 md 文件)。它可以使用这些信息(例如，根据演示文稿启用扩展)。
-- 函数必须返回预解析器扩展列表。
-- 每个扩展可以包含：
-  - 一个 `transformRawLines(lines)` 函数，它在解析 md 文件的页头之后运行，并接收所有行的列表(来自 md 文件)。该函数可以任意变更列表。
-  - 一个 `transformSlide(content, frontmatter)` 函数，在分割文件为若干个幻灯片后，在每张幻灯片中都会调用，并将幻灯片内容作为字符串接收，将幻灯片的扉页作为对象接收。该函数可以改变扉页，并且必须返回内容字符串(可能已修改，如果没有进行修改则返回 `undefined`)。
-  - 一个 `name`
-=======
 This example systematically replaces any `@@@` line by a line with `hello`. It illustrates the structure of a preparser configuration file and some of the main concepts the preparser involves:
 
 - `definePreparserSetup` must be called with a function as parameter.
@@ -69,7 +48,6 @@ This example systematically replaces any `@@@` line by a line with `hello`. It i
   - a `transformRawLines(lines)` function that runs just after parsing the headmatter of the md file and receives a list of all lines (from the md file). The function can mutate the list arbitrarily.
   - a `transformSlide(content, frontmatter)` function that is called for each slide, just after splitting the file, and receives the slide content as a string and the frontmatter of the slide as an object. The function can mutate the frontmatter and must return the content string (possibly modified, possibly `undefined` if no modifications have been done).
   - a `name`
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ## 预解析器扩展示例 {#example-preparser-extensions}
 
@@ -91,11 +69,7 @@ This example systematically replaces any `@@@` line by a line with `hello`. It i
 see you next time
 ```
 
-<<<<<<< HEAD
-为了支持这些 `@src:` 和 `@cover:` 语法，创建一个 `./setup/preparser.ts` 文件，其内容如下:
-=======
 To allow these `@src:` and `@cover:` syntaxes, create a `./setup/preparser.ts` file with the following content:
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ```ts
 import { definePreparserSetup } from '@slidev/types'
@@ -140,12 +114,7 @@ export default definePreparserSetup(() => {
 
 就是这样。
 
-<<<<<<< HEAD
-
-### 用例2: 使用自定义扉页来包装幻灯片 {#use-case-2-using-custom-frontmatter-to-wrap-slides}
-=======
 ### Use case 2: using custom frontmatter to wrap slides
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 设想一种情况，你经常想要缩放您的一些幻灯片，但是仍然想要使用各种现有的布局，因此创建一个新的布局将不适合。例如，你可能希望按如下方式编写 `slides.md`：
 
@@ -178,17 +147,10 @@ _scale: 2.5
 see you next time
 ```
 
-<<<<<<< HEAD
-在这里，我们使用了一个下划线 `_scale` 以避免与现有的扉页属性发生可能的冲突(实际上，如果使用没有下划线的 `scale`，会导致潜在的问题)。
-
-要处理扉页中的 `_scale: ...` 语法，创建一个 `./setup/preparser.ts` 文件，其内容如下:
-
-=======
 Here we used an underscore in `_scale` to avoid possible conflicts with existing frontmatter properties (indeed, the case of `scale`, without underscore would cause potential problems).
 
 To handle this `_scale: ...` syntax in the frontmatter, create a `./setup/preparser.ts` file with the following content:
 
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```ts
 import { definePreparserSetup } from '@slidev/types'
 

@@ -25,7 +25,6 @@ $ slidev export
 
 稍作等待，即可在 `./slides-export.pdf` 路径下看到你幻灯片的 PDF 文件。
 
-<<<<<<< HEAD
 如果你想要导出使用暗色主题的幻灯片，请使用 `--dark` 选项：
 
 ```bash
@@ -42,10 +41,7 @@ $ slidev export --dark
 $ slidev export --with-clicks
 ```
 
-### PNGs {#pngs}
-=======
-### PNGs and Markdown
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+### PNGs and Markdown {#pngs-and-markdown}
 
 当为命令传入 `--format png` 选项时，Slidev 会将每张幻灯片导出为 PNG 图片格式。
 
@@ -53,11 +49,10 @@ $ slidev export --with-clicks
 $ slidev export --format png
 ```
 
-<<<<<<< HEAD
 ### 导出一系列幻灯片 {#export-a-range-of-slides}
 
 默认情况下会导出演示文稿中的全部幻灯片。如果要导出特定的幻灯片或幻灯片范围，可以设置 `--range` 选项指定要导出的幻灯片。
-=======
+
 You can also compile a markdown file composed of compiled png using `--format md`.
 
 ```bash
@@ -119,7 +114,6 @@ exportFilename: my-pdf-export
 ### Export a range of slides
 
 By default, all slides in the presentation are exported. If you want to export a specific slide or a range of slides you can set the `--range` option and specify which slides you would like to export.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ```bash
 $ slidev export --range 1,6-8,10
@@ -127,10 +121,7 @@ $ slidev export --range 1,6-8,10
 
 该选项接受特定的幻灯片编号和范围。
 
-<<<<<<< HEAD
 上面的示例将导出幻灯片第 1、6、7、8、10 页。
-=======
-The example above would export slides 1,6,7,8, and 10.
 
 ### Multiple entries
 
@@ -147,7 +138,6 @@ $ slidev export *.md
 ```
 
 In this case, each input file will generate its own PDf file.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ## 演讲者注释 {#presenter-notes}
 
@@ -159,7 +149,8 @@ In this case, each input file will generate its own PDf file.
 $ slidev export-notes
 ```
 
-<<<<<<< HEAD
+This command also accept multiple entries like for the [export command](#multiple-entries)
+
 ## 单页应用（SPA） {#single-page-application-spa}
 
 请参阅 [静态部署](/guide/hosting) 章节。
@@ -182,47 +173,3 @@ docker run --name slidev -d --rm -it \
 ```bash
 docker exec -i slidev npx slidev export --timeout 2m --output slides.pdf
 ```
-
-=======
-This command also accept multiple entries like for the [export command](#multiple-entries)
-
-## Single-Page Application (SPA)
-
-See [Static Hosting](/guide/hosting).
-
-## Exportable Docker Image
-
-To support the export feature, there is a [docker image](/guide/install#install-on-docker) (maintianed by [@tangramor](https://github.com/tangramor)) with tag **playwright**. Run following command in your work folder:
-
-```bash
-docker run --name slidev --rm -it \
-    -v ${PWD}:/slidev \
-    -p 3030:3030 \
-    -e NPM_MIRROR="https://registry.npmmirror.com" \
-    tangramor/slidev:playwright
-```
-
-Then you can use the export feature like following under your work folder:
-
-```bash
-docker exec -i slidev npx slidev export --timeout 2m --output slides.pdf
-```
-
-## Troubleshooting
-
-### Timeout
-
-For big presentation you might want to increase the playwrigth timeout with `--timeout`
-
-```bash
-$ slidev export --timeout 60000
-```
-
-### Executable path
-
-You can set the browser executable path for playwright using `--executable-path`
-
-```bash
-$ slidev export --executable-path [path_to_chromium]
-```
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2

@@ -6,13 +6,6 @@ title: 使用扩展插件
 
 扩展插件是你可以在演示文稿中使用的附加组件、布局、样式、配置等集。
 
-<<<<<<< HEAD
-它们与 [主题](/themes/use) 相似，但总而言之：
-=======
-- they don't affect the global styles of your slides
-- you can use multiple addons in one presentation
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
-
 * 它们不影响幻灯片的全局样式
 * 你可以在同一演示文稿中使用多个插件
 

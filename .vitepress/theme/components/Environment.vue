@@ -3,17 +3,10 @@ defineProps<{ type: 'node' | 'client' }>()
 </script>
 
 <template>
-<<<<<<< HEAD
-  <details class="px-4 py-3 mt-4 rounded bg-gray-400 bg-opacity-10">
-    <summary class="outline-none">
-      环境：
-      <span class="capitalize" :class="type === 'node' ? 'text-orange-400' : 'text-green-400'">{{ type }}</span>
-=======
   <details class="p4 mt-4 rounded-lg bg-gray-400 bg-opacity-10">
     <summary class="outline-none !m0 select-none">
-      Environment:
+      环境：
       <span class="capitalize font-bold" :class="type === 'node' ? 'text-orange-400' : 'text-green-400'">{{ type }}</span>
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
     </summary>
 
     <div class="pt2 opacity-75">

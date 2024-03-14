@@ -2,13 +2,7 @@
 title: 自定义
 ---
 
-<<<<<<< HEAD
-# 自定义 {#customizations}
-=======
-Slidev is fully customizable, from styling to tooling configurations. It allows you to configure the tools underneath ([Vite](/custom/config-vite), [UnoCSS](/custom/config-unocss), [Monaco](/custom/config-monaco), etc.)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
-
-从样式到工具，Slidev 都是完全可以自定义的。你可以对以下这些工具进行自定义配置（ [Vite](/custom/config-vite) ， [Windi CSS](/custom/config-windicss) ， [Monaco](/custom/config-monaco) ，等等。）
+从样式到工具，Slidev 都是完全可以自定义的。你可以对以下这些工具进行自定义配置（ [Vite](/custom/config-vite) ，  [UnoCSS](/custom/config-unocss)， [Monaco](/custom/config-monaco) ，等等。）
 
 ## 扉页配置 {#frontmatter-configures}
 
@@ -16,25 +10,14 @@ Slidev is fully customizable, from styling to tooling configurations. It allows 
 
 ```yaml
 ---
-<<<<<<< HEAD
 # 主题id 或 主题包名称
 # 了解更多：https://sli.dev/themes/use.html
-theme: 'default'
+theme: default
 # 幻灯片的总标题，如果没有指定，那么将以第一张拥有标题的幻灯片的标题作为总标题
-title: 'Slidev'
+title: Slidev
 # 网页的标题模板，`%s` 会被页面的标题替换
 titleTemplate: '%s - Slidev'
 # 幻灯片信息，可以是一个 markdown 字符串
-=======
-# theme id or package name
-# Learn more: https://sli.dev/themes/use.html
-theme: default
-# title of your slide, will auto infer from the first header if not specified
-title: Slidev
-# titleTemplate for the webpage, `%s` will be replaced by the page's title
-titleTemplate: '%s - Slidev'
-# information for your slides, can be a markdown string.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 info: false
 # author field for exported PDF
 author: Your Name Here
@@ -45,18 +28,7 @@ keywords: keyword1,keyword2
 presenter: true
 # 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
 download: false
-<<<<<<< HEAD
 # 要导出文件的文件名称
-exportFilename: 'slidev-exported'
-# 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
-highlighter: 'prism'
-# 在代码块中显示行号
-lineNumbers: false
-# 启用 monaco 编辑器，可以是 boolean，'dev' 或者 'build'
-monaco: 'dev'
-# 使用 vite-plugin-remote-assets 在本地下载远程资源，可以是 boolean，'dev' 或者 'build'
-=======
-# filename of the export file
 exportFilename: slidev-exported
 # export options
 # use export CLI options in camelCase format
@@ -67,40 +39,26 @@ export:
   dark: false
   withClicks: false
   withToc: false
-# syntax highlighter, can be 'prism', 'shiki'
+# 语法高亮设置，可以使用 'prism' 或 'shiki' 方案
 highlighter: shiki
-# show line numbers in code blocks
+# 在代码块中显示行号
 lineNumbers: false
-# enable monaco editor, can be boolean, 'dev' or 'build'
-monaco: dev
-# download remote assets in local using vite-plugin-remote-assets, can be boolean, 'dev' or 'build'
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+# 启用 monaco 编辑器，可以是 boolean，'dev' 或者 'build'
+monaco: 'dev'
+# 使用 vite-plugin-remote-assets 在本地下载远程资源，可以是 boolean，'dev' 或者 'build'
 remoteAssets: false
 # 控制幻灯片中的文本是否可以选择
 selectable: true
-<<<<<<< HEAD
 # 启用幻灯片录制，可以是 boolean，'dev' 或者 'build'
-record: 'dev'
-
-# 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
-colorSchema: 'auto'
-# vue-router 模式，可以使用 'history' 或 'hash' 模式
-routerMode: 'history'
-# 幻灯片的长宽比
-aspectRatio: '16/9'
-# canvas 的真实宽度，单位为 px
-=======
-# enable slide recording, can be boolean, 'dev' or 'build'
 record: dev
 
-# force color schema for the slides, can be 'auto', 'light', or 'dark'
+# 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
 colorSchema: auto
-# router mode for vue-router, can be "history" or "hash"
+# vue-router 模式，可以使用 'history' 或 'hash' 模式
 routerMode: history
-# aspect ratio for the slides
+# 幻灯片的长宽比
 aspectRatio: 16/9
-# real width of the canvas, unit in px
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+# canvas 的真实宽度，单位为 px
 canvasWidth: 980
 # 用于主题定制，会将属性 `x` 注入根样式 `--slidev-theme-x`
 themeConfig:
@@ -139,9 +97,6 @@ htmlAttrs:
 
 你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) 获取到更多的配置信息。
 
-<<<<<<< HEAD
-## 目录结构 {#directory-structure}
-=======
 ## Per slide configuration
 
 In addition, every slide accepts the following configuration in the Frontmatter block:
@@ -159,8 +114,7 @@ In addition, every slide accepts the following configuration in the Frontmatter 
 - `transition` (`string | TransitionProps`): Defines the transition between the slide and the next one (learn more [here](/guide/animations.html#slide-transitions)).
 - `zoom` (`number`): Custom zoom scale. Useful for slides with a lot of content.
 
-## Directory Structure
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+## 目录结构 {#directory-structure}
 
 Slidev 使用特定的目录结构来减少配置的复杂度，并使功能扩展更加的灵活和直观。
 
@@ -168,20 +122,10 @@ Slidev 使用特定的目录结构来减少配置的复杂度，并使功能扩�
 
 ## Config Tools {#config-tools}
 
-<<<<<<< HEAD
 - [语法高亮器](/custom/highlighters)
 - [配置 Vue](/custom/config-vue)
 - [配置 Vite](/custom/config-vite)
-- [配置 Windi CSS](/custom/config-windicss)
+- [配置 UnoCSS](/custom/config-unocss)
 - [配置 Monaco](/custom/config-monaco)
 - [配置 KaTeX](/custom/config-katex)
 - [配置 Mermaid](/custom/config-mermaid)
-=======
-- [Highlighters](/custom/highlighters)
-- [Configure Vue](/custom/config-vue)
-- [Configure Vite](/custom/config-vite)
-- [Configure UnoCSS](/custom/config-unocss)
-- [Configure Monaco](/custom/config-monaco)
-- [Configure KaTeX](/custom/config-katex)
-- [Configure Mermaid](/custom/config-mermaid)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2

@@ -4,35 +4,14 @@ title: 安装
 
 # 安装 {#installation}
 
-<<<<<<< HEAD
-## 初始模板 {#starter-template}
-=======
-> Slidev requires [**Node.js >=18.0**](https://nodejs.org/)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+> Slidev 需要 [Node.js](https://nodejs.org/) 的版本 **>=18.0.0**
 
-> Slidev 需要 [Node.js](https://nodejs.org/) 的版本 **>=14.0.0**
-
-<<<<<<< HEAD
-快速开始最好的方式就是使用官方的初始模板。
-
-使用 NPM：
-=======
 ::: code-group
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ```bash [npm]
 npm init slidev@latest
 ```
 
-<<<<<<< HEAD
-使用 Yarn：
-
-```bash
-$ yarn create slidev
-```
-
-跟随命令行的提示，它将自动为你打开幻灯片，网址是 `http://localhost:3030/`。
-=======
 ```bash [yarn]
 yarn create slidev
 ```
@@ -43,8 +22,7 @@ pnpm create slidev
 
 :::
 
-Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+跟随命令行的提示，它将自动为你打开幻灯片，网址是 `http://localhost:3030/`。
 
 同时包含了一些基本配置和简单的 demo，为你说明如何开始使用 Slidev。
 
@@ -56,13 +34,6 @@ Follow the prompts and it will open up the slideshow at `http://localhost:3030/`
 npm install @slidev/cli @slidev/theme-default
 ```
 
-<<<<<<< HEAD
-> 请注意，如果你使用的是 [pnpm](https://pnpm.io)，请先启用 [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) 选项，才能使得 Slidev 正常工作。
->
-> ```bash
-> echo 'shamefully-hoist=true' >> .npmrc
-> ```
-=======
 ```bash
 touch slides.md
 ```
@@ -70,7 +41,6 @@ touch slides.md
 ```bash
 npx slidev
 ```
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ## 全局安装 {#install-globally}
 
@@ -105,24 +75,13 @@ docker run --name slidev --rm -it \
     tangramor/slidev:latest
 ```
 
-<<<<<<< HEAD
 ***注意***：你可以用 `NPM_MIRROR` 环境变量来指定一个 npm 镜像以加速安装过程。
-=======
-**_Note_**: You can use `NPM_MIRROR` to specify a npm mirror to speed up the installation process.
-
-If your work folder is empty, it will generate a template `slides.md` and other related files under your work folder, and launch the server on port `3030`.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 如果你的工作目录为空，容器会在目录下自动创建 `slides.md` 文件和其它相关文件，并基于 `3030` 端口启动 slidev 服务。
 
 你可以通过 `http://localhost:3030/` 访问你的幻灯片。
 
-<<<<<<< HEAD
-
 ### 构建可部署镜像 {#build-deployable-image}
-=======
-### Build deployable image
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 你也可以把你的 slidev 幻灯片构建到一个 docker 镜像里来进行部署，Dockerfile 如下：
 
@@ -138,36 +97,19 @@ ADD . /slidev
 
 这时你就可用通过 `http://localhost:3030/` 来打开你的幻灯片了。
 
-<<<<<<< HEAD
-
 ### 构建单网页应用  {#build-hostable-spa-single-page-application}
-=======
-### Build hostable SPA (Single Page Application)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 在前面启动的 `slidev` 容器上运行命令 `docker exec -i slidev npx slidev build` 就可以在 `dist` 目录下将你的幻灯片生成静态 HTML 文件。
 
-<<<<<<< HEAD
-
 #### 使用 Github Pages 托管 {#host-on-github-pages}
 
-你可以在静态 Web 站点上托管生成的静态文件，比如 [Github pages](https://tangramor.github.io/slidev_docker/) 或 Gitlab pages。
-=======
-#### Host on Github Pages
-
-You can host `dist` in a static web site such as [Github Pages](https://tangramor.github.io/slidev_docker/) or Gitlab Pages.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+你可以在静态 Web 站点上托管生成的静态文件（在 `dist` 文件夹中），比如 [Github pages](https://tangramor.github.io/slidev_docker/) 或 Gitlab pages。
 
 由于 Github pages 的 URL 可能包含二级目录，所以你需要修改生成的 `index.html`，把 `href="/assets/xxx` 改为 `href="./assets/xxx` （即使用相对路径）。或者你可以用 vite 的 `--base=/<subfolder>/` 选项来指定二级目录，例如： `docker exec -i slidev npx slidev build --base=/slidev_docker/`。
 
 为了防止触发 Jekyll 构建流程，你需要在静态站根目录下添加一个名为 `.nojekyll` 的空文件
 
-<<<<<<< HEAD
-
 #### 使用 docker 托管 {#host-by-docker}
-=======
-#### Host by docker
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 你当然也可以使用 docker 容器来托管生成的静态文件：
 
@@ -191,15 +133,9 @@ COPY dist /usr/share/nginx/html
 
 关于容器的更多详细信息，请参考 [tangramor/slidev_docker 仓库](https://github.com/tangramor/slidev_docker)。
 
-
-<<<<<<< HEAD
-## Command Line Interface (CLI) {#command-line-interface-cli}
+## 命令行接口 (CLI) {#command-line-interface-cli}
 
 `@slidev/cli` 暴露了一些命令，你可以通过 `npx slidev ...` 或者在你的 `package.json` 中添加 script 来使用它们。
-=======
-`@slidev/cli` Expose a few commands you can use with `npx slidev ...` or by adding scripts in your `package.json`:
-
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```json
 {
   "script": {
@@ -212,18 +148,11 @@ COPY dist /usr/share/nginx/html
 
 你可以向任何命令传参：
 
-<<<<<<< HEAD
-* boolean 选项如果存在则为 `true`，否则为 `false`（例如：`slidev --open`）
-* 一些选项可以在选项后添加数值，或者使用 `=` 字符（例如：`slidev --port 8080` 或者 `slidev --port=8080`）
+- boolean 选项如果存在则为 `true`，否则为 `false`（例如：`slidev --open`）
+- 一些选项可以在选项后添加数值，或者使用 `=` 字符（例如：`slidev --port 8080` 或者 `slidev --port=8080`）
 
 如果你使用 npm 的 script，别忘了在 npm 命令后加上 `--`：
-=======
-- boolean option are `true` if they are present, false otherwise (example: `slidev --open`)
-- some options can have values you can add just after the option or by using the `=` character (example: `slidev --port 8080` or `slidev --port=8080`)
 
-If you use npm scripts, don't forget to add `--` after the npm command:
-
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```bash
 npm run slidev -- --open
 ```
@@ -232,48 +161,6 @@ npm run slidev -- --open
 
 为 Slidev 启动一个本地服务器。
 
-<<<<<<< HEAD
-* `[entry]`（`string`，默认值：`slides.md`）：幻灯片 markdown 的入口文件。
-
-选项：
-
-* `--port`，`-p`（`number`，默认值：`3030`）：端口号。
-* `--open`，`-o` (`boolean`，默认值：`false`)：在浏览器打开。
-* `--remote [password]` (`string`)：监听公共主机并启用远程控制，如果传递了该值，那么演讲者模式是私有的，只有通过在 URL 查询 `password` 参数中给定的密码才能访问。
-* `--log` (`'error'，'warn'，'info'，'silent'`，默认值：`'warn'`)：日志级别。
-* `--force`，`-f` (`boolean`，默认值：`false`)：强制优化器忽略缓存，并重新构建。
-* `--theme`，`-t` (`string`)：覆盖主题。
-
-### `slidev build [entry]` {#slidev-build-entry}
-
-建立可托管的 SPA。
-
-* `[entry]`（`string`，默认值：`slides.md`）：幻灯片 markdown 的入口文件。
-
-选项：
-
-* `--watch`，`-w` (`boolean`，默认值：`false`)：构建观察。
-* `--out`，`-o` (`string`，默认值：`dist`)：要输出到的目标文件夹。
-* `--base` (`string`，默认值：`/`)：base URL（参阅 https://cli.vuejs.org/config/#publicpath）
-* `--download` (`boolean`，默认值：`false`)：允许在 SPA 内下载 PDF 格式的幻灯片。
-* `--theme`，`-t` (`string`)：覆盖主题。
-
-### `slidev export [entry]` {#slidev-export-entry}
-
-将幻灯片导出为 PDF（或者其他格式）。
-
-* `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
-
-Options:
-
-* `--output` (`string`，默认值：use `exportFilename` (参阅 https://sli.dev/custom/#frontmatter-configures) 或使用 `[entry]-export`)：输出的路径。
-* `--base` (`'pdf'，'png'，'md'`，默认值：`'pdf'`)：输出的格式。
-* `--timeout` (`number`，默认值：`30000`)：渲染打印页面的超时时间（参阅 https://playwright.dev/docs/api/class-page#page-goto）。
-* `--range` (`string`)：输出的页面范围（例如：`'1,4-5,6'`）。
-* `--dark` (`boolean`，默认值：`false`)：导出黑暗主题色。
-* `--with-clicks`，`-c` (`boolean`，默认值：`false`)：输出每次点击的页面（参阅 https://sli.dev/guide/animations.html#click-animations)。
-* `--theme`，`-t` (`string`)：覆盖主题。
-=======
 - `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
 
 Options:
@@ -285,39 +172,23 @@ Options:
 - `--log` (`'error', 'warn', 'info', 'silent'`, default: `'warn'`): Log level.
 - `--force`, `-f` (`boolean`, default: `false`): force the optimizer to ignore the cache and re-bundle.
 - `--theme`, `-t` (`string`): override theme.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ### `slidev format [entry]` {#slidev-format-entry}
 
 格式化 markdown 文件。
 
-<<<<<<< HEAD
-* `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
-=======
 - `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ### `slidev theme [subcommand]` {#slidev-theme-subcommand}
 
-<<<<<<< HEAD
-与主题相关的业务。
-=======
 - `--watch`, `-w` (`boolean`, default: `false`): build watch.
 - `--out`, `-o` (`string`, default: `dist`): output dir.
 - `--base` (`string`, default: `/`): base URL (see https://cli.vuejs.org/config/#publicpath)
 - `--download` (`boolean`, default: `false`): allow to download the slides as PDF inside the SPA.
 - `--theme`, `-t` (`string`): override theme.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 子命令：
 
-<<<<<<< HEAD
-* `eject [entry]`：将当前主题弹出到本地文件系统中
-  * `[entry]` (`string`，默认值：`slides.md`)：幻灯片 markdown 的入口文件。
-  * 选项：
-    * `--dir` (`string`，默认值：`theme`)：要输出到的目标文件夹。
-    * `--theme`，`-t` (`string`)：覆盖主题。
-=======
 Export slides to PDF (or other format).
 
 - `[entry]` (`string`, default: `slides.md`): path to the slides markdown entry.
@@ -349,4 +220,3 @@ Subcommands:
   - Options:
     - `--dir` (`string`, default: `theme`): output dir.
     - `--theme`, `-t` (`string`): override theme.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2

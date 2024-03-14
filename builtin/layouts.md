@@ -82,7 +82,7 @@ image: ./path/to/the/image
 ---
 ```
 
-You can change the default background size (`cover`) by adding the `backgroundSize` attribute:
+你可以使用 `backgroundSize` 选项来控制背景图片的大小：
 
 ```yaml
 ---
@@ -184,46 +184,42 @@ layout: two-cols
 
 # Left
 
-This shows on the left
+显示在左侧
 
 ::right::
 
 # Right
 
-This shows on the right
+显示在右侧
 ```
 
-<<<<<<< HEAD
-## 自定义布局 {#custom-layouts}
-=======
 ### `two-cols-header`
 
-Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+将页面内容分为两列，上方和下方的内容分开，第二行将左右两列分开。
 
-#### Usage
+#### 用法
 
 ```md
 ---
 layout: two-cols-header
 ---
 
-This spans both
+显示在上方
 
 ::left::
 
 # Left
 
-This shows on the left
+显示在左侧
 
 ::right::
 
 # Right
 
-This shows on the right
+显示在右侧
 ```
 
-## Custom Layouts
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+## 自定义布局 {#custom-layouts}
 
 在你的项目根目录里创建一个 `layouts/` 文件夹，然后直接把你的自定义 Vue 组件放进去。
 

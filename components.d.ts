@@ -36,6 +36,7 @@ declare module 'vue' {
     DemoEditor: typeof import('./.vitepress/theme/components/DemoEditor.vue')['default']
     DemoSlide: typeof import('./.vitepress/theme/components/DemoSlide.vue')['default']
     Environment: typeof import('./.vitepress/theme/components/Environment.vue')['default']
+    HomeHero: typeof import('./.vitepress/theme/components/HomeHero.vue')['default']
     LandingPage: typeof import('./.vitepress/theme/components/LandingPage.vue')['default']
     Link: typeof import('./.vitepress/@slidev/client/builtin/Link.vue')['default']
     LogosVue: typeof import('~icons/logos/vue')['default']
@@ -63,6 +64,7 @@ declare module 'vue' {
     Tweet: typeof import('./.vitepress/@slidev/client/builtin/Tweet.vue')['default']
     TwemojiCatWithTearsOfJoy: typeof import('~icons/twemoji/cat-with-tears-of-joy')['default']
     UimRocket: typeof import('~icons/uim/rocket')['default']
+    WorkingInProgress: typeof import('./.vitepress/theme/components/WorkingInProgress.vue')['default']
     Youtube: typeof import('./.vitepress/@slidev/client/builtin/Youtube.vue')['default']
   }
 }

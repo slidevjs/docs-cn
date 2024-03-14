@@ -61,11 +61,11 @@ const Guide: DefaultTheme.NavItemWithLink[] = [
 
 const BuiltIn: DefaultTheme.NavItemWithLink[] = [
   {
-    text: 'Components',
+    text: '组件',
     link: '/builtin/components',
   },
   {
-    text: 'Layouts',
+    text: '布局',
     link: '/builtin/layouts',
   },
 ]
@@ -96,7 +96,6 @@ const Addon: DefaultTheme.NavItemWithLink[] = [
   },
 ]
 
-<<<<<<< HEAD:.vitepress/config.js
 const Translations = [
   {
     text: '简体中文',
@@ -139,10 +138,7 @@ const Translations = [
   },
 ]
 
-const Customizations = [
-=======
 const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts
   {
     text: '自定义',
     link: '/custom/',
@@ -168,13 +164,8 @@ const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildr
     link: '/custom/config-vite',
   },
   {
-<<<<<<< HEAD:.vitepress/config.js
-    text: '配置 Windi CSS',
-    link: '/custom/config-windicss',
-=======
-    text: 'Configure UnoCSS',
+    text: '配置 UnoCSS',
     link: '/custom/config-unocss',
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts
   },
   {
     text: '配置 Monaco',
@@ -223,58 +214,28 @@ const Resources: DefaultTheme.NavItemWithLink[] = [
 
 const slidebars: DefaultTheme.SidebarItem[] = [
   {
-<<<<<<< HEAD:.vitepress/config.js
     text: '指南',
-    children: Guide,
-  },
-  {
-    text: '主题',
-    children: Theme,
-  },
-  {
-    text: '附加组件',
-    children: Addon,
-  },
-  {
-    text: '定制',
-    children: Customizations,
-  },
-  {
-    text: '内置',
-    children: [
-      {
-        text: '组件',
-        link: '/builtin/components',
-      },
-      {
-        text: '布局',
-        link: '/builtin/layouts',
-      },
-    ],
-=======
-    text: 'Guide',
     items: Guide,
   },
   {
-    text: 'Themes',
+    text: '主题',
     items: Theme,
   },
   {
-    text: 'Addons',
+    text: '附加组件',
     items: Addon,
   },
   {
-    text: 'Customizations',
+    text: '定制',
     items: Customizations,
   },
   {
-    text: 'Built-in',
+    text: '内置',
     items: BuiltIn,
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: Resources,
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts
   },
 ]
 
@@ -313,31 +274,14 @@ export default defineConfig({
   },
   cleanUrls: true,
   themeConfig: {
-<<<<<<< HEAD:.vitepress/config.js
-    repo: 'slidevjs/docs-cn',
-    logo: '/logo.svg',
-    docsBranch: 'main',
-    editLinks: true,
-    editLinkText: '改进翻译',
-
-    algolia: {
-      appId: 'LCBV6MIFS6',
-      apiKey: '1ff173fe73b20edc962c1c24c0b1c160',
-      indexName: 'slidev',
-      searchParameters: {
-        // for translations maintainers: change the filter to your locale code (subdomain name)
-        facetFilters: ['language:cn']
-      }
-=======
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/slidevjs/docs/edit/main/:path',
-      text: 'Suggest changes to this page',
+      pattern: 'https://github.com/slidevjs/docs-cn/edit/main/:path',
+      text: '改进翻译',
     },
 
     search: {
       provider: 'local',
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts
     },
 
     nav: [
@@ -346,52 +290,34 @@ export default defineConfig({
         items: Guide,
       },
       {
-<<<<<<< HEAD:.vitepress/config.js
         text: '主题',
-        items: Theme,
-      },
-      {
-        text: '附加组件',
-        items: Addon,
-      },
-      {
-        text: '定制',
-        items: Customizations,
-=======
-        text: 'Theme',
         items: [
           ...Theme,
           {
-            text: 'Built-in',
+            text: '内置',
             items: BuiltIn,
           },
         ],
       },
       {
-        text: 'Customize',
+        text: '定制',
         items: [
           ...Customizations,
           {
-            text: 'Addon',
+            text: '附加组件',
             items: Addon,
           },
         ],
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts
       },
       {
         text: '资源',
         items: Resources,
       },
       {
-<<<<<<< HEAD:.vitepress/config.js
-        text: '中文',
-        items: Translations,
-=======
         text: `v${CURRENT_VERSION}`,
         items: [
-          { text: 'Release Notes', link: 'https://github.com/slidevjs/slidev/releases' },
+          { text: '版本发布', link: 'https://github.com/slidevjs/slidev/releases' },
         ],
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts
       },
     ],
 
@@ -417,17 +343,7 @@ export default defineConfig({
     },
   },
 
-<<<<<<< HEAD:.vitepress/config.js
-  markdown: {
-    anchor: {
-      renderPermalink: require('./plugins/render-perma-link')
-    },
-    config: (md) => {
-      md.use(require('./plugins/markdown-it-custom-anchor'))
-    }
-  },
-}
-=======
+
   locales: {
     root: {
       label: 'English',
@@ -470,4 +386,3 @@ export default defineConfig({
     },
   },
 })
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2:.vitepress/config.ts

@@ -1,23 +1,12 @@
 ---
-<<<<<<< HEAD
-title: Markdown 语法
+outline: deep
 ---
 
 # Markdown 语法 {#markdown-syntax}
 
 幻灯片通过 **一个 markdown 文件** 编写而成 (默认会使用 `./slides.md`)。
 
-你可以像平时编写 markdown 一样使用 [Markdown 的相关特性](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，同时还支持内联的 HTML 和 Vue 组件。也支持使用 [Windi CSS](https://windicss.org) 来编写样式。使用 `---` 添加分隔符来分隔你的幻灯片。
-=======
-outline: deep
----
-
-# Markdown Syntax
-
-Slides are written within **a single markdown file** (by default `./slides.md`).
-
-You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+你可以像平时编写 markdown 一样使用 [Markdown 的相关特性](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，同时还支持内联的 HTML 和 Vue 组件。也支持使用 [UnoCSS](/custom/config-unocss) 来编写样式。使用 `---` 添加分隔符来分隔你的幻灯片。
 
 ````md
 # Slidev
@@ -45,15 +34,10 @@ You can directly use Windi CSS and Vue components to style and enrich your slide
 </div>
 ````
 
-<<<<<<< HEAD
 ## 扉页及布局 {#front-matter-layouts}
 
 你可以通过将分隔符转换为 [扉页块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个扉页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
-=======
-## Frontmatter & Layouts
 
-Specify layouts and other metadata for each slide by converting the separators into [frontmatter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 <!-- eslint-skip -->
 
@@ -85,9 +69,6 @@ This is a default page without any additional metadata.
 
 欲了解更多，请参阅 [自定义](/custom/) 章节。
 
-<<<<<<< HEAD
-## 代码块 {#code-blocks}
-=======
 ### Prettier Support
 
 > Available since v0.44
@@ -118,8 +99,7 @@ class: 'text-white'
 This is a page with the layout `center` and a background image.
 ````
 
-## Code Blocks
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+## 代码块 {#code-blocks}
 
 建立 Slidev 一个非常重要的原因就是为了让代码在幻灯片中拥有正确的高亮。如你所见，你可以使用 Markdown 风格的代码块，以使得你的代码高亮。
 
@@ -129,19 +109,11 @@ console.log('Hello, World!')
 ```
 ````
 
-<<<<<<< HEAD
 我们支持 [Prism](https://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
-=======
-We support [Prism](https://prismjs.com), [Shiki](https://github.com/shikijs/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ### 特定行高亮 {#line-highlighting}
 
-<<<<<<< HEAD
 如需针对特定行进行高亮展示，只需在 `{}` 内添加对应的行号。行号从 1 开始计算。
-=======
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ````md
 ```ts {2,3}
@@ -154,11 +126,7 @@ function add(
 ```
 ````
 
-<<<<<<< HEAD
-如果要在多个步骤中改变高亮，你可以用 `|` 分隔它们。比如：
-=======
 You can enable line number to all slides by setting `lineNumbers: true` on the config or enable each code block individually by setting `lines: true`. You can also set the starting line for each code block and highlight the lines accordingly, defaults to 1:
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
@@ -171,19 +139,10 @@ function add(
 ```
 ````
 
-<<<<<<< HEAD
-这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。你可以在 [动画指南](/guide/animations) 中了解更多。
-
-你可以使用行号 `0` 来跳过高亮。比如：
-
-~~~ts {0}
-//```ts {0}
-=======
-To change the highlight in multiple clicks, you can use `|` to separate them:
+如果要在多个步骤中改变高亮，你可以用 `|` 分隔它们：
 
 ````md
 ```ts {2-3|5|all}
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
@@ -193,12 +152,7 @@ function add(
 ```
 ````
 
-<<<<<<< HEAD
-如果代码在一张幻灯片展示不下，你可以传递一个额外的 maxHeight 选项，
-该选项将为代码段设置固定高度并启用滚动：
-=======
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。
 
 You can set the line number to `hide` to hide the code block or `none` to not highlight any line:
 
@@ -214,10 +168,10 @@ function add(
 ````
 
 ::: tip
-Learn more in the [clicks animations guide](./animations#positioning).
+你可以在 [动画指南](./animations#positioning) 中了解更多。
 :::
 
-If the code doesn't fit into one slide, you use the `maxHeight` to set fixed height and enable scrolling:
+如果代码在一张幻灯片展示不下，你可以传递一个额外的 maxHeight 选项，该选项将为代码段设置固定高度并启用滚动：
 
 ````md
 ```ts {2|3|7|12}{maxHeight:'100px'}
@@ -319,31 +273,46 @@ console.log('HelloWorld')
 
 欲了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
 
-<<<<<<< HEAD
-## 内联样式 {#embedded-styles}
-=======
 #### Monaco Diff
 
 Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
 
 ````md
 ```ts {monaco-diff}
-This line is removed on the right.
-just some text
-abcd
-efgh
-Some more text
+console.log('Original text')
 ~~~
-just some text
-abcz
-zzzzefgh
-Some more text.
-This line is removed on the left.
+console.log('Modified text')
 ```
 ````
 
-## Embedded Styles
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+#### Monaco Runner
+
+> Available since v0.48
+
+Slidev also provides the Monaco Runner Editor, which allows you to run the code directly in the editor and see the result. Use `{monaco-run}` to turn the block into a Monaco Runner Editor.
+
+````md
+```ts {monaco-run}
+function distance(x: number, y: number) {
+  return Math.sqrt(x ** 2 + y ** 2)
+}
+console.log(distance(3, 4))
+```
+````
+
+It will provide the editor with a "Run" button, and shows the result right below the code block. You many also modify the code and the result will be re-evaluated on the fly.
+
+By default it will automatically runs the code when the slide is loaded, if you want to always explicitly trigger the run, you can set `{autorun:false}`.
+
+````md
+```ts {monaco-run} {autorun:false}
+console.log('HelloWorld')
+```
+````
+
+Currently Slidev supports running JavaScript and TypeScript code out-of-box. Refer to [Custom Code Runners](/custom/config-code-runners) for custom languages support.
+
+## 内联样式 {#embedded-styles}
 
 你可以在 Markdown 中直接使用 `<style>` 标签来覆盖**当前幻灯片**的样式。
 
@@ -363,11 +332,7 @@ h1 {
 
 Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。子选择器 (如 `.a > .b`) 在这里不起作用。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
 
-<<<<<<< HEAD
-在 [Windi CSS](https://windicss.org) 的支持下，你可以直接使用嵌套的 CSS 和 [指令集](https://windicss.org/features/directives.html)。(例如，`@apply`)
-=======
-Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://unocss.dev/transformers/directives) (e.g. `--uno:` or `@apply`)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+在 [UnoCSS](/custom/config-unocss) 的支持下，你可以直接使用嵌套的 CSS 和 [指令](https://unocss.dev/transformers/directives)。(例如，`--uno:` 或 `@apply`)
 
 ```md
 # Slidev
@@ -399,11 +364,7 @@ blockquote {
 ![Local Image](/pic.png)
 ```
 
-<<<<<<< HEAD
 如果你想使用自定义的尺寸或样式，可以使用 `<img>` 标签
-=======
-For you want to apply custom sizes or styles, you can convert them to the `<img>` tag
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
@@ -451,29 +412,16 @@ For some slides you might have longer notes that might be hard to find where you
 
 ## 图标 {#icons}
 
-<<<<<<< HEAD
-Slidev 允许你在 Markdown 中**直接**访问几乎所有的开源的图标集。这得益于 [`unplugin-icons`](https://github.com/antfu/unplugin-icons) 和 [Iconify](https://iconify.design/)。
-=======
-Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+Slidev 允许你在 Markdown 中在安装对应包后访问几乎所有的开源的图标集。这得益于 [`unplugin-icons`](https://github.com/antfu/unplugin-icons) 和 [Iconify](https://iconify.design/)。
 
 图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
 
-<<<<<<< HEAD
 - 使用 [Material Design Icons](https://github.com/Templarian/MaterialDesign)，其规则为 `<mdi-account-circle />` - <mdi-account-circle />
 - 使用 [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)，其规则为 `<carbon-badge />` - <carbon-badge />
 - 使用 [Unicons Monochrome](https://github.com/Iconscout/unicons)，其规则为 `<uim-rocket />` - <uim-rocket />
 - 使用 [Twemoji](https://github.com/twitter/twemoji)，其规则为 `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy />
 - 使用 [SVG Logos](https://github.com/gilbarbara/logos)，其规则为 `<logos-vue />` - <logos-vue />
 - 还有更多...
-=======
-- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
-- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
-- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
-- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji) - [`@iconify-json/twemoji`](https://npmjs.com/package/@iconify-json/twemoji)
-- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
-- And much more...
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 你可以通过 [Icônes](https://icones.js.org/) 来浏览访问所有可用的图标。
 
@@ -569,27 +517,40 @@ This shows on the right
 This shows on the left
 ```
 
-<<<<<<< HEAD
-## 配置 {#configurations}
-=======
 ## Import Code Snippets
 
 > Available since v0.47.0
 
-You can import code snippets from existing files via following syntax:
+You can import code snippets from existing files via the following syntax:
 
 ```md
 <<< @/snippets/snippet.js
 ```
 
 ::: tip
-The value of `@` corresponds to the source root, the directory where the `slides.md` is located.
+The value of `@` corresponds to your package's root directory. It's recommended to put snippets in `@/snippets`, for compatibility with the Monaco editor. Alternatively, you can also import from relative paths.
 :::
 
-This feature is vendored from VitePress, learn more about it in [VitePress's documentation](https://vitepress.dev/guide/markdown#import-code-snippets).
+You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) to only include the corresponding part of the code file:
 
-## Configurations
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+```md
+<<< @/snippets/snippet.js#region-name
+```
+
+To explicitly specify the language of the imported code, you can add a language identifier after:
+
+```md
+<<< @/snippets/snippet.js ts
+```
+
+Any code block features like [line highlighting](#line-highlighting) and [Monaco editor](#monaco-editor) are also supported:
+
+```md
+<<< @/snippets/snippet.js {2,3|5}{lines:true}
+<<< @/snippets/snippet.js ts {monaco}{height:200px}
+```
+
+## 配置 {#configurations}
 
 依赖的所有配置都可以在 Markdown 文件中定义，比如：
 
@@ -642,9 +603,6 @@ $$
 
 了解更多：[Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-<<<<<<< HEAD
-## 图表 {#diagrams}
-=======
 ### LaTex line highlighting
 
 > Available since v0.43.1
@@ -664,8 +622,7 @@ $$
 
 The `at` and `finally` options of [code blocks](#line-highlighting) are also available for LaTeX blocks.
 
-## Diagrams
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+## 图表 {#diagrams}
 
 你也可以在 Markdown 的文本描述中创建图形或图表，得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
 

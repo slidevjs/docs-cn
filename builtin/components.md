@@ -4,30 +4,11 @@ title: 组件
 
 # 组件 {#components}
 
-<<<<<<< HEAD
-## 内置组件 {#built-in-components}
-
-> 这部分文档尚未完成。在完成之前，你可以直接去看看 [源码](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)。
-
-### `Toc` {#toc}
-
-插入目录。
-
-如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
-```yml
----
-hideInToc: true
----
-```
-
-标题使用 [`<Titles>` 组件](#titles) 来展示
-=======
 ### `Arrow`
 
-Draw an arrow.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+绘制一个箭头。
 
-#### 用法 {#toc-usage}
+#### 用法 {#arrow-usage}
 
 ```md
 <Arrow x1="10" y1="20" x2="100" y2="200" />
@@ -41,16 +22,6 @@ Or:
 
 参数：
 
-<<<<<<< HEAD
-* `columns` (`string | number`，默认值：`1`)：要显示的列数The number of columns of the display
-* `listClass` (`string | string[]`，默认值：`''`)：用于修饰目录的 class
-* `maxDepth` (`string | number`，默认值：`Infinity`)：要显示标题的最大深度
-* `minDepth` (`string | number`，默认值：`1`)：要显示标题的最小深度
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`，默认值：`'all'`):
-  * `'all'`：显示所有项目
-  * `'onlyCurrentTree'`：只显示当前树中的项目（活跃的项目，及其父节点以及子节点）
-  * `'onlySiblings'`：只显示当前树中的项目和它们的直接兄弟姐妹
-=======
 - `x1` (`string | number`, required): start point x position
 - `y1` (`string | number`, required): start point y position
 - `x2` (`string | number`, required): end point x position
@@ -120,7 +91,6 @@ You can provide markdown in the slots, but you will need to surround the content
   </template>
 </LightOrDark>
 ```
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ### `Link` {#link}
 
@@ -136,10 +106,6 @@ You can provide markdown in the slots, but you will need to surround the content
 
 参数：
 
-<<<<<<< HEAD
-* `to` (`string | number`)：幻灯片的路径，以导航到对应位置（幻灯片下标从 `1` 开始）
-* `title` (`string`)：要显示的标题
-=======
 - `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
 - `title` (`string`): The title to display
 
@@ -188,7 +154,6 @@ Total number of slides.
 ```md
 <SlidesTotal />
 ```
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ### `Titles` {#titles}
 
@@ -196,14 +161,8 @@ Total number of slides.
 
 标题和标题级别会自动从每张幻灯片的第一个标题元素中检索出来。
 
-<<<<<<< HEAD
-目录的标题和标题层级根据每张幻灯片上的第一个标题元素自动生成。
-
-可以使用前端语法覆盖幻灯片的这种自动生成目录行为：
-=======
 You can override this automatic behaviour for a slide by using the front matter syntax:
 
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```yml
 ---
 title: Amazing slide title
@@ -213,43 +172,27 @@ level: 2
 
 #### 用法 {#titles-usage}
 
-<<<<<<< HEAD
-`<Titles>` 组件是一个虚拟组件，你可以使用如下方式导入：
-=======
 The `<Titles>` component is a virtual component you can import with:
 
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```js
 import Titles from '/@slidev/titles.md'
 ```
 
-<<<<<<< HEAD
-然后你可以这样使用：
-~~~md
-=======
 Then you can use it with:
 
 ```md
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 <Titles no="42" />
 ```
 
 参数：
 
-<<<<<<< HEAD
-* `no` (`string | number`): 显示标题的幻灯片编号（幻灯片下标从 `1` 开始）
-
-### `LightOrDark` {#lightordark}
-
-使用 `LightOrDark` 组件来根据当前的亮色或暗色主题来显示指定内容。
-=======
 - `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
 
 ### `Toc`
 
-Insert a Table Of Content.
+插入目录
 
-If you want a slide to not appear in the `<Toc>` component, you can use in the front matter block of the slide:
+如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
 
 ```yml
 ---
@@ -257,39 +200,10 @@ hideInToc: true
 ---
 ```
 
-Titles are displayed using the [`<Titles>` component](#titles)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+标题使用 [`<Titles>` 组件](#titles) 来展示。
 
-#### 用法 {#usage}
+#### 用法 {#toc-usage}
 
-<<<<<<< HEAD
-使用 `#dark` 和 `#light` 两个具名插槽:
-~~~md
-<LightOrDark>
-  <template #dark>Dark mode is on</template>
-  <template #light>Light mode is on</template>
-</LightOrDark>
-~~~
-
-`LightOrDark` 组件提供的 props 能够通过作用域插槽 props 获取到：
-~~~md
-<LightOrDark width="100" alt="some image">
-  <template #dark="props">
-    <img src="/dark.png" v-bind="props"/>
-  </template>
-  <template #light="props">
-    <img src="/light.png" v-bind="props"/>
-  </template>
-</LightOrDark>
-~~~
-
-可以在插槽中使用 markdown 语法，但是需要在内容前后增加空行：
-~~~md
-<LightOrDark>
-  <template #dark>
-  
-![dark](/dark.png)
-=======
 ```md
 <Toc />
 ```
@@ -304,7 +218,6 @@ Parameters:
   - `'all'`: Display all items
   - `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
   - `'onlySiblings'`: Display only items that are in current tree and their direct siblings
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ### `Transform`
 

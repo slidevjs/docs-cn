@@ -63,10 +63,4 @@ drawings:
 ---
 ```
 
-<<<<<<< HEAD
 通过这个配置，只有来自演讲者实例的绘图会和其他实例同步。
-
-
-=======
-With this config, only the drawing from the presenter instance will be able to sync with others.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2

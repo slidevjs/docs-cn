@@ -20,23 +20,15 @@ presenter: false
 ---
 ```
 
-<<<<<<< HEAD
 或者，可以通过在配置中设置所需的模式，只为 `dev` 或 `build` 模式启用它:
-=======
-Or you can enable it only for `dev` or `build` mode by setting the mode you want in the config:
 
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 ```md
 ---
 presenter: dev
 ---
 ```
-<<<<<<< HEAD
-在这种情况下，只有在运行 `slidev` 时才会使用演讲者模式，而在运行 `slidev build` 时则不开启演讲者模式。
-=======
 
-In that case the presenter will only be available when running `slidev` but not when running `slidev build`.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+在这种情况下，只有在运行 `slidev` 时才会使用演讲者模式，而在运行 `slidev build` 时则不开启演讲者模式。
 
 ## 远程访问限制 {#remote-restricted-access}
 

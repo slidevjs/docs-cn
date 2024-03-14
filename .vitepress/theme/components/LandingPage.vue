@@ -6,7 +6,7 @@
       </h1>
       <img src="/logo-title.png" alt="Slidev" w-80 xl:w-100 xl:mt--35>
       <h2 text-3xl mt--5 op80 text-center>
-        Presentation Slides for Developers
+        为开发者打造的演示文稿工具
       </h2>
       <div flex="~ gap-3 justify-center" p4 mt-5>
         <a href="/guide/" class="bg-$vp-c-brand-3 text-white! no-underline! px5 py3 text-xl font-bold rounded-xl hover:bg-$vp-c-brand-1">Get Started</a>

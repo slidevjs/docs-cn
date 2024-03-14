@@ -119,13 +119,9 @@ import './code.css'
 import './layouts.css'
 ```
 
-<<<<<<< HEAD
-样式得益于 [Windi CSS](https://windicss.org/) 和 [PostCSS](https://postcss.org/)，因此，你拥有开箱即用的 css 嵌套和 [at-directives](https://windicss.org/features/directives.html)。示例：
-=======
-Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://unocss.dev/transformers/directives#apply) out-of-box. For example:
+样式得益于 [UnoCSS](https://unocss.dev/) 和 [PostCSS](https://postcss.org/)，你拥有开箱即用的 css 嵌套和 [at-directives](https://unocss.dev/transformers/directives#apply)。示例：
 
 <!-- eslint-skip -->
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 ```less
 .slidev-layout {
@@ -145,11 +141,7 @@ Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://
 }
 ```
 
-<<<<<<< HEAD
-[了解更多关于此语法的信息](https://windicss.org/features/directives.html)。
-=======
-[Learn more about the syntax](https://unocss.dev/transformers/directives#apply).
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
+[了解更多关于此语法的信息](https://unocss.dev/transformers/directives#apply)。
 
 ## `index.html` {#index-html}
 
@@ -195,12 +187,6 @@ Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://
 
 ## 全局图层 {#global-layers}
 
-<<<<<<< HEAD
 约定：`global-top.vue` | `global-bottom.vue`
 
 了解更多：[全局图层](/custom/global-layers)
-=======
-Conventions: `global-top.vue` | `global-bottom.vue`
-
-Learn more: [Global Layers](/custom/global-layers)
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2

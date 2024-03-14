@@ -8,11 +8,7 @@ title: 编辑器整合
 
 如果你想对幻灯片进行一些高级管理，我们为你提供了以下编辑器集成！
 
-<<<<<<< HEAD
 ## 编辑器集成 {#integrated-editor}
-=======
-Slidev comes with an integrated [CodeMirror](https://codemirror.net/) editor that will instantly reload and save the changes to your file.
->>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 Slidev 带有一个集成的 [CodeMirror](https://codemirror.net/) 编辑器，可以立即重新加载并保存更改到文件中。
 
