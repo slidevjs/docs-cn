@@ -69,12 +69,11 @@ This is a default page without any additional metadata.
 
 欲了解更多，请参阅 [自定义](/custom/) 章节。
 
-### Prettier Support
+### Prettier 支持
 
 > Available since v0.44
 
-The custom syntax might not be compactible with some formatters like Prettier.
-You can either install the [Prettier Plugin](/guide/editors#prettier-plugin) or use a direct `yaml` code block to define the frontmatter instead:
+自定义语法可能无法与某些代码格式化工具（如 Prettier）兼容。你可以安装 [Prettier Plugin](/guide/editors#prettier-plugin) 插件，或者直接使用 `yaml` 语法来定义扉页信息:
 
 ````md
 ---
@@ -126,7 +125,7 @@ function add(
 ```
 ````
 
-You can enable line number to all slides by setting `lineNumbers: true` on the config or enable each code block individually by setting `lines: true`. You can also set the starting line for each code block and highlight the lines accordingly, defaults to 1:
+你可以通过在[配置](/guide/syntax#configurations)设置 `lineNumbers: true` 为所有幻灯片启用行号，也可以通过设置 `lines: true` 为每个代码块单独启用行号。你还可以为每个代码块设置起始行，并相应地突出显示行，默认值为 1
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
@@ -154,8 +153,7 @@ function add(
 
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。
 
-You can set the line number to `hide` to hide the code block or `none` to not highlight any line:
-
+你可以将行号设置为`hide`隐藏代码块，或将行号设置为`none`不高亮展示任何行：
 ````md
 ```ts {hide|none}
 function add(
