@@ -2,43 +2,43 @@
 outline: deep
 ---
 
-# Animations
+# 动画
 
-## Click Animations
+## 点击动画
 
-> [!NOTE]
-> Since v0.48.0, we are rewritten the click animations system with much more consistent behaviors. It might change the behaviors of your existing slides in edge cases. While this page is showing the new click system, you can find more details about the refactor in [#1279](https://github.com/slidevjs/slidev/pull/1279).
+> [!NOTE] 注意
+> 自 v0.48.0 起，我们重写了点击动画系统，现在的行为将更加一致。这可能会改变您现有幻灯片在边缘情况下的行为。尽管此页面展示了新的点击系统，但你仍可以前往 [#1279](https://github.com/slidevjs/slidev/pull/1279) 找到关于重构的更多详情。
 
 ### `v-click`
 
-To apply "click animations" for elements, you can use the `v-click` directive or `<v-click>` components
+要为元素应用 "点击动画"，可以使用 `v-click` 指令或 `<v-click>` 组件
 
 <!-- eslint-skip -->
 
 ```md
-<!-- Component usage:
-     this will be invisible until you press "next" -->
+<!-- 组件用法:
+     此行将在你点击“下一页”前不可见 -->
 <v-click> Hello World! </v-click>
 
-<!-- Directive usage:
-     this will be invisible until you press "next" the second time -->
+<!-- 指令用法:
+     此行将在你第二次点击“下一页”时不可见 -->
 <div v-click class="text-xl"> Hey! </div>
 ```
 
 ### `v-after`
 
-`v-after` is only provided as a directive. It will turn the element visible when the previous `v-click` is triggered.
+`v-after` 仅作为指令提供。它将在触发前一个 `v-click` 时使元素变为可见。
 
 ```md
 <div v-click> Hello </div>
 <div v-after> World </div>
 ```
 
-When you press "next", both `Hello` and `World` will show up together.
+当你点击“下一步”时，“Hello”和“World”将同时显示。
 
-### Hide after clicking
+### 点击后隐藏
 
-Add a `.hide` modifier to `v-click` or `v-after` to make the element invisible after clicking, instead of showing up.
+你可以为 `v-click` 或 `v-after` 添加 `.hide` 修饰符，使元素在点击后不可见，而不是显示出来。
 
 ```md
 <div v-click> Visible after 1 click </div>
@@ -46,7 +46,7 @@ Add a `.hide` modifier to `v-click` or `v-after` to make the element invisible a
 <div v-after.hide> Hidden after 2 click </div>
 ```
 
-For `v-click` component, you can use the `hide` prop to achieve the same effect:
+对于 `v-click` 组件，可以使用 `hide` 参数来达到同样的效果：
 
 ```md
 <v-click> Visible after 1 click </v-click>
@@ -55,7 +55,7 @@ For `v-click` component, you can use the `hide` prop to achieve the same effect:
 
 ### `v-clicks`
 
-`v-clicks` is only provided as a component. It's a shorthand to apply the `v-click` directive to all its child elements. It is especially useful when working with lists and tables.
+v-clicks` 仅作为一个组件提供。它是将 `v-click` 指令应用于所有子元素的简写。它在处理列表和表格时尤其出色。
 
 ```md
 <v-clicks>
@@ -67,8 +67,8 @@ For `v-click` component, you can use the `hide` prop to achieve the same effect:
 </v-clicks>
 ```
 
-An item will become visible each time you click "next".
-It accepts a `depth` prop for nested list:
+每次点击“下一步“时，一个项目就会变得可见。
+它同時接受用于嵌套列表的 `depth` 属性：
 
 ```md
 <v-clicks depth="2">
@@ -83,7 +83,7 @@ It accepts a `depth` prop for nested list:
 </v-clicks>
 ```
 
-Also, you can use the `every` prop to specify the number of items to show after each click:
+此外，你还可以使用 `every` 屬性来指定每次点击后要显示的项目数：
 
 ```md
 <v-clicks every="2">
@@ -96,15 +96,15 @@ Also, you can use the `every` prop to specify the number of items to show after 
 </v-clicks>
 ```
 
-### Positioning
+### 定位
 
-By default, the clicking animations take place one by one. You can customize the animation position of elements by using the `at` prop or the `v-click` directive with value.
+默认情况下，点击动画是逐个进行的。你可以使用 `at` prop 或 `v-click` 指令自定义元素的动画位置。
 
-Like the CSS layout system, click-animated elements can be "relative" or "absolute":
+与 CSS 布局系统一样，点击动画元素可以是“相对”或“绝对”的：
 
-#### Relative Position
+#### 相對定位
 
-This actual position of relative elements is calculated based on the previous relative elements:
+相对元素的实际位置是根据之前的相对元素计算出来的：
 
 ````md
 <div v-click> visible after 1 click </div>
@@ -117,10 +117,10 @@ This actual position of relative elements is calculated based on the previous re
 ```
 ````
 
-> [!NOTE]
-> The default value of `v-click` is `'+1'` when you don't specify it.
+> [!NOTE] 注意
+> `v-click` 的默认值为 `'+1'`
 
-In fact, `v-after` are just shortcuts for `v-click` with `at` prop:
+归根结底，`v-after` 只是自带了 `at` 属性的 `v-click` 的快捷方式：
 
 ```md
 <!-- The following 2 usages are equivalent -->
@@ -133,21 +133,21 @@ In fact, `v-after` are just shortcuts for `v-click` with `at` prop:
 <v-click-gap size="1" /><img v-after />
 ```
 
-::: info
-Only string values starting with `'+'` or `'-'` like `'+1'` are treated as relative positions:
+::: info 提示
+只有以 `'+'` 或 `'-'`（如 `'+1'`）开头的字符串值才会被视为相对位置：
 
-| Value          | Kind     |
-| -------------- | -------- |
-| `'-1'`, `'+1'` | Relative |
-| `+1` === `1`   | Absolute |
-| `'1'`          | Absolute |
+| 属性值         | 类型 |
+| -------------- | ---- |
+| `'-1'`, `'+1'` | 相对 |
+| `+1` === `1`   | 绝对 |
+| `'1'`          | 绝对 |
 
-So don't forget the single quotes for the relative values.
+因此，不要忘记为相对值加上单引号。
 :::
 
-#### Absolute Position
+#### 绝对定位
 
-The given value is the exact click count to show the element:
+传递的值为需要操作的精确点击次数：
 
 ````md
 <div v-click="3"> visible after 3 clicks </div>
@@ -160,9 +160,9 @@ The given value is the exact click count to show the element:
 ```
 ````
 
-#### Mixed Case
+#### 混合使用
 
-You can mix the absolute and relative positions:
+你可以将绝对位置和相对位置的用法混合使用：
 
 ```md
 <div v-click> visible after 1 click </div>
@@ -172,7 +172,7 @@ You can mix the absolute and relative positions:
 <div v-click="4"> visible after 4 clicks </div>
 ```
 
-The following example synchronizes the highlighting of the two code blocks:
+下面的示例同步了两个代码块的高亮显示：
 
 ````md
 ```js {1|2}{at:1}
@@ -186,19 +186,19 @@ The following example synchronizes the highlighting of the two code blocks:
 ```
 ````
 
-### Enter & Leave
+### 进入和离开
 
-> Available since v0.43.0
+> 自 v0.43.0 起可用
 
-You can also specify the enter and leave index for the `v-click` directive by passing an array. The end index is exclusive.
+你也可以通过传递一个数组为 `v-click` 指令指定进入和离开的时间。显示/隐藏周期是不包含结束索引在内的。
 
 ```md
 <div v-click="[2, 4]">This will be shown on the 2nd and 3rd clicks, and hide again after the 4th.</div>
 ```
 
-### Custom Total Clicks Count
+### 自定义总点击次数
 
-By default, Slidev counts how many steps are needed before going to the next slide. You can override this setting by passing the `clicks` frontmatter option:
+默认情况下，Slidev 会计算进入下一张幻灯片前需要多少步。你可以通过 `clicks` frontmatter 选项来覆盖这一设置：
 
 ```yaml
 ---
@@ -207,21 +207,21 @@ clicks: 10
 ---
 ```
 
-### Element Transitions
+### 元素过渡
 
-When you apply the `v-click` directive to your elements, it will attach the class name `slidev-vclick-target` to it. When the elements are hidden, the class name `slidev-vclick-hidden` will also be attached. For example:
+当你将 `v-click` 指令应用于元素时，它将附加 `slidev-vclick-target` 类名。相反，当元素被隐藏时，类名 `slidev-vclick-hidden` 会被附加。例如：
 
 ```html
 <div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
 ```
 
-After a click, it will become
+点击后，它将变成
 
 ```html
 <div class="slidev-vclick-target">Text</div>
 ```
 
-By default, a subtle opacity transition is applied to those classes:
+默认情况下，这些类别会使用透明度过渡：
 
 ```css
 /* below shows the default style */
@@ -236,9 +236,9 @@ By default, a subtle opacity transition is applied to those classes:
 }
 ```
 
-You can override them to customize the transition effects in your custom stylesheets.
+您可以覆盖它们，在自定义样式表中定制过渡效果。
 
-For example, you can achieve the scaling up transitions by:
+例如，您可以通过以下方法实现放大转换：
 
 ```css
 /* styles.css */
@@ -252,7 +252,7 @@ For example, you can achieve the scaling up transitions by:
 }
 ```
 
-To specify animations for only certain slides or layouts
+仅为某些幻灯片或布局指定动画
 
 ```scss
 .slidev-page-7,
@@ -267,15 +267,15 @@ To specify animations for only certain slides or layouts
 }
 ```
 
-Learn more about [customizing styles](/custom/directory-structure#style).
+进一步了解 [自定义样式](/custom/directory-structure#style).
 
-### Direction Specific Animations
+### 特定方向动画
 
-> Available since v0.48.0
+> 自 v0.48.0 起可用
 
-In some cases, you might want to have different animations going forward and backward. Slide will apply the `.slidev-nav-go-forward` or `.slidev-nav-go-backward` class to slide container when navigating.
+在某些情况下，你可能希望在前进和后退时使用不同的动画。在切换幻灯片时，Slide 将对 slide 容器应用 `.slidev-nav-go-forward` 或 `.slidev-nav-go-backward` 类。
 
-So you can leverage this to apply different animations for different directions, for example:
+因此，你可以利用这一点为不同的方向应用不同的动画：
 
 ```css
 /* example: delay on only forward but not backward */
@@ -287,38 +287,39 @@ So you can leverage this to apply different animations for different directions,
 }
 ```
 
-To make it easier, we also provided some [UnoCSS variants built-in](https://github.com/slidevjs/slidev/blob/6adcf2016b8fb0cab65cf150221f1f67a76a2dd8/packages/client/uno.config.ts#L32-L38), that you can add `forward:` or `backward:` prefix to any utility classes to apply them conditionally.
+
+为了简化操作，我们还提供了一些 [UnoCSS variants built-in](https://github.com/slidevjs/slidev/blob/6adcf2016b8fb0cab65cf150221f1f67a76a2dd8/packages/client/uno.config.ts#L32-L38)，您可以在任何实用程序类中添加 `forward:` 或 `backward:` 前缀，以便有条件地应用它们。
 
 ```html
 <div v-click class="transition delay-300">Element</div> // [!code --]
 <div v-click class="transition forward:delay-300">Element</div> // [!code ++]
 ```
 
-## Rough Markers
+## 标记
 
-> Available since v0.48.0
+> 自 v0.48.0 起可用
 
-Slidev integrates [Rough Notation](https://github.com/linkstrifer/react-rough-notation) to allow marking or highlighting elements in your slides.
+Slidev 集成了 [Rough Notation](https://github.com/linkstrifer/react-rough-notation)，允许在幻灯片中标记或突出显示元素。
 
 ### `v-mark`
 
-Rough Notation integrates comes with the `v-mark` directive.
+Rough Notation 集成了 `v-mark` 指令。
 
-#### Type
+#### 标记
 
-`v-mark.underline` for Underline mark, `v-mark.circle` for Circle mark, etc. Default to `underline`
+`v-mark.underline` 用于下划线标记，`v-mark.circle` 用于圆形标记等。默认为 `underline`
 
-#### Color
+#### 颜色
 
-`v-mark.red` makes the notation `red`. Supported built-in color themes from UnoCSS. For custom colors, use object syntax `v-mark="{ color: '#234' }"`
+`v-mark.red` 使符号成为红色。`v-mark` 支持 UnoCSS 的内置颜色主题。对于自定义颜色，请使用对象语法 `v-mark="{ color: '#234' }"`
 
-#### Clicks
+#### 点击触发
 
-`v-mark` works like `v-click` and will trigger after a click. Same as `v-click`, it allows you to pass a custom click value, like `v-mark="5"` or `v-mark="'+1'"`.
+`v-mark` 的工作原理与 `v-click` 相似，会在点击后触发。与 `v-click` 相同，它允许传递自定义点击值，如 `v-mark="5"` 或 `v-mark="'+1'"`。
 
-#### Options
+#### 选项
 
-Optionally you can pass an object to `v-mark` to specify the options, for example:
+你可以选择将一个对象传递给 `v-mark` 来指定选项，例如：
 
 ```vue
 <span v-mark="{ at: 5, color: '#234', type: 'circle' }">
@@ -326,13 +327,13 @@ Important text
 </span>
 ```
 
-#### Preview
+#### 预览
 
 <video src="https://github.com/slidevjs/slidev/assets/11247099/c840340c-0aa1-4cde-b228-e6c67e5f6879" rounded-lg shadow controls></video>
 
-## Motion
+## 元素运动
 
-Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use the `v-motion` directive to any elements to apply motion to them. For example
+Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。您可以对任何元素使用 `v-motion` 指令来对其应用运动。例如
 
 ```html
 <div
@@ -343,9 +344,9 @@ Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use th
 </div>
 ```
 
-The text `Slidev` will move from `-80px` to its original position on initialization.
+文本 `Slidev` 将在初始化时从 `-80px` 移动到原来的位置。
 
-> Note: Slidev preloads the next slide for performance, which means the animations might start before you navigate to the page. To get it works properly, you can disable the preloading for the particular slide
+> 注意：Slidev 会预加载下一张幻灯片以提高性能，这意味着动画可能会在您导航到该页面之前开始。为了使其正常工作，您可以禁用特定幻灯片的预加载
 >
 > ```md
 > ---
@@ -353,7 +354,7 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > ---
 > ```
 >
-> Or control the element life-cycle with `v-if` to have fine-grained controls
+> 或使用 `v-if` 控制元素生命周期，以实现精细控制
 >
 > ```html
 > <div
@@ -365,15 +366,15 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > </div>
 > ```
 
-Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
+了解更多: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
 
-## Slide Transitions
+## 幻灯片过渡
 
 <div id="pages-transitions" />
 
-> Available since v0.39.0
+> 自 v0.39.0 起可用
 
-Slidev supports slide transitions out of the box. You can enable it by setting the `transition` frontmatter option:
+Slidev 支持开箱即用的幻灯片过渡效果。你可以通过设置 `transition` frontmatter 选项来启用它：
 
 ```md
 ---
@@ -381,31 +382,31 @@ transition: slide-left
 ---
 ```
 
-This will give you a nice sliding effects on slide switching. Setting it in the frontmatter will apply to all slides. You can also set different transitions per slide.
+这将在幻灯片切换时带来顺滑的滑动效果。在前面板中进行设置将适用于所有幻灯片。你还可以为每张幻灯片设置不同的过渡效果。
 
-### Builtin Transitions
+### 内置过渡
 
-- `fade` - Crossfade in/out
-- `fade-out` - Fade out and then fade in
-- `slide-left` - Slides to the left (slide to right when going backward)
-- `slide-right` - Slides to the right (slide to left when going backward)
-- `slide-up` - Slides to the top (slide to bottom when going backward)
-- `slide-down` - Slides to the bottom (slide to top when going backward)
-- `view-transition` - Slides with the view transitions API
+- `fade` - 交叉淡入/淡出
+- `fade-out` - 淡出后再淡入
+- `slide-left` - 向左滑动（后退时向右滑动）
+- `slide-right` - 向右滑动（后退时向左滑动）
+- `slide-up` - 向上方滑动（向后时向下方滑动）
+- `slide-down` - 向下滑动（向后时滑动到顶部）
+- `view-transition` - 使用视图转换 API 的幻灯片
 
-### View Transitions
+### View 过渡
 
-> Available since v0.43.0
+> 自 v0.43.0 起可用
 
-The **View Transitions API** provides a mechanism for easily creating animated transitions between different DOM states. Learn more how it works in [View Transitions API - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API).
+**View Transitions API** 提供了一种在不同 DOM 状态之间轻松创建动画转换的机制。要详细了解其工作原理，请参考 [View Transitions API - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API)。
 
-:::warning
-Experimental: This is not supported by all browsers. Check the [Browser compatibility table](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#browser_compatibility) carefully before using this.
+:::警告
+实验性功能：并非所有浏览器都支持此功能。使用此功能之前请检查[浏览器兼容性表](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#browser_compatibility)。
 :::
 
-You can use the `view-transition-name` CSS property to name view transitions, which creates connections between different page elements and smooth transitions when switching slides.
+你可以使用 `view-transition-name` CSS 属性来命名过渡动画，这样就能在不同页面元素之间建立连接，并在切换幻灯片时实现平滑过渡。
 
-You can enable [MDC (Markdown Component) Syntax](/guide/syntax#mdc-syntax) support to conveniently name view-transitions:
+您可以启用 [MDC（Markdown 组件）语法](/guide/syntax#mdc-syntax) 支持，让命名视图转换更便捷：
 
 ```md
 ---
@@ -420,9 +421,9 @@ mdc: true
 # View Transition {.inline-block.view-transition-title}
 ```
 
-### Custom Transitions
+### 自定义过渡
 
-Slidev's slide transitions are powered by [Vue Transition](https://vuejs.org/guide/built-ins/transition.html). You can provide your custom transitions by:
+Slidev 的幻灯片过渡效果由 [Vue Transition](https://vuejs.org/guide/built-ins/transition.html) 实现。因此你也可以通过以下方式提供自定义过渡效果：
 
 ```md
 ---
@@ -430,7 +431,7 @@ transition: my-transition
 ---
 ```
 
-and then in your custom stylesheets:
+然后在自定义样式表中添加：
 
 ```css
 .my-transition-enter-active,
@@ -444,11 +445,11 @@ and then in your custom stylesheets:
 }
 ```
 
-Learn more about how it works in [Vue Transition](https://vuejs.org/guide/built-ins/transition.html).
+有关其工作原理的更多信息，请参阅 [Vue Transition](https://vuejs.org/guide/built-ins/transition.html)。
 
-### Forward & Backward Transitions
+### 前后过渡
 
-You can specify different transitions for forward and backward navigation using `|` as a separator in the transition name:
+您可以在过渡名称中使用 `|` 作为分隔符，为向前和向后导航指定不同的过渡：
 
 ```md
 ---
@@ -456,11 +457,11 @@ transition: go-forward | go-backward
 ---
 ```
 
-With this, when you go from slide 1 to slide 2, the `go-forward` transition will be applied. When you go from slide 2 to slide 1, the `go-backward` transition will be applied.
+添加以上配置后，当你从幻灯片 1 切换到幻灯片 2 时，将应用 `go-forward` 过渡。相反，从幻灯片 2 转到幻灯片 1 时，将应用 `go-backward` 过渡。
 
-### Advanced Usage
+### 进阶用法
 
-The `transition` field accepts an option that will passed to the [`<TransitionGroup>`](https://vuejs.org/api/built-in-components.html#transition) component. For example:
+`transition` 字段接受一个选项，该选项将传递给 [`<TransitionGroup>`](https://vuejs.org/api/built-in-components.html#transition) 组件。例如：
 
 ```md
 ---
