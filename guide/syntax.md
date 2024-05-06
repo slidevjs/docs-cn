@@ -34,9 +34,9 @@ You can directly use Windi CSS and Vue components to style and enrich your slide
 </div>
 ````
 
-## 扉页及布局 {#front-matter-layouts}
+## 前置数据页及布局 {#front-matter-layouts}
 
-你可以通过将分隔符转换为 [扉页块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个扉页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
+你可以通过将分隔符转换为 [前置数据块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个前置数据页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
 
 
 <!-- eslint-skip -->
@@ -69,11 +69,12 @@ This is a default page without any additional metadata.
 
 欲了解更多，请参阅 [自定义](/custom/) 章节。
 
-### Prettier 支持
+### Prettier 支持 {#prettier-support}
 
-> Available since v0.44
+> 自 v0.44 起可用
 
-自定义语法可能无法与某些代码格式化工具（如 Prettier）兼容。你可以安装 [Prettier Plugin](/guide/editors#prettier-plugin) 插件，或者直接使用 `yaml` 语法来定义扉页信息:
+自定义语法可能无法与某些格式化工具（如 Prettier）兼容。
+你可以安装 [Prettier 插件](/guide/editors#prettier-plugin)，或者直接使用 `yaml` 代码块来定义 frontmatter：
 
 ````md
 ---
@@ -125,7 +126,7 @@ function add(
 ```
 ````
 
-你可以通过在[配置](/guide/syntax#configurations)设置 `lineNumbers: true` 为所有幻灯片启用行号，也可以通过设置 `lines: true` 为每个代码块单独启用行号。你还可以为每个代码块设置起始行，并相应地突出显示行，默认值为 1
+你可以通过在[配置](/guide/syntax#configurations)中设置 `lineNumbers: true` 为所有幻灯片启用行号，或通过设置 `lines: true` 为每个代码块单独启用行号。您还可以为每个代码块设置起始行，并相应地突出显示行，默认值为 1：
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
@@ -153,7 +154,8 @@ function add(
 
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。
 
-你可以将行号设置为 `hide` 以隐藏代码块，或将行号设置为 `none` 以不高亮展示任何行：
+你可以将行号设置为 `hide` 以隐藏代码块，或设置为 `none` 以不突出显示任何行：
+
 ````md
 ```ts {hide|none}
 function add(
@@ -184,15 +186,15 @@ const c = add(1, 2)
 ```
 ````
 
-### TwoSlash Integration
+### TwoSlash 交互 {#twoslash-integration}
 
-> Available since v0.46
+> 自 v0.46 起可用
 
-This feature is only available when you [set `highlighter` to `shiki`](/custom/highlighters)
+此功能仅在您 [将 `highlighter` 设置为 `shiki`](/custom/highlighter) 时可用。
 
-[TwoSlash](https://twoslash.netlify.app/) is a powerful tool for rendering TypeScript code blocks with type information on hover or inlined. It's quite useful for preparing slides for JavaScript/TypeScript-related topics.
+[TwoSlash](https://twoslash.netlify.app/) 是一款功能强大的工具，用于在悬停或内联时呈现带有类型信息的 TypeScript 代码块。它对于准备 JavaScript/TypeScript 相关主题的幻灯片非常有用。
 
-To use it, you can add `twoslash` to the code block's language identifier:
+要使用它，可以在代码块的语言标识符中添加 `twoslash`：
 
 ````md
 ```ts twoslash
@@ -203,7 +205,7 @@ const count = ref(0)
 ```
 ````
 
-It will be rendered as:
+这会被渲染成：
 
 ```ts twoslash
 import { ref } from 'vue'
@@ -217,11 +219,12 @@ const count = ref(0)
 
 ### Shiki Magic Move
 
-> Available since v0.48
+> 自 v0.48 起可用
 
-[Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) enables you to have granular transition between code changes, similar to Keynote's Magic Move. You can check [the playground](https://shiki-magic-move.netlify.app/) to see how it works.
 
-In Slidev, we bind it to the [clicks system](/guide/animations#click-animations). The syntax is wrap multiple code blocks representing each steps with <code>````md magic-move</code> (mind it's **4** backticks), this will be transformed into one code block, that morphing to each steps as you click.
+通过 [Shiki Magic Move](https://github.com/shikijs/shiki-magic-move)，你可以在代码更改之间进行细粒度过渡，类似于 Keynote 的 Magic Move。你也可以查看[演练场](https://shiki-magic-move.netlify.app/)了解其工作原理。
+
+在 Slidev 中，我们将其绑定到[点击系统](/guide/animations#click-animations)。语法是用 <code>````md magic-move</code>（注意是**4**个回车键）将代表每个步骤的多个代码块封装起来，这将被转换成一个代码块，在您点击时变形到每个步骤。
 
 `````md
 ````md magic-move
@@ -237,7 +240,7 @@ console.log(`Step ${3}` as string)
 ````
 `````
 
-It's also possible mix Magic Move with [line highlighting](#line-highlighting), for example:
+你也可以将 Magic Move 与 [线条突出显示](#line-highlighting) 混合使用，例如：
 
 `````md
 ````md magic-move {at:4} // [!code hl]
@@ -248,7 +251,7 @@ function add() {
 }
 ```
 
-Non-code blocks in between as ignored, you can put some comments.
+中间的非代码块将被忽略，你可以添加一些注释。
 
 ```js
 let count = 1
@@ -269,11 +272,12 @@ console.log('HelloWorld')
 ```
 ````
 
-欲了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
+如果你想了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
 
 #### Monaco Diff
 
-Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+
+Monaco 还可以生成两个代码块之间的差异。你可以使用 `{monaco-diff}` 将块变成 [diff Monaco 编辑器](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) 并使用 `~~~` 来分隔代码的原始版本和修改版本！
 
 ````md
 ```ts {monaco-diff}
@@ -285,9 +289,9 @@ console.log('Modified text')
 
 #### Monaco Runner
 
-> Available since v0.48
+> 自 v0.48 起可用
 
-Slidev also provides the Monaco Runner Editor, which allows you to run the code directly in the editor and see the result. Use `{monaco-run}` to turn the block into a Monaco Runner Editor.
+Slidev 还提供了 Monaco Runner 编辑器，可以直接在编辑器中运行代码并查看结果。使用 `{monaco-run}` 可将代码块转化为 Monaco Runner 编辑器。
 
 ````md
 ```ts {monaco-run}
@@ -298,9 +302,9 @@ console.log(distance(3, 4))
 ```
 ````
 
-It will provide the editor with a "Run" button, and shows the result right below the code block. You many also modify the code and the result will be re-evaluated on the fly.
+它将为编辑器提供一个“运行”按钮，并在代码块下方显示结果。你还可以修改代码，然后结果将实时重新计算。
 
-By default it will automatically runs the code when the slide is loaded, if you want to always explicitly trigger the run, you can set `{autorun:false}`.
+默认情况下，它会在幻灯片加载时自动运行代码，如果你想始终显式触发运行，可以配置 `{autorun:false}`。
 
 ````md
 ```ts {monaco-run} {autorun:false}
@@ -308,7 +312,7 @@ console.log('HelloWorld')
 ```
 ````
 
-Currently Slidev supports running JavaScript and TypeScript code out-of-box. Refer to [Custom Code Runners](/custom/config-code-runners) for custom languages support.
+Slidev 目前已支持运行 JavaScript 和 TypeScript 代码。有关自定义语言支持，请参阅[自定义代码运行器](/custom/config-code-runners)。
 
 ## 内联样式 {#embedded-styles}
 
@@ -400,11 +404,11 @@ The second page
 
 Basic Markdown and HTML are also supported in notes on Presenter renderering.
 
-### Click Markers
+### 点击标记 {#click-markers}
 
-> Available since v0.48
+> 自 v0.48 起可用
 
-For some slides you might have longer notes that might be hard to find where you are looking at, we introduced the click markers that allows highlighting and auto-scrolling to the section of notes of your corresponding content. Put `[click]` markers in your notes for the timming you need to go to another [click](/guide/animations#click-animations), Slidev divide the content between the click markers and highlight them in presenter notes, synchronized with your slide progress.
+对于某些幻灯片，可能含有较长的注释，导致很难找到你正在查看的位置，我们提供了点击标记，可以突出显示并自动滚动到相应内容的注释部分。将 `[click]` 标记放入笔记中，以便你需要转到另一个[点击](/guide/animations#click-animations)，Slidev 将点击标记之间的内容分开，并在演示者笔记中突出显示它们，与您的幻灯片进度。
 
 <!-- TODO: add a video -->
 
@@ -515,33 +519,33 @@ This shows on the right
 This shows on the left
 ```
 
-## Import Code Snippets
+## 导入代码块 {#importing-code-blocks}
 
-> Available since v0.47.0
+> 自 v0.47.0 起可用
 
-You can import code snippets from existing files via the following syntax:
+你可以通过以下语法从现有文件中导入代码块：
 
 ```md
 <<< @/snippets/snippet.js
 ```
 
 ::: tip
-The value of `@` corresponds to your package's root directory. It's recommended to put snippets in `@/snippets`, for compatibility with the Monaco editor. Alternatively, you can also import from relative paths.
+`@` 的值对应包的根目录。我们建议你将片段放在“@/snippets”中，以与 Monaco 编辑器兼容。或者你也可以从相对路径导入。
 :::
 
-You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) to only include the corresponding part of the code file:
+你也可以使用 [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) 功能来导入代码文件的相应部分：
 
 ```md
 <<< @/snippets/snippet.js#region-name
 ```
 
-To explicitly specify the language of the imported code, you can add a language identifier after:
+要显式指定导入代码的语言，可以在后面添加语言标识符：
 
 ```md
 <<< @/snippets/snippet.js ts
 ```
 
-Any code block features like [line highlighting](#line-highlighting) and [Monaco editor](#monaco-editor) are also supported:
+同时也支持任何代码块功能，例如[行突出显示](#line-highlighting)和 [Monaco 编辑器](#monaco-editor)：
 
 ```md
 <<< @/snippets/snippet.js {2,3|5}{lines:true}
@@ -601,11 +605,11 @@ $$
 
 了解更多：[Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-### LaTex line highlighting
+### LaTex 行高亮 {#latex-line-highlighting}
 
-> Available since v0.43.1
+> 自 v0.43.1 起可用
 
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+要突出显示特定行，只需在括号 `{}` 内添加行号。默认情况下，行号从 1 开始计数。
 
 ```latex
 $$ {1|3|all}
@@ -618,7 +622,7 @@ $$ {1|3|all}
 $$
 ```
 
-The `at` and `finally` options of [code blocks](#line-highlighting) are also available for LaTeX blocks.
+[代码块](#line-highlighting) 的 `at` 和 `finally` 选项也可用于 LaTeX 代码块。
 
 ## 图表 {#diagrams}
 
@@ -742,13 +746,13 @@ src: ./content.md
 ---
 ```
 
-## MDC Syntax
+## MDC 格式 {#mdc-syntax}
 
-> Available since v0.43.0
+> 自 v0.43.0 起可用
 
-Slidev supports optional [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
+Slidev 支持由 [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc) 提供的可选 [MDC（Markdown 组件）语法](https://content.nuxtjs.org/guide/writing/mdc)。
 
-You can enable it by adding `mdc: true` to the frontmatter of your markdown file.
+您可以在标记符文件的 frontmatter 中添加 `mdc: true` 来启用它。
 
 ```mdc
 ---
@@ -764,4 +768,4 @@ The **default** slot
 ::
 ```
 
-Learn more about [the syntax](https://content.nuxt.com/guide/writing/mdc).
+了解有关 [语法](https://content.nuxt.com/guide/writing/mdc) 的更多信息。
