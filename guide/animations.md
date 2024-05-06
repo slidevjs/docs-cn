@@ -7,7 +7,7 @@ outline: deep
 ## 点击动画
 
 > [!NOTE] 注意
-> 自 v0.48.0 起，我们重写了点击动画系统，现在的行为将更加一致。这可能会改变您现有幻灯片在边缘情况下的行为。此页面展示了新的点击系统，您还可以前往 [#1279](https://github.com/slidevjs/slidev/pull/1279) 找到关于重构的更多详情。
+> 自 v0.48.0 起，我们重写了点击动画系统，现在的行为将更加一致。这可能会改变你现有幻灯片在边缘情况下的行为。此页面展示了新的点击系统，你还可以前往 [#1279](https://github.com/slidevjs/slidev/pull/1279) 找到关于重构的更多详情。
 
 ### `v-click`
 
@@ -55,7 +55,7 @@ outline: deep
 
 ### `v-clicks`
 
-v-clicks` 仅作为一个组件提供。它是将 `v-click` 指令应用于所有子元素的简写。它在处理列表和表格时尤其出色。
+`v-clicks` 仅作为一个组件提供。它是将 `v-click` 指令应用于所有子元素的简写。它在处理列表和表格时尤其出色。
 
 ```md
 <v-clicks>
@@ -68,7 +68,7 @@ v-clicks` 仅作为一个组件提供。它是将 `v-click` 指令应用于所�
 ```
 
 每次点击“下一步“时，一个项目就会变得可见。
-它同時接受用于嵌套列表的 `depth` 属性：
+它同时接受用于嵌套列表的 `depth` 属性：
 
 ```md
 <v-clicks depth="2">
@@ -83,7 +83,7 @@ v-clicks` 仅作为一个组件提供。它是将 `v-click` 指令应用于所�
 </v-clicks>
 ```
 
-此外，你还可以使用 `every` 屬性来指定每次点击后要显示的项目数：
+此外，你还可以使用 `every` 属性来指定每次点击后要显示的项目数：
 
 ```md
 <v-clicks every="2">
@@ -102,7 +102,7 @@ v-clicks` 仅作为一个组件提供。它是将 `v-click` 指令应用于所�
 
 与 CSS 布局系统一样，点击动画元素可以是“相对”或“绝对”的：
 
-#### 相對定位
+#### 相对定位
 
 相对元素的实际位置是根据之前的相对元素计算出来的：
 
@@ -236,9 +236,9 @@ clicks: 10
 }
 ```
 
-您可以覆盖它们，在自定义样式表中定制过渡效果。
+你可以覆盖它们，在自定义样式表中定制过渡效果。
 
-例如，您可以通过以下方法实现放大转换：
+例如，你可以通过以下方法实现放大转换：
 
 ```css
 /* styles.css */
@@ -288,7 +288,7 @@ clicks: 10
 ```
 
 
-为了简化操作，我们还提供了一些 [UnoCSS variants built-in](https://github.com/slidevjs/slidev/blob/6adcf2016b8fb0cab65cf150221f1f67a76a2dd8/packages/client/uno.config.ts#L32-L38)，您可以在任何实用程序类中添加 `forward:` 或 `backward:` 前缀，以便有条件地应用它们。
+为了简化操作，我们还提供了一些 [UnoCSS variants built-in](https://github.com/slidevjs/slidev/blob/6adcf2016b8fb0cab65cf150221f1f67a76a2dd8/packages/client/uno.config.ts#L32-L38)，你可以在任何实用程序类中添加 `forward:` 或 `backward:` 前缀，以便有条件地应用它们。
 
 ```html
 <div v-click class="transition delay-300">Element</div> // [!code --]
@@ -333,7 +333,7 @@ Important text
 
 ## 元素运动
 
-Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。您可以对任何元素使用 `v-motion` 指令来对其应用运动。例如：
+Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以对任何元素使用 `v-motion` 指令来对其应用运动。例如：
 
 ```html
 <div
@@ -346,7 +346,7 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。您可以对任�
 
 文本 `Slidev` 将在初始化时从 `-80px` 移动到原来的位置。
 
-> 注意：Slidev 会预加载下一张幻灯片以提高性能，这意味着动画可能会在您导航到该页面之前开始。为了使其正常工作，您可以禁用特定幻灯片的预加载：
+> 注意：Slidev 会预加载下一张幻灯片以提高性能，这意味着动画可能会在你导航到该页面之前开始。为了使其正常工作，你可以禁用特定幻灯片的预加载：
 >
 > ```md
 > ---
@@ -406,7 +406,7 @@ transition: slide-left
 
 你可以使用 `view-transition-name` CSS 属性来命名过渡动画，这样就能在不同页面元素之间建立连接，并在切换幻灯片时实现平滑过渡。
 
-您可以启用 [MDC（Markdown 组件）语法](/guide/syntax#mdc-syntax) 支持，让命名视图转换更便捷：
+你可以启用 [MDC（Markdown 组件）语法](/guide/syntax#mdc-syntax) 支持，让命名视图转换更便捷：
 
 ```md
 ---
@@ -449,7 +449,7 @@ transition: my-transition
 
 ### 前后过渡
 
-您可以在过渡名称中使用 `|` 作为分隔符，为向前和向后导航指定不同的过渡：
+你可以在过渡名称中使用 `|` 作为分隔符，为向前和向后导航指定不同的过渡：
 
 ```md
 ---
