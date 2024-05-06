@@ -153,7 +153,7 @@ function add(
 
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。
 
-你可以将行号设置为`hide`隐藏代码块，或将行号设置为`none`不高亮展示任何行：
+你可以将行号设置为 `hide` 以隐藏代码块，或将行号设置为 `none` 以不高亮展示任何行：
 ````md
 ```ts {hide|none}
 function add(
