@@ -126,7 +126,7 @@ function add(
 ```
 ````
 
-你可以通过在配置中设置 `lineNumbers: true` 为所有幻灯片启用行号，或通过设置 `lines: true` 为每个代码块单独启用行号。您还可以为每个代码块设置起始行，并相应地突出显示行，默认值为 1：
+你可以通过在[配置](/guide/syntax#configurations)中设置 `lineNumbers: true` 为所有幻灯片启用行号，或通过设置 `lines: true` 为每个代码块单独启用行号。您还可以为每个代码块设置起始行，并相应地突出显示行，默认值为 1：
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
@@ -154,7 +154,7 @@ function add(
 
 这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。
 
-您可以将行号设置为 `hide` 以隐藏代码块，或设置为 `none` 以不突出显示任何行：
+你可以将行号设置为 `hide` 以隐藏代码块，或设置为 `none` 以不突出显示任何行：
 
 ````md
 ```ts {hide|none}
