@@ -129,7 +129,7 @@ Or
 $ slidev export *.md
 ```
 
-在这种情况下，每个输入文件都将生成自己的 PDf 文件。
+在这种情况下，每个输入文件都将生成自己的 PDF 文件。
 
 ## 演讲者注释 {#presenter-notes}
 
