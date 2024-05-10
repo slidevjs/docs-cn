@@ -53,57 +53,49 @@ $ slidev export --format png
 
 默认情况下会导出演示文稿中的全部幻灯片。如果要导出特定的幻灯片或幻灯片范围，可以设置 `--range` 选项指定要导出的幻灯片。
 
-You can also compile a markdown file composed of compiled png using `--format md`.
+你还可以使用 `--format md` 编译由编译后的 png 组成的 markdown 文件。
 
 ```bash
 $ slidev export --format md
 ```
 
-### Dark mode
+### 暗黑模式 {#dark-mode}
 
-In case you want to export your slides using the dark version of the theme, use the `--dark` option:
+如果你想使用深色主题导出幻灯片，请使用 `--dark` 选项：
 
 ```bash
 $ slidev export --dark
 ```
 
-### Export Clicks Steps
+### 导出点击步骤
 
-> Available since v0.21
+> 自 v0.21 起可用
 
-By default, Slidev exports one page per slide with clicks animations disabled. If you want export slides with multiple steps into multiple pages, pass the `--with-clicks` option.
+默认情况下，Slidev 导出每张幻灯片一页并禁用点击动画。如果要将包含多个步骤的幻灯片导出到多个页面，请传递 `--with-clicks` 选项。
 
 ```bash
 $ slidev export --with-clicks
 ```
 
-### Slide range
+### PDF 大纲 {#pdf-outline}
 
-You can also specify a range of slides to export with the `--range` option.
+> 自 v0.36.10 起可用
 
-```bash
-$ slidev export --range 1,4-5,6
-```
-
-### PDF outline
-
-> Available since v0.36.10
-
-You can generate the PDF outline by passing the `--with-toc` option.
+你可以使用 `--with-toc` 选项来生成 PDF 大纲。
 
 ```bash
 $ slidev export --with-toc
 ```
 
-### Output filename
+### 输出文件名 {#output-filename}
 
-You can specify the output filename with the `--output` option.
+你可以使用 `--output` 选项指定输出的文件名。
 
 ```bash
 $ slidev export --output my-pdf-export
 ```
 
-Or in the frontmatter configuration:
+你也可以在 frontmatter 配置中指定：
 
 ```yaml
 ---
@@ -113,7 +105,7 @@ exportFilename: my-pdf-export
 
 ### Export a range of slides
 
-By default, all slides in the presentation are exported. If you want to export a specific slide or a range of slides you can set the `--range` option and specify which slides you would like to export.
+默认情况下，演示文稿中的所有幻灯片都会导出。如果想导出特定幻灯片或一定范围的幻灯片，可以设置 `--range`，并指定要导出的幻灯片。
 
 ```bash
 $ slidev export --range 1,6-8,10
@@ -123,9 +115,9 @@ $ slidev export --range 1,6-8,10
 
 上面的示例将导出幻灯片第 1、6、7、8、10 页。
 
-### Multiple entries
+### 批量导出 {#multiple-entries}
 
-You can also export multiple slides at once.
+你还可以一次导出多个幻灯片。
 
 ```bash
 $ slidev export slides1.md slides1.md
@@ -137,7 +129,7 @@ Or
 $ slidev export *.md
 ```
 
-In this case, each input file will generate its own PDf file.
+在这种情况下，每个输入文件都将生成自己的 PDf 文件。
 
 ## 演讲者注释 {#presenter-notes}
 
@@ -149,7 +141,7 @@ In this case, each input file will generate its own PDf file.
 $ slidev export-notes
 ```
 
-This command also accept multiple entries like for the [export command](#multiple-entries)
+此命令还接受多个条目，例如 [导出命令](#multiple-entries)
 
 ## 单页应用（SPA） {#single-page-application-spa}
 
