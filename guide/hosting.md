@@ -10,11 +10,11 @@ $ slidev build
 
 生成的应用程序会保存在 `dist/` 目录下，然后你可以将该目录部署在 [GitHub Pages](https://pages.github.com/)，[Netlify](https://netlify.app/)，[Vercel](https://vercel.com/)，等你想部署的任何地方。接着，就可以将你幻灯片的链接分享给任何人。
 
-You can test the generated build using a web server (Apache, NGINX, Caddy...etc.) or in the project you can directly run: `npx vite preview`.
+您可以使用 web 服务器（Apache、NGINX、Caddy等）或直接在项目中运行 `npx vite preview` 来测试生成的构建文件：。
 
 ### 配置基础路径 {#base-path}
 
-如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。The `--base` path **must begin and end** with a slash `/`; for example:
+如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。`--base` 选项必须以斜线 `/` 开始和结束；例如：
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
@@ -42,7 +42,7 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
-This can also be done with the CLI option `--download` (`boolean` only).
+你也可以通过 CLI 的 `--download` 选项来指定（仅限 `boolean`）。
 
 ```bash
 $ slidev build --download
@@ -50,40 +50,42 @@ $ slidev build --download
 
 When using the download option, you can also provide the export options:
 
-- By using [CLI export options](/guide/exporting.html)
-- Or [frontmatter export options](/custom/#frontmatter-configures)
+除了使用 `--download` 选项，你还可以提供导出选项：
 
-### Output directory
+- 使用 [CLI 导出选项](/guide/exporting.html)
+- 或 [frontmatter 导出选项](/custom/#frontmatter-configures)
 
-You can change the output directory using `--out`.
+### 输出目录 {#output-directory}
+
+你可以使用 `--out` 来更改输出目录。
 
 ```bash
 $ slidev build --out my-build-folder
 ```
 
-### Watch mode
+### 监听模式 {#watch-mode}
 
-By passing the `--watch` option the build will run in watch mode and will rebuild anytime the source changes.
+通过传递 `--watch` 选项，构建会以监听模式运行，并在源代码发生变化时进行更新。
 
 ```bash
 $ slidev build --watch
 ```
 
-### Multiple entries
+### 批量导出 {#multiple-entries}
 
-You can also build multiple slides at once.
+你还可以一次导出多个幻灯片。
 
 ```bash
-$ slidev build slides1.md slides1.md
+$ slidev build slides1.md slides2.md
 ```
 
-Or
+或者
 
 ```bash
 $ slidev build *.md
 ```
 
-In this case, each input file will generate a folder containing the build in the output directory.
+在这种情况下，每个输入文件都将生成自己的构建文件夹。
 
 ### 示例 {#examples}
 
@@ -94,7 +96,7 @@ In this case, each input file will generate a folder containing the build in the
 
 欲了解更多，请参阅 [Showcases](/showcases)。
 
-## 部署
+## 部署 {#deploy}
 
 我们建议使用 `npm init slidev@latest` 来为你初始化你的项目，它包含了部署服务开箱即用的配置文件。
 
