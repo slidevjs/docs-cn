@@ -22,38 +22,38 @@ Or:
 
 参数：
 
-- `x1` (`string | number`, required): start point x position
-- `y1` (`string | number`, required): start point y position
-- `x2` (`string | number`, required): end point x position
-- `y2` (`string | number`, required): end point x position
-- `width` (`string | number`, default: `2`): line width
-- `color` (`string`, default: `'currentColor'`): line color
+- `x1` (`string | number`, required): 起始 x 位置
+- `y1` (`string | number`, required): 起始 y 位置
+- `x2` (`string | number`, required): 终点 x 位置
+- `y2` (`string | number`, required): 终点 y 位置
+- `width` (`string | number`, default: `2`): 线宽
+- `color` (`string`, default: `'currentColor'`): 颜色
 
 ### `AutoFitText`
 
-> Experimental
+> 实验性功能
 
-Box inside which the font size will automatically adapt to fit the content. Similar to PowerPoint or Keynote TextBox.
+字体大小会自动适应内容的方框。类似于 PowerPoint 或 Keynote 的文本框。
 
-#### Usage
+#### 用法 {#auto-fit-text-usage}
 
 ```md
 <AutoFitText :max="200" :min="100" modelValue="Some text"/>
 ```
 
-Parameters:
+参数:
 
-- `max` (`string | number`, default `100`): Maximum font size
-- `min` (`string | number`, default `30`): Minimum font size
-- `modelValue` (`string`, default `''`): text content
+- `max` (`string | number`, default `100`): 最大字体大小
+- `min` (`string | number`, default `30`): 最小字体大小
+- `modelValue` (`string`, default `''`): 文本内容
 
 ### `LightOrDark`
 
-Use it to display one thing or another depending on the active light or dark theme.
+你可以使用它来根据活动的亮色或暗色主题，显示一种或另一种内容。
 
-#### Usage
+#### 用法 {#light-or-dark-usage}
 
-Use it with the two named Slots `#dark` and `#light`:
+与 `#dark` 和 `#light` 插槽一起使用：
 
 ```md
 <LightOrDark>
@@ -62,7 +62,7 @@ Use it with the two named Slots `#dark` and `#light`:
 </LightOrDark>
 ```
 
-Provided props on `LightOrDark` component will be available using scoped slot props:
+在 `LightOrDark` 组件上提供的 props 将可以使用作用域插槽 props 来访问：
 
 ```md
 <LightOrDark width="100" alt="some image">
@@ -75,7 +75,7 @@ Provided props on `LightOrDark` component will be available using scoped slot pr
 </LightOrDark>
 ```
 
-You can provide markdown in the slots, but you will need to surround the content with blank lines:
+你可以在插槽中提供 markdown，但需要用空行分隔内容：
 
 ```md
 <LightOrDark>
@@ -106,10 +106,10 @@ You can provide markdown in the slots, but you will need to surround the content
 
 参数：
 
-- `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
-- `title` (`string`): The title to display
+- `to` (`string | number`): 导航到的幻灯片的路径 (幻灯片从 `1` 开始计数)
+- `title` (`string`): 要显示的标题
 
-One can use a string as `to`, provided the corresponding route exists, e.g.
+只要存在相应的路由，就可以使用字符串作为 `to`，例如：
 
 ```md
 ---
@@ -121,25 +121,25 @@ routeAlias: solutions
 
 ### `RenderWhen`
 
-Render slot only when the context match (for example when we are in presenter view).
+插槽仅在上下文满足条件时（如处于演示者视图中时）才会渲染。
 
-#### Usage
+#### 用法 {#render-when-usage}
 
 ```md
 <RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
 ```
 
-Context type: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+上下文类型: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
 
-Parameters:
+参数:
 
-- `context` (`Context | Context[]`): context or array of contexts you want the slot to be rendered
+- `context` (`Context | Context[]`): 渲染插槽的上下文或上下文数组
 
 ### `SlideCurrentNo`
 
-Current slide number.
+当前幻灯片编号。
 
-#### Usage
+#### 用法 {#slide-current-no-usage}
 
 ```md
 <SlideCurrentNo />
@@ -147,9 +147,9 @@ Current slide number.
 
 ### `SlidesTotal`
 
-Total number of slides.
+幻灯片总数。
 
-#### Usage
+#### 用法 {#slides-total-usage}
 
 ```md
 <SlidesTotal />
@@ -161,7 +161,7 @@ Total number of slides.
 
 标题和标题级别会自动从每张幻灯片的第一个标题元素中检索出来。
 
-You can override this automatic behaviour for a slide by using the front matter syntax:
+您可以使用 front matter 语法来覆盖幻灯片的这种自动行为：
 
 ```yml
 ---
@@ -172,13 +172,13 @@ level: 2
 
 #### 用法 {#titles-usage}
 
-The `<Titles>` component is a virtual component you can import with:
+`<Titles>` 组件是一个虚拟组件，可以使用以下方式导入：
 
 ```js
 import Titles from '/@slidev/titles.md'
 ```
 
-Then you can use it with:
+然后像这样使用：
 
 ```md
 <Titles no="42" />
@@ -186,7 +186,7 @@ Then you can use it with:
 
 参数：
 
-- `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
+- `no` (`string | number`): 显示标题的幻灯片编号（幻灯片从 `1` 开始）
 
 ### `Toc`
 
@@ -208,20 +208,20 @@ hideInToc: true
 <Toc />
 ```
 
-Parameters:
+参数：
 
-- `columns` (`string | number`, default: `1`): The number of columns of the display
-- `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
-- `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-- `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
+- `columns` (`string | number`, default: `1`): 显示的列数
+- `listClass` (`string | string[]`, default: `''`): 应用于目录列表的类
+- `maxDepth` (`string | number`, default: `Infinity`): 要显示的标题的最大深度级别
+- `minDepth` (`string | number`, default: `1`): 要显示的标题的最小深度级别
 - `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  - `'all'`: Display all items
-  - `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  - `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+  - `'all'`: 显示所有项目
+  - `'onlyCurrentTree'`: 仅显示当前树中的项目（活动项目、活动项目的父项和子项）
+  - `'onlySiblings'`: 仅显示当前树中的项目及其直系同级项目
 
 ### `Transform`
 
-Apply scaling or transforming to elements.
+对元素进行缩放或变换。
 
 #### Usage
 
@@ -233,12 +233,12 @@ Apply scaling or transforming to elements.
 
 Parameters:
 
-- `scale` (`number | string`, default `1`): transform scale value
-- `origin` (`string`, default `'top left'`): transform origin value
+- `scale` (`number | string`, default `1`): 大小比例
+- `origin` (`string`, default `'top left'`): 位置
 
 ### `Tweet`
 
-Embed a tweet.
+嵌入一条推文。
 
 #### Usage
 
@@ -248,18 +248,18 @@ Embed a tweet.
 
 Parameters:
 
-- `id` (`number | string`, required): id of the tweet
-- `scale` (`number | string`, default `1`): transform scale value
-- `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
-- `cards` (`'hidden' | 'visible'`, default `'visible'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `id` (`number | string`, required): 推文 id
+- `scale` (`number | string`, default `1`): 大小比例
+- `conversation` (`string`, default `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `cards` (`'hidden' | 'visible'`, default `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
 ### `VAfter`, `VClick` and `VClicks`
 
-See https://sli.dev/guide/animations.html
+请见 https://sli.dev/guide/animations.html
 
 ### `Youtube`
 
-Embed a youtube video.
+嵌入 YouTube 视频。
 
 #### Usage
 
@@ -269,15 +269,15 @@ Embed a youtube video.
 
 Parameters:
 
-- `id` (`string`, required): id of the youtube video
-- `width` (`number`): width of the video
-- `height` (`number`): height of the video
+- `id` (`string`, required): YouTube 视频 id
+- `width` (`number`): 视频宽度
+- `height` (`number`): 视频高度
 
-You can also make the video start at specific time if you add `?start=1234` to the id value (where 1234 are seconds),
+你还可以在 id 值中添加 `?start=1234`（其中 1234 为秒）来让视频在特定时间开始播放。
 
 ## 自定义组件 {#custom-components}
 
-在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里使用该组件啦！
+在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里使用该组件了！
 
 欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
 
