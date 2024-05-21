@@ -280,6 +280,10 @@ export default defineConfig({
       text: '改进翻译',
     },
 
+    outline: {
+      label: '本页目录'
+    },
+
     search: {
       provider: 'local',
     },
