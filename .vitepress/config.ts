@@ -87,11 +87,11 @@ const Theme: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
 
 const Addon: DefaultTheme.NavItemWithLink[] = [
   {
-    text: 'Use Addon',
+    text: '使用扩展插件',
     link: '/addons/use',
   },
   {
-    text: 'Write an Addon',
+    text: '编写扩展插件',
     link: '/addons/write-an-addon',
   },
 ]
@@ -278,6 +278,10 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/slidevjs/docs-cn/edit/main/:path',
       text: '改进翻译',
+    },
+
+    outline: {
+      label: '本页目录'
     },
 
     search: {
