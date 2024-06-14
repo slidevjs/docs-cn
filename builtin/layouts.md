@@ -102,7 +102,7 @@ backgroundSize: 20em 70%
 
 ### `iframe-left`
 
-在屏幕左侧显示网页，内容将位于右侧。
+在屏幕左侧通过 `<iframe>` 元素显示网页，内容将位于右侧。
 
 #### Usage
 
@@ -120,7 +120,7 @@ class: my-cool-content-on-the-right
 
 ### `iframe-right`
 
-在屏幕右侧显示网页，内容将位于左侧。
+在屏幕右侧通过 `<iframe>` 元素显示网页，内容将位于左侧。
 
 #### Usage
 
@@ -138,7 +138,7 @@ class: my-cool-content-on-the-left
 
 ### `iframe`
 
-显示网页作为此页的主要内容。
+通过 `<iframe>` 元素显示网页作为此页的主要内容。
 
 #### Usage
 
