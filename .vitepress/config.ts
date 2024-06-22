@@ -96,48 +96,6 @@ const Addon: DefaultTheme.NavItemWithLink[] = [
   },
 ]
 
-const Translations = [
-  {
-    text: '简体中文',
-  },
-  {
-    text: 'English',
-    link: 'https://sli.dev{{pathname}}',
-  },
-  {
-    text: 'Français',
-    link: 'https://fr.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Español',
-    link: 'https://es.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Русский',
-    link: 'https://ru.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Việt Nam',
-    link: 'https://vn.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Deutsch',
-    link: 'https://de.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Português (BR)',
-    link: 'https://br.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Ελληνικά',
-    link: 'https://el.sli.dev{{pathname}}',
-  },
-  {
-    text: '日本語',
-    link: 'https://ja.sli.dev{{pathname}}',
-  },
-]
-
 const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   {
     text: '自定义',
@@ -350,11 +308,11 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: 'English',
+      label: '简体中文',
     },
     zh: {
-      label: '简体中文',
-      link: 'https://cn.sli.dev/',
+      label: 'English',
+      link: 'https://sli.dev/',
     },
     fr: {
       label: 'Français',
