@@ -72,7 +72,11 @@ pnpm create slidev
 }
 ```
 
+<<<<<<< HEAD
 或者，你也可以使用 [`npx`](https://www.npmjs.com/package/npx)
+=======
+Otherwise, you can use it with [`npx`](https://github.com/npm/cli/blob/latest/bin/npx)
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```bash
 $ npx slidev
@@ -111,6 +115,7 @@ console.log('Hello, World!')
 
 Slidev 使用了如下的工具和技术：
 
+<<<<<<< HEAD
 - [Vite](https://vitejs.dev) —— 一款极速的前端工具
 - 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
 - [Windi CSS](https://github.com/windicss/windicss) 或 [UnoCSS](https://github.com/unocss/unocss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
@@ -121,3 +126,15 @@ Slidev 使用了如下的工具和技术：
 - [Drauu](https://github.com/antfu/drauu) - 支持绘图和批注
 - [KaTeX](https://katex.org/) —— LaTeX 数学渲染
 - [Mermaid](https://mermaid-js.github.io/mermaid) —— 文本描述语言创建图表
+=======
+- [Vite](https://vitejs.dev) - An extremely fast frontend tooling
+- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - Focus on the content while having the power of HTML and Vue components whenever needed
+- [UnoCSS](https://github.com/unocss/unocss) - On-demand utility-first CSS framework, style your slides at ease
+- [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - First-class code snippets support with live coding capability
+- [RecordRTC](https://recordrtc.org) - Built-in recording and camera view
+- [VueUse](https://vueuse.org) family - [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
+- [Iconify](https://iconify.design/) - Iconsets collection.
+- [Drauu](https://github.com/antfu/drauu) - Drawing and annotations support
+- [KaTeX](https://katex.org/) - LaTeX math rendering.
+- [Mermaid](https://mermaid-js.github.io/mermaid) - Textual Diagrams.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3

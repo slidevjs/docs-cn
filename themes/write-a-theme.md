@@ -16,12 +16,21 @@ $ npm init slidev-theme
 
 一个主题可以自定义以下功能：
 
+<<<<<<< HEAD
 - 全局样式
 - 提供默认配置（字体、配色方案、语法高亮器等）
 - 自定义布局或者重写现有布局
 - 自定义组件或者重写现有组件
 - 扩展 UnoCSS/Windi CSS 配置
 - 配置 Monaco, Prism 等工具
+=======
+- Global styles
+- Provide default configurations (fonts, color schema, highlighters, etc.)
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS configurations
+- Configure tools like Shiki and Monaco
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ## 约定 {#conventions}
 
@@ -122,6 +131,7 @@ html.dark {
 
 ### 语法高亮器 {#highlighter}
 
+<<<<<<< HEAD
 主题中也可以设置代码高亮配色，我们同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki)。欲了解更多，请参阅 [语法高亮文档](/custom/highlighters)。
 
 你可以选择使用其中任意一种或同时使用。可以参考默认主题配置示例中的 [`./styles/code.css`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/styles/code.css) 和 [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts)。
@@ -136,6 +146,9 @@ html.dark {
   }
 }
 ```
+=======
+Syntax highlighting colors are also provided in the theme. For example [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts). Refer to [the syntax highlighting docs](/custom/highlighters) for more information.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### Slidev 版本 {#slidev-version}
 
