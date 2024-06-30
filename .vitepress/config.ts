@@ -30,8 +30,25 @@ const Guide: DefaultTheme.NavItemWithLink[] = [
     link: '/guide/animations',
   },
   {
+<<<<<<< HEAD
     text: '导出',
     link: '/guide/exporting',
+=======
+    text: 'Draggable Elements',
+    link: '/guide/draggable',
+  },
+  {
+    text: 'Presenter Mode',
+    link: '/guide/presenter-mode',
+  },
+  {
+    text: 'Slides Overview',
+    link: '/guide/overview',
+  },
+  {
+    text: 'Drawing & Annotations',
+    link: '/guide/drawing',
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
   },
   {
     text: '静态部署',
@@ -184,11 +201,31 @@ const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildr
     link: '/custom/config-parser',
   },
   {
+<<<<<<< HEAD
     text: '配置快捷键',
     link: '/custom/config-shortcuts',
   },
   {
     text: 'Vue 全局上下文',
+=======
+    text: 'Configure Routes',
+    link: '/custom/config-routes',
+  },
+  {
+    text: 'Configure Shortcuts',
+    link: '/custom/config-shortcuts',
+  },
+  {
+    text: 'Configure Code Runners',
+    link: '/custom/config-code-runners',
+  },
+  {
+    text: 'Configure Context Menu',
+    link: '/custom/config-context-menu',
+  },
+  {
+    text: 'Vue Global Context',
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
     link: '/custom/vue-context',
   },
   {
@@ -276,12 +313,17 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
+<<<<<<< HEAD
       pattern: 'https://github.com/slidevjs/docs-cn/edit/main/:path',
       text: '改进翻译',
     },
 
     outline: {
       label: '本页目录'
+=======
+      pattern: 'https://github.com/slidevjs/slidev/edit/main/docs/:path',
+      text: 'Suggest changes to this page',
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
     },
 
     search: {

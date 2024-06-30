@@ -30,7 +30,11 @@ Slidev 的主题可以通过 `npm` 包的形式来分享和安装。你只需要
 
 ## 对开发者友好 {#developer-friendly}
 
+<<<<<<< HEAD
 Slidev 为开发者提供了一流的代码片段支持。它同时支持 [Prism](https://prismjs.com/) 和 [Shiki](https://github.com/shikijs/shiki) 以获得像素级的完美语法高亮，并且能够随时修改代码。通过内置的 [Monaco 编辑器](https://microsoft.github.io/monaco-editor/)，它还能让你在演示文稿中进行现场编码/演示，并支持自动补全、类型悬停、甚至是 `TypeScript` 类型检查。
+=======
+Slidev provides first-class support for code snippets for developers. It supports [Shiki](https://github.com/shikijs/shiki) to get pixel-perfect syntax highlighting, while still being able to modify the code at any time. With [Monaco editor](https://microsoft.github.io/monaco-editor/) built-in, it also empowers you to do live coding / demonstration in your presentation with autocompletion, type hovering, and even TypeScript type check support.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 欲了解更多，请参阅 [语法高亮](/custom/highlighters) 和 [Monaco 配置](/custom/config-monaco)。
 
@@ -52,7 +56,11 @@ Slidev 提供了内置的录音和摄像头视图。你可以将你的演示文�
 
 ## 可移植性 {#portable}
 
+<<<<<<< HEAD
 用一个命令就可以将你的幻灯片导出为 PDF 或 PNG，甚至是可托管的单页应用程序（SPA），并在任何地方分享它们。
+=======
+Export your slides into PDF, PPTX, PNGs, or even a hostable Single-page Application (SPA) with a single command, and share them anywhere.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 欲了解更多，请参阅 [导出文档](/guide/exporting)。
 

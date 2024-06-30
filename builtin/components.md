@@ -1,6 +1,13 @@
 ---
+<<<<<<< HEAD
 title: 组件
 ---
+=======
+outline: [2, 3]
+---
+
+# Components
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 # 组件 {#components}
 
@@ -22,12 +29,32 @@ Or:
 
 参数：
 
+<<<<<<< HEAD
 - `x1` (`string | number`, required): 起始 x 位置
 - `y1` (`string | number`, required): 起始 y 位置
 - `x2` (`string | number`, required): 终点 x 位置
 - `y2` (`string | number`, required): 终点 y 位置
 - `width` (`string | number`, default: `2`): 线宽
 - `color` (`string`, default: `'currentColor'`): 颜色
+=======
+- `x1` (`string | number`, required): start point x position
+- `y1` (`string | number`, required): start point y position
+- `x2` (`string | number`, required): end point x position
+- `y2` (`string | number`, required): end point x position
+- `width` (`string | number`, default: `2`): line width
+- `color` (`string`, default: `'currentColor'`): line color
+- `two-way` (`boolean`, default: `false`): draw a two-way arrow
+
+### `VDragArrow`
+
+An `Arrow` component that can be dragged.
+
+#### Usage
+
+See https://sli.dev/guide/draggable.html#draggable-arrow
+
+Parameters not related to position are the same as [the `Arrow` component](#arrow).
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### `AutoFitText`
 
@@ -118,6 +145,10 @@ routeAlias: solutions
 
 # Now some solutions!
 ```
+
+### `PoweredBySlidev`
+
+Renders "Powered by Slidev" with a link to the Slidev website.
 
 ### `RenderWhen`
 
@@ -256,6 +287,62 @@ Parameters:
 ### `VAfter`, `VClick` and `VClicks`
 
 请见 https://sli.dev/guide/animations.html
+
+### `VSwitch`
+
+Switch between multiple slots based on clicks.
+
+See https://sli.dev/guide/animations.html#enter-leave
+
+- If the `unmount` prop is set to `true`, the previous slot will be unmounted when switching to the next slot. Default is `false`.
+- Use the `tag` and `childTag` props to change the default tag of the component and its children. Default is `div`.
+- Use the `transition` prop to change the transition effect. Default is `false` (disabled).
+
+### `VDrag`
+
+See https://sli.dev/guide/draggable.html
+
+### `SlidevVideo`
+
+Embed a video.
+
+#### Usage
+
+```md
+<SlidevVideo v-click autoplay controls>
+  <!-- Anything that can go in a HTML video element. -->
+  <source src="/myMovie.mp4" type="video/mp4" />
+  <source src="/myMovie.webm" type="video/webm" />
+  <p>
+    Your browser does not support videos. You may download it
+    <a href="/myMovie.mp4">here</a>.
+  </p>
+</SlidevVideo>
+```
+
+Check [HTML video element's doc](https://developer.mozilla.org/docs/Web/HTML/Element/Video) to see what can be included in this component's slot.
+
+Parameters:
+
+- `controls` (`boolean`, default: `false`): show the video controls
+- `autoplay` (`boolean | 'once'`, default: `false`):
+  - `true` or `'once'`: start the video only once and does not restart it once ended or paused
+  - `false`: never automatically start the video (rely on `controls` instead)
+- `autoreset` (`'slide' | 'click'`, default: `undefined`):
+  - `'slide'`: go back to the start of the video when going back to the slide
+  - `'click'`: go back to the start of the video when going back to the component's click turn
+- `poster` (`string | undefined`, default: `undefined`):
+  - The source of the image to print when the video is not playing.
+- `printPoster` (`string | undefined`, default: `undefined`):
+  - The override for `poster` when printing.
+- `timestamp` (`string | number`, default: `0`):
+  - The starting time of the video in seconds.
+- `printTimestamp` (`string | number | 'last' | undefined`, default: `undefined`):
+  - The override for `timestamp` when printing.
+
+::: warning
+When exporting, the video may fail to load because Chromium does not support some video formats. In this case, you can specify the executable path of the browser. See [Chromium executable path](/guide/exporting.html#executable-path) for more information.
+:::
 
 ### `Youtube`
 

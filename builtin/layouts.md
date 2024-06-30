@@ -42,7 +42,7 @@ title: 布局
 layout: image-left
 
 # the image source
-image: ./path/to/the/image
+image: /path/to/the/image
 
 # a custom class name to the content
 class: my-cool-content-on-the-right
@@ -60,7 +60,7 @@ class: my-cool-content-on-the-right
 layout: image-right
 
 # the image source
-image: ./path/to/the/image
+image: /path/to/the/image
 
 # a custom class name to the content
 class: my-cool-content-on-the-left
@@ -78,7 +78,7 @@ class: my-cool-content-on-the-left
 layout: image
 
 # the image source
-image: ./path/to/the/image
+image: /path/to/the/image
 ---
 ```
 
@@ -87,7 +87,7 @@ image: ./path/to/the/image
 ```yaml
 ---
 layout: image
-image: ./path/to/the/image
+image: /path/to/the/image
 backgroundSize: contain
 ---
 ```
@@ -95,7 +95,7 @@ backgroundSize: contain
 ```yaml
 ---
 layout: image-left
-image: ./path/to/the/image
+image: /path/to/the/image
 backgroundSize: 20em 70%
 ---
 ```

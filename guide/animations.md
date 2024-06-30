@@ -188,15 +188,41 @@ outline: deep
 
 ### 进入和离开
 
+<<<<<<< HEAD
 > 自 v0.43.0 起可用
 
 你也可以通过传递一个数组为 `v-click` 指令指定进入和离开的时间。显示/隐藏周期是不包含结束索引在内的。
+=======
+You can also specify the enter and leave index for the `v-click` directive by passing an array. The end index is exclusive.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```md
-<div v-click="[2, 4]">This will be shown on the 2nd and 3rd clicks, and hide again after the 4th.</div>
+<div v-click.hide="[2, 4]">
+  This will be hidden at click 2 and 3.
+</div>
+<div v-click />
+<div v-click="'[+1, +1]'">
+  This will be shown at click 3, and hidden since click 4.
+</div>
 ```
 
+<<<<<<< HEAD
 ### 自定义总点击次数
+=======
+You can also use `v-switch` to achieve the same effect:
+
+```md
+<v-switch>
+  <template #1> show at click 1, hide at click 2. </template>
+  <template #2> show at click 2, hide at click 5. </template>
+  <template #5-7> show at click 5, hide at click 7. </template>
+</v-switch>
+```
+
+See [`VSwitch` Component](/builtin/components#vswitch) for more details.
+
+### Custom Total Clicks Count
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 默认情况下，Slidev 会计算进入下一张幻灯片前需要多少步。你可以通过 `clicks` frontmatter 选项来覆盖这一设置：
 

@@ -71,7 +71,8 @@ if (typeof window !== 'undefined') {
 }
 
 onMounted(() => {
-  new TypeIt(block.value, {
+  // @ts-expect-error wrong types provided by TypeIt
+  new TypeIt(block.value!, {
     speed: 50,
     startDelay: 900,
     afterStep: () => {
@@ -79,11 +80,17 @@ onMounted(() => {
       code.value = JSON.parse(JSON.stringify(block.value!.innerText.replace('|', '')))
     },
   })
+<<<<<<< HEAD
     .type('<br><span class="token title"># 欢迎使用 Slidev!</span><br><br>', { delay: 400 })
     .type('为开发者打造的演示文稿工具', { delay: 400 })
     .move('START', { speed: 0 })
+=======
+    .type('<br><span class="token title"># Welcome to Slidev!</span><br><br>', { delay: 400 })
+    .type('Presentation Slides for Developers', { delay: 400 })
+    .move(null, { to: 'START', speed: 0 })
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
     .type('<br>')
-    .move('START')
+    .move(null, { to: 'START' })
     .exec(pause)
     .type('<span class="token punctuation">---<br><br>---</span>')
     .move(-4)
@@ -101,7 +108,7 @@ onMounted(() => {
     .type(COVER_URL, { speed: 0 })
     .exec(resume)
     .pause(1000)
-    .move('END', { speed: 0 })
+    .move(null, { to: 'END', speed: 0 })
     .exec(pause)
     .type('<br><br><span class="token punctuation">---</span><br><br>', { delay: 400 })
     .exec(resume)
