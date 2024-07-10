@@ -10,7 +10,7 @@ title: 自定义
 
 ```yaml
 ---
-# 主题id 或 主题包名称
+# 主题 id 或 主题包名称
 # 了解更多：https://sli.dev/themes/use.html
 theme: default
 # 幻灯片的总标题，如果没有指定，那么将以第一张拥有标题的幻灯片的标题作为总标题
@@ -97,22 +97,22 @@ htmlAttrs:
 
 你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) 获取到更多的配置信息。
 
-## Per slide configuration
+## 单页幻灯片配置 {#per-slide-configuration}
 
-In addition, every slide accepts the following configuration in the Frontmatter block:
+此外，每张幻灯片都允许单独声明以下 Frontmatter 配置：
 
-- `clicks` (`number`): Custom clicks count (learn more [here](/guide/animations.html#custom-total-clicks-count)).
-- `disabled` (`boolean`): Completely disable and hide the slide.
-- `hide` (`boolean`): The same as `disabled`.
-- `hideInToc` (`boolean`): Hide the slide for the `<Toc>` components (learn more [here](/builtin/components.html#toc)).
-- `layout` (`string`): Defines the layout component applied to the slide (learn more [here](/guide/syntax.html#front-matter-layouts) and [here](/builtin/layouts.html)).
-- `level` (`number`): Override the title level for the `<Title>` and `<Toc>` components (only if `title` has also been declared, learn more [here](/builtin/components.html#titles)).
-- `preload` (`boolean`, default `true`): Preload the next slide (learn more [here](/guide/animations.html#motion)).
-- `routeAlias` (`string`): Create a route alias that can be used in the URL or with the `<Link>` component (learn more [here](/builtin/components.html#link)).
-- `src` (`string`): Includes a markdown file (learn more [here](/guide/syntax.html#multiple-entries)).
-- `title` (`string`): Override the title for the `<Title>` and `<Toc>` components (learn more [here](/builtin/components.html#titles)).
-- `transition` (`string | TransitionProps`): Defines the transition between the slide and the next one (learn more [here](/guide/animations.html#slide-transitions)).
-- `zoom` (`number`): Custom zoom scale. Useful for slides with a lot of content.
+- `clicks` (`number`)：自定义点击计数（[了解更多](/guide/animations.html#custom-total-clicks-count)）
+- `disabled` (`boolean`)：完全禁用和隐藏幻灯片。
+- `hide` (`boolean`)：作用参考 `disabled` 配置。
+- `hideInToc` (`boolean`)：为 `<Toc>` 组件隐藏幻灯片（[了解更多](/builtin/components.html#toc)）
+- `layout` (`string`)：定义应用于幻灯片的布局组件（查阅 [Markdown 语法](/guide/syntax.html#front-matter-layouts) 和 [布局](/builtin/layouts.html) 文档以了解更多）
+- `level` (`number`)：仅当同时声明了 `title` 配置时，为 `<Title>` 和 `<Toc>` 提供组件级的标题覆盖（[了解更多](/builtin/components.html#titles)）
+- `preload` (`boolean`，默认为 `true`)：预加载下一张幻灯片（[了解更多](/guide/animations.html#motion)）
+- `routeAlias` (`string`)：创建一个路由别名，可用于 URL 或 `<Link>` 组件（[了解更多](/builtin/components.html#link)）
+- `src` (`string`)：引入一个 Markdown 文件（[了解更多](/guide/syntax.html#multiple-entries)）
+- `title` (`string`)：覆盖 `<Title>` 和 `<Toc>` 组件的标题（[了解更多](/builtin/components.html#titles)）
+- `transition` (`string | TransitionProps`)：定义幻灯片与下一张幻灯片之间的过渡（[了解更多](/guide/animations.html#slide-transitions)）
+- `zoom` (`number`)：自定义缩放比例，适用于内容较多的幻灯片。
 
 ## 目录结构 {#directory-structure}
 
