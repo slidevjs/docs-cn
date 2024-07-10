@@ -19,7 +19,7 @@ title: Slidev
 titleTemplate: '%s - Slidev'
 # 幻灯片信息，可以是一个 markdown 字符串
 info: false
-# author field for exported PDF
+# author field for exported PDF or PPTX
 author: Your Name Here
 # keywords field for exported PDF, comma-delimited.
 keywords: keyword1,keyword2
@@ -43,14 +43,30 @@ export:
 highlighter: shiki
 # 在代码块中显示行号
 lineNumbers: false
+<<<<<<< HEAD
 # 启用 monaco 编辑器，可以是 boolean，'dev' 或者 'build'
 monaco: 'dev'
 # 使用 vite-plugin-remote-assets 在本地下载远程资源，可以是 boolean，'dev' 或者 'build'
+=======
+# enable monaco editor, can be boolean, 'dev' or 'build'
+monaco: true
+# Where to load monaco types from, can be 'cdn', 'local' or 'none'
+monacoTypesSource: local
+# explicitly specify extra local packages to import the types for
+monacoTypesAdditionalPackages: []
+# explicitly specify extra local modules as dependency of monaco runnable
+monacoRunAdditionalDeps: []
+# download remote assets in local using vite-plugin-remote-assets, can be boolean, 'dev' or 'build'
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 remoteAssets: false
 # 控制幻灯片中的文本是否可以选择
 selectable: true
 # 启用幻灯片录制，可以是 boolean，'dev' 或者 'build'
 record: dev
+# enable Slidev's context menu, can be boolean, 'dev' or 'build'
+contextMenu: true
+# enable wake lock, can be boolean, 'dev' or 'build'
+wakeLock: true
 
 # 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
 colorSchema: auto
@@ -101,6 +117,7 @@ htmlAttrs:
 
 此外，每张幻灯片都允许单独声明以下 Frontmatter 配置：
 
+<<<<<<< HEAD
 - `clicks` (`number`)：自定义点击计数（[了解更多](/guide/animations.html#custom-total-clicks-count)）
 - `disabled` (`boolean`)：完全禁用和隐藏幻灯片。
 - `hide` (`boolean`)：作用参考 `disabled` 配置。
@@ -113,6 +130,21 @@ htmlAttrs:
 - `title` (`string`)：覆盖 `<Title>` 和 `<Toc>` 组件的标题（[了解更多](/builtin/components.html#titles)）
 - `transition` (`string | TransitionProps`)：定义幻灯片与下一张幻灯片之间的过渡（[了解更多](/guide/animations.html#slide-transitions)）
 - `zoom` (`number`)：自定义缩放比例，适用于内容较多的幻灯片。
+=======
+- `clicks` (`number`): Custom clicks count (learn more [here](/guide/animations.html#custom-total-clicks-count)).
+- `disabled` (`boolean`): Completely disable and hide the slide.
+- `hide` (`boolean`): The same as `disabled`.
+- `hideInToc` (`boolean`): Hide the slide for the `<Toc>` components (learn more [here](/builtin/components.html#toc)).
+- `layout` (`string`): Defines the layout component applied to the slide (learn more [here](/guide/syntax.html#front-matter-layouts) and [here](/builtin/layouts.html)).
+- `level` (`number`): Override the title level for the `<Title>` and `<Toc>` components (only if `title` has also been declared, learn more [here](/builtin/components.html#titles)).
+- `preload` (`boolean`, default `true`): Preload the next slide (learn more [here](/guide/animations.html#motion)).
+- `routeAlias` (`string`): Create a route alias that can be used in the URL or with the `<Link>` component (learn more [here](/builtin/components.html#link)).
+- `src` (`string`): Includes a markdown file (learn more [here](/guide/syntax.html#multiple-entries)).
+- `title` (`string`): Override the title for the `<Title>` and `<Toc>` components (learn more [here](/builtin/components.html#titles)).
+- `transition` (`string | TransitionProps`): Defines the transition between the slide and the next one (learn more [here](/guide/animations.html#slide-transitions)).
+- `zoom` (`number`): Custom zoom scale. Useful for slides with a lot of content.
+- `dragPos` (`Record<string,string>`): Used as positions of draggable elements (learn more [here](/guide/draggable.html).
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ## 目录结构 {#directory-structure}
 

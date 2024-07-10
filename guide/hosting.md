@@ -2,7 +2,11 @@
 
 ## 构建单页应用（SPA） {#build-single-page-application-spa}
 
+<<<<<<< HEAD
 你还可以将幻灯片构建成可部署的单页应用（SPA）：
+=======
+You can build the slides into a self-hostable SPA:
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```bash
 $ slidev build
@@ -12,7 +16,11 @@ $ slidev build
 
 您可以使用 web 服务器（Apache、NGINX、Caddy等）或直接在项目中运行 `npx vite preview` 来测试生成的构建文件：。
 
+<<<<<<< HEAD
 ### 配置基础路径 {#base-path}
+=======
+Then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever other web server or service that you want. Now you can share your slides with the rest of the world with a single link.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。`--base` 选项必须以斜线 `/` 开始和结束；例如：
 
@@ -22,7 +30,11 @@ $ slidev build --base /talks/my-cool-talk/
 
 欲了解更多，请参阅 [Vite 的文档](https://cn.vitejs.dev/guide/build.html#public-base-path)。
 
+<<<<<<< HEAD
 ### 提供可下载的 PDF {#provide-downloadable-pdf}
+=======
+### Provide a Downloadable PDF
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 你可以向浏览幻灯片单页应用的观众提供一个可下载的 PDF。你可以通过如下配置来启用它：
 
@@ -73,7 +85,11 @@ $ slidev build --watch
 
 ### 批量导出 {#multiple-entries}
 
+<<<<<<< HEAD
 你还可以一次导出多个幻灯片。
+=======
+You can build multiple slide decks at once.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```bash
 $ slidev build slides1.md slides2.md
@@ -142,9 +158,16 @@ status = 200
 
 - [GitHub Pages](https://pages.github.com/)
 
+<<<<<<< HEAD
 将你的幻灯片部署到 GitHub Pages：
 - 上传你的仓库里该项目的全部文件（例如，名字为 `name_of_repo`）
 - 创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。在该文件中，用 `name_of_repo` 替换 `<name_of_repo>`。
+=======
+To deploy your slides on GitHub Pages:
+
+- upload all the files of the project in your repo (i.e. named `name_of_repo`)
+- create `.github/workflows/deploy.yml` with the following content to deploy your slides to GitHub Pages via GitHub Actions.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```yaml
 name: Deploy pages
@@ -179,7 +202,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build -- --base /<name_of_repo>/
+        run: npm run build -- --base /${{github.event.repository.name}}/
 
       - uses: actions/configure-pages@v4
 
