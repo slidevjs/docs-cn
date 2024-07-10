@@ -1,0 +1,21 @@
+# Ported from https://github.com/vuejs-translations/docs-zh-cn/blob/main/.github/workflows/autosync.yml
+name: Auto Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # At 00:00.  https://crontab.guru/
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          upstream_repository: slidevjs/docs
+          upstream_branch: main
+          target_repository: slidevjs/docs-cn
+          target_branch: upstream
+          force: false
+          tags: false
