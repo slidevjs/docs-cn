@@ -46,6 +46,6 @@ VS Code 插件提供一些特性，这些特性可以帮你更好的组织幻灯
 
 <TheTweet id="1395333405345148930" />
 
-## Prettier Plugin
+## Prettier 插件 {#prettier-plugin}
 
-Slidev also provides a Prettier plugin to format your slides. You can use it with your favorite editor that supports Prettier. Docs for the plugin can be found [here](https://github.com/slidevjs/prettier-plugin).
+Slidev 还提供了 Prettier 插件来格式化幻灯片。你可以将它与支持 Prettier 的编辑器一起使用。该插件的文档可以在[此处](https://github.com/slidevjs/prettier-plugin)找到。
