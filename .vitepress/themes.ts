@@ -445,6 +445,51 @@ export const community: ThemeInfo[] = [
       'light',
     ],
   },
+  {
+    id: 'slidev-theme-excali-slide',
+    name: 'Excali-slide',
+    description: 'A theme based on Excalidraw with animated highlighter effect',
+    author: {
+      name: 'Filip Hric',
+      link: 'https://github.com/filiphric',
+    },
+    repo: 'https://github.com/filiphric/slidev-theme-excali-slide',
+    previews: [
+      'https://raw.githubusercontent.com/filiphric/excali-slide/main/images/default_slide.png',
+      'https://raw.githubusercontent.com/filiphric/excali-slide/main/images/intro_slide.png',
+    ],
+    tags: [
+      'dark',
+      'light',
+    ],
+  },
+  {
+    id: 'slidev-theme-mint',
+    name: 'mint',
+    description: 'Slidev Theme Mint',
+    author: {
+      name: 'Alfatta Rezqa',
+      link: 'https://github.com/alfatta',
+    },
+    repo: 'https://github.com/alfatta/slidev-theme-mint',
+    previews: [
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/1.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/2.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/3.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/4.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/5.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/6.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/7.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/8.png',
+      'https://cdn.jsdelivr.net/gh/alfatta/slidev-theme-mint/screenshot/9.png',
+    ],
+    tags: [
+      'light',
+      'mint',
+      'green',
+      'cool',
+    ],
+  },
   // Add yours here!
   {
     id: '',

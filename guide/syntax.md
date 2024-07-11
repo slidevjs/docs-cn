@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# Markdown 语法 {#markdown-syntax}
+# Markdown Syntax
 
-幻灯片通过 **一个 markdown 文件** 编写而成 (默认会使用 `./slides.md`)。
+Slides are written within **a single markdown file** (by default `./slides.md`).
 
-你可以像平时编写 markdown 一样使用 [Markdown 的相关特性](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，同时还支持内联的 HTML 和 Vue 组件。也支持使用 [UnoCSS](/custom/config-unocss) 来编写样式。使用 `---` 添加分隔符来分隔你的幻灯片。
+You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides.
 
 ````md
 # Slidev
@@ -27,17 +27,16 @@ console.log('Hello, World!')
 
 # Page 3
 
-You can directly use Windi CSS and Vue components to style and enrich your slides.
+You can directly use UnoCSS CSS and Vue components to style and enrich your slides.
 
 <div class="p-3">
   <Tweet id="20" />
 </div>
 ````
 
-## 前置数据页及布局 {#front-matter-layouts}
+## Frontmatter & Layouts
 
-你可以通过将分隔符转换为 [前置数据块 (front matter)](https://jekyllrb.com/docs/front-matter/)，为每张幻灯片指定布局 (layout) 和其他元数据。每个前置数据页信息都以分隔符 `---` 开始，以另一个分隔符 `---` 结束。两个分隔符之间的文本是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的数据对象。具体示例如下：
-
+Specify layouts and other metadata for each slide by converting the separators into [frontmatter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
 
 <!-- eslint-skip -->
 
@@ -52,7 +51,7 @@ This is the cover page.
 
 ---
 layout: center
-background: './images/background-1.png'
+background: /background-1.png
 class: 'text-white'
 ---
 
@@ -67,14 +66,14 @@ This is a page with the layout `center` and a background image.
 This is a default page without any additional metadata.
 ```
 
-欲了解更多，请参阅 [自定义](/custom/) 章节。
+Refer to [customization](/custom/) for more details.
 
-### Prettier 支持 {#prettier-support}
+### Prettier Support
 
-> 自 v0.44 起可用
+> Available since v0.44
 
-自定义语法可能无法与某些格式化工具（如 Prettier）兼容。
-你可以安装 [Prettier 插件](/guide/editors#prettier-plugin)，或者直接使用 `yaml` 代码块来定义 frontmatter：
+The custom syntax might not be compatible with some formatters like Prettier.
+You can either install the [Prettier Plugin](/guide/editors#prettier-plugin) or use a direct `yaml` code block to define the frontmatter instead:
 
 ````md
 ---
@@ -90,7 +89,7 @@ This is the cover page.
 ```yaml
 # The first yaml block will be treated as the frontmatter of that slide
 layout: center
-background: './images/background-1.png'
+background: /background-1.png
 class: 'text-white'
 ```
 
@@ -99,9 +98,9 @@ class: 'text-white'
 This is a page with the layout `center` and a background image.
 ````
 
-## 代码块 {#code-blocks}
+## Code Blocks
 
-建立 Slidev 一个非常重要的原因就是为了让代码在幻灯片中拥有正确的高亮。如你所见，你可以使用 Markdown 风格的代码块，以使得你的代码高亮。
+One big reason that led to the creation of Slidev was the need to perfectly display code in slides. Consequently, you can use Markdown-flavored code blocks to highlight your code.
 
 ````md
 ```ts
@@ -109,11 +108,11 @@ console.log('Hello, World!')
 ```
 ````
 
-我们支持 [Prism](https://prismjs.com) 和 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。请参阅 [语法高亮器](/custom/highlighters) 获取更多细节。
+Slidev has [Shiki](https://github.com/shikijs/shiki) built in as the syntax highlighter. Refer to [the highlighters section](/custom/highlighters) for more details.
 
-### 特定行高亮 {#line-highlighting}
+### Line Highlighting
 
-如需针对特定行进行高亮展示，只需在 `{}` 内添加对应的行号。行号从 1 开始计算。
+To highlight specific lines, simply add line numbers within brackets `{}`. Line numbers start counting from 1 by default.
 
 ````md
 ```ts {2,3}
@@ -126,20 +125,7 @@ function add(
 ```
 ````
 
-你可以通过在[配置](/guide/syntax#configurations)中设置 `lineNumbers: true` 为所有幻灯片启用行号，或通过设置 `lines: true` 为每个代码块单独启用行号。您还可以为每个代码块设置起始行，并相应地突出显示行，默认值为 1：
-
-````md
-```ts {6,7}{lines:true,startLine:5}
-function add(
-  a: Ref<number> | number,
-  b: Ref<number> | number
-) {
-  return computed(() => unref(a) + unref(b))
-}
-```
-````
-
-如果要在多个步骤中改变高亮，你可以用 `|` 分隔它们：
+To change what's highlighted with multiple clicks, you can use `|` to separate each stage:
 
 ````md
 ```ts {2-3|5|all}
@@ -152,9 +138,9 @@ function add(
 ```
 ````
 
-这段代码会先对 `a: Ref<number> | number` 和 `b: Ref<number> | number` 进行高亮展示，当你点击幻灯片后，会高亮展示 `return computed(() => unref(a) + unref(b))`，最后，会对整个块进行高亮展示。
+This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block.
 
-你可以将行号设置为 `hide` 以隐藏代码块，或设置为 `none` 以不突出显示任何行：
+You can set the line number to `hide` to hide the code block or `none` to not highlight any line:
 
 ````md
 ```ts {hide|none}
@@ -168,10 +154,27 @@ function add(
 ````
 
 ::: tip
-你可以在 [动画指南](./animations#positioning) 中了解更多。
+Learn more in the [click animations guide](./animations#positioning).
 :::
 
-如果代码在一张幻灯片展示不下，你可以传递一个额外的 maxHeight 选项，该选项将为代码段设置固定高度并启用滚动：
+### Line Numbers
+
+You can enable line numbering for all slides by setting `lineNumbers: true` in the global config or enable each code block individually by setting `lines: true`. You can also set the starting line for each code block and highlight the lines accordingly; it defaults to 1:
+
+````md
+```ts {6,7}{lines:true,startLine:5}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+```
+````
+
+### Max Height
+
+If the code doesn't fit into one slide, you use the `maxHeight` to set a fixed height and enable scrolling:
 
 ````md
 ```ts {2|3|7|12}{maxHeight:'100px'}
@@ -186,15 +189,15 @@ const c = add(1, 2)
 ```
 ````
 
-### TwoSlash 交互 {#twoslash-integration}
+### TwoSlash Integration
 
-> 自 v0.46 起可用
+> Available since v0.46
 
-此功能仅在您 [将 `highlighter` 设置为 `shiki`](/custom/highlighter) 时可用。
+This feature is only available when you [set `highlighter` to `shiki`](/custom/highlighters)
 
-[TwoSlash](https://twoslash.netlify.app/) 是一款功能强大的工具，用于在悬停或内联时呈现带有类型信息的 TypeScript 代码块。它对于准备 JavaScript/TypeScript 相关主题的幻灯片非常有用。
+[TwoSlash](https://twoslash.netlify.app/) is a powerful tool for rendering TypeScript code blocks with type information on hover or inlined. It's quite useful for preparing slides for JavaScript/TypeScript-related topics.
 
-要使用它，可以在代码块的语言标识符中添加 `twoslash`：
+To use it, you can add `twoslash` to the code block's language identifier:
 
 ````md
 ```ts twoslash
@@ -205,7 +208,7 @@ const count = ref(0)
 ```
 ````
 
-这会被渲染成：
+It will be rendered as:
 
 ```ts twoslash
 import { ref } from 'vue'
@@ -214,17 +217,18 @@ const count = ref(0)
 //            ^?
 ```
 
-<!-- For the popup to not to overlap the content below -->
+<!-- For the popup to not overlap the content below -->
 <div class="py-20" />
 
 ### Shiki Magic Move
 
-> 自 v0.48 起可用
+> Available since v0.48
 
+[Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) enables you to have a granular transition between code changes, similar to Keynote's Magic Move. You can check [the playground](https://shiki-magic-move.netlify.app/) to see how it works.
 
-通过 [Shiki Magic Move](https://github.com/shikijs/shiki-magic-move)，你可以在代码更改之间进行细粒度过渡，类似于 Keynote 的 Magic Move。你也可以查看[演练场](https://shiki-magic-move.netlify.app/)了解其工作原理。
+<video src="https://github.com/slidevjs/slidev/assets/11247099/79927794-27ba-4342-9911-9996cec889d6" controls rounded shadow w-full></video>
 
-在 Slidev 中，我们将其绑定到[点击系统](/guide/animations#click-animations)。语法是用 <code>````md magic-move</code>（注意是**4**个回车键）将代表每个步骤的多个代码块封装起来，这将被转换成一个代码块，在您点击时变形到每个步骤。
+In Slidev, we bind the magic-move to the [clicks system](/guide/animations#click-animations). The syntax is to wrap multiple code blocks representing each step with <code>````md magic-move</code> (mind it's **4** backticks), this will be transformed into one code block, that morphs to each step as you click.
 
 `````md
 ````md magic-move
@@ -240,10 +244,10 @@ console.log(`Step ${3}` as string)
 ````
 `````
 
-你也可以将 Magic Move 与 [线条突出显示](#line-highlighting) 混合使用，例如：
+It's also possible to mix Magic Move with [line highlighting](#line-highlighting) and [line numbers](#line-numbers), for example:
 
 `````md
-````md magic-move {at:4} // [!code hl]
+````md magic-move {at:4, lines: true} // [!code hl]
 ```js {*|1|2-5} // [!code hl]
 let count = 1
 function add() {
@@ -251,20 +255,20 @@ function add() {
 }
 ```
 
-中间的非代码块将被忽略，你可以添加一些注释。
+Non-code blocks in between as ignored, you can put some comments.
 
-```js
+```js {*}{lines: false} // [!code hl]
 let count = 1
 const add = () => count += 1
 ```
 ````
 `````
 
-<!-- TODO: add an inline demo -->
+### Monaco Editor
 
-### Monaco 编辑器 {#monaco-editor}
+<video src="https://github.com/slidevjs/slidev/assets/11247099/0c6ce681-80d3-4555-93bf-9288ee533462" controls rounded shadow w-full></video>
 
-当你需要在演示文稿中做修改时，只需在语言 id 后添加 `{monaco}` —— 即可将该代码块变为一个功能齐全的 Monaco 编辑器。
+Whenever you want to do some modification in the presentation, simply add `{monaco}` after the language id — it turns the block into a fully-featured Monaco editor!
 
 ````md
 ```ts {monaco}
@@ -272,12 +276,11 @@ console.log('HelloWorld')
 ```
 ````
 
-如果你想了解更多，请参阅 [配置 Monaco](/custom/config-monaco)。
+Learn more about [configuring Monaco](/custom/config-monaco).
 
-#### Monaco Diff
+#### Monaco Diff Editor
 
-
-Monaco 还可以生成两个代码块之间的差异。你可以使用 `{monaco-diff}` 将块变成 [diff Monaco 编辑器](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) 并使用 `~~~` 来分隔代码的原始版本和修改版本！
+Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [Monaco diff editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate the original and modified code!
 
 ````md
 ```ts {monaco-diff}
@@ -289,9 +292,9 @@ console.log('Modified text')
 
 #### Monaco Runner
 
-> 自 v0.48 起可用
+> Available since v0.48
 
-Slidev 还提供了 Monaco Runner 编辑器，可以直接在编辑器中运行代码并查看结果。使用 `{monaco-run}` 可将代码块转化为 Monaco Runner 编辑器。
+Slidev also provides the Monaco Runner Editor, which allows you to run the code directly in the editor and see the result. Use `{monaco-run}` to turn the block into a Monaco Runner Editor.
 
 ````md
 ```ts {monaco-run}
@@ -302,28 +305,48 @@ console.log(distance(3, 4))
 ```
 ````
 
-它将为编辑器提供一个“运行”按钮，并在代码块下方显示结果。你还可以修改代码，然后结果将实时重新计算。
+It provides the editor with a "Run" button, and shows the result of the code execution right below the code block. You may also modify the code and the result will be re-evaluated on the fly.
 
-默认情况下，它会在幻灯片加载时自动运行代码，如果你想始终显式触发运行，可以配置 `{autorun:false}`。
+By default it will automatically run the code when the slide is loaded; if you want to instead explicitly trigger the run, you can set `{autorun:false}`.
 
 ````md
 ```ts {monaco-run} {autorun:false}
-console.log('HelloWorld')
+console.log('Click the play button to run me')
 ```
 ````
 
-Slidev 目前已支持运行 JavaScript 和 TypeScript 代码。有关自定义语言支持，请参阅[自定义代码运行器](/custom/config-code-runners)。
+If you want to only show the output in certain clicks, you can use the `showOutputAt` prop. The value is the same as `v-click`.
 
-## 内联样式 {#embedded-styles}
+````md
+```ts {monaco-run} {showOutputAt:'+1'}
+console.log('Shown after 1 click')
+```
+````
 
-你可以在 Markdown 中直接使用 `<style>` 标签来覆盖**当前幻灯片**的样式。
+Currently Slidev supports running JavaScript and TypeScript code out-of-box. Refer to [Custom Code Runners](/custom/config-code-runners) for custom languages support.
+
+#### Writable Monaco Editor
+
+> Available since v0.49.5
+
+You can also use the [Import Code Snippets](#import-code-snippets) syntax combining with the `{monaco-write}` directive, to link your Monaco Editor with a file on your filesystem. This will allow you to edit the code directly in the editor and save the changes back to the file.
+
+```md
+<<< ./some-file.ts {monaco-write}
+```
+
+When using this, be sure to back up your files beforehand, as the changes will be saved directly to the file.
+
+## Embedded Styles
+
+You can use `<style>` tag in your Markdown directly to override styles for the **current slide**.
 
 ```md
 # This is Red
 
 <style>
 h1 {
-  color: red
+  color: red;
 }
 </style>
 
@@ -332,9 +355,9 @@ h1 {
 # Next slide is not affected
 ```
 
-Markdown 中的 `<style>` 标签均为 [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)。子选择器 (如 `.a > .b`) 在这里不起作用。如果想覆盖全局样式，请查阅 [项目结构](/custom/directory-structure#style)。
+The `<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As a result, a selector with a child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
 
-在 [UnoCSS](/custom/config-unocss) 的支持下，你可以直接使用嵌套的 CSS 和 [指令](https://unocss.dev/transformers/directives)。(例如，`--uno:` 或 `@apply`)
+Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://unocss.dev/transformers/directives) (e.g. `--uno:` or `@apply`)
 
 ```md
 # Slidev
@@ -350,86 +373,102 @@ blockquote {
 </style>
 ```
 
-## 静态资源 {#static-assets}
+## Static Assets
 
-和编写 Markdown 的方式一样，你可以使用本地或远程的 URL 的图片。
+Just like you would do in markdown, you can use images pointing to a remote or local URL.
 
-如果是远程资源，内置的 [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) 将在第一次运行时把它们缓存到磁盘中，即便是大图也能实现立即加载。
+For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them onto the disk at first run, ensuring instant loading even for large images later on.
 
 ```md
 ![Remote Image](https://sli.dev/favicon.png)
 ```
 
-如果是本地资源，请将资源放置到 [`public` 文件夹](/custom/directory-structure.html#public) 中并使用 **/** 开头的 URL 来引用它们。
+For local assets, put them into the [`public` folder](/custom/directory-structure.html#public) and reference them with a **leading slash** (i.e., `/pic.png`, NOT `./pic.png`, which is relative to the working file).
 
 ```md
 ![Local Image](/pic.png)
 ```
 
-如果你想使用自定义的尺寸或样式，可以使用 `<img>` 标签
+If you want to apply custom sizes or styles, you can convert them to the `<img>` tag:
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
 ```
 
-## 备注 {#notes}
+## Notes
 
-你也可以为每张幻灯片编写备注。它们将展示在 [演讲者模式](/guide/presenter-mode) 中，供你在演示时参考。
+You can also create presenter notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
 
-在 Markdown 中，每张幻灯片中的最后一个注释块将被视为备注。
+In Markdown, the last comment block in each slide will be treated as a note.
 
 ```md
 ---
 layout: cover
 ---
 
-# 第 1 页
+# Page 1
 
 This is the cover page.
 
-<!-- 这是一条备注 -->
+<!-- This is a note -->
 
 ---
 
-# 第 2 页
+# Page 2
 
-<!-- 这不是一条备注，因为它在幻灯片内容前 -->
+<!-- This is NOT a note because it precedes the content of the slide -->
 
 The second page
 
 <!--
-这是另一条备注
+This is another note
 -->
 ```
 
-Basic Markdown and HTML are also supported in notes on Presenter renderering.
+Basic Markdown and HTML are also supported in notes when the Presenter renders note content.
 
-### 点击标记 {#click-markers}
+### Click Markers
 
-> 自 v0.48 起可用
+> Available since v0.48
 
-对于某些幻灯片，可能含有较长的注释，导致很难找到你正在查看的位置，我们提供了点击标记，可以突出显示并自动滚动到相应内容的注释部分。将 `[click]` 标记放入笔记中，以便你需要转到另一个[点击](/guide/animations#click-animations)，Slidev 将点击标记之间的内容分开，并在演示者笔记中突出显示它们，与您的幻灯片进度。
+For some slides you might have longer notes that could be hard to find your place. Slidev supports click markers that allow highlighting and auto-scrolling to the section of notes from your corresponding content. Put `[click]` markers at the beginning of any line in your notes for the timing you need to go to another [click](/guide/animations#click-animations). You may skip `n` clicks by using `[click:{n+1}]`. For example:
 
-<!-- TODO: add a video -->
+```md
+<!--
+Content before the first click
 
-## 图标 {#icons}
+[click] This will be highlighted after the first click
 
-Slidev 允许你在 Markdown 中在安装对应包后访问几乎所有的开源的图标集。这得益于 [`unplugin-icons`](https://github.com/antfu/unplugin-icons) 和 [Iconify](https://iconify.design/)。
+Also highlighted after the first click
 
-图标 ID 遵循 [Iconify](https://iconify.design/) 的命名规则 `{collection-name}-{icon-name}`。例如：
+- [click] This list element will be highlighted after the second click
 
-- 使用 [Material Design Icons](https://github.com/Templarian/MaterialDesign)，其规则为 `<mdi-account-circle />` - <mdi-account-circle />
-- 使用 [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)，其规则为 `<carbon-badge />` - <carbon-badge />
-- 使用 [Unicons Monochrome](https://github.com/Iconscout/unicons)，其规则为 `<uim-rocket />` - <uim-rocket />
-- 使用 [Twemoji](https://github.com/twitter/twemoji)，其规则为 `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy />
-- 使用 [SVG Logos](https://github.com/gilbarbara/logos)，其规则为 `<logos-vue />` - <logos-vue />
-- 还有更多...
+[click:3] Last click (skip two clicks)
+-->
+```
 
-你可以通过 [Icônes](https://icones.js.org/) 来浏览访问所有可用的图标。
+Slidev divides the content between the click markers and highlights it in presenter notes, synchronized with your slide progress.
 
-### 调整图标样式 {#styling-icons}
+<video src="https://github.com/slidevjs/slidev/assets/11247099/40014e34-67cd-4830-8c8d-8431754a3672" controls rounded shadow w-full></video>
 
-你可以像其他 HTML 元素一样对图标的样式进行修改。例如：
+## Icons
+
+Slidev allows you to have access to virtually all open-source icon sets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
+
+The naming follows [Iconify](https://iconify.design/)'s convention of `{collection-name}-{icon-name}`. For example:
+
+- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
+- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
+- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
+- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji) - [`@iconify-json/twemoji`](https://npmjs.com/package/@iconify-json/twemoji)
+- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
+- And much more...
+
+Browse and search for all the icons available with [Icônes](https://icones.js.org/).
+
+### Styling Icons
+
+You can style the icons just like other HTML elements. For example:
 
 ```html
 <uim-rocket />
@@ -441,13 +480,13 @@ Slidev 允许你在 Markdown 中在安装对应包后访问几乎所有的开源
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
-## 插槽 {#slots}
+## Slots
 
-> 自 v0.18 开始可用
+> Available since v0.18
 
-一些布局可以使用 [Vue 的具名插槽](https://v3.vuejs.org/guide/component-slots.html)。
+Some layouts can provide multiple contributing points using [Vue's named slots](https://v3.vuejs.org/guide/component-slots.html).
 
-例如，在 [`two-cols` 布局](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue) 中，你可以采用左（`default` 插槽）右（`right` 插槽）两列的布局方式。
+For example, in [`two-cols` layout](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), you can have two columns left (`default` slot) and right (`right` slot) side by side.
 
 ```md
 ---
@@ -481,7 +520,7 @@ This shows on the right
 </div>
 </div>
 
-我们还为具名插槽提供了一个语法糖 `::name::`。下述示例与上述示例的工作原理完全相同。
+We also provide a shorthand syntactical sugar `::name::` for slot name. The following works exactly the same as the previous example.
 
 ```md
 ---
@@ -499,7 +538,7 @@ This shows on the left
 This shows on the right
 ```
 
-你也可以明确的指定默认插槽，并按自定义顺序展示。
+You can also explicitly specify the default slot and provide in the custom order.
 
 ```md
 ---
@@ -519,42 +558,42 @@ This shows on the right
 This shows on the left
 ```
 
-## 导入代码块 {#importing-code-blocks}
+## Import Code Snippets
 
-> 自 v0.47.0 起可用
+> Available since v0.47.0
 
-你可以通过以下语法从现有文件中导入代码块：
+You can import code snippets from existing files via the following syntax:
 
 ```md
 <<< @/snippets/snippet.js
 ```
 
 ::: tip
-`@` 的值对应包的根目录。我们建议你将片段放在“@/snippets”中，以与 Monaco 编辑器兼容。或者你也可以从相对路径导入。
+The value of `@` corresponds to your package's root directory. It's recommended to put snippets in `@/snippets`, for compatibility with the Monaco editor. Alternatively, you can also import from relative paths.
 :::
 
-你也可以使用 [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) 功能来导入代码文件的相应部分：
+You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) to only include the corresponding part of the code file:
 
 ```md
 <<< @/snippets/snippet.js#region-name
 ```
 
-要显式指定导入代码的语言，可以在后面添加语言标识符：
+To explicitly specify the language of the imported code, you can add a language identifier after:
 
 ```md
 <<< @/snippets/snippet.js ts
 ```
 
-同时也支持任何代码块功能，例如[行突出显示](#line-highlighting)和 [Monaco 编辑器](#monaco-editor)：
+Any code block features like [line highlighting](#line-highlighting) and [Monaco editor](#monaco-editor) are also supported:
 
 ```md
 <<< @/snippets/snippet.js {2,3|5}{lines:true}
 <<< @/snippets/snippet.js ts {monaco}{height:200px}
 ```
 
-## 配置 {#configurations}
+## Configurations
 
-依赖的所有配置都可以在 Markdown 文件中定义，比如：
+All configurations can be defined in the Markdown file. For example:
 
 ```md
 ---
@@ -568,25 +607,26 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 This is the cover page.
 ```
 
-欲了解更多，请参阅 [扉页配置](/custom/#frontmatter-configures) 章节。
+Learn more about [frontmatter configurations](/custom/#frontmatter-configures).
 
-## LaTeX {#latex}
+## LaTeX
 
-Slidev 开箱即有对 LaTeX 的支持，得益于 [KaTeX](https://katex.org/)。
+Slidev comes with LaTeX support out-of-box, powered by [KaTeX](https://katex.org/).
 
 <TheTweet id="1392246507793915904" />
 
-### 内联 {#inline}
+### Inline
 
-在你的 LaTeX 语法左右各加一个 `$`，用于内联渲染。
+Surround your LaTeX with a single `$` on each side for inline rendering.
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-### 块 {#block}
+### Block
 
-当使用两个 (`$$`) 时，会进行块级渲染。这种模式会使用更大的符号，并将结果居中。
+Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
+the result.
 
 ```latex
 $$
@@ -603,13 +643,13 @@ $$
 $$
 ```
 
-了解更多：[Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
+Learn more: [Demo](https://sli.dev/demo/starter/11) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-### LaTex 行高亮 {#latex-line-highlighting}
+### LaTex line highlighting
 
-> 自 v0.43.1 起可用
+> Available since v0.43.1
 
-要突出显示特定行，只需在括号 `{}` 内添加行号。默认情况下，行号从 1 开始计数。
+To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
 
 ```latex
 $$ {1|3|all}
@@ -622,13 +662,36 @@ $$ {1|3|all}
 $$
 ```
 
-[代码块](#line-highlighting) 的 `at` 和 `finally` 选项也可用于 LaTeX 代码块。
+The `at` and `finally` options of [code blocks](#line-highlighting) are also available for LaTeX blocks.
 
-## 图表 {#diagrams}
+### Chemical equations
 
-你也可以在 Markdown 的文本描述中创建图形或图表，得益于 [Mermaid](https://mermaid-js.github.io/mermaid)。
+To enable the rendering of chemical equations, the [mhchem](https://github.com/KaTeX/KaTeX/tree/main/contrib/mhchem)
+KaTeX extension needs to be loaded.
 
-被标记为 `mermaid` 的代码块将被转换为图形，例如：
+Create `vite.config.ts` with the following content:
+
+```ts
+import 'katex/contrib/mhchem'
+
+export default {}
+```
+
+Now chemical equations can be rendered properly.
+
+```latex
+$$
+\displaystyle{\ce{B(OH)3 + H2O <--> B(OH)4^- + H+}}
+$$
+```
+
+Learn more: [Syntax](https://mhchem.github.io/MathJax-mhchem)
+
+## Diagrams
+
+You can also create diagrams / graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
+
+Code blocks marked as `mermaid` will be converted to diagrams, for example:
 
 ````md
 ```mermaid
@@ -638,7 +701,7 @@ sequenceDiagram
 ```
 ````
 
-你可以向它传递一个配置项来指定缩放和主题。该对象的语法是 JavaScript 的对象字面量，你需要对字符串添加引号 (`'`)，并在键与键之间使用(`,`)。
+You can further pass an options object to it to specify the scaling and theming. The syntax of the object is a JavaScript object literal, you will need to add quotes (`'`) for strings and use comma (`,`) between keys.
 
 ````md
 ```mermaid {theme: 'neutral', scale: 0.8}
@@ -649,13 +712,13 @@ C -->|Two| E[Result 2]
 ```
 ````
 
-了解更多：[Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+Learn more: [Demo](https://sli.dev/demo/starter/12) | [Mermaid](https://mermaid-js.github.io/mermaid)
 
-## 多个入口点 {#multiple-entries}
+## Multiple Entries
 
-> 自 v0.15 开始可用
+> Available since v0.15
 
-这意味着你可以将 `slides.md` 分割成多个文件，并可以按照你的需求组织它们。
+You can split your `slides.md` into multiple files and organize them however you'd like.
 
 `slides.md` :
 
@@ -682,9 +745,9 @@ Inline content will be ignored
 This page is from another file
 ```
 
-### 合并 Frontmatter {#frontmatter-merging}
+### Frontmatter Merging
 
-你可以为主入口点和外部 markdown 页面提供 frontmatter。如果其中有相同的 key，**主入口点的 key 拥有更高的优先级**。例如：
+You can provide frontmatter instructions from both your main entry and external markdown pages. If there are duplicate keys in them, the ones from the **main entry have the higher priority**. For example:
 
 `slides.md` :
 
@@ -709,7 +772,7 @@ background: https://sli.dev/foo.png
 Cover Page
 ```
 
-其效果最终与下述页面相同：
+They will end up being equivalent to the following page:
 
 ```md
 ---
@@ -723,9 +786,9 @@ class: text-center
 Cover Page
 ```
 
-### 页面复用 {#page-reusing}
+### Page Reuse
 
-有了多入口点的加持，对页面进行重用变得很容易。例如：
+With the multi-entries support, reusing pages could be straightforward. For example:
 
 ```yaml
 ---
@@ -746,13 +809,13 @@ src: ./content.md
 ---
 ```
 
-## MDC 格式 {#mdc-syntax}
+## MDC Syntax
 
-> 自 v0.43.0 起可用
+> Available since v0.43.0
 
-Slidev 支持由 [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc) 提供的可选 [MDC（Markdown 组件）语法](https://content.nuxtjs.org/guide/writing/mdc)。
+Slidev supports optional [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
 
-您可以在标记符文件的 frontmatter 中添加 `mdc: true` 来启用它。
+You can enable it by adding `mdc: true` to the frontmatter of your markdown file.
 
 ```mdc
 ---
@@ -768,4 +831,4 @@ The **default** slot
 ::
 ```
 
-了解有关 [语法](https://content.nuxt.com/guide/writing/mdc) 的更多信息。
+Learn more about [MDC Syntax](https://content.nuxt.com/guide/writing/mdc).

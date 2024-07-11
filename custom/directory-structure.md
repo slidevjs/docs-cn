@@ -1,34 +1,30 @@
----
-title: 项目结构
----
+# Directory Structure
 
-# 项目结构 {#directory-structure}
+Slidev employs some directory structure conventions to minimize the configuration surface and to make the functionality extensions flexible and intuitive.
 
-Slidev 对项目结构进行了一些约定，以尽量减少配置项，使功能扩展更加灵活直观。
-
-基本结构如下所示：
+The basic structure is as follows:
 
 ```bash
 your-slidev/
-  ├── components/       # 自定义组件
-  ├── layouts/          # 自定义布局
-  ├── public/           # 静态资源
-  ├── setup/            # 自定义 setup / hooks
-  ├── styles/           # 自定义样式
-  ├── index.html        # 注入的 index.html
-  ├── slides.md         # 幻灯片主入口
-  └── vite.config.ts    # 扩展 vite 配置
+  ├── components/       # custom components
+  ├── layouts/          # custom layouts
+  ├── public/           # static assets
+  ├── setup/            # custom setup / hooks
+  ├── styles/           # custom style
+  ├── index.html        # injections to index.html
+  ├── slides.md         # the main slides entry
+  └── vite.config.ts    # extending vite config
 ```
 
-以上所有均为可选。
+All of them are optional.
 
-## 组件 {#components}
+## Components
 
-约定：`./components/*.{vue,js,ts,jsx,tsx,md}`
+Conventions: `./components/*.{vue,js,ts,jsx,tsx,md}`
 
-此目录中的组件可以在幻灯片的 Markdown 中直接使用，其组件名与文件名相同。
+Components inside this directory can be directly used in the slides Markdown with the same component name as the file name.
 
-示例：
+For example:
 
 ```bash
 your-slidev/
@@ -52,13 +48,13 @@ your-slidev/
 </hello-world>
 ```
 
-此特性得益于 [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)。
+This feature is powered by [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components), learn more there.
 
-Slidev 还提供了一些 [内置组件](/builtin/components) 供你选择。
+Slidev also provides some [built-in components](/builtin/components) for you to use.
 
-## 布局 {#layouts}
+## Layouts
 
-约定：`./layouts/*.{vue,js,ts,jsx,tsx}`
+Conventions: `./layouts/*.{vue,js,ts,jsx,tsx}`
 
 ```
 your-slidev/
@@ -68,7 +64,7 @@ your-slidev/
       └── my-cool-theme.vue
 ```
 
-你可以为布局文件使用任何文件名。然后只需在你的 YAML 头部使用文件名引用你的布局。
+You can use any filename for your layout. You then reference your layout in your YAML header using the filename.
 
 ```yaml
 ---
@@ -76,9 +72,9 @@ layout: my-cool-theme
 ---
 ```
 
-如果你提供的布局与内置布局或主题布局重名的话，你的自定义布局将优先于内置/主题布局。优先级为 `本地 > 主题 > 内置`。
+If the layout you provide has the same name as a built-in layout or a theme layout, your custom layout will take precedence over the built-in/theme layout. The priority order is `local > theme > built-in`.
 
-在布局组件中，你可以使用 `<slot/>` 展示幻灯片内容。比如：
+In the layout component, use `<slot/>` for the slide content. For example:
 
 ```html
 <!-- default.vue -->
@@ -89,17 +85,17 @@ layout: my-cool-theme
 </template>
 ```
 
-## 静态资源 {#public}
+## Public
 
-约定：`./public/*`
+Conventions: `./public/*`
 
-开发过程中，此目录中的资源文件将在 `/` 下提供，并会按原样复制到 dist 目录的根目录中。欲了解更多，请参阅 [Vite 的 `public` 目录](https://cn.vitejs.dev/guide/assets.html#the-public-directory)。
+Assets in this directory will be served at root path `/` during dev, and copied to the root of the dist directory as-is. Read more about [Vite's `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory).
 
-## 样式 {#style}
+## Style
 
-约定：`./style.css` | `./styles/index.{css,js,ts}`
+Conventions: `./style.css` | `./styles/index.{css,js,ts}`
 
-遵循上述约定的文件将被注入到 App 的根目录中。如果你需要引入多个 css 入口，你可以按如下方式创建结构并自行管理引入顺序。
+Files following this convention will be injected to the App root. If you need to import multiple CSS entries, you can create the following structure and manage the import order yourself.
 
 ```bash
 your-slidev/
@@ -119,7 +115,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-样式得益于 [UnoCSS](https://unocss.dev/) 和 [PostCSS](https://postcss.org/)，你拥有开箱即用的 css 嵌套和 [at-directives](https://unocss.dev/transformers/directives#apply)。示例：
+Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use CSS nesting and [at-directives](https://unocss.dev/transformers/directives#apply) out-of-box. For example:
 
 <!-- eslint-skip -->
 
@@ -141,15 +137,15 @@ import './layouts.css'
 }
 ```
 
-[了解更多关于此语法的信息](https://unocss.dev/transformers/directives#apply)。
+[Learn more about the syntax](https://unocss.dev/transformers/directives#apply).
 
-## `index.html` {#index-html}
+## `index.html`
 
-约定：`index.html`
+Conventions: `index.html`
 
-`index.html` 提供了向主 `index.html` 中注入 meta 标签以及 scripts 标签的能力。
+The `index.html` provides the ability to inject meta tags and/or scripts to the main `index.html`
 
-例如，对于以下自定义 `index.html` 来说：
+For example, for the following custom `index.html`:
 
 ```html
 <!-- ./index.html -->
@@ -163,7 +159,7 @@ import './layouts.css'
 </body>
 ```
 
-最终部署的 `index.html` 效果如下：
+The final hosted `index.html` will be:
 
 ```html
 <!DOCTYPE html>
@@ -185,8 +181,8 @@ import './layouts.css'
 </html>
 ```
 
-## 全局图层 {#global-layers}
+## Global Layers
 
-约定：`global-top.vue` | `global-bottom.vue`
+Conventions: `global-top.vue` | `global-bottom.vue`
 
-了解更多：[全局图层](/custom/global-layers)
+Learn more: [Global Layers](/custom/global-layers)

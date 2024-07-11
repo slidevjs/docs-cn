@@ -1,44 +1,41 @@
----
-title: 编写扩展插件
----
+# Write an Addon
 
-# 编写扩展插件 {#write-an-addon}
+> Available since v0.32.1
 
-> 自 v0.32.1 起可用
+## Capability
 
-## 扩展插件能力 {#capability}
+An addon can contribute to the following points:
 
+- Global styles (use with caution as it has more role than [themes](/themes/use))
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS CSS configurations
+- Configure tools like Monaco and Prism
 
-- 全局样式（谨慎使用，它更通常作为 [主题](/themes/use) 的能力）
-- 自定义布局或者重写现有布局
-- 自定义组件或者重写现有组件
-- 扩展 UnoCSS/Windi CSS 配置
-- 配置 Monaco、Prism 等工具
+## Conventions
 
-## 约定 {#conventions}
+Addons are published to the NPM registry, and they should follow the conventions below:
 
-扩展插件发布到 npm，需遵循以下约定：
+- Package name should start with `slidev-addon-`, for example: `slidev-addon-awesome`
+- Add `slidev-addon` and `slidev` in the `keywords` field of your `package.json`
 
-- 包名应该以 `slidev-addon-` 开头，例如：`slidev-addon-awesome`
-- 在主题 `package.json` 的 `keywords` 中添加 `slidev-addon` 和 `slidev` 关键词
+## Setup
 
-## 配置说明 {#setup}
+### Initialization
 
-### 初始化 {#initialization}
+To create your addon, start by creating a directory with a `package.json` file (you can use `npm init`).
 
-如果想要创建扩展插件，请首先创建一个带有 `package.json` 文件的目录（你可以使用 `npm init`）。
-
-然后，安装 Slidev 依赖项：
+Then, install Slidev dependencies:
 
 ```bash
 $ npm install -D @slidev/cli
 ```
 
-### 测试 {#testing}
+### Testing
 
-如果想要测试自己编写的扩展插件，你可以新建 `example.md` 并在其内填写一些内容。
+To set up the testing playground for your addon, you can create an `example.md` file with some content.
 
-你还可以在 `packages.json` 增加一些脚本以方便测试：
+And optionally, you can also add some scripts to your `packages.json`
 
 ```json
 // package.json
@@ -52,15 +49,15 @@ $ npm install -D @slidev/cli
 }
 ```
 
-你只需在命令行中执行 `npm publish` 就可以发布自己的扩展插件，并不需要额外的构建过程（这意味着你可以直接发布 `.vue` 和 `.ts` 文件，Slidev 可以直接识别它们）。
+To publish your addon, simply run `npm publish` and you are good to go. There is no build process required (which means you can directly publish `.vue` and `.ts` files, Slidev is smart enough to understand them).
 
-扩展插件的约定与本地自定义相一致，请参阅 [命名约定](/custom/)。
+Addon contribution points follow the same conventions as local customization, please refer to [the docs for the naming conventions](/custom/).
 
-## 扩展插件原数据 {#addon-metadata}
+## Addon metadata
 
-### Slidev 版本 {#slidev-version}
+### Slidev Version
 
-如果主题依赖于 Slidev 的某项新特性，你可以为主题设置最小的 Slidev 版本，以使你的主题可以正常工作：
+If the addon is relying on a specific feature of Slidev that is newly introduced, you can set the minimal Slidev version required to have your addon working properly:
 
 ```json
 // package.json
@@ -71,4 +68,4 @@ $ npm install -D @slidev/cli
 }
 ```
 
-如果用户使用的是旧版本的 Slidev，将会抛出错误。
+If users are using older versions of Slidev, an error will be thrown.

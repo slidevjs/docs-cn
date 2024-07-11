@@ -1,14 +1,10 @@
----
-title: Vue 全局上下文
----
+# Vue Global Context
 
-# Vue 全局上下文 {#vue-global-context}
+Slidev injected a [global Vue context](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev` for advanced conditions or navigation controls.
 
-Slidev 注入了一个 [全局的 Vue 上下文](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev`，它用于高级的条件判断或导航控制。
+## Usage
 
-## 用法 {#usage}
-
-你可以在你的 markdown 文件以及 Vue 模板的任何位置使用 ["Mustache" 语法](https://v3.vuejs.org/guide/template-syntax.html#interpolations) 访问它。
+You can access it anywhere in your markdown and Vue template, with the ["Mustache" syntax](https://v3.vuejs.org/guide/template-syntax.html#interpolations).
 
 ```md
 <!-- slides.md -->
@@ -27,11 +23,11 @@ Current page is: {{ $slidev.nav.currentPage }}
 </template>
 ```
 
-## 属性 {#properties}
+## Properties
 
 ### `$clicks`
 
-`$clicks` hold a number of clicks on the current slide. Can be used conditionally to show different content on clicks.
+`$clicks` hold the number of clicks on the current slide. Can be used conditionally to show different content on clicks.
 
 ```html
 <div v-if="$clicks > 3">Content</div>
@@ -49,7 +45,7 @@ Is current page active: {{ $page === $slidev.nav.currentPage }}
 
 ### `$renderContext`
 
-`$renderContext` holds the current render context, can be `slide`, `overview`, `presenter` or `previewNext`
+`$renderContext` holds the current render context, which can be `slide`, `overview`, `presenter` or `previewNext`
 
 ```md
 <div v-if="$renderContext === 'slide'">
@@ -59,29 +55,29 @@ Is current page active: {{ $page === $slidev.nav.currentPage }}
 
 ### `$slidev.nav`
 
-一个响应式对象，它拥有幻灯片导航的属性以及控制权。例如：
+A reactive object holding the properties and controls of the slide navigation. For examples:
 
 ```js
-$slidev.nav.next() // 执行下一步
+$slidev.nav.next() // go next step
 
-$slidev.nav.nextSlide() // 跳转下一张幻灯片 (忽略 v-clicks)
+$slidev.nav.nextSlide() // go next slide (skip v-clicks)
 
-$slidev.nav.go(10) // 去到幻灯片的第 10 页
+$slidev.nav.go(10) // go slide #10
 ```
 
 ```js
-$slidev.nav.currentPage // 获取当前幻灯片的页数
+$slidev.nav.currentPage // current slide number
 
 $slidev.nav.currentLayout // current layout id
 ```
 
-欲了解更多可用属性，请参阅 [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts) 的 exports。
+For more properties available, refer to the [`SlidevContextNav` interface](https://github.com/slidevjs/slidev/blob/main/packages/client/composables/useNav.ts).
 
 > Note: `$slidev.nav.clicks` is a global state while `$clicks` is local to each slide. It's recommended to **use `$clicks` over `$slidev.nav.clicks`** to avoid clicks changed been triggered on page transitions.
 
 ### `$slidev.configs`
 
-一个响应式对象，它存储着你 `slides.md` 中解析后的 [第一个 frontmatter 中的配置](/custom/#frontmatter-configures)。例如：
+A reactive object holding the parsed [configurations in the first frontmatter](/custom/#frontmatter-configures) of your `slides.md`. For example:
 
 ```yaml
 ---
@@ -93,9 +89,9 @@ title: My First Slidev!
 {{ $slidev.configs.title }} // 'My First Slidev!'
 ```
 
-### `$slidev.themeConfigs` {#slidev-themeconfigs}
+### `$slidev.themeConfigs`
 
-一个响应式对象，它存储着解析后的主题配置。
+A reactive object holding the parsed theme configurations.
 
 ```yaml
 ---
@@ -114,3 +110,42 @@ themeConfig:
 > Available since v0.43.0
 
 A shorthand of `$slidev.nav`.
+
+## Composable Usage
+
+> Available since v0.48.0
+
+### Context
+
+If you want to get the context programmatically (also type-safely), you can import composables from `@slidev/client`:
+
+```vue
+<script setup>
+import { onSlideEnter, onSlideLeave, useDarkMode, useIsSlideActive, useNav, useSlideContext } from '@slidev/client'
+
+const { $slidev } = useSlideContext()
+const { currentPage, currentLayout, currentSlideRoute } = useNav()
+const { isDark } = useDarkMode()
+const isActive = useIsSlideActive()
+onSlideEnter(() => { /* ... */ })
+onSlideLeave(() => { /* ... */ })
+// ...
+</script>
+```
+
+> [!NOTE]
+> Previously, you might see the usage of importing nested modules like `import { isDark } from '@slidev/client/logic/dark.ts'`, this is **NOT RECOMMENDED** as they are internal implementation details and might be broken in the future. Try always to use the public API from `@slidev/client` whenever possible.
+
+### Types
+
+If you want to get a type programmatically, you can import types like `TocItem` from `@slidev/types`:
+
+```vue
+<script setup>
+import type { TocItem } from '@slidev/types'
+
+function tocFunc(tree: TocItem[]): TocItem[] {
+  // ...
+}
+</script>
+```

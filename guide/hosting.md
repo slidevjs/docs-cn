@@ -1,30 +1,32 @@
-# 静态部署 {#static-hosting}
+# Static Hosting
 
-## 构建单页应用（SPA） {#build-single-page-application-spa}
+## Build Single Page Applications (SPA)
 
-你还可以将幻灯片构建成可部署的单页应用（SPA）：
+You can build the slides into a self-hostable SPA:
 
 ```bash
 $ slidev build
 ```
 
-生成的应用程序会保存在 `dist/` 目录下，然后你可以将该目录部署在 [GitHub Pages](https://pages.github.com/)，[Netlify](https://netlify.app/)，[Vercel](https://vercel.com/)，等你想部署的任何地方。接着，就可以将你幻灯片的链接分享给任何人。
+The generated application will be available under `dist/`.
 
-您可以使用 web 服务器（Apache、NGINX、Caddy等）或直接在项目中运行 `npx vite preview` 来测试生成的构建文件：。
+You can test the generated build using a web server (Apache, NGINX, Caddy...etc.) or in the project you can directly run: `npx vite preview`.
 
-### 配置基础路径 {#base-path}
+Then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever other web server or service that you want. Now you can share your slides with the rest of the world with a single link.
 
-如果你需要将幻灯片部署在网站的子路由下，你可以使用 `--base` 选项来进行修改。`--base` 选项必须以斜线 `/` 开始和结束；例如：
+### Base Path
+
+To deploy your slides under sub-routes, you will need to pass the `--base` option. The `--base` path **must begin and end** with a slash `/`; for example:
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
 ```
 
-欲了解更多，请参阅 [Vite 的文档](https://cn.vitejs.dev/guide/build.html#public-base-path)。
+Refer to [Vite's documentation](https://vitejs.dev/guide/build.html#public-base-path) for more details.
 
-### 提供可下载的 PDF {#provide-downloadable-pdf}
+### Provide a Downloadable PDF
 
-你可以向浏览幻灯片单页应用的观众提供一个可下载的 PDF。你可以通过如下配置来启用它：
+You can provide a downloadable PDF to the viewers of your SPA with the following config:
 
 ```md
 ---
@@ -32,9 +34,9 @@ download: true
 ---
 ```
 
-配置好后，Slidev 将生成一个 PDF 文件，并在单页应用中展示下载按钮。
+Slidev will generate a PDF file along with the build, and a download button will be displayed in the SPA.
 
-你也可以为 PDF 提供一个自定义的 URL。在这种情况下，PDF 的渲染过程将被忽略。
+You can also provide a custom URL for the PDF. In that case, the rendering process will be skipped.
 
 ```md
 ---
@@ -42,7 +44,7 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
-你也可以通过 CLI 的 `--download` 选项来指定（仅限 `boolean`）。
+This can also be done with the CLI option `--download` (`boolean` only).
 
 ```bash
 $ slidev build --download
@@ -50,61 +52,59 @@ $ slidev build --download
 
 When using the download option, you can also provide the export options:
 
-除了使用 `--download` 选项，你还可以提供导出选项：
+- By using [CLI export options](/guide/exporting.html)
+- Or [frontmatter export options](/custom/#frontmatter-configures)
 
-- 使用 [CLI 导出选项](/guide/exporting.html)
-- 或 [frontmatter 导出选项](/custom/#frontmatter-configures)
+### Output directory
 
-### 输出目录 {#output-directory}
-
-你可以使用 `--out` 来更改输出目录。
+You can change the output directory using `--out`.
 
 ```bash
 $ slidev build --out my-build-folder
 ```
 
-### 监听模式 {#watch-mode}
+### Watch mode
 
-通过传递 `--watch` 选项，构建会以监听模式运行，并在源代码发生变化时进行更新。
+By passing the `--watch` option the build will run in watch mode and will rebuild anytime the source changes.
 
 ```bash
 $ slidev build --watch
 ```
 
-### 批量导出 {#multiple-entries}
+### Multiple entries
 
-你还可以一次导出多个幻灯片。
+You can build multiple slide decks at once.
 
 ```bash
 $ slidev build slides1.md slides2.md
 ```
 
-或者
+Or
 
 ```bash
 $ slidev build *.md
 ```
 
-在这种情况下，每个输入文件都将生成自己的构建文件夹。
+In this case, each input file will generate a folder containing the build in the output directory.
 
-### 示例 {#examples}
+## Examples
 
-下面是几个导出为单页应用的示例：
+Here are a few examples of the exported SPA:
 
 - [Starter Template](https://sli.dev/demo/starter)
 - [Composable Vue](https://talks.antfu.me/2021/composable-vue) by [Anthony Fu](https://github.com/antfu)
 
-欲了解更多，请参阅 [Showcases](/showcases)。
+For more, check out [Showcases](/showcases).
 
-## 部署 {#deploy}
+## Hosting
 
-我们建议使用 `npm init slidev@latest` 来为你初始化你的项目，它包含了部署服务开箱即用的配置文件。
+We recommend using `npm init slidev@latest` to scaffold your project, which contains the necessary configuration files for hosting services out-of-the-box.
 
 ### Netlify
 
 - [Netlify](https://netlify.com/)
 
-在你项目的根目录创建 `netlify.toml` 文件，其内容如下：
+Create `netlify.toml` in your project root with the following content.
 
 ```toml
 [build]
@@ -120,13 +120,13 @@ to = '/index.html'
 status = 200
 ```
 
-接着，去 Netlify 的仪表盘，选择对应仓库并创建新的站点。
+Then go to your Netlify dashboard and create a new site with the repository.
 
 ### Vercel
 
 - [Vercel](https://vercel.com/)
 
-在你项目的根目录创建 `vercel.json` 文件，其内容如下：
+Create `vercel.json` in your project root with the following content.
 
 ```json
 {
@@ -136,15 +136,16 @@ status = 200
 }
 ```
 
-接着，去 Vercel 的仪表盘，选择对应仓库并创建新的站点。
+Then go to your Vercel dashboard and create a new site with the repository.
 
 ### GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
-将你的幻灯片部署到 GitHub Pages：
-- 上传你的仓库里该项目的全部文件（例如，名字为 `name_of_repo`）
-- 创建 `.github/workflows/deploy.yml` 文件，并包含如下内容。然后通过 Github Action 将你的幻灯片部署到 Github Pages。在该文件中，用 `name_of_repo` 替换 `<name_of_repo>`。
+To deploy your slides on GitHub Pages:
+
+- upload all the files of the project in your repo (i.e. named `name_of_repo`)
+- create `.github/workflows/deploy.yml` with the following content to deploy your slides to GitHub Pages via GitHub Actions.
 
 ```yaml
 name: Deploy pages
@@ -179,7 +180,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build -- --base /<name_of_repo>/
+        run: npm run build -- --base /${{github.event.repository.name}}/
 
       - uses: actions/configure-pages@v4
 
@@ -192,5 +193,5 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-- 在你的仓库里，选择 “Settings > Pages”。在 “Build and deployment” 下，选择 “Deploy from a branch”，选择 “gh-pages” 和 “root”，点击保存。
-- 最终，在全部工作流执行之后，在 “Settings > Pages” 下会出现幻灯片的链接。
+- In your repository, go to Settings>Pages. Under "Build and deployment", select "GitHub Actions".
+- Finally, after all workflows are executed, a link to the slides should appear under Settings>Pages.

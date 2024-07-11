@@ -1,6 +1,6 @@
-# 案例展示
+# Showcases
 
-使用 Slidev 制作的演示文档/演讲。
+Talks / Presentations using Slidev.
 
 <!-- Edit in ./docs/.vitepress/showcases.ts -->
 <ShowCases />

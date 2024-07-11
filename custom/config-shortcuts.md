@@ -1,18 +1,14 @@
----
-title: 配置快捷键
----
+# Configure Shortcuts
 
-# 配置快捷键 {#configure-shortcuts}
-
-> 自 v0.20 起可用
+> Available since v0.20
 
 > Since v0.35.6 (excluded), you decide which base shortcuts to keep (see `...base,` below).
 
 <Environment type="client" />
 
-## 开始使用 {#getting-started}
+## Getting started
 
-创建一份包含以下内容的 `./setup/shortcuts.ts` 文件：
+Create `./setup/shortcuts.ts` with the following content:
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -35,13 +31,13 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 })
 ```
 
-在配置时，你可以添加或者一些自定义的快捷键。例如，上面的配置为 <kbd>enter</kbd> 绑定了下一动画或幻灯片，为 <kbd>backspace</kbd> 绑定了上一动画或幻灯片。
+With the setup, you can provide the custom setting for shortcuts mentioned in [Navigation](/guide/navigation#navigation-bar). The above configuration binds the next animation or slide to <kbd>enter</kbd> and the previous animation or slide to <kbd>backspace</kbd>.
 
-配置函数会接收一个封装有导航函数的对象参数，返回一个快捷键配置信息的数组，你可以参考其类型定义获得详细信息。
+The configuration function receives an object with some navigation methods, and returns an array containing some shortcut configuration. Refer to the type definitions for more details.
 
-## 高级键盘绑定 {#advanced-key-binding}
+## Advanced key binding
 
-该 `key` 仅支持字符串类型，但你也可以使用如下约定绑定多个快捷键：
+The `key` type only allows for strings, but you can still bind multiple keys by using following convention:
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -59,9 +55,9 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 })
 ```
 
-## 高级导航功能 {#advanced-navigation-features}
+## Advanced navigation features
 
-导航操作 `nav` 比下一张或上一张幻灯片这样的基础功能更加强大。请参阅下面的用例:
+The `nav` navigation operations allow you to access some functionalities than the basic _next slide_ or _previous slide_. See the following for use cases:
 
 ```ts
 import { NavOperations, defineShortcutsSetup } from '@slidev/types'
@@ -81,4 +77,4 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 })
 ```
 
-关于键盘事件，请参考 [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/)。
+Refer to [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) for more details about key pressed event.

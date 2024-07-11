@@ -1,57 +1,64 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
-
-const CURRENT_VERSION = '0.48.0-beta.22'
+import { version } from '../../package.json'
 
 const Guide: DefaultTheme.NavItemWithLink[] = [
   {
-    text: '为什么选择 Slidev',
+    text: 'Why Slidev',
     link: '/guide/why',
   },
   {
-    text: '开始使用',
+    text: 'Getting Started',
     link: '/guide/',
   },
   {
-    text: '安装',
+    text: 'Installation',
     link: '/guide/install',
   },
   {
-    text: 'Markdown 语法',
+    text: 'Markdown Syntax',
     link: '/guide/syntax',
   },
   {
-    text: '导航',
+    text: 'Navigation',
     link: '/guide/navigation',
   },
   {
-    text: '动画',
+    text: 'Animations',
     link: '/guide/animations',
   },
   {
-    text: '导出',
-    link: '/guide/exporting',
+    text: 'Draggable Elements',
+    link: '/guide/draggable',
   },
   {
-    text: '静态部署',
-    link: '/guide/hosting',
-  },
-  {
-    text: '演讲录制',
-    link: '/guide/recording',
-  },
-  {
-    text: '演讲者模式',
+    text: 'Presenter Mode',
     link: '/guide/presenter-mode',
   },
   {
-    text: '绘图与批注',
+    text: 'Slides Overview',
+    link: '/guide/overview',
+  },
+  {
+    text: 'Drawing & Annotations',
     link: '/guide/drawing',
   },
   {
-    text: '编辑器整合',
+    text: 'Editor Integrations',
     link: '/guide/editors',
+  },
+  {
+    text: 'Record Presentation',
+    link: '/guide/recording',
+  },
+  {
+    text: 'Exporting',
+    link: '/guide/exporting',
+  },
+  {
+    text: 'Static Hosting',
+    link: '/guide/hosting',
   },
   {
     text: 'FAQ',
@@ -61,193 +68,163 @@ const Guide: DefaultTheme.NavItemWithLink[] = [
 
 const BuiltIn: DefaultTheme.NavItemWithLink[] = [
   {
-    text: '组件',
+    text: 'Components',
     link: '/builtin/components',
   },
   {
-    text: '布局',
+    text: 'Layouts',
     link: '/builtin/layouts',
   },
 ]
 
 const Theme: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   {
-    text: '使用主题',
+    text: 'Use Theme',
     link: '/themes/use',
   },
   {
-    text: '主题集合',
+    text: 'Theme Gallery',
     link: '/themes/gallery',
   },
   {
-    text: '编写主题',
+    text: 'Write a Theme',
     link: '/themes/write-a-theme',
   },
 ]
 
 const Addon: DefaultTheme.NavItemWithLink[] = [
   {
-    text: '使用扩展插件',
+    text: 'Use Addon',
     link: '/addons/use',
   },
   {
-    text: '编写扩展插件',
+    text: 'Write an Addon',
     link: '/addons/write-an-addon',
-  },
-]
-
-const Translations = [
-  {
-    text: '简体中文',
-  },
-  {
-    text: 'English',
-    link: 'https://sli.dev{{pathname}}',
-  },
-  {
-    text: 'Français',
-    link: 'https://fr.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Español',
-    link: 'https://es.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Русский',
-    link: 'https://ru.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Việt Nam',
-    link: 'https://vn.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Deutsch',
-    link: 'https://de.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Português (BR)',
-    link: 'https://br.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Ελληνικά',
-    link: 'https://el.sli.dev{{pathname}}',
-  },
-  {
-    text: '日本語',
-    link: 'https://ja.sli.dev{{pathname}}',
   },
 ]
 
 const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   {
-    text: '自定义',
+    text: 'Customizations',
     link: '/custom/',
   },
   {
-    text: '项目结构',
+    text: 'Directory Structure',
     link: '/custom/directory-structure',
   },
   {
-    text: '字体',
+    text: 'Fonts',
     link: '/custom/fonts',
   },
   {
-    text: '语法高亮器',
+    text: 'Highlighters',
     link: '/custom/highlighters',
   },
   {
-    text: '配置 Vue',
+    text: 'Configure Vue',
     link: '/custom/config-vue',
   },
   {
-    text: '配置 Vite',
+    text: 'Configure Vite',
     link: '/custom/config-vite',
   },
   {
-    text: '配置 UnoCSS',
+    text: 'Configure UnoCSS',
     link: '/custom/config-unocss',
   },
   {
-    text: '配置 Monaco',
+    text: 'Configure Monaco',
     link: '/custom/config-monaco',
   },
   {
-    text: '配置 KaTeX',
+    text: 'Configure KaTeX',
     link: '/custom/config-katex',
   },
   {
-    text: '配置 Mermaid',
+    text: 'Configure Mermaid',
     link: '/custom/config-mermaid',
   },
   {
-    text: '配置解析器',
+    text: 'Configure Parser',
     link: '/custom/config-parser',
   },
   {
-    text: '配置快捷键',
+    text: 'Configure Routes',
+    link: '/custom/config-routes',
+  },
+  {
+    text: 'Configure Shortcuts',
     link: '/custom/config-shortcuts',
   },
   {
-    text: 'Vue 全局上下文',
+    text: 'Configure Code Runners',
+    link: '/custom/config-code-runners',
+  },
+  {
+    text: 'Configure Context Menu',
+    link: '/custom/config-context-menu',
+  },
+  {
+    text: 'Vue Global Context',
     link: '/custom/vue-context',
   },
   {
-    text: '全局图层',
+    text: 'Global Layers',
     link: '/custom/global-layers',
   },
 ]
 
 const Resources: DefaultTheme.NavItemWithLink[] = [
   {
-    text: '案例展示',
+    text: 'Showcases',
     link: '/showcases',
   },
   {
-    text: '学习资源',
+    text: 'Learning Resources',
     link: '/resources/learning',
   },
   {
-    text: '精选封面',
+    text: 'Curated Covers',
     link: '/resources/covers',
   },
 ]
 
 const slidebars: DefaultTheme.SidebarItem[] = [
   {
-    text: '指南',
+    text: 'Guide',
     items: Guide,
   },
   {
-    text: '主题',
+    text: 'Themes',
     items: Theme,
   },
   {
-    text: '附加组件',
+    text: 'Addons',
     items: Addon,
   },
   {
-    text: '定制',
+    text: 'Customizations',
     items: Customizations,
   },
   {
-    text: '内置',
+    text: 'Built-in',
     items: BuiltIn,
   },
   {
-    text: '资源',
+    text: 'Resources',
     items: Resources,
   },
 ]
 
 export default defineConfig({
   title: 'Slidev',
-  description: '为开发者打造的演示文稿工具',
+  description: 'Presentation slides for developers',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'author', content: 'Anthony Fu' }],
-    ['meta', { property: 'og:title', content: 'Slidev 中文文档' }],
+    ['meta', { property: 'og:title', content: 'Slidev' }],
     ['meta', { property: 'og:image', content: 'https://sli.dev/og-image.png' }],
-    ['meta', { property: 'og:description', content: '为开发者打造的演示文稿工具' }],
+    ['meta', { property: 'og:description', content: 'Presentation slides for developers' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@slidevjs' }],
     ['meta', { name: 'twitter:image', content: 'https://sli.dev/og-image.png' }],
@@ -276,12 +253,8 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/slidevjs/docs-cn/edit/main/:path',
-      text: '改进翻译',
-    },
-
-    outline: {
-      label: '本页目录'
+      pattern: 'https://github.com/slidevjs/slidev/edit/main/docs/:path',
+      text: 'Suggest changes to this page',
     },
 
     search: {
@@ -290,37 +263,37 @@ export default defineConfig({
 
     nav: [
       {
-        text: '指南',
+        text: 'Guide',
         items: Guide,
       },
       {
-        text: '主题',
+        text: 'Theme',
         items: [
           ...Theme,
           {
-            text: '内置',
+            text: 'Built-in',
             items: BuiltIn,
           },
         ],
       },
       {
-        text: '定制',
+        text: 'Customize',
         items: [
           ...Customizations,
           {
-            text: '附加组件',
+            text: 'Addon',
             items: Addon,
           },
         ],
       },
       {
-        text: '资源',
+        text: 'Resources',
         items: Resources,
       },
       {
-        text: `v${CURRENT_VERSION}`,
+        text: `v${version}`,
         items: [
-          { text: '版本发布', link: 'https://github.com/slidevjs/slidev/releases' },
+          { text: 'Release Notes', link: 'https://github.com/slidevjs/slidev/releases' },
         ],
       },
     ],
@@ -346,7 +319,6 @@ export default defineConfig({
       copyright: 'Copyright © 2020 Anthony Fu.',
     },
   },
-
 
   locales: {
     root: {

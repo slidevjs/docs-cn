@@ -1,26 +1,22 @@
----
-title: 配置 Monaco
----
-
-# 配置 Monaco {#configure-monaco}
+# Configure Monaco
 
 <Environment type="client" />
 
-创建一份包含以下内容的 `./setup/monaco.ts` 文件：
+Create `./setup/monaco.ts` with the following content:
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
 
 export default defineMonacoSetup(async (monaco) => {
-  // 使用 `monaco` 配置
+  // use `monaco` to configure
 })
 ```
 
-访问 [monaco-editor](https://github.com/Microsoft/monaco-editor) 了解更多关于 Monaco 配置的相关信息。
+Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor).
 
-## 用法 {#usage}
+## Usage
 
-如果你想在你的幻灯片中使用 Monaco， 只需添加 `{monaco}` 到你的代码片段中：
+To use Monaco in your slides, simply append `{monaco}` to your code snippets:
 
 ````md
 ```js {monaco} // [!code ++]
@@ -35,7 +31,7 @@ plusOne.value++ // error
 
 ## TypeScript Types
 
-当你使用 Monaco 编写 TypeScript 时，类型依赖将会自动安装到客户端.
+When using TypeScript with Monaco, types for dependencies will be installed to the client-side automatically.
 
 ````md
 ```ts {monaco}
@@ -46,11 +42,11 @@ const counter = ref(0)
 ```
 ````
 
-In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically. When deploy as SPA, those types will also be bundled for static hosting.
+In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically. When deployed as SPA, those types will also be bundled for static hosting.
 
 ### Additional Types
 
-Slidev will scan all the monaco codeblocks in your slides and import the types for those used libraries for you. In case it missed some, you can explicitly specify extra packages to import the types for:
+Slidev will scan all the Monaco code blocks in your slides and import the types for those used libraries for you. In case it missed some, you can explicitly specify extra packages to import the types for:
 
 ```md
 ---
@@ -72,7 +68,7 @@ monacoTypesSource: ata
 
 This feature is powered by [`@typescript/ata`](https://github.com/microsoft/TypeScript-Website/tree/v2/packages/ata) and runs completely on the client-side.
 
-## 配置主题 {#configure-themes}
+## Configure Themes
 
 Since v0.48.0, Monaco will reuse the Shiki theme you configured in [Shiki's setup file](/custom/highlighters#configure-shiki), powered by [`@shikijs/monaco`](https://shiki.style/packages/monaco). You don't need to worry about it anymore and it will have a consistent style with the rest of your code blocks.
 
@@ -105,10 +101,14 @@ export default defineMonacoSetup(() => {
 
 ## Disabling
 
-Since v0.48.0, Monaco editor is enabled by default and only be bundled when you use it. If you want to disable it, you can set `monaco` to `false` in the frontmatter of your slide:
+Since v0.48.0, the Monaco editor is enabled by default and only be bundled when you use it. If you want to disable it, you can set `monaco` to `false` in the frontmatter of your slide:
 
 ```yaml
 ---
 monaco: false # can also be `dev` or `build` tp conditionally enable it
 ---
 ```
+
+## Configure Code Runners
+
+To configure how the Monaco Runner runs the code, or to add support for custom languages, please reference to [Configure Code Runners](/custom/config-code-runners).

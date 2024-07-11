@@ -6,7 +6,6 @@ import TypeIt from 'typeit'
 import Markdown from 'markdown-it'
 import type { SlidevMarkdown } from '@slidev/types'
 
-// @ts-expect-error missing types
 import { parse } from '@slidev/parser'
 import Cover from '@slidev/theme-default/layouts/cover.vue'
 import Default from '@slidev/client/layouts/default.vue'
@@ -41,8 +40,7 @@ watch([code, paused], () => {
   try {
     info.value = parse(code.value)
   }
-  catch (e) {
-
+  catch {
   }
 })
 
@@ -71,7 +69,8 @@ if (typeof window !== 'undefined') {
 }
 
 onMounted(() => {
-  new TypeIt(block.value, {
+  // @ts-expect-error wrong types provided by TypeIt
+  new TypeIt(block.value!, {
     speed: 50,
     startDelay: 900,
     afterStep: () => {
@@ -79,11 +78,11 @@ onMounted(() => {
       code.value = JSON.parse(JSON.stringify(block.value!.innerText.replace('|', '')))
     },
   })
-    .type('<br><span class="token title"># 欢迎使用 Slidev!</span><br><br>', { delay: 400 })
-    .type('为开发者打造的演示文稿工具', { delay: 400 })
-    .move('START', { speed: 0 })
+    .type('<br><span class="token title"># Welcome to Slidev!</span><br><br>', { delay: 400 })
+    .type('Presentation Slides for Developers', { delay: 400 })
+    .move(null, { to: 'START', speed: 0 })
     .type('<br>')
-    .move('START')
+    .move(null, { to: 'START' })
     .exec(pause)
     .type('<span class="token punctuation">---<br><br>---</span>')
     .move(-4)
@@ -101,15 +100,15 @@ onMounted(() => {
     .type(COVER_URL, { speed: 0 })
     .exec(resume)
     .pause(1000)
-    .move('END', { speed: 0 })
+    .move(null, { to: 'END', speed: 0 })
     .exec(pause)
     .type('<br><br><span class="token punctuation">---</span><br><br>', { delay: 400 })
     .exec(resume)
     .exec(() => setTimeout(() => page.value = 1))
-    .type('<span class="token title"># 第二页</span><br><br>', { delay: 400 })
-    .type('- 📄 在单一 Markdown 文件中编写幻灯片<br>', { delay: 800 })
-    .type('- 🌈 主题，代码高亮，可交互的组件，等等<br>', { delay: 800 })
-    .type('- 😎 阅读文档了解更多！', { delay: 800 })
+    .type('<span class="token title"># Page 2</span><br><br>', { delay: 400 })
+    .type('- 📄 Write slides in a single Markdown file<br>', { delay: 800 })
+    .type('- 🌈 Themes, code blocks, interactive components<br>', { delay: 800 })
+    .type('- 😎 Read the docs to learn more!', { delay: 800 })
     .exec(() => setTimeout(() => page.value = 0))
     .go()
 })
