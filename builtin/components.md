@@ -14,7 +14,7 @@ title: 组件
 <Arrow x1="10" y1="20" x2="100" y2="200" />
 ```
 
-Or:
+或者:
 
 ```md
 <Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />
@@ -22,12 +22,12 @@ Or:
 
 参数：
 
-- `x1` (`string | number`, required): 起始 x 位置
-- `y1` (`string | number`, required): 起始 y 位置
-- `x2` (`string | number`, required): 终点 x 位置
-- `y2` (`string | number`, required): 终点 y 位置
-- `width` (`string | number`, default: `2`): 线宽
-- `color` (`string`, default: `'currentColor'`): 颜色
+- `x1` (`string | number`, 必要值): 起始 x 位置
+- `y1` (`string | number`, 必要值): 起始 y 位置
+- `x2` (`string | number`, 必要值): 终点 x 位置
+- `y2` (`string | number`, 必要值): 终点 y 位置
+- `width` (`string | number`, 默认为: `2`): 线宽
+- `color` (`string`, 默认为: `'currentColor'`): 颜色
 
 ### `AutoFitText`
 
@@ -43,9 +43,9 @@ Or:
 
 参数:
 
-- `max` (`string | number`, default `100`): 最大字体大小
-- `min` (`string | number`, default `30`): 最小字体大小
-- `modelValue` (`string`, default `''`): 文本内容
+- `max` (`string | number`, 默认为: `100`): 最大字体大小
+- `min` (`string | number`, 默认为: `30`): 最小字体大小
+- `modelValue` (`string`, 默认为: `''`): 文本内容
 
 ### `LightOrDark`
 
@@ -210,11 +210,11 @@ hideInToc: true
 
 参数：
 
-- `columns` (`string | number`, default: `1`): 显示的列数
-- `listClass` (`string | string[]`, default: `''`): 应用于目录列表的类
-- `maxDepth` (`string | number`, default: `Infinity`): 要显示的标题的最大深度级别
-- `minDepth` (`string | number`, default: `1`): 要显示的标题的最小深度级别
-- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
+- `columns` (`string | number`, 默认为: `1`): 显示的列数
+- `listClass` (`string | string[]`, 默认为: `''`): 应用于目录列表的类
+- `maxDepth` (`string | number`, 默认为: `Infinity`): 要显示的标题的最大深度级别
+- `minDepth` (`string | number`, 默认为: `1`): 要显示的标题的最小深度级别
+- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, 默认为: `'all'`):
   - `'all'`: 显示所有项目
   - `'onlyCurrentTree'`: 仅显示当前树中的项目（活动项目、活动项目的父项和子项）
   - `'onlySiblings'`: 仅显示当前树中的项目及其直系同级项目
@@ -233,8 +233,8 @@ hideInToc: true
 
 Parameters:
 
-- `scale` (`number | string`, default `1`): 大小比例
-- `origin` (`string`, default `'top left'`): 位置
+- `scale` (`number | string`, 默认为 `1`): 大小比例
+- `origin` (`string`, 默认为 `'top left'`): 位置
 
 ### `Tweet`
 
@@ -246,12 +246,12 @@ Parameters:
 <Tweet id="20" />
 ```
 
-Parameters:
+参数:
 
-- `id` (`number | string`, required): 推文 id
-- `scale` (`number | string`, default `1`): 大小比例
-- `conversation` (`string`, default `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
-- `cards` (`'hidden' | 'visible'`, default `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `id` (`number | string`, 必要值): 推文 id
+- `scale` (`number | string`, 默认为: `1`): 大小比例
+- `conversation` (`string`, 默认为: `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `cards` (`'hidden' | 'visible'`, 默认为: `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
 ### `VAfter`, `VClick` and `VClicks`
 
@@ -269,7 +269,7 @@ Parameters:
 
 Parameters:
 
-- `id` (`string`, required): YouTube 视频 id
+- `id` (`string`, 必要值): YouTube 视频 id
 - `width` (`number`): 视频宽度
 - `height` (`number`): 视频高度
 

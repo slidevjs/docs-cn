@@ -14,7 +14,7 @@ Slidev 通过三步解析演示文档(如 `slides.md`) :
 
 配置步骤 2 中使用的 markdown 解析器可以通过 [配置 Vite 内部插件](/custom/config-vite#configure-internal-plugins)来完成。
 
-> Available since v0.37.0.
+> 自 v0.37.0 起可用
 
 :::warning
 重要：当你修改预解析器配置时，需要停止并重新启动 slidev (重新启动可能不够)。

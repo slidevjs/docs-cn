@@ -6,7 +6,7 @@ title: 配置快捷键
 
 > 自 v0.20 起可用
 
-> Since v0.35.6 (excluded), you decide which base shortcuts to keep (see `...base,` below).
+> 从 v0.35.6 起，你可以决定保留哪些基本快捷方式。（参考下面的 `...base,`）
 
 <Environment type="client" />
 
