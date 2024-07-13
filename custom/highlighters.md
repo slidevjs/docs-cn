@@ -6,11 +6,16 @@ Slidev uses [Shiki](https://github.com/shikijs/shiki) as the code highlighter. I
 
 <Environment type="both" />
 
-Create `./setup/shiki.ts` file with the following content:
+**Shiki**，一个基于 TextMate 语法的代码高亮器。它直接生成带样式的包裹元素，所以不需要引入额外的 CSS 文件。因为基于 TextMate 语法，所以生成的高亮区块非常准确，效果类似于 VS Code。Shiki 自带了一些 [内置主题](https://shiki.style/themes)。而在 Slidev 中，我们也提供内置的 [TwoSlash](#twoslash-integration)。
 
-```ts
-/* ./setup/shiki.ts */
-import { defineShikiSetup } from '@slidev/types'
+Slidev 主题通常会同时支持 Prism 和 Shiki，不过需要注意有些主题可能只会支持其中一种。
+
+你可以参考以下描述来选择使用哪种高亮器：
+
+- **Prism** 更容易自定义样式
+- **Shiki** 生成的高亮区块更加准确
+
+Slidev 在 `v0.47` 后默认使用 Shiki。你可以通过向你的 `slides.md` 中添加以下内容来切换。
 
 export default defineShikiSetup(() => {
   return {
@@ -59,10 +64,6 @@ Check [Built-in languages](https://shiki.style/languages) and [Built-in themes](
 For now, Shiki Magic Move does not support transformers.
 :::
 
-## Configure Prism
+## 配置 Prism
 
-:::warning
-Prism support is deprecated and will be removed in the future. Please consider using Shiki instead.
-:::
-
-To configure your Prism, you can just import the theme CSS or use [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) to configure themes for both light and dark mode. Refer to its docs for more details.
+如果要配置你的 Prism，你可以引入相应的主题 CSS，或者使用 [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) 来进行亮/暗模式下的主题配置。请参考相应文档以了解更多细节。

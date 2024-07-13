@@ -27,29 +27,29 @@ Current page is: {{ $slidev.nav.currentPage }}
 
 ### `$clicks`
 
-`$clicks` hold the number of clicks on the current slide. Can be used conditionally to show different content on clicks.
+`$clicks` 储存着当前页面的点击次数。被用于条件判断，以显示不同内容。
 
 ```html
-<div v-if="$clicks > 3">Content</div>
+<div v-if="$clicks > 3">要显示的内容</div>
 ```
 
 ### `$page`
 
-`$page` holds the number of the current page, 1-indexed.
+`$page` 储存着当前页面的页码，将从 1 开始。
 
 ```md
-Page: {{ $page }}
+页码: {{ $page }}
 
-Is current page active: {{ $page === $slidev.nav.currentPage }}
+当前页面是否活跃: {{ $page === $slidev.nav.currentPage }}
 ```
 
 ### `$renderContext`
 
-`$renderContext` holds the current render context, which can be `slide`, `overview`, `presenter` or `previewNext`
+`$renderContext` 储存着当前页面的渲染上下文, 可以选择 `slide`, `overview`, `presenter` 或 `previewNext`。
 
 ```md
 <div v-if="$renderContext === 'slide'">
-  This content will only be rendered in slides view
+  以下内容仅会在幻灯片放映模式下显示
 </div>
 ```
 
@@ -73,7 +73,7 @@ $slidev.nav.currentLayout // current layout id
 
 For more properties available, refer to the [`SlidevContextNav` interface](https://github.com/slidevjs/slidev/blob/main/packages/client/composables/useNav.ts).
 
-> Note: `$slidev.nav.clicks` is a global state while `$clicks` is local to each slide. It's recommended to **use `$clicks` over `$slidev.nav.clicks`** to avoid clicks changed been triggered on page transitions.
+> 备注: `$slidev.nav.clicks` 是一个全局状态而 `$clicks` 对每个页面是独立的。我们更推荐 **用 `$clicks` 替换 `$slidev.nav.clicks`** 来避免页面切换时触发点击次数变化。
 
 ### `$slidev.configs`
 
@@ -107,45 +107,6 @@ themeConfig:
 
 ### `$nav`
 
-> Available since v0.43.0
+> 自 v0.43.0 起可用
 
-A shorthand of `$slidev.nav`.
-
-## Composable Usage
-
-> Available since v0.48.0
-
-### Context
-
-If you want to get the context programmatically (also type-safely), you can import composables from `@slidev/client`:
-
-```vue
-<script setup>
-import { onSlideEnter, onSlideLeave, useDarkMode, useIsSlideActive, useNav, useSlideContext } from '@slidev/client'
-
-const { $slidev } = useSlideContext()
-const { currentPage, currentLayout, currentSlideRoute } = useNav()
-const { isDark } = useDarkMode()
-const isActive = useIsSlideActive()
-onSlideEnter(() => { /* ... */ })
-onSlideLeave(() => { /* ... */ })
-// ...
-</script>
-```
-
-> [!NOTE]
-> Previously, you might see the usage of importing nested modules like `import { isDark } from '@slidev/client/logic/dark.ts'`, this is **NOT RECOMMENDED** as they are internal implementation details and might be broken in the future. Try always to use the public API from `@slidev/client` whenever possible.
-
-### Types
-
-If you want to get a type programmatically, you can import types like `TocItem` from `@slidev/types`:
-
-```vue
-<script setup>
-import type { TocItem } from '@slidev/types'
-
-function tocFunc(tree: TocItem[]): TocItem[] {
-  // ...
-}
-</script>
-```
+`$slidev.nav` 的简写

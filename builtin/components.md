@@ -16,7 +16,7 @@ Draw an arrow.
 <Arrow x1="10" y1="20" x2="100" y2="200" />
 ```
 
-Or:
+或者:
 
 ```md
 <Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />
@@ -34,13 +34,12 @@ Parameters:
 
 ### `VDragArrow`
 
-An `Arrow` component that can be dragged.
-
-#### Usage
-
-See https://sli.dev/guide/draggable.html#draggable-arrow
-
-Parameters not related to position are the same as [the `Arrow` component](#arrow).
+- `x1` (`string | number`, 必要值): 起始 x 位置
+- `y1` (`string | number`, 必要值): 起始 y 位置
+- `x2` (`string | number`, 必要值): 终点 x 位置
+- `y2` (`string | number`, 必要值): 终点 y 位置
+- `width` (`string | number`, 默认为: `2`): 线宽
+- `color` (`string`, 默认为: `'currentColor'`): 颜色
 
 ### `AutoFitText`
 
@@ -56,9 +55,9 @@ Box inside which the font size will automatically adapt to fit the content. Simi
 
 Parameters:
 
-- `max` (`string | number`, default `100`): Maximum font size
-- `min` (`string | number`, default `30`): Minimum font size
-- `modelValue` (`string`, default `''`): text content
+- `max` (`string | number`, 默认为: `100`): 最大字体大小
+- `min` (`string | number`, 默认为: `30`): 最小字体大小
+- `modelValue` (`string`, 默认为: `''`): 文本内容
 
 ### `LightOrDark`
 
@@ -240,14 +239,14 @@ Titles are displayed using the [`<Titles>` component](#titles)
 
 Parameters:
 
-- `columns` (`string | number`, default: `1`): The number of columns of the display
-- `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
-- `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-- `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
-- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  - `'all'`: Display all items
-  - `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  - `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+- `columns` (`string | number`, 默认为: `1`): 显示的列数
+- `listClass` (`string | string[]`, 默认为: `''`): 应用于目录列表的类
+- `maxDepth` (`string | number`, 默认为: `Infinity`): 要显示的标题的最大深度级别
+- `minDepth` (`string | number`, 默认为: `1`): 要显示的标题的最小深度级别
+- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, 默认为: `'all'`):
+  - `'all'`: 显示所有项目
+  - `'onlyCurrentTree'`: 仅显示当前树中的项目（活动项目、活动项目的父项和子项）
+  - `'onlySiblings'`: 仅显示当前树中的项目及其直系同级项目
 
 ### `Transform`
 
@@ -263,8 +262,8 @@ Apply scaling or transforming to elements.
 
 Parameters:
 
-- `scale` (`number | string`, default `1`): transform scale value
-- `origin` (`string`, default `'top left'`): transform origin value
+- `scale` (`number | string`, 默认为 `1`): 大小比例
+- `origin` (`string`, 默认为 `'top left'`): 位置
 
 ### `Tweet`
 
@@ -276,12 +275,12 @@ Embed a tweet.
 <Tweet id="20" />
 ```
 
-Parameters:
+参数:
 
-- `id` (`number | string`, required): id of the tweet
-- `scale` (`number | string`, default `1`): transform scale value
-- `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
-- `cards` (`'hidden' | 'visible'`, default `'visible'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `id` (`number | string`, 必要值): 推文 id
+- `scale` (`number | string`, 默认为: `1`): 大小比例
+- `conversation` (`string`, 默认为: `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `cards` (`'hidden' | 'visible'`, 默认为: `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
 ### `VAfter`, `VClick` and `VClicks`
 
@@ -355,9 +354,9 @@ Embed a YouTube video.
 
 Parameters:
 
-- `id` (`string`, required): id of the YouTube video
-- `width` (`number`): width of the video
-- `height` (`number`): height of the video
+- `id` (`string`, 必要值): YouTube 视频 id
+- `width` (`number`): 视频宽度
+- `height` (`number`): 视频高度
 
 You can also make the video start at a specific time if you add `?start=1234` to the id value (where `1234` is seconds),
 

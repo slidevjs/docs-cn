@@ -12,7 +12,7 @@ Configuring the markdown parser used in step 2 can be done by [configuring Vite 
 
 ## Preparser Extensions
 
-> Available since v0.37.0.
+> 自 v0.37.0 起可用
 
 ::: warning
 Important: when modifying the preparser configuration, you need to stop and start slidev again (restart might not be sufficient).
