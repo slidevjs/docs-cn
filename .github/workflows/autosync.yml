@@ -1,4 +1,3 @@
-# Ported from https://github.com/vuejs-translations/docs-zh-cn/blob/main/.github/workflows/autosync.yml
 name: Auto Sync
 
 on:
@@ -9,13 +8,25 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write           # 'write' access to repository contents
     steps:
-      - uses: TobKed/github-forks-sync-action@master
+      - name: Install git-filter-repo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-filter-repo
+
+      - name: Clone upstream repository
+        run: |
+          git clone https://github.com/slidevjs/slidev
+      
+      - name: Extract docs
+        run: |
+          cd slidev
+          git filter-repo --subdirectory-filter docs --force
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          upstream_repository: slidevjs/docs
-          upstream_branch: main
-          target_repository: slidevjs/docs-cn
-          target_branch: upstream
-          force: false
-          tags: false
+          branch: refs/heads/upstream
