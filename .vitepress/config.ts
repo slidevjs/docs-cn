@@ -350,11 +350,11 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: 'English',
-    },
-    zh: {
       label: '简体中文',
-      link: 'https://cn.sli.dev/',
+    },
+    en: {
+      label: 'English',
+      link: 'https://sli.dev/',
     },
     fr: {
       label: 'Français',
