@@ -16,9 +16,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git-filter-repo
 
-      - name: Clone upstream repository
-        run: |
-          git clone https://github.com/slidevjs/slidev
+      - name: Checkout upstram
+        uses: actions/checkout@v2
+        with:
+          repository: slidevjs/slidev
       
       - name: Extract docs
         run: |
