@@ -9,7 +9,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write           # 'write' access to repository contents
+      contents: write # 'write' access to repository contents
     steps:
       - name: Install git-filter-repo
         run: |
@@ -20,7 +20,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: slidevjs/slidev
-      
+          fetch-depth: 0
+
       - name: Extract docs
         run: git filter-repo --subdirectory-filter docs --force
 
