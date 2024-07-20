@@ -1,59 +1,70 @@
----
-title: 组件
----
+# Components
 
-# 组件 {#components}
+This page lists all the built-in components provided by Slidev. These components can be **directly** used in your slides.
 
-### `Arrow`
+Note that <LinkInline link="guide/theme-addon" /> can provide additional components. To add your own components, see <LinkInline link="guide/component#write" />.
 
-绘制一个箭头。
+## `Arrow`
 
-#### 用法 {#arrow-usage}
+Draw an arrow.
+
+### Usage
 
 ```md
 <Arrow x1="10" y1="20" x2="100" y2="200" />
 ```
 
-或者:
+Or:
 
 ```md
 <Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />
 ```
 
-参数：
+Parameters:
 
-- `x1` (`string | number`, 必要值): 起始 x 位置
-- `y1` (`string | number`, 必要值): 起始 y 位置
-- `x2` (`string | number`, 必要值): 终点 x 位置
-- `y2` (`string | number`, 必要值): 终点 y 位置
-- `width` (`string | number`, 默认为: `2`): 线宽
-- `color` (`string`, 默认为: `'currentColor'`): 颜色
+- `x1` (`string | number`, required): start point x position
+- `y1` (`string | number`, required): start point y position
+- `x2` (`string | number`, required): end point x position
+- `y2` (`string | number`, required): end point x position
+- `width` (`string | number`, default: `2`): line width
+- `color` (`string`, default: `'currentColor'`): line color
+- `two-way` (`boolean`, default: `false`): draw a two-way arrow
 
-### `AutoFitText`
+## `VDragArrow`
 
-> 实验性功能
+An `Arrow` component that can be dragged.
 
-字体大小会自动适应内容的方框。类似于 PowerPoint 或 Keynote 的文本框。
+### Usage
 
-#### 用法 {#auto-fit-text-usage}
+See https://sli.dev/guide/draggable.html#draggable-arrow
+
+Parameters not related to position are the same as [the `Arrow` component](#arrow).
+
+## `AutoFitText`
+
+> Experimental
+
+Box inside which the font size will automatically adapt to fit the content. Similar to PowerPoint or Keynote TextBox.
+
+### Usage
 
 ```md
 <AutoFitText :max="200" :min="100" modelValue="Some text"/>
 ```
 
-参数:
+Parameters:
 
-- `max` (`string | number`, 默认为: `100`): 最大字体大小
-- `min` (`string | number`, 默认为: `30`): 最小字体大小
-- `modelValue` (`string`, 默认为: `''`): 文本内容
+- `max` (`string | number`, default `100`): Maximum font size
+- `min` (`string | number`, default `30`): Minimum font size
+- `modelValue` (`string`, default `''`): text content
 
-### `LightOrDark`
+## `LightOrDark`
 
-你可以使用它来根据活动的亮色或暗色主题，显示一种或另一种内容。
+Use it to display one thing or another depending on the active light or dark theme.
 
-#### 用法 {#light-or-dark-usage}
+### Usage
 
-与 `#dark` 和 `#light` 插槽一起使用：
+Use it with the two named Slots `#dark` and `#light`:
 
 ```md
 <LightOrDark>
@@ -62,7 +73,7 @@ title: 组件
 </LightOrDark>
 ```
 
-在 `LightOrDark` 组件上提供的 props 将可以使用作用域插槽 props 来访问：
+Provided props on `LightOrDark` component will be available using scoped slot props:
 
 ```md
 <LightOrDark width="100" alt="some image">
@@ -75,7 +86,7 @@ title: 组件
 </LightOrDark>
 ```
 
-你可以在插槽中提供 markdown，但需要用空行分隔内容：
+You can provide markdown in the slots, but you will need to surround the content with blank lines:
 
 ```md
 <LightOrDark>
@@ -92,11 +103,11 @@ title: 组件
 </LightOrDark>
 ```
 
-### `Link` {#link}
+## `Link`
 
-插入一个链接，你可以用它来导航到一个指定的幻灯片。
+Insert a link you can use to navigate to a given slide.
 
-#### 用法 {#link-usage}
+### Usage
 
 ```md
 <Link to="42">Go to slide 42</Link>
@@ -104,12 +115,12 @@ title: 组件
 <Link to="solutions" title="Go to solutions"/>
 ```
 
-参数：
+Parameters:
 
-- `to` (`string | number`): 导航到的幻灯片的路径 (幻灯片从 `1` 开始计数)
-- `title` (`string`): 要显示的标题
+- `to` (`string | number`): The path of the slide to navigate to (slides path starts from `1`)
+- `title` (`string`): The title to display
 
-只要存在相应的路由，就可以使用字符串作为 `to`，例如：
+One can use a string as `to`, provided the corresponding route exists, e.g.
 
 ```md
 ---
@@ -119,49 +130,66 @@ routeAlias: solutions
 # Now some solutions!
 ```
 
-### `RenderWhen`
+## `PoweredBySlidev`
 
-插槽仅在上下文满足条件时（如处于演示者视图中时）才会渲染。
+Renders "Powered by Slidev" with a link to the Slidev website.
 
-#### 用法 {#render-when-usage}
+## `RenderWhen`
+
+Render slots depend on whether the context matches (for example whether we are in presenter view).
+
+### Usage
 
 ```md
 <RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
 ```
 
-上下文类型: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+Context type: `'main' | 'visible' | 'print' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
 
-参数:
+Parameters:
 
-- `context` (`Context | Context[]`): 渲染插槽的上下文或上下文数组
+- `context` (`Context | Context[]`): a context or array of contexts you want to check for
+  - `'main'`: Render in slides and presenter view (equivalent to ['slide', 'presenter']),
+  - `'visible'`: Render the content if it is visible
+  - `'print'`: Render in print mode
+  - `'slide'`: Render in slides
+  - `'overview'`: Render in overview
+  - `'presenter'`: Render in presenter view
+  - `'previewNext'`: Render in presenter's next slide view
+  - `'previewPrevious'`: Render in presenter's previous slide view
 
-### `SlideCurrentNo`
+Slots:
 
-当前幻灯片编号。
+- `#default`: Rendered when the context matches
+- `#fallback`: Rendered when the context does not match
 
-#### 用法 {#slide-current-no-usage}
+## `SlideCurrentNo`
+
+Current slide number.
+
+### Usage
 
 ```md
 <SlideCurrentNo />
 ```
 
-### `SlidesTotal`
+## `SlidesTotal`
 
-幻灯片总数。
+Total number of slides.
 
-#### 用法 {#slides-total-usage}
+### Usage
 
 ```md
 <SlidesTotal />
 ```
 
-### `Titles` {#titles}
+## `TitleRenderer`
 
-在一个被解析为 HTML 的幻灯片中插入主标题
+Insert the main title from a slide parsed as HTML.
 
-标题和标题级别会自动从每张幻灯片的第一个标题元素中检索出来。
+Titles and title levels get automatically retrieved from the first title element of each slide.
 
-您可以使用 front matter 语法来覆盖幻灯片的这种自动行为：
+You can override this automatic behavior for a slide by using the front matter syntax:
 
 ```yml
 ---
@@ -170,29 +198,29 @@ level: 2
 ---
 ```
 
-#### 用法 {#titles-usage}
+### Usage
 
-`<Titles>` 组件是一个虚拟组件，可以使用以下方式导入：
+The `<TitleRenderer>` component is a virtual component you can import with:
 
 ```js
-import Titles from '/@slidev/titles.md'
+import TitleRenderer from '#slidev/title-renderer'
 ```
 
-然后像这样使用：
+Then you can use it with:
 
 ```md
-<Titles no="42" />
+<TitleRenderer no="42" />
 ```
 
-参数：
+Parameters:
 
-- `no` (`string | number`): 显示标题的幻灯片编号（幻灯片从 `1` 开始）
+- `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
 
-### `Toc`
+## `Toc`
 
-插入目录
+Insert a Table Of Content.
 
-如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
+If you want a slide to not appear in the `<Toc>` component, you can use the `hideInToc` option in the frontmatter of the slide:
 
 ```yml
 ---
@@ -200,30 +228,30 @@ hideInToc: true
 ---
 ```
 
-标题使用 [`<Titles>` 组件](#titles) 来展示。
+Titles are displayed using the [`<Titles>` component](#titles)
 
-#### 用法 {#toc-usage}
+### Usage
 
 ```md
 <Toc />
 ```
 
-参数：
+Parameters:
 
-- `columns` (`string | number`, 默认为: `1`): 显示的列数
-- `listClass` (`string | string[]`, 默认为: `''`): 应用于目录列表的类
-- `maxDepth` (`string | number`, 默认为: `Infinity`): 要显示的标题的最大深度级别
-- `minDepth` (`string | number`, 默认为: `1`): 要显示的标题的最小深度级别
-- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, 默认为: `'all'`):
-  - `'all'`: 显示所有项目
-  - `'onlyCurrentTree'`: 仅显示当前树中的项目（活动项目、活动项目的父项和子项）
-  - `'onlySiblings'`: 仅显示当前树中的项目及其直系同级项目
+- `columns` (`string | number`, default: `1`): The number of columns of the display
+- `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
+- `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
+- `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
+- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
+  - `'all'`: Display all items
+  - `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
+  - `'onlySiblings'`: Display only items that are in current tree and their direct siblings
 
-### `Transform`
+## `Transform`
 
-对元素进行缩放或变换。
+Apply scaling or transforming to elements.
 
-#### Usage
+### Usage
 
 ```md
 <Transform :scale="0.5">
@@ -233,35 +261,91 @@ hideInToc: true
 
 Parameters:
 
-- `scale` (`number | string`, 默认为 `1`): 大小比例
-- `origin` (`string`, 默认为 `'top left'`): 位置
+- `scale` (`number | string`, default `1`): transform scale value
+- `origin` (`string`, default `'top left'`): transform origin value
 
-### `Tweet`
+## `Tweet`
 
-嵌入一条推文。
+Embed a tweet.
 
-#### Usage
+### Usage
 
 ```md
 <Tweet id="20" />
 ```
 
-参数:
+Parameters:
 
-- `id` (`number | string`, 必要值): 推文 id
-- `scale` (`number | string`, 默认为: `1`): 大小比例
-- `conversation` (`string`, 默认为: `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
-- `cards` (`'hidden' | 'visible'`, 默认为: `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `id` (`number | string`, required): id of the tweet
+- `scale` (`number | string`, default `1`): transform scale value
+- `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `cards` (`'hidden' | 'visible'`, default `'visible'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
-### `VAfter`, `VClick` and `VClicks`
+## `VAfter`, `VClick` and `VClicks`
 
-请见 https://sli.dev/guide/animations.html
+See https://sli.dev/guide/animations.html
 
-### `Youtube`
+## `VSwitch`
 
-嵌入 YouTube 视频。
+Switch between multiple slots based on clicks.
 
-#### Usage
+See https://sli.dev/guide/animations.html#enter-leave
+
+- If the `unmount` prop is set to `true`, the previous slot will be unmounted when switching to the next slot. Default is `false`.
+- Use the `tag` and `childTag` props to change the default tag of the component and its children. Default is `div`.
+- Use the `transition` prop to change the transition effect. Default is `false` (disabled).
+
+## `VDrag`
+
+See https://sli.dev/guide/draggable.html
+
+## `SlidevVideo`
+
+Embed a video.
+
+### Usage
+
+```md
+<SlidevVideo v-click autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/myMovie.mp4" type="video/mp4" />
+  <source src="/myMovie.webm" type="video/webm" />
+  <p>
+    Your browser does not support videos. You may download it
+    <a href="/myMovie.mp4">here</a>.
+  </p>
+</SlidevVideo>
+```
+
+Check [HTML video element's doc](https://developer.mozilla.org/docs/Web/HTML/Element/Video) to see what can be included in this component's slot.
+
+Parameters:
+
+- `controls` (`boolean`, default: `false`): show the video controls
+- `autoplay` (`boolean | 'once'`, default: `false`):
+  - `true` or `'once'`: start the video only once and does not restart it once ended or paused
+  - `false`: never automatically start the video (rely on `controls` instead)
+- `autoreset` (`'slide' | 'click'`, default: `undefined`):
+  - `'slide'`: go back to the start of the video when going back to the slide
+  - `'click'`: go back to the start of the video when going back to the component's click turn
+- `poster` (`string | undefined`, default: `undefined`):
+  - The source of the image to print when the video is not playing.
+- `printPoster` (`string | undefined`, default: `undefined`):
+  - The override for `poster` when printing.
+- `timestamp` (`string | number`, default: `0`):
+  - The starting time of the video in seconds.
+- `printTimestamp` (`string | number | 'last' | undefined`, default: `undefined`):
+  - The override for `timestamp` when printing.
+
+::: warning
+When exporting, the video may fail to load because Chromium does not support some video formats. In this case, you can specify the executable path of the browser. See [Chromium executable path](/guide/exporting.html#executable-path) for more information.
+:::
+
+## `Youtube`
+
+Embed a YouTube video.
+
+### Usage
 
 ```md
 <Youtube id="luoMHjh-XcQ" />
@@ -269,20 +353,8 @@ Parameters:
 
 Parameters:
 
-- `id` (`string`, 必要值): YouTube 视频 id
-- `width` (`number`): 视频宽度
-- `height` (`number`): 视频高度
+- `id` (`string`, required): id of the YouTube video
+- `width` (`number`): width of the video
+- `height` (`number`): height of the video
 
-你还可以在 id 值中添加 `?start=1234`（其中 1234 为秒）来让视频在特定时间开始播放。
-
-## 自定义组件 {#custom-components}
-
-在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里使用该组件了！
-
-欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
-
-## 主题提供的组件 {#theme-provided-components}
-
-同时主题也可以提供组件。请阅读它们各自的文档，以知晓它们提供了什么。
-
-欲了解更多，请参阅 [路径结构](/custom/directory-structure) 章节。
+You can also make the video start at a specific time if you add `?start=1234` to the id value (where `1234` is seconds),

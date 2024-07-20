@@ -9,7 +9,7 @@ import UnoCSS from 'unocss/vite'
 export default defineConfig({
   resolve: {
     alias: {
-      '@slidev/client': resolve(__dirname, '.vitepress/@slidev/client'),
+      '@slidev/client/': `${resolve(__dirname, '.vitepress/@slidev/client')}/`,
       '@slidev/parser': resolve(__dirname, '.vitepress/@slidev/parser'),
       '@slidev/theme-default': resolve(__dirname, '.vitepress/@slidev/theme-default'),
     },
@@ -33,7 +33,7 @@ export default defineConfig({
         './.vitepress/@slidev/client/builtin',
       ],
       extensions: ['vue', 'md'],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.md\?vue/],
       resolvers: [
         IconsResolver({
           prefix: '',
@@ -45,15 +45,6 @@ export default defineConfig({
     }),
     Inspect(),
     UnoCSS(),
-    {
-      name: 'code-block-escape',
-      enforce: 'post',
-      transform(code, id) {
-        if (!id.endsWith('.md'))
-          return
-        return code.replace(/\/\/```/mg, '```')
-      },
-    },
     {
       name: 'virtual-modules',
       resolveId(id) {

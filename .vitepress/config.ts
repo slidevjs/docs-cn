@@ -1,253 +1,43 @@
+import { fileURLToPath } from 'node:url'
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
-
-const CURRENT_VERSION = '0.48.0-beta.22'
-
-const Guide: DefaultTheme.NavItemWithLink[] = [
-  {
-    text: '为什么选择 Slidev',
-    link: '/guide/why',
-  },
-  {
-    text: '开始使用',
-    link: '/guide/',
-  },
-  {
-    text: '安装',
-    link: '/guide/install',
-  },
-  {
-    text: 'Markdown 语法',
-    link: '/guide/syntax',
-  },
-  {
-    text: '导航',
-    link: '/guide/navigation',
-  },
-  {
-    text: '动画',
-    link: '/guide/animations',
-  },
-  {
-    text: '导出',
-    link: '/guide/exporting',
-  },
-  {
-    text: '静态部署',
-    link: '/guide/hosting',
-  },
-  {
-    text: '演讲录制',
-    link: '/guide/recording',
-  },
-  {
-    text: '演讲者模式',
-    link: '/guide/presenter-mode',
-  },
-  {
-    text: '绘图与批注',
-    link: '/guide/drawing',
-  },
-  {
-    text: '编辑器整合',
-    link: '/guide/editors',
-  },
-  {
-    text: 'FAQ',
-    link: '/guide/faq',
-  },
-]
-
-const BuiltIn: DefaultTheme.NavItemWithLink[] = [
-  {
-    text: '组件',
-    link: '/builtin/components',
-  },
-  {
-    text: '布局',
-    link: '/builtin/layouts',
-  },
-]
-
-const Theme: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
-  {
-    text: '使用主题',
-    link: '/themes/use',
-  },
-  {
-    text: '主题集合',
-    link: '/themes/gallery',
-  },
-  {
-    text: '编写主题',
-    link: '/themes/write-a-theme',
-  },
-]
-
-const Addon: DefaultTheme.NavItemWithLink[] = [
-  {
-    text: '使用扩展插件',
-    link: '/addons/use',
-  },
-  {
-    text: '编写扩展插件',
-    link: '/addons/write-an-addon',
-  },
-]
-
-const Translations = [
-  {
-    text: '简体中文',
-  },
-  {
-    text: 'English',
-    link: 'https://sli.dev{{pathname}}',
-  },
-  {
-    text: 'Français',
-    link: 'https://fr.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Español',
-    link: 'https://es.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Русский',
-    link: 'https://ru.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Việt Nam',
-    link: 'https://vn.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Deutsch',
-    link: 'https://de.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Português (BR)',
-    link: 'https://br.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Ελληνικά',
-    link: 'https://el.sli.dev{{pathname}}',
-  },
-  {
-    text: '日本語',
-    link: 'https://ja.sli.dev{{pathname}}',
-  },
-]
-
-const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
-  {
-    text: '自定义',
-    link: '/custom/',
-  },
-  {
-    text: '项目结构',
-    link: '/custom/directory-structure',
-  },
-  {
-    text: '字体',
-    link: '/custom/fonts',
-  },
-  {
-    text: '语法高亮器',
-    link: '/custom/highlighters',
-  },
-  {
-    text: '配置 Vue',
-    link: '/custom/config-vue',
-  },
-  {
-    text: '配置 Vite',
-    link: '/custom/config-vite',
-  },
-  {
-    text: '配置 UnoCSS',
-    link: '/custom/config-unocss',
-  },
-  {
-    text: '配置 Monaco',
-    link: '/custom/config-monaco',
-  },
-  {
-    text: '配置 KaTeX',
-    link: '/custom/config-katex',
-  },
-  {
-    text: '配置 Mermaid',
-    link: '/custom/config-mermaid',
-  },
-  {
-    text: '配置解析器',
-    link: '/custom/config-parser',
-  },
-  {
-    text: '配置快捷键',
-    link: '/custom/config-shortcuts',
-  },
-  {
-    text: 'Vue 全局上下文',
-    link: '/custom/vue-context',
-  },
-  {
-    text: '全局图层',
-    link: '/custom/global-layers',
-  },
-]
-
-const Resources: DefaultTheme.NavItemWithLink[] = [
-  {
-    text: '案例展示',
-    link: '/showcases',
-  },
-  {
-    text: '学习资源',
-    link: '/resources/learning',
-  },
-  {
-    text: '精选封面',
-    link: '/resources/covers',
-  },
-]
+import { version } from '../package.json'
+import { Advanced, BuiltIn, Guides, Resources } from './pages'
+import Customizations from './customizations'
 
 const slidebars: DefaultTheme.SidebarItem[] = [
   {
-    text: '指南',
-    items: Guide,
+    text: 'Guide',
+    items: Guides,
   },
   {
-    text: '主题',
-    items: Theme,
+    text: 'Advanced',
+    items: Advanced,
   },
   {
-    text: '附加组件',
-    items: Addon,
-  },
-  {
-    text: '定制',
+    text: 'Customizations',
     items: Customizations,
   },
   {
-    text: '内置',
+    text: 'Built-in',
     items: BuiltIn,
   },
   {
-    text: '资源',
+    text: 'Resources',
     items: Resources,
   },
 ]
 
 export default defineConfig({
   title: 'Slidev',
-  description: '为开发者打造的演示文稿工具',
+  description: 'Presentation slides for developers',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'author', content: 'Anthony Fu' }],
-    ['meta', { property: 'og:title', content: 'Slidev 中文文档' }],
+    ['meta', { property: 'og:title', content: 'Slidev' }],
     ['meta', { property: 'og:image', content: 'https://sli.dev/og-image.png' }],
-    ['meta', { property: 'og:description', content: '为开发者打造的演示文稿工具' }],
+    ['meta', { property: 'og:description', content: 'Presentation slides for developers' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@slidevjs' }],
     ['meta', { name: 'twitter:image', content: 'https://sli.dev/og-image.png' }],
@@ -266,22 +56,25 @@ export default defineConfig({
         'xml',
         'vue',
         'markdown',
+        'mermaid',
+        'latex',
       )
     },
     codeTransformers: [
-      transformerTwoslash(),
+      transformerTwoslash({
+        twoslashOptions: {
+          // The @slidev/* installed in docs package are very old and should only be used in the homepage demo
+          vfsRoot: fileURLToPath(new URL('../../demo/starter/', import.meta.url)),
+        },
+      }),
     ],
   },
   cleanUrls: true,
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/slidevjs/docs-cn/edit/main/:path',
-      text: '改进翻译',
-    },
-
-    outline: {
-      label: '本页目录'
+      pattern: 'https://github.com/slidevjs/slidev/edit/main/docs/:path',
+      text: 'Suggest changes to this page',
     },
 
     search: {
@@ -290,38 +83,35 @@ export default defineConfig({
 
     nav: [
       {
-        text: '指南',
-        items: Guide,
+        text: 'Guide',
+        items: [
+          ...Guides,
+          {
+            text: 'Advanced',
+            items: Advanced,
+          },
+        ],
       },
       {
-        text: '主题',
+        text: '✨ Features',
+        link: '/features/',
+      },
+      {
+        text: 'Reference',
         items: [
-          ...Theme,
           {
-            text: '内置',
+            text: 'Built-in',
             items: BuiltIn,
           },
-        ],
-      },
-      {
-        text: '定制',
-        items: [
-          ...Customizations,
           {
-            text: '附加组件',
-            items: Addon,
+            text: 'Customize',
+            items: Customizations,
           },
         ],
       },
       {
-        text: '资源',
+        text: 'Resources',
         items: Resources,
-      },
-      {
-        text: `v${CURRENT_VERSION}`,
-        items: [
-          { text: '版本发布', link: 'https://github.com/slidevjs/slidev/releases' },
-        ],
       },
     ],
 
@@ -332,6 +122,7 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/features/': [],
       '/guide/': slidebars,
       '/themes/': slidebars,
       '/addons/': slidebars,
@@ -343,50 +134,17 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2020 Anthony Fu.',
+      copyright: 'Copyright © 2020-2024 Anthony Fu.',
     },
   },
 
-
   locales: {
     root: {
+      label: `English (v${version})`,
+    },
+    zh: {
       label: '简体中文',
-    },
-    en: {
-      label: 'English',
-      link: 'https://sli.dev/',
-    },
-    fr: {
-      label: 'Français',
-      link: 'https://fr.sli.dev/',
-    },
-    es: {
-      label: 'Español',
-      link: 'https://es.sli.dev/',
-    },
-    ru: {
-      label: 'Русский',
-      link: 'https://ru.sli.dev/',
-    },
-    vn: {
-      label: 'Việt Nam',
-      link: 'https://vn.sli.dev/',
-    },
-    de: {
-      label: 'Deutsch',
-      link: 'https://de.sli.dev/',
-    },
-    br: {
-      label: 'Português (BR)',
-      link: 'https://br.sli.dev/',
-    },
-    el: {
-      label: 'Ελληνικά',
-      link: 'https://el.sli.dev/',
-    },
-    ja: {
-      label: '日本語',
-      link: 'https://ja.sli.dev/',
+      link: 'https://cn.sli.dev/',
     },
   },
 })
