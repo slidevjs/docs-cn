@@ -2,7 +2,7 @@
 aside: false
 ---
 
-# Showcases
+# 案例展示
 
 Talks / Presentations using Slidev.
 

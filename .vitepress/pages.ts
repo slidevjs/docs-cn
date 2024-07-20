@@ -101,7 +101,7 @@ export const Resources = [
     link: '/resources/covers',
   },
   {
-    text: 'Release Notes',
+    text: '更新日志',
     link: 'https://github.com/slidevjs/slidev/releases',
   },
 ]

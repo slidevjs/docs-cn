@@ -1,4 +1,4 @@
-# Curated Covers
+# 精选封面
 
 We curated a few cover images to demonstrate our starter template.
 

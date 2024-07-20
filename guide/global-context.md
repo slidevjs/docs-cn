@@ -1,8 +1,8 @@
-# Global Context
+# 全局上下文
 
 Slidev injects several global context values for advanced navigation controls.
 
-## Direct Usage
+## 直接使用
 
 You can access them directly in your slides or components:
 
@@ -28,7 +28,7 @@ Current page is: {{ $nav.currentPage }}
 </template>
 ```
 
-## Composable Usage
+## 通过 Composable 使用
 
 > Available since v0.48.0
 

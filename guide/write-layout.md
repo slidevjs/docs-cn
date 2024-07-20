@@ -1,4 +1,4 @@
-# Writing Layouts
+# 编写布局
 
 > Please read <LinkInline link="guide/layout" /> first.
 

@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Exporting
+# 导出幻灯片
 
 Usually the slides are displayed in a web browser, but you can also export them to PDF, PPTX, PNG, or Markdown files for sharing or printing. This feature is available through the CLI command [`slidev export`](../builtin/cli#export).
 

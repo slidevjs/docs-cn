@@ -1,8 +1,8 @@
-# Components in Slides
+# 组件指南
 
 One of the most powerful features of Slidev is the ability to use Vue components directly in your slides. This allows you to create interactive and dynamic content with ease.
 
-## Using Components {#use}
+## 使用组件 {#use}
 
 With the help of [`unplugin-vue-components`](https://github.com/unplugin/unplugin-vue-components), Slidev allows you to use Vue components directly in your slides without importing them manually:
 
@@ -18,7 +18,7 @@ The components come from:
 - Provided by the theme and addons. See <LinkInline link="guide/theme-addon" />.
 - Custom components in the `components` directory. See the next section.
 
-## Writing Components {#write}
+## 编写组件 {#write}
 
 To create a custom component, simply create a new Vue file in the `components` directory:
 

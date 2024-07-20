@@ -1,4 +1,4 @@
-# Writing Themes
+# 编写主题
 
 > Please read <LinkInline link="guide/theme-addon" /> first.
 
@@ -24,7 +24,7 @@ $ yarn create slidev-theme
 
 Then you can modify and play with it. You can also refer to the [official themes](../resources/theme-gallery#official-themes) as examples.
 
-## Capability
+## 主题能力 {#capability}
 
 A theme can contribute to the following points:
 
@@ -55,7 +55,7 @@ To provide default Slidev configurations, you can add a `slidev.defaults` field 
 }
 ```
 
-### Require Slidev Version
+### 限制 Slidev 版本 {#restrict-version}
 
 If the theme is relying on a specific feature of Slidev that is newly introduced, you can set the minimal Slidev version required to have your theme working properly:
 
@@ -69,7 +69,7 @@ If the theme is relying on a specific feature of Slidev that is newly introduced
 
 An error message will be shown when the an incompatible version is used.
 
-### Theme Metadata
+### 元信息 {#metadata}
 
 By default, Slidev assumes themes support both light mode and dark mode. If you only want your theme to be presented in a specific color schema, you need to specify it explicitly in the `package.json`:
 
@@ -81,7 +81,7 @@ By default, Slidev assumes themes support both light mode and dark mode. If you 
 }
 ```
 
-## Previewing
+## 预览插件 {#previewing}
 
 You can preview your theme when developing by using a demo slide deck. To do so, create a `./slides.md` file with the following headmatter:
 
@@ -93,7 +93,7 @@ theme: ./  # Use the theme in the current directory
 
 Then you can start the demo slides as usual.
 
-## Publishing
+## 发布插件 {#publishing}
 
 When publishing the theme, non-JS files like `.vue` and `.ts` files can be published directly without compiling. Slidev will automatically compile them when using the theme.
 

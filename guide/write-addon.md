@@ -1,10 +1,10 @@
-# Writing Addons
+# 编写插件
 
 > Please read <LinkInline link="guide/theme-addon" /> first.
 
 Each slides project can only have one theme, but can have multiple addons. Please read [Write a Theme](./write-theme) first if you haven't.
 
-## Capability
+## 插件能力 {#capability}
 
 Theoretically, all the capabilities of a theme can be done in an addon. However, an addon is more like a plugin that extends the functionalities of Slidev.
 
@@ -25,7 +25,7 @@ However, the following points are **not** recommended to be done in an addon, an
 
 An addon can also specify its required Slidev version in the same way as themes.
 
-## Previewing
+## 预览插件 {#previewing}
 
 The same as themes, you can preview your addon via a `./slides.md` like this:
 
@@ -36,7 +36,7 @@ addons:
 ---
 ```
 
-## Publishing
+## 发布插件 {#publishing}
 
 When publishing the addon, non-JS files like `.vue` and `.ts` files can be published directly without compiling. Slidev will automatically compile them when using the addon.
 
