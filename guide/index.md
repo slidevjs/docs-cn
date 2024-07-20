@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Getting Started
+# 快速上手
 
 Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown. With the power of web technologies like Vue, you are able to deliver pixel-perfect designs with interactive demos to your presentation.
 
@@ -32,15 +32,15 @@ You can learn more about the rationale behind this project in <LinkInline link="
 
 <!-- <FeaturesAnimation /> -->
 
-## Create Slides
+## 创建幻灯片 {#create}
 
-### Try it Online
+### 在浏览器中创建 {#create-browser}
 
 Start Slidev right in your browser with StackBlitz: [sli.dev/new](https://sli.dev/new)
 
-### Create Locally
+### 在本地创建 {#create-local}
 
-> Requires [Node.js](https://nodejs.org) >= 18.0 installed.
+> 需要先安装 [Node.js](https://nodejs.org) >= 18.0
 
 Run the following command to create a new Slidev project locally:
 
@@ -90,7 +90,7 @@ slidev slides.md
 
 ::::
 
-## Basic Commands
+## 基本命令 {#commmands}
 
 Slidev provides a set of commands in its CLI. Here are some common ones:
 
@@ -116,7 +116,7 @@ Then, you can simply run `npm run dev`, `npm run build`, and `npm run export`.
 
 For more information about the CLI, please check the [CLI guide](../builtin/cli).
 
-## Setup Your Editor {#editor}
+## 配置编辑器 {#editor}
 
 Since Slidev uses Markdown as the source entry, you can use any editor you prefer to create your slides. We also provide tools to help you edit you slides more conveniently:
 
@@ -124,13 +124,13 @@ Since Slidev uses Markdown as the source entry, you can use any editor you prefe
 <LinkCard link="feature/side-editor" />
 <LinkCard link="feature/prettier-plugin" />
 
-## Join the Community
+## 加入社区 {#community}
 
 It's recommended to join our official [Discord Server](https://chat.sli.dev/) to get help, share your slides, or discuss anything about Slidev.
 
 If you're encountering bugs, feel free to open an issue on [GitHub](https://github.com/slidevjs/slidev/issues/new/choose).
 
-## Tech Stack
+## 技术栈 {#tech-stack}
 
 Slidev is made possible by combining these tools and technologies.
 

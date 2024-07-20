@@ -41,15 +41,15 @@ function removeTag(tag: string) {
 }
 </script>
 
-# Features
+# 功能列表
 
-This is a list of all the individual features that Slidev provides. Each feature can be used independently and is optional.
+本页是 Slidev 提供的相对独立的功能列表。每一个功能都可以在有需要的时候单独使用，使你的幻灯片更加精彩。
 
-You can also read <LinkInline link="guide/index" /> to learn the features by topic.
+如果你想按主题了解这些功能，也可以阅读 <LinkInline link="guide/index" />。
 
 <div flex items-center mt-6 pl-1>
   <carbon:search text-sm mr-2 op-80 />
-  <input v-model="search" type="search" placeholder="Search features..." class="b-b-.5 b-solid b-gray-200/40 focus:b-gray-200/80" />
+  <input v-model="search" type="search" placeholder="搜索..." class="b-b-.5 b-solid b-gray-200/40 focus:b-gray-200/80" />
   <div ml-12 flex items-center gap-1 v-if="tagsArr.length">
     <carbon:tag text-sm mr-1 op-80 />
     <FeatureTag v-for="tag in tagsArr" :key="tag" :tag removable @remove="removeTag(tag)"/>
@@ -59,10 +59,10 @@ You can also read <LinkInline link="guide/index" /> to learn the features by top
 <FeaturesOverview :features="filteredFeatures" />
 
 <div v-if="filteredFeatures.length === 0" class="w-full mt-6 op-80 flex flex-col items-center">
-  No results found
+  找不到匹配的功能
   <button class="block select-button flex-inline gap-1 items-center px-2 py-1 hover:bg-gray-400/10 rounded" @click="resetFilters()">
     <carbon:filter-remove />
-    Clear Filters
+    清除搜索条件
   </button>
 </div>
 

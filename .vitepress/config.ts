@@ -77,6 +77,8 @@ export default defineConfig({
       text: '改进翻译',
     },
 
+    outlineTitle: '本页目录',
+
     search: {
       provider: 'local',
     },
