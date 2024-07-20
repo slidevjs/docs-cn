@@ -22,9 +22,7 @@ jobs:
           repository: slidevjs/slidev
       
       - name: Extract docs
-        run: |
-          cd slidev
-          git filter-repo --subdirectory-filter docs --force
+        run: git filter-repo --subdirectory-filter docs --force
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
