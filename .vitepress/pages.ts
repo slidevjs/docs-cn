@@ -1,103 +1,103 @@
 export const Guides = [
   {
-    text: 'Why Slidev',
+    text: '为什么选 Slidev',
     link: '/guide/why',
   },
   {
-    text: 'Getting Started',
+    text: '快速上手',
     link: '/guide/index',
   },
   {
-    text: 'Syntax Guide',
+    text: '语法',
     link: '/guide/syntax',
   },
   {
-    text: 'User Interface',
+    text: '用户界面',
     link: '/guide/ui',
   },
   {
-    text: 'Animations',
+    text: '动画',
     link: '/guide/animations',
   },
   {
-    text: 'Theme & Addons',
+    text: '主题和插件',
     link: '/guide/theme-addon',
   },
   {
-    text: 'Components',
+    text: '组件',
     link: '/guide/component',
   },
   {
-    text: 'Layouts',
+    text: '布局',
     link: '/guide/layout',
   },
   {
-    text: 'Exporting',
+    text: '导出',
     link: '/guide/exporting',
   },
   {
-    text: 'Hosting',
+    text: '部署',
     link: '/guide/hosting',
   },
   {
-    text: 'FAQ',
+    text: '常见问答',
     link: '/guide/faq',
   },
 ]
 
 export const BuiltIn = [
   {
-    text: 'CLI',
+    text: '命令行工具',
     link: '/builtin/cli',
   },
   {
-    text: 'Components',
+    text: '内置组件',
     link: '/builtin/components',
   },
   {
-    text: 'Layouts',
+    text: '内置布局',
     link: '/builtin/layouts',
   },
 ]
 
 export const Advanced = [
   {
-    text: 'Global Context',
+    text: '全局上下文',
     link: '/guide/global-context',
   },
   {
-    text: 'Writing Layouts',
+    text: '编写布局',
     link: '/guide/write-layout',
   },
   {
-    text: 'Writing Themes',
+    text: '编写主题',
     link: '/guide/write-theme',
   },
   {
-    text: 'Writing Addons',
+    text: '编写插件',
     link: '/guide/write-addon',
   },
 ]
 
 export const Resources = [
   {
-    text: 'Showcases',
+    text: '案例展示',
     link: '/resources/showcases',
   },
   {
-    text: 'Theme Gallery',
+    text: '主题合集',
     link: '/resources/theme-gallery',
   },
   {
-    text: 'Addon Gallery',
+    text: '插件合集',
     link: '/resources/addon-gallery',
   },
   {
-    text: 'Learning Resources',
+    text: '学习资源',
     link: '/resources/learning',
   },
   {
-    text: 'Curated Covers',
+    text: '精选封面',
     link: '/resources/covers',
   },
   {
