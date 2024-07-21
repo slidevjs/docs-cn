@@ -28,6 +28,10 @@ export default [
     link: '/custom/config-code-runners',
   },
   {
+    text: '配置自定义语法',
+    link: '/custom/config-transformers',
+  },
+  {
     text: '配置 Monaco',
     link: '/custom/config-monaco',
   },

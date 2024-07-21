@@ -3,6 +3,7 @@ import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { version } from '../package.json'
+import { getSidebarObject } from './sidebar-gen'
 import { Advanced, BuiltIn, Guides, Resources } from './pages'
 import Customizations from './customizations'
 
@@ -85,7 +86,7 @@ export default defineConfig({
 
     nav: [
       {
-        text: '指南',
+        text: '📖 指南',
         items: [
           ...Guides,
           {
@@ -124,13 +125,14 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/features/': [],
       '/guide/': slidebars,
       '/themes/': slidebars,
       '/addons/': slidebars,
       '/custom/': slidebars,
       '/builtin/': slidebars,
       '/resources/': slidebars,
+      ...await getSidebarObject(),
+      '/features/': [],
       '/': slidebars,
     },
 
