@@ -4,13 +4,13 @@ outline: deep
 
 # 为什么选 Slidev
 
-There have been lots of feature-rich WYSIWYG slides makers like [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) and [Apple Keynote](https://www.apple.com/keynote/) _(see [Comparisons](#comparisons))_. They are intuitive and easy to learn. So why bother making Slidev?
+有许多功能丰富、所见即所得的幻灯片制作工具可供选择，比如 [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 和 [Apple Keynote](https://www.apple.com/keynote/) _(参见 [与其他工具的比较](#comparisons))_。它们直观易学。那么为什么要选择 Slidev 呢？
 
-Slidev aims to provide flexibility and interactivity for **developers** to make their presentations much more interesting, expressive, and attractive by using technologies they are familiar with. Slidev is also open source with a strong community.
+Slidev 旨在为**开发者**制作的幻灯片提供极强的灵活性和交互性，并帮助开发者使用熟悉的技术来使演示更加有趣、有表现力和吸引力。Slidev 也是一个拥有活跃社区开源项目。
 
-Slidev is Markdown-based, which helps you **focus on the content**. Slidev is also Web-based, which means **nothing is impossible** - everything you can do in a web app can apply to your slides.
+Slidev 的幻灯片以 Markdown 的格式编写。这帮助您**专注于内容**。同时，Slidev 的幻灯片在浏览器中呈现，这意味着**几乎没有什么效果不可能被实现** - 一切您在 Web 应用中能做的都可以应用到您的幻灯片中。
 
-Slidev is also **progressive**. You can start with a super simple Markdown file, and then use the [built-in features](../features/) when you need them without any configuration. There are also [themes and addons](./theme-addon) you can optionally install to enhance your slides.
+Slidev 也具有**渐进式**的设计。您可以从一个超级简单的 Markdown 文件开始，然后在需要时随时用上丰富的[内置功能](../features/)。您还可以选择安装[主题和插件](./theme-addon)来增强您的幻灯片。
 
 ![demo slide](/screenshots/cover.png) {#welcome}
 
@@ -18,95 +18,95 @@ Slidev is also **progressive**. You can start with a super simple Markdown file,
 
 ### 📝 基于 Markdown
 
-Slidev uses an extended Markdown format to organize your slides in a single plain text file. This helps you focus on the content while allowing you to use Git and any editor you like.
+Slidev 使用拓展的 Markdown 格式来编写幻灯片。这帮助您专注于内容，并且可以使用 Git 和您喜欢的任何编辑器。
 
-> Learn more: <LinkInline link="guide/syntax"/>.
+> 了解更多：<LinkInline link="guide/syntax"/>
 
 ### 🧑‍💻 开发者友好
 
-Slidev provides first-class support for code snippets for developers. It uses [Shiki](https://github.com/shikijs/shiki) to get the most accurate syntax highlighting. Slidev also supports <LinkInline link="features/shiki-magic-move"/> and <LinkInline link="features/twoslash"/>. These make Slidev the best choice for tech talks.
+Slidev 为在幻灯片中加入代码片段提供了一流支持。它使用 [Shiki](https://github.com/shikijs/shiki) 来提供最准确的语法高亮。Slidev 还支持 <LinkInline link="features/shiki-magic-move"/> 和 <LinkInline link="features/twoslash"/>。这使得 Slidev 成为技术演讲的最佳选择。
 
 ### 🎨 主题丰富
 
-Themes for Slidev can be shared via npm packages. You apply a theme within one line of code.
+主题可以通过 npm 包来安装。只需一行代码就可以将主题应用在您的幻灯片中。
 
-Check out the [Theme Gallery](../resources/theme-gallery) for the beautiful themes made by the official team and the community.
+访问[主题合集](../resources/theme-gallery)来了解由官方团队和社区打造的精美主题。
 
 ### ⚡ 快速
 
-Every change you make in the editor will be updated to your slides in the browser **instantly** without reloading, thanks to [Vite's HMR feature](https://vitejs.dev/guide/features.html#hot-module-replacement).
+您在编辑器中对幻灯片的每一个修改都会**立即**更新到浏览器中，无需刷新。这得益于 [Vite 的 HMR 功能](https://vitejs.dev/guide/features.html#hot-module-replacement)。
 
 ### 🤹 可交互
 
-You can write Vue components and use them in your slides, which you can then interact with during the presentation to express your idea in a more interesting and intuitive way.
+您可以在幻灯片中编写 Vue 组件，并在演示过程中与之交互，以更有趣、直观的方式表达您的想法。
 
-Slidev also has built-in support of <LinkInline link="features/monaco-editor"/>, which empowers you to do live coding in your presentation with auto-completion and hover messages.
+此外，您还可以在幻灯片中嵌入带有自动补全和悬停提示功能的 <LinkInline link="features/monaco-editor"/>（即 VSCode 的编辑器组件），在演示中进行实时编码。
 
 ### 🎥 录制功能
 
-Slidev provides built-in recording and camera view. You can share your presentation with your camera view inside, or record and save your screen and camera separately.
+Slidev 还提供了内置的录制和摄像头视图功能。您可以在演示中分享您的摄像头视图，或者分别录制并保存您的屏幕和摄像头视图。
 
-> Learn more: <LinkInline link="features/recording"/>.
+> 了解更多：<LinkInline link="features/recording"/>
 
 ### 📤 跨平台
 
-You can export your slides into PDF, PPTX, PNGs, or even a single-page application (SPA) via a single command. Then you can share or host it anywhere you like.
+Slidev 的幻灯片支持导出为 PDF、PPTX 和图片格式，也可以通过一个简单的命令编译为静态网页，以便您分享或部署到任何地方。
 
-> Learn more: <LinkInline link="guide/exporting"/> and <LinkInline link="guide/hosting"/>.
+> 了解更多：<LinkInline link="guide/exporting"/>、<LinkInline link="guide/hosting"/>
 
 ### 🛠 可自定义
 
-Because Slidev is web-based, everything that can be done in a normal web app can be applied to your slides. For example, WebGL, API requests, iframes, or even live sharing. It's up to your imagination!
+Slidev 以 Web 为平台的展示您的幻灯片，因此任何可以在 Web 应用中实现的功能都可以应用到您的幻灯片中。例如，WebGL、API 请求、iframe 等。您的想象力在 Slidev 有着自由发挥的空间。
 
-> Learn more: [Customization](../custom/).
+> 了解更多：[Customization](../custom/)
 
 ## 与其他工具的比较
 
 ::: details Slidev vs. 微软 PPT / Apple Keynote
 
-[Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) and [Apple Keynote](https://www.apple.com/keynote/) are feature-rich WYSIWYG slides makers. They are intuitive and easy to learn, which makes them one of the best choices for non-developers.
+[Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 和 [Apple Keynote](https://www.apple.com/keynote/) 是功能丰富的所见即所得幻灯片制作工具。它们直观易学，这使得它们成为非开发者制作幻灯片的最佳选择之一。
 
-Compared to them, Slidev has the following advantages:
+和它们相比，Slidev 有以下优势：
 
-- Developer-friendly: Code snippets are first-class citizens in Slidev.
-- Markdown-based: Focus on the content, and version control your slides with Git.
-- Web-based: Everything you can do in a web app can apply to your slides.
-- Hackable: Customize anything you like with web technologies.
-- Open source: Slidev is completely open source, and has a strong community.
+- 开发者友好：对代码片段的一流支持等。
+- 基于 Markdown：专注于内容，允许使用 Git 进行版本控制。
+- 基于 Web：一切您在 Web 应用中能做的都可以应用到您的幻灯片中。
+- 可定制：使用 Web 技术自定义您喜欢的任何东西。
+- 开源：Slidev 是完全开源的，并且拥有强大的社区。
 
 :::
 
 ::: details Slidev vs. Reveal.js
 
-[Reveal.js](https://revealjs.com/) is a popular HTML presentation framework. It is also open source and supports Markdown.
+[Reveal.js](https://revealjs.com/) 是一个流行的 HTML 幻灯片框架。它也是开源的，并支持 Markdown。
 
-Compared to Reveal.js, Slidev has the following advantages:
+和 Reveal.js 相比，Slidev 有以下优势：
 
-- More concise: Slidev uses an extended Markdown format, while Reveal.js encourages you to write HTML to organize your slides.
-- Vue support: You can use Vue components in Slidev to make your slides interactive.
-- Vite-based: Slidev is built on top of Vite, which provides instant HMR and flexible plugin API.
-- Atomatic CSS: You can [UnoCSS](https://unocss.dev/) out of the box to style your slides.
+- 更简洁：Slidev 使用拓展的 Markdown 格式，而 Reveal.js 鼓励您使用 HTML 来组织您的幻灯片。
+- Vue 支持：您可以在 Slidev 中使用 Vue 组件使您的幻灯片更具交互性。
+- 基于 Vite：Slidev 是基于 Vite 构建的，提供了即时更新和灵活的插件 API。
+- 原子化 CSS：您可以直接使用 [UnoCSS](https://unocss.dev/) 来为您的幻灯片添加样式。
 
 :::
 
 ::: details Slidev vs. Marp
 
-[Marp](https://marp.app/) is a Markdown presentation tool that focuses on simplicity and portability. It is also open source and supports Markdown.
+[Marp](https://marp.app/) 是一个专注于简单性和可移植性的 Markdown 幻灯片工具。它也是开源的，并支持 Markdown。
 
-Compared to Marp, Slidev has the following advantages:
+与 Marp 相比，Slidev 有以下优势：
 
-- The same simplicity: Slidev's slides can start as simple as Marp's.
-- More features: Slidev supports many features that Marp doesn't.
-- Vue support: You can use Vue components in Slidev to make your slides interactive.
-- Vite-based: Slidev is built on top of Vite, which provides instant HMR and flexible plugin API.
-- Atomatic CSS: You can [UnoCSS](https://unocss.dev/) out of the box to style your slides.
+- 同样的简易性：基础的 Slidev 的幻灯片和 Marp 一样简单。
+- 更多功能：Slidev 支持很多 Marp 不支持的功能。
+- Vue 支持：您可以在 Slidev 中使用 Vue 组件使您的幻灯片更具交互性。
+- 基于 Vite：Slidev 是基于 Vite 构建的，提供了即时更新和灵活的插件 API。
+- 原子化 CSS：您可以直接使用 [UnoCSS](https://unocss.dev/) 来为您的幻灯片添加样式。
 
 :::
 
 ## 尝试使用 Slidev
 
-Playing around with Slidev will tell you more than thousands of words. Check the [Getting Started](./) guide to create your first Slidev project in one click or one command.
+事实胜于千言万语。查看 <LinkInline link="guide/index"/> 指南，即刻创建您的第一个 Slidev 项目。
 
-Or you can have a quick preview of it:
+或者您也可以通过下方的视频进行快速预览:
 
 <iframe class="aspect-16/9 rounded-xl w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
