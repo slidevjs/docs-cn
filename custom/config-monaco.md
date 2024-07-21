@@ -1,14 +1,18 @@
-# Configure Monaco
+---
+title: 配置 Monaco
+---
+
+# 配置 Monaco {#configure-monaco}
 
 <Environment type="client" />
 
-Create `./setup/monaco.ts` with the following content:
+创建一份包含以下内容的 `./setup/monaco.ts` 文件：
 
 ```ts twoslash
 import { defineMonacoSetup } from '@slidev/types'
 
 export default defineMonacoSetup(async (monaco) => {
-  // use `monaco` to configure
+  // 使用 `monaco` 配置
 })
 ```
 

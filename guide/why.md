@@ -103,7 +103,7 @@ Compared to Marp, Slidev has the following advantages:
 
 :::
 
-## Give it a Try
+## 即刻体验 {#give-it-a-try}
 
 Playing around with Slidev will tell you more than thousands of words. Check the [Getting Started](./) guide to create your first Slidev project in one click or one command.
 

@@ -1,10 +1,10 @@
-import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import Components from 'unplugin-vue-components/vite'
 import Inspect from 'vite-plugin-inspect'
 import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 
 export default defineConfig({
   resolve: {

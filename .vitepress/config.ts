@@ -1,6 +1,9 @@
-import { fileURLToPath } from 'node:url'
+import { Advanced, BuiltIn, Guides, Resources } from './pages'
+
+import Customizations from './customizations'
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
+import { fileURLToPath } from 'node:url'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { version } from '../package.json'
 import { getSidebarObject } from './sidebar-gen'

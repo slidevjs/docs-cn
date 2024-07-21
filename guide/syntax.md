@@ -100,7 +100,7 @@ The comment blocks at the end of each slide are treated as the note of the slide
 layout: cover
 ---
 
-# Page 1
+# 第 1 页
 
 This is the cover page.
 
@@ -108,7 +108,7 @@ This is the cover page.
 
 ---
 
-# Page 2
+# 第 2 页
 
 <!-- This is NOT a note because it is not at the end of the slide -->
 

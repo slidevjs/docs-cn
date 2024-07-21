@@ -2,7 +2,7 @@
 
 <Environment type="node" />
 
-Slidev is powered by [Vite](https://vitejs.dev/) under the hood. This means you can leverage Vite's great plugin system to customize your slides even further.
+Slidev 基于 [Vite](http://vitejs.dev/) 实现。这意味着你可以利用 Vite 强大的插件系统来进一步定制你的幻灯片。
 
 The `vite.config.ts` will be respected if you have one, and will be merged with the Vite config provided by Slidev, your theme and the addons.
 

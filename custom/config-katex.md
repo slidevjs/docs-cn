@@ -1,8 +1,12 @@
-# Configure KaTeX
+---
+title: 配置 KaTeX
+---
+
+# 配置 KaTeX {#configure-katex}
 
 <Environment type="node" />
 
-Create `./setup/katex.ts` with the following content:
+创建一份包含以下内容的 `./setup/katex.ts` 文件：
 
 ```ts twoslash
 import { defineKatexSetup } from '@slidev/types'

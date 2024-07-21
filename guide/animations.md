@@ -236,13 +236,13 @@ When you apply the `v-click` directive to your elements, it will attach the clas
 <div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
 ```
 
-After a click, it will become
+点击后，它将变成
 
 ```html
 <div class="slidev-vclick-target">Text</div>
 ```
 
-By default, a subtle opacity transition is applied to those classes:
+默认情况下，这些类别会使用透明度过渡：
 
 ```css
 /* below shows the default style */
@@ -288,7 +288,7 @@ To specify animations for only certain slides or layouts
 }
 ```
 
-Learn more about [customizing styles](/custom/directory-structure#style).
+进一步了解 [自定义样式](/custom/directory-structure#style).
 
 ## Motion
 

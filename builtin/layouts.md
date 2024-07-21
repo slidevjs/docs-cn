@@ -6,31 +6,31 @@ Note that <LinkInline link="guide/theme-addon" /> may provide additional layouts
 
 ## `center`
 
-Displays the content in the middle of the screen.
+在屏幕中间展示内容。
 
 ## `cover`
 
-Used to display the cover page for the presentation, may contain the presentation title, contextualization, etc.
+用来展示演讲稿的封面页，可以包含演讲的标题、演讲者、时间等。
 
 ## `default`
 
-The most basic layout, to display any kind of content.
+最基础的布局，用于展示任意类型的内容。
 
 ## `end`
 
-The final page for the presentation.
+演讲的最后一页。
 
 ## `fact`
 
-To show some fact or data with a lot of prominence on the screen.
+用来在屏幕上突出展示很多事实或数据。
 
 ## `full`
 
-Use all the space of the screen to display the content.
+使用屏幕全部空间来展示内容。
 
 ## `image-left`
 
-Shows an image on the left side of the screen, the content will be placed on the right side.
+在屏幕左侧展示图片，屏幕右侧展示内容。
 
 ### Usage
 
@@ -48,7 +48,7 @@ class: my-cool-content-on-the-right
 
 ## `image-right`
 
-Shows an image on the right side of the screen, the content will be placed on the left side.
+在屏幕右侧展示图片，屏幕左侧展示内容。
 
 ### Usage
 
@@ -66,7 +66,7 @@ class: my-cool-content-on-the-left
 
 ## `image`
 
-Shows an image as the main content of the page.
+将图片作为页面的主要内容进行展示。
 
 ### Usage
 
@@ -79,7 +79,7 @@ image: /path/to/the/image
 ---
 ```
 
-You can change the default background size (`cover`) by adding the `backgroundSize` attribute:
+你可以使用 `backgroundSize` 选项来控制背景图片的大小：
 
 ```yaml
 ---
@@ -99,7 +99,7 @@ backgroundSize: 20em 70%
 
 ## `iframe-left`
 
-Shows a web page on the left side of the screen, the content will be placed on the right side.
+在屏幕左侧通过 `<iframe>` 元素显示网页，内容将位于右侧。
 
 ### Usage
 
@@ -117,7 +117,7 @@ class: my-cool-content-on-the-right
 
 ## `iframe-right`
 
-Shows a web page on the right side of the screen, the content will be placed on the left side.
+在屏幕右侧通过 `<iframe>` 元素显示网页，内容将位于左侧。
 
 ### Usage
 
@@ -150,27 +150,27 @@ url: https://github.com/slidevjs/slidev
 
 ## `intro`
 
-To introduce the presentation, usually with the presentation title, a short description, the author, etc.
+介绍演讲稿，通​​常带有演讲稿标题、简述、作者等信息。
 
 ## `none`
 
-A layout without any existing styling.
+没有任何样式的布局。
 
 ## `quote`
 
-To display a quotation with prominence.
+突出显示引文。
 
 ## `section`
 
-Used to mark the beginning of a new presentation section.
+用来标记演讲稿的新部分的开始。
 
 ## `statement`
 
-Make an affirmation/statement as the main page content.
+将主张/声明作为主要页面内容。
 
 ## `two-cols`
 
-Separates the page content in two columns.
+将页面内容分为两列。
 
 ### Usage
 
@@ -192,7 +192,7 @@ This shows on the right
 
 ## `two-cols-header`
 
-Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+将页面内容分为两列，上方和下方的内容分开，第二行将左右两列分开。
 
 ### Usage
 

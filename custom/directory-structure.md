@@ -17,7 +17,7 @@ your-slidev/
   └── vite.config.ts    # extending vite config
 ```
 
-All of them are optional.
+以上所有均为可选。
 
 ## Components
 
@@ -25,19 +25,19 @@ Pattern: `./components/*.{vue,js,ts,jsx,tsx,md}`
 
 <LinkCard link="guide/component" />
 
-## Layouts
+## 布局 {#layouts}
 
 Pattern: `./layouts/*.{vue,js,ts,jsx,tsx}`
 
 <LinkCard link="guide/layout" />
 
-## Public
+## 静态资源 {#public}
 
 Pattern: `./public/*`
 
 Assets in this directory will be served at root path `/` during dev, and copied to the root of the dist directory as-is. Read more about [Assets Handling](../guide/faq#assets-handling).
 
-## Style
+## 样式 {#style}
 
 Pattern: `./style.css` | `./styles/index.{css,js,ts}`
 
@@ -85,13 +85,13 @@ Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://
 
 Learn more about the syntax [here](https://unocss.dev/transformers/directives#apply).
 
-## `index.html`
+## `index.html` {#index-html}
 
 Pattern: `index.html`
 
-The `index.html` provides the ability to inject meta tags and/or scripts to the main `index.html`
+`index.html` 提供了向主 `index.html` 中注入 meta 标签以及 scripts 标签的能力。
 
-For example, for the following custom `index.html`:
+例如，对于以下自定义 `index.html` 来说：
 
 ```html
 <!-- ./index.html -->
@@ -105,7 +105,7 @@ For example, for the following custom `index.html`:
 </body>
 ```
 
-The final hosted `index.html` will be:
+最终部署的 `index.html` 效果如下：
 
 ```html
 <!DOCTYPE html>

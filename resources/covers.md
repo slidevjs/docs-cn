@@ -1,12 +1,16 @@
-# Curated Covers
+---
+title: 精选封面
+---
 
-We curated a few cover images to demonstrate our starter template.
+# 精选封面 {#curated-covers}
+
+我们精心挑选了一些封面图片，用以展示在我们的初始模板中。
 
 ![](/screenshots/covers.png)
 
 ```yaml
 ---
-# random image from the curated collection
+# 来自精选集的随机图片
 background: https://cover.sli.dev
 ---
 ```

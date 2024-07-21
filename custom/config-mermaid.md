@@ -1,8 +1,12 @@
-# Configure Mermaid
+---
+title: 配置 Mermaid
+---
+
+# 配置 Mermaid {#configure-mermaid}
 
 <Environment type="client" />
 
-Create `./setup/mermaid.ts` with the following content:
+创建一份包含以下内容的 `./setup/mermaid.ts` 文件：
 
 ```ts twoslash
 import { defineMermaidSetup } from '@slidev/types'
