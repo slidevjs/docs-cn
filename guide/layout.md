@@ -1,8 +1,8 @@
-# Slide Layout
+# 幻灯片布局
 
 Layouts in Slidev are used to define the structure for each slides. They are Vue components that wrap the content of the slides.
 
-## Using Layouts {#use}
+## 使用布局 {#use}
 
 To use a layout, you can specify it in the frontmatter of the slide:
 
@@ -27,6 +27,6 @@ The layouts are loaded in the following order, and the last one loaded will over
   'features/slot-sugar',
 ]" />
 
-## Writing Layouts {#write}
+## 编写布局 {#write}
 
 <LinkCard link="guide/write-layout" />

@@ -1,4 +1,4 @@
-# Learning Resources
+# 学习资源
 
 ## English
 

@@ -1,4 +1,4 @@
-# Components
+# 内置组件
 
 This page lists all the built-in components provided by Slidev. These components can be **directly** used in your slides.
 

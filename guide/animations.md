@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Animation
+# 动画指南
 
 Animation is an essential part of slide presentations. Slidev provides a variety of ways to animate your slides, from the simple to the complex. This guide will show you how to use them effectively.
 

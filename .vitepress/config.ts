@@ -1,9 +1,6 @@
-import { Advanced, BuiltIn, Guides, Resources } from './pages'
-
-import Customizations from './customizations'
+import { fileURLToPath } from 'node:url'
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
-import { fileURLToPath } from 'node:url'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { version } from '../package.json'
 import { getSidebarObject } from './sidebar-gen'
@@ -12,36 +9,36 @@ import Customizations from './customizations'
 
 const slidebars: DefaultTheme.SidebarItem[] = [
   {
-    text: 'Guide',
+    text: '指南',
     items: Guides,
   },
   {
-    text: 'Advanced',
+    text: '进阶',
     items: Advanced,
   },
   {
-    text: 'Customizations',
+    text: '定制',
     items: Customizations,
   },
   {
-    text: 'Built-in',
+    text: '内置',
     items: BuiltIn,
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: Resources,
   },
 ]
 
 export default defineConfig({
   title: 'Slidev',
-  description: 'Presentation slides for developers',
+  description: '为开发者打造的演示文稿工具',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'author', content: 'Anthony Fu' }],
-    ['meta', { property: 'og:title', content: 'Slidev' }],
+    ['meta', { property: 'og:title', content: 'Slidev 中文文档' }],
     ['meta', { property: 'og:image', content: 'https://sli.dev/og-image.png' }],
-    ['meta', { property: 'og:description', content: 'Presentation slides for developers' }],
+    ['meta', { property: 'og:description', content: '为开发者打造的演示文稿工具' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@slidevjs' }],
     ['meta', { name: 'twitter:image', content: 'https://sli.dev/og-image.png' }],
@@ -77,9 +74,11 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/slidevjs/slidev/edit/main/docs/:path',
-      text: 'Suggest changes to this page',
+      pattern: 'https://github.com/slidevjs/docs-cn/edit/main/:path',
+      text: '改进翻译',
     },
+
+    outlineTitle: '本页目录',
 
     search: {
       provider: 'local',
@@ -87,34 +86,34 @@ export default defineConfig({
 
     nav: [
       {
-        text: '📖 Guide',
+        text: '📖 指南',
         items: [
           ...Guides,
           {
-            text: 'Advanced',
+            text: '进阶',
             items: Advanced,
           },
         ],
       },
       {
-        text: '✨ Features',
+        text: '✨ 功能',
         link: '/features/',
       },
       {
-        text: 'Reference',
+        text: '参考',
         items: [
           {
-            text: 'Built-in',
+            text: '内置',
             items: BuiltIn,
           },
           {
-            text: 'Customize',
+            text: '定制',
             items: Customizations,
           },
         ],
       },
       {
-        text: 'Resources',
+        text: '资源',
         items: Resources,
       },
     ],
@@ -145,11 +144,11 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: `English (v${version})`,
+      label: `简体中文 (v${version})`,
     },
     zh: {
-      label: '简体中文',
-      link: 'https://cn.sli.dev/',
+      label: 'English',
+      link: 'https://sli.dev/',
     },
   },
 })

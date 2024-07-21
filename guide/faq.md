@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# FAQ
+# 常见问答
 
 ## Assets Handling {#assets-handling}
 

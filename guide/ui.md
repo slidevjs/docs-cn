@@ -2,16 +2,16 @@
 outline: deep
 ---
 
-# User Interface
+# 用户界面
 
-## Navigation Bar {#navigation-bar}
+## 导航栏 {#navigation-bar}
 
 In Play mode, move your mouse to the bottom left corner of the page, you can see the navigation bar.
 ![](/screenshots/navbar.png)
 
 > You can extend the navigation bar via <LinkInline link="features/global-layers" />.
 
-## Navigation Actions {#navigation-actions}
+## 导航操作 {#navigation-actions}
 
 | Keyboard Shortcut                   | Button in Navigation Bar                                                              | Description                                                     |
 | ----------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -33,13 +33,13 @@ In Play mode, move your mouse to the bottom left corner of the page, you can see
 
 > You can [configure the shortcuts](../custom/config-shortcuts).
 
-## Quick Overview {#quick-overview}
+## 幻灯片总览 {#quick-overview}
 
 By pressing <kbd>o</kbd> or clicking the <carbon-apps class="inline-icon-btn"/> button in the navigation bar, you can have an overview of your slides so you can jump between them easily.
 
 ![](/screenshots/slides-overview.png)
 
-## Presenter Mode {#presenter-mode}
+## 演讲者模式 {#presenter-mode}
 
 To enter the presenter mode, you can click the <carbon-user-speaker class="inline-icon-btn"/> button in the navigation panel, or visit `http://localhost:<port>/presenter`.
 
@@ -49,7 +49,7 @@ Whenever you navigate through the slides in the presenter mode, all other opened
 
 ![](/screenshots/presenter-mode.png)
 
-## Slide Overview {#slides-overview}
+## 线性总览 {#slides-overview}
 
 > Available since v0.48.0
 
@@ -60,19 +60,19 @@ You can visit an overview of all of your slides by first opening the [Quick Over
 
 The overview page gives you a linear list of all your slides, with all of your notes on the side. You can double-click on the notes to edit the notes directly, and drag the clicks sliders to preview the steps in your slides.
 
-## Drawing UI {#drawing}
+## 绘图 {#drawing}
 
-See:
+请参阅:
 
 <LinkCard link="features/drawing" />
 
 ## Recording UI {#recording}
 
-See:
+请参阅:
 
 <LinkCard link="features/recording"/>
 
-## Global Layers {#global-layers}
+## 全局图层 {#global-layers}
 
 You can add any custom UI below or above your slides for the whole presentation or per-slide:
 

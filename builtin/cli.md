@@ -1,8 +1,8 @@
-# Slidev CLI
+# Slidev 命令行工具 (CLI)
 
 `@slidev/cli` exposes a binary called `slidev` that you can use to develop, build, and export your slides.
 
-## Prerequisites
+## 基本信息
 
 To use the CLI, you can either install `@slidev/cli` globally or install it locally in your Node.js project. If you created your project with `npm init slidev`, the CLI is already installed locally.
 

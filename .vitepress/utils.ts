@@ -39,9 +39,9 @@ export function resolveLink(link: string): {
     case 'guide': {
       return {
         kind: 'guide',
-        title: `📖  ${getGuideTitle(name)}`,
-        tags: ['guide'],
-        descripton: 'Click to read this guide',
+        title: `📖 ${getGuideTitle(name)}`,
+        tags: ['指南'],
+        descripton: '点击阅读该指南',
         url: `/guide/${nameWithHash}`,
       }
     }

@@ -1,66 +1,66 @@
 export default [
   {
-    text: 'Configurations',
+    text: '自定义',
     link: '/custom/',
   },
   {
-    text: 'Directory Structure',
+    text: '目录结构',
     link: '/custom/directory-structure',
   },
   {
-    text: 'Configure Highlighter',
+    text: '代码高亮',
     link: '/custom/config-highlighter',
   },
   {
-    text: 'Configure Vite and Plugins',
+    text: '配置 Vite 和插件',
     link: '/custom/config-vite',
   },
   {
-    text: 'Configure Vue App',
+    text: '配置 Vue',
     link: '/custom/config-vue',
   },
   {
-    text: 'Configure UnoCSS',
+    text: '配置 UnoCSS',
     link: '/custom/config-unocss',
   },
   {
-    text: 'Configure Code Runners',
+    text: '配置代码运行器',
     link: '/custom/config-code-runners',
   },
   {
-    text: 'Configure Transformers',
+    text: '配置自定义语法',
     link: '/custom/config-transformers',
   },
   {
-    text: 'Configure Monaco',
+    text: '配置 Monaco',
     link: '/custom/config-monaco',
   },
   {
-    text: 'Configure KaTeX',
+    text: '配置 KaTeX',
     link: '/custom/config-katex',
   },
   {
-    text: 'Configure Mermaid',
+    text: '配置 Mermaid',
     link: '/custom/config-mermaid',
   },
   {
-    text: 'Configure Routes',
+    text: '配置路由',
     link: '/custom/config-routes',
   },
   {
-    text: 'Configure Shortcuts',
+    text: '配置快捷键',
     link: '/custom/config-shortcuts',
   },
   {
-    text: 'Configure Context Menu',
+    text: '配置右键菜单',
     link: '/custom/config-context-menu',
   },
   {
-    text: 'Configure Fonts',
+    text: '配置字体',
     link: '/custom/config-fonts',
   },
   {
-    text: 'Configure Pre-Parser',
+    text: '配置预处理器',
     link: '/custom/config-parser',
   },
 ]

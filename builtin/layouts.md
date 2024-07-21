@@ -1,4 +1,4 @@
-# Layouts
+# 内置布局
 
 This page lists all the built-in layouts provided by Slidev. These layouts can be used via the `layout` option in the frontmatters of your slides.
 

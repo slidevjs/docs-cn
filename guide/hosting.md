@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# Building and Hosting
+# 编译和部署
 
 Slidev is designed to run as a web server when you are editing or presenting your slides. However, after the presentation, you may still want to share your **interactive** slides with others. This guide will show you how to build and host your slides.
 
-## Build as a SPA {#spa}
+## 编译为静态网页 {#spa}
 
 You can build the slides into a static [Single-page application (SPA)](https://developer.mozilla.org/en-US/docs/Glossary/SPA) via the following command:
 
@@ -63,7 +63,7 @@ Here are a few examples of the exported SPA:
 <LinkCard link="features/build-with-pdf" />
 <LinkCard link="features/bundle-remote-assets" />
 
-## Hosting
+## 静态部署 {#hosting}
 
 We recommend using `npm init slidev@latest` to scaffold your project, which contains the necessary configuration files for hosting services out-of-the-box.
 

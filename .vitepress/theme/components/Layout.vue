@@ -15,16 +15,12 @@ const route = useRoute()
       <a @click.prevent>
         <Dropdown :triggers="['hover', 'click']" :popper-triggers="['hover']" theme="twoslash" popper-class="z-1000">
           <Badge class="scale-80 translate-x--1 select-none">
-            New Docs!
+            新版文档
           </Badge>
           <template #popper>
             <div class="p3 text-sm">
               <p>
-                You are viewing the new Slidev documentation.
-              </p>
-              <p>
-                The old one is available
-                <a href="https://docs-legacy.sli.dev/" class="underline text-primary" target="_blank">here</a>.
+                您正在访问新版文档。
               </p>
             </div>
           </template>

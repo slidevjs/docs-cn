@@ -2,13 +2,13 @@
 outline: deep
 ---
 
-# Syntax Guide
+# 语法
 
 Slidev's slides are written as Markdown files, which are called **Slidev Markdown**s. A presentation has a Slidev Markdown as its entry, which is `./slides.md` by default, but you can change it by passing the file path as an argument to [the CLI commands](../builtin/cli).
 
 In a Slidev Markdown, not only [the basic Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used as usual, Slidev also provides additional features to enhance your slides. This section covers the syntax introduced by Slidev. Please make sure you know the basic Markdown syntax before reading this guide.
 
-## Slide Separators {#slide-separators}
+## 分隔符 {#slide-separators}
 
 Use `---` padded with a new line to separate your slides.
 
@@ -38,7 +38,7 @@ Use UnoCSS classes and Vue components to style and enrich your slides:
 </div>
 ````
 
-## Frontmatter & Headmatter {#frontmatter}
+## Frontmatter 和 Headmatter {#frontmatter}
 
 At the beginning of each slide, you can add an optional [frontmatter](https://jekyllrb.com/docs/front-matter/) to configure the slide. The first frontmatter block is called **headmatter** and can configure the whole slide deck. The rest are **frontmatters** for individual slides. Texts in the headmatter or the frontmatter should be an object in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
 
@@ -89,7 +89,7 @@ Also, there is another possible frontmatter format:
 
 <LinkCard link="features/block-frontmatter" />
 
-## Notes {#notes}
+## 备注 {#notes}
 
 You can also create presenter notes for each slide. They will show up in [Presenter Mode](../guide/ui#presenter-mode) for you to reference during presentations.
 
@@ -100,7 +100,7 @@ The comment blocks at the end of each slide are treated as the note of the slide
 layout: cover
 ---
 
-# 第 1 页
+# Page 1
 
 This is the cover page.
 
@@ -108,7 +108,7 @@ This is the cover page.
 
 ---
 
-# 第 2 页
+# Page 2
 
 <!-- This is NOT a note because it is not at the end of the slide -->
 
@@ -125,7 +125,7 @@ Basic Markdown and HTML are also supported in notes and will be rendered.
   'features/click-marker',
 ]" />
 
-## Code Blocks {#code-block}
+## 代码块 {#code-block}
 
 One big reason that led to the creation of Slidev was the need to perfectly display code in slides. Consequently, you can use Markdown-flavored code blocks to highlight your code.
 
@@ -149,20 +149,20 @@ More about code blocks:
 <LinkCard link="features/twoslash" />
 <LinkCard link="features/import-snippet" />
 
-## LaTeX Blocks {#latex-block}
+## Latex 公式块 {#latex-block}
 
 Slidev supports LaTeX blocks for mathematical and chemical formulas:
 
 <LinkCard link="features/latex" />
 
-## Diagrams {#diagrams}
+## 图表 {#diagrams}
 
 Slidev supports [Mermaid.js](http://mermaid.js.org/) and [PlantUML](https://plantuml.com/) for creating diagrams from text:
 
 <LinkCard link="features/mermaid" />
 <LinkCard link="features/plantuml" />
 
-## MDC Syntax {#mdc-syntax}
+## MDC 语法 {#mdc-syntax}
 
 MDC Syntax is the easiest way to apply styles and classes to elements:
 
@@ -174,6 +174,6 @@ You can use scoped CSS to style your slides:
 
 <LinkCard link="features/slide-scope-style" />
 
-## Importing Slides {#importing-slides}
+## 导入幻灯片 {#importing-slides}
 
 <LinkCard link="features/importing-slides" />
