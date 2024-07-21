@@ -6,6 +6,9 @@ import { defineConfig } from 'vitepress'
 import { fileURLToPath } from 'node:url'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { version } from '../package.json'
+import { getSidebarObject } from './sidebar-gen'
+import { Advanced, BuiltIn, Guides, Resources } from './pages'
+import Customizations from './customizations'
 
 const slidebars: DefaultTheme.SidebarItem[] = [
   {
@@ -84,7 +87,7 @@ export default defineConfig({
 
     nav: [
       {
-        text: 'Guide',
+        text: '📖 Guide',
         items: [
           ...Guides,
           {
@@ -123,13 +126,14 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/features/': [],
       '/guide/': slidebars,
       '/themes/': slidebars,
       '/addons/': slidebars,
       '/custom/': slidebars,
       '/builtin/': slidebars,
       '/resources/': slidebars,
+      ...await getSidebarObject(),
+      '/features/': [],
       '/': slidebars,
     },
 

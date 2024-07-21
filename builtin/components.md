@@ -298,7 +298,7 @@ See https://sli.dev/guide/animations.html#enter-leave
 
 ## `VDrag`
 
-See https://sli.dev/guide/draggable.html
+<LinkCard link="features/draggable" />
 
 ## `SlidevVideo`
 
