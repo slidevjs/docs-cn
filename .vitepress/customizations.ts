@@ -28,7 +28,7 @@ export default [
     link: '/custom/config-code-runners',
   },
   {
-    text: '配置自定义语法',
+    text: '配置切换效果',
     link: '/custom/config-transformers',
   },
   {

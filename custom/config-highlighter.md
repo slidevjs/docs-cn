@@ -1,12 +1,13 @@
-# Configure Highlighter
+# 配置语法高亮
 
-Slidev uses [Shiki](https://github.com/shikijs/shiki) as the code highlighter. It's a TextMate Grammar powered syntax highlighter as accurate as VS Code. It generates colored tokens so no additinal CSS is required. Shiki also comes with [a bunch of built-in themes](https://shiki.style/themes). In Slidev, we also provided the [TwoSlash](#twoslash-integration) support.
+Slidev 使用 [Shiki](https://github.com/shikijs/shiki) ，一个基于 TextMate 语法，与 VS Code一样准确的代码高亮器。它直接生成带样式的包裹元素，所以不需要引入额外的 CSS 文件。Shiki 自带了一系列 [内置主题](https://shiki.style/themes)。而在 Slidev 中，我们也提供内置的 [TwoSlash](#twoslash-integration)。
 
-## Configure Shiki
+
+## 配置 Shiki
 
 <Environment type="both" />
 
-Create `./setup/shiki.ts` file with the following content:
+创建包含以下内容的 `./setup/shiki.ts` 文件：
 
 ```ts twoslash
 /* ./setup/shiki.ts */
@@ -25,7 +26,7 @@ export default defineShikiSetup(() => {
 })
 ```
 
-If you want to add custom theme or language (TextMate grammar/themes in JSON), you can import them in the setup file:
+如果你想添加自定义主题或语言（ JSON 中的 TextMate 语法/主题），你可以在上述文件中导入它们：
 
 <!-- eslint-disable import/first-->
 
@@ -60,16 +61,16 @@ export default defineShikiSetup(() => {
 })
 ```
 
-Check [Built-in languages](https://shiki.style/languages) and [Built-in themes](https://shiki.style/themes), and refer to [Shiki's docs](https://shiki.style) for more details.
+更多详情请参考 [Built-in languages](https://shiki.style/languages) 及 [Built-in themes](https://shiki.style/themes) 以及 Shiki 的 [官方文档](https://shiki.style) 。
 
 :::info
-For now, Shiki Magic Move does not support transformers.
+目前，Shiki 中的 Magic Move 还不支持页面切换效果。
 :::
 
-## Configure Prism
+## 配置 Prism
 
 :::warning
-Prism support is deprecated and will be removed in the future. Please consider using Shiki instead.
+Prism 已被 Slidev 停止支持，并且将在未来版本中被移除。请考虑更换到 Shiki
 :::
 
-To configure your Prism, you can just import the theme CSS or use [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) to configure themes for both light and dark mode. Refer to its docs for more details.
+如果要配置你的 Prism，你可以引入相应的主题 CSS，或者使用 [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) 来进行亮/暗模式下的主题配置。请参考相应文档以了解更多细节。
