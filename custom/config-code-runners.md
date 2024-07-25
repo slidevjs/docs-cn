@@ -8,7 +8,7 @@ Slidev 内置了对 JavaScript 与 TypeScript 运行器。 它们能直接在浏
 
 你需要创建含以下内容的 `./setup/code-runners.ts` 文件:
 
-```ts
+```ts twoslash
 import { defineCodeRunnersSetup } from '@slidev/types'
 
 export default defineCodeRunnersSetup(() => {
@@ -34,7 +34,7 @@ export default defineCodeRunnersSetup(() => {
 
 第二个传入参数 `ctx` 是运行的上下文, 包含了以下属性:
 
-```ts
+```ts twoslash
 export interface CodeRunnerContext {
   /**
    * 通过 `runnerOptions` 属性传递给运行器的选项。
@@ -43,7 +43,7 @@ export interface CodeRunnerContext {
   /**
    * 使用 Shiki 高亮代码。
    */
-  highlight: (code: string, lang: string, options?: Partial<CodeToHastOptions>) => Promise<string>
+  highlight: (code: string, lang: string, options?: Partial<CodeToHastOptions>) => string
   /**
    * 使用其他代码运行器运行代码。
    */
