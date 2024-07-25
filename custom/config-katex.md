@@ -1,8 +1,4 @@
----
-title: 配置 KaTeX
----
-
-# 配置 KaTeX {#configure-katex}
+# 配置 KaTeX
 
 <Environment type="node" />
 
@@ -19,4 +15,6 @@ export default defineKatexSetup(() => {
 })
 ```
 
-The return value should be the custom options for KaTeX. Refer to [KaTeX's documentation](https://katex.org/docs/options.html) or the type definition for the full options list.
+返回值应当是 KaTeX 的自定义选项。
+
+请参阅 [KaTeX的文档](https://katex.org/docs/options.html) 或选项列表的类型定义。
