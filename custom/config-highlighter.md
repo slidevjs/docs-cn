@@ -30,14 +30,15 @@ export default defineShikiSetup(() => {
 <!-- eslint-disable import/first-->
 
 ```ts twoslash
-declare module '*.tmTheme.json' {
-  const value: any
-  export default value
-}
-// ---cut---
 /* ./setup/shiki.ts */
 import { defineShikiSetup } from '@slidev/types'
+// ---cut-start---
+// @ts-expect-error missing types
+// ---cut-end---
 import customTheme from './customTheme.tmTheme.json'
+// ---cut-start---
+// @ts-expect-error missing types
+// ---cut-end---
 import customLanguage from './customLanguage.tmLanguage.json'
 
 export default defineShikiSetup(() => {
