@@ -2,11 +2,11 @@
 title: 自定义
 ---
 
-从样式到工具，Slidev 都是完全可以自定义的。你可以对以下这些工具进行自定义配置（ [Vite](/custom/config-vite) ，  [UnoCSS](/custom/config-unocss)， [Monaco](/custom/config-monaco) ，等等。）
+在 Slidev 中，从样式到工具都是完全可以自定义的。你可以对 [Vite](/custom/config-vite)、[UnoCSS](/custom/config-unocss)、[Monaco](/custom/config-monaco) 等工具进行自定义配置。
 
-## 扉页配置 {#headmatter}
+## Headmatter {#headmatter}
 
-你可以在 Slidev 的第一张幻灯片扉页处（文件顶部）进行各项配置，以下是各项的默认参数。
+**第一张**幻灯片的 Frontmatter 也叫 Headmatter，在此处可以配置整个幻灯片。以下是各选项及其的默认值：
 
 
 ```yaml
@@ -43,15 +43,15 @@ export:
   dark: false
   withClicks: false
   withToc: false
-# 语法高亮设置，可以使用 'prism' 或 'shiki'(已弃用) 方案
+# 语法高亮设置，可以使用 'shiki' 或 'prism'(已弃用) 方案
 highlighter: shiki
-# 启用 twoslash, 可以是一个 boolean 值、'dev' 或 'build'
+# 启用 twoslash, 可以是一个 boolean 值，'dev' 或 'build'
 twoslash: true
 # 在代码块中显示行号
 lineNumbers: false
 # 启用 monaco 编辑器，可以是一个 boolean 值，'dev' 或 'build'
 monaco: true
-# 从何处加载 monaco 的类型，可以是 'cdn'， 'local' 或 ‘none’
+# 从何处加载 monaco 的类型，可以是 'cdn'，'local' 或 ‘none’
 monacoTypesSource: local
 # 指定额外的本地包以导入 monaco 类型
 monacoTypesAdditionalPackages: []
@@ -114,10 +114,9 @@ htmlAttrs:
 
 你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) 获取到更多的配置信息。
 
-## 单页幻灯片配置 {#frontmatter}
+## Frontmatter {#frontmatter}
 
-此外，每张幻灯片都允许单独声明以下 Frontmatter 配置：
-以下为相应 frontmatter 默认值
+此外，每张幻灯片的 Frontmatter 中，可以配置该幻灯片的特定属性。以下是各选项及其的默认值：
 
 ```yaml
 ---
