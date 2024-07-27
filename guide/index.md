@@ -1,148 +1,176 @@
 ---
-outline: deep
+title: 自定义
 ---
 
-# 快速上手
+在 Slidev 中，从样式到工具都是完全可以自定义的。你可以对 [Vite](/custom/config-vite)、[UnoCSS](/custom/config-unocss)、[Monaco](/custom/config-monaco) 等工具进行自定义配置。
 
-Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> 是一个为开发者设计的基于 Web 的幻灯片制作工具。它帮助您以 Markdown 的形式专注于编写幻灯片的内容，并制作出具有交互式演示功能的、高度可自定义的幻灯片。
+## Headmatter {#headmatter}
 
-::: tip
+**第一张**幻灯片的 Frontmatter 也叫 Headmatter，在此处可以配置整个幻灯片。以下是各选项及其的默认值：
 
-你可以在 <LinkInline link="guide/why" /> 部分了解更多关于本项目的设计初衷。
 
-:::
+```yaml
+---
+# 主题 id 或 主题包名称
+# 了解更多：https://cn.sli.dev/guide/theme-addon#use-theme
+theme: default
+# 附加组件, 一个可以含包名或本地路径的数组。
+# 了解更多： https://cn.sli.dev/guide/theme-addon#use-addon
+addons: []
+# 幻灯片的总标题，如果没有指定，那么将以第一张拥有标题的幻灯片的标题作为总标题。
+title: Slidev
+# 网页的标题模板，`%s` 会被页面的标题替换。
+titleTemplate: '%s - Slidev'
+# 幻灯片信息，可以是一个 markdown 字符串。
+info: false
+# 导出的 PDF 或 PPTX 文件中的作者字段。
+author: Your Name Here
+# 导出的 PDF 文件中的关键字，以逗号分割。
+keywords: keyword1,keyword2
 
-<!--
-- 📝 [**Markdown-based**](/guide/syntax) - focus on content and use your favorite editor
-- 🧑‍💻 [**Developer Friendly**](/guide/syntax#code-blocks) - built-in code highlighting, live coding, etc.
-- 🎨 [**Themable**](/resources/theme-gallery) - theme can be shared and used with npm packages
-- 🌈 [**Stylish**](/guide/syntax#embedded-styles) - on-demand utilities via [UnoCSS](https://github.com/unocss/unocss).
-- 🤹 [**Interactive**](/custom/directory-structure#components) - embedding Vue components seamlessly
-- 🎙 [**Presenter Mode**](/guide/ui#presenter-mode) - use another window, or even your phone to control your slides
-- 🎨 [**Drawing**](/features/drawing) - draw and annotate on your slides
-- 🧮 [**LaTeX**](/guide/syntax#latex) - built-in LaTeX math equations support
-- 📰 [**Diagrams**](/guide/syntax#diagrams) - creates diagrams using textual descriptions with [Mermaid.js](https://mermaid.js.org/)
-- 🌟 [**Icons**](/guide/syntax#icons) - access to icons from any icon set directly
-- 💻 [**Editor**](/guide/index#editor) - integrated editor, or the [VSCode extension](/features/vscode-extension)
-- 🎥 [**Recording**](/features/recording) - built-in recording and camera view
-- 📤 [**Portable**](/guide/exporting) - export into PDF, PNGs, or PPTX
-- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
-- 🛠 [**Hackable**](/custom/) - using Vite plugins, Vue components, or any npm packages
--->
+# 启用演讲者模式，可以是一个 boolean 值、'dev' 或 'build'
+presenter: true
+# 在单页（SPA）构建中启用 pdf 下载，也可以指定一个自定义 url
+download: false
+# 要导出文件的文件名称
+exportFilename: slidev-exported
+# 导出选项
+# 使用驼峰命名法的导出 CLI 选项
+# 了解更多： https://cn.sli.dev/guide/exporting
+export:
+  format: pdf
+  timeout: 30000
+  dark: false
+  withClicks: false
+  withToc: false
+# 语法高亮设置，可以使用 'shiki' 或 'prism'(已弃用) 方案
+highlighter: shiki
+# 启用 twoslash, 可以是一个 boolean 值，'dev' 或 'build'
+twoslash: true
+# 在代码块中显示行号
+lineNumbers: false
+# 启用 monaco 编辑器，可以是一个 boolean 值，'dev' 或 'build'
+monaco: true
+# 从何处加载 monaco 的类型，可以是 'cdn'，'local' 或 ‘none’
+monacoTypesSource: local
+# 指定额外的本地包以导入 monaco 类型
+monacoTypesAdditionalPackages: []
+# 指定额外的本地模块作为 monaco 可运行的依赖项
+monacoRunAdditionalDeps: []
+# 使用 vite-plugin-remote-assets 在本地下载远程资源，可以是一个 boolean 值，'dev' 或者 'build'
+remoteAssets: false
+# 控制幻灯片中的文本是否可以被选择
+selectable: true
+# 启用幻灯片录制，可以是一个 boolean 值，'dev' 或者 'build'
+record: dev
+# 启用 Slidev 的前后文菜单，可以是一个 boolean 值，'dev' 或者 'build'
+contextMenu: true
+# 防止休眠，可以是一个 boolean 值，'dev' 或者 'build'
+wakeLock: true
 
-<!-- <FeaturesAnimation /> -->
+# 幻灯片的配色方案，可以使用 'auto'，'light' 或者 'dark'
+colorSchema: auto
+# vue-router 模式，可以使用 'history' 或 'hash' 模式
+routerMode: history
+# 幻灯片的长宽比
+aspectRatio: 16/9
+# canvas 的真实宽度，单位为 px
+canvasWidth: 980
+# 用于主题定制，会将属性 `x` 注入根样式 `--slidev-theme-x`
+themeConfig:
+  primary: '#5d8392'
 
-## 创建幻灯片 {#create}
+# favicon 可以是本地文件路径，也可以是一个 URL
+favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
+# 用于渲染图表的 PlantUML 服务器的 URL
+# 了解更多： https://cn.sli.dev/features/plantuml.html
+plantUmlServer: https://www.plantuml.com/plantuml
+# 字体将从 Google 字体自动导入
+# 了解更多： https://cn.sli.dev/custom/config-fonts
+fonts:
+  sans: Roboto
+  serif: Roboto Slab
+  mono: Fira Code
 
-### 在浏览器中创建 {#create-browser}
+# 为所有幻灯片添加默认的 frontmatter
+defaults:
+  layout: default
+  # ...
 
-通过 StackBlitz 在浏览器中创建幻灯片: [sli.dev/new](https://sli.dev/new)
+# 绘制选项
+# 了解更多：https://cn.sli.dev/features/drawing
+drawings:
+  enabled: true
+  persist: false
+  presenterOnly: false
+  syncAll: true
 
-### 在本地创建 {#create-local}
-
-> 需要先安装 [Node.js](https://nodejs.org) >= 18.0
-
-在终端运行以下命令来创建一个新的 Slidev 项目：
-
-::: code-group
-
-```bash [npm]
-npm init slidev@latest
+# HTML 标签属性
+htmlAttrs:
+  dir: ltr
+  lang: en
+---
 ```
 
-```bash [pnpm]
-pnpm create slidev
+你可以从 [类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) 获取到更多的配置信息。
+
+## Frontmatter {#frontmatter}
+
+此外，每张幻灯片的 Frontmatter 中，可以配置该幻灯片的特定属性。以下是各选项及其的默认值：
+
+```yaml
+---
+# 自定义点击计数
+# 了解更多： https://cn.sli.dev/guide/animations#custom-total-clicks-count
+clicks: 0
+# 自定义初始点击次数
+clicksStart: 0
+# 完全禁用和隐藏幻灯片
+disabled: false
+# 作用参考 `disabled` 配置。
+hide: false
+# 为 `<Toc>` 组件隐藏幻灯片
+hideInToc: false
+# 定义应用于幻灯片的布局组件
+layout: <"cover" if the slide is the first slide, otherwise "default">
+# 仅当同时声明了 `title` 配置时，为 `<TitleRenderer>` 和 `<Toc>` 提供组件级的标题覆盖
+level: 1
+# 预加载下一张幻灯片
+preload: true
+# 创建一个路由别名，可用于 URL 或 `<Link>` 组件
+routeAlias: undefined # 或 string
+# 引入一个 Markdown 文件
+# 了解更多： https://cn.sli.dev/guide/syntax.html#importing-slides
+src: undefined # 或 string
+# 仅当同时声明了 `level` 配置时，覆盖 `<TitleRenderer>` 和 `<Toc>` 组件的标题
+title: undefined # 或 string
+# 定义幻灯片与下一张幻灯片之间的过渡
+# 了解更多： https://cn.sli.dev/guide/animations.html#slide-transitions
+transition: undefined # 或 string | TransitionProps
+# 自定义缩放比例
+# 适用于内容较多的幻灯片
+zoom: 1
+# 用于可拖动元素的位置
+# 了解更多： https://cn.sli.dev/features/draggable.html
+dragPos: {} # 类型: Record<string,string>
+---
 ```
 
-```bash [yarn]
-yarn create slidev
-```
+## 目录结构
 
-:::
+Slidev 使用特定的目录结构来减少配置的复杂度，并使功能扩展更加的灵活和直观。
 
-根据指引，输入项目名称并按照提示完成项目创建。幻灯片内容在 `slides.md` 文件中，初始内容包含了 Slidev 的大部分功能的演示。关于幻灯片 Markdown 语法的更多信息，请查看 <LinkInline link="guide/syntax" />。
+具体请参考 [目录结构](/custom/directory-structure) 章节。
 
-:::: details 单文件模式 (不推荐)
+## 配置工具
 
-如果你不想创建一个 Node.js 包来管理你的幻灯片，可以选择全局安装 Slidev CLI:
+<script setup>
+import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
+import customizations from '../.vitepress/customizations'
+</script>
 
-::: code-group
-
-```bash [npm]
-npm i -g @slidev/cli
-```
-
-```bash [pnpm]
-pnpm i -g @slidev/cli
-```
-
-```bash [yarn]
-yarn global add @slidev/cli
-```
-
-:::
-
-然后，你可以通过以下命令创建并启动幻灯片:
-
-```bash
-slidev slides.md
-```
-
-::::
-
-## 基本命令 {#commmands}
-
-以下是 Slidev 的一些常用命令：
-
-- `slidev` - Start the dev server. See [the dev command](../builtin/cli#dev).
-- `slidev export` - Export the slides to PDF, PPTX, or PNGs. See <LinkInline link="guide/exporting" />.
-- `slidev build` - Build the slides as a static web application. See <LinkInline link="guide/hosting" />.
-- `slidev format` - Format the slides. See [the format command](../builtin/cli#format).
-- `slidev --help` - Show the help message
-
-To run these commands, you can add them to your `package.json` scripts (which has been done for you if the project was created via `npm init slidev`):
-
-你可以将这些命令添加到你的 `package.json` 的 `scripts` 字段中，来更方便地运行它们（如果幻灯片项目是通过 `npm init slidev` 创建的，则可以跳过这一步）：
-
-```json
-{
-  "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build",
-    "export": "slidev export"
-  }
-}
-```
-
-这样，你就可以通过 `npm run dev`、`npm run build` 和 `npm run export` 来运行这些命令了。
-
-关于 CLI 的更多信息，请查看 [CLI 指南](../builtin/cli)。
-
-## 配置编辑器 {#editor}
-
-因为 Slidev 使用 Markdown 作为幻灯片的基本格式，你可以使用任何你喜欢的编辑器来开发你的幻灯片。我们也提供了一些工具来帮助你更方便地开发幻灯片：
-
-<LinkCard link="features/vscode-extension" />
-<LinkCard link="features/side-editor" />
-<LinkCard link="features/prettier-plugin" />
-
-## 加入社区 {#community}
-
-欢迎加入我们的 [Discord 服务器](https://chat.sli.dev/)，获取帮助、分享你的幻灯片，或者讨论关于 Slidev 的任何事情。
-
-如果你遇到了疑似 bug 的问题，欢迎在 [GitHub](https://github.com/slidevjs/slidev/issues/new/choose) 上开一个 issue。
-
-## 技术栈 {#tech-stack}
-
-Slidev 基于以下工具和技术构建：
-
-- [Vite](https://vitejs.dev) - 一款极速响应的下一代的前端工具链
-- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - 用于编写幻灯片内容
-- [UnoCSS](https://github.com/unocss/unocss) - 帮助快速构建幻灯片样式
-- [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - 为在幻灯片中嵌入代码提供一流支持
-- [RecordRTC](https://recordrtc.org) - 内置的录制工具和摄像头视图
-- [VueUse](https://vueuse.org) 系列 - [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), 等等
-- [Iconify](https://iconify.design/) - 用图标集丰富你的幻灯片
-- [Drauu](https://github.com/antfu/drauu) - 用于在幻灯片上绘图和批注
-- [KaTeX](https://katex.org/) - 用于渲染 LaTeX 数学公式
-- [Mermaid](https://mermaid-js.github.io/mermaid) - 基于文本的图表绘制工具
+<li v-for="c of customizations.slice(2)" :key="c.text">
+  <VPLink :href="c.link">
+    {{ c.text }}
+  </VPLink>
+</li>
