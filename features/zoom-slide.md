@@ -3,9 +3,9 @@ relates:
   - guide/faq#adjust-size
   - features/canvas-size
   - features/transform-component
-tags: [layout]
+tags: [布局]
 description: |
-  Zoom the content of a slide to a specific scale.
+  将幻灯片内容缩放到一个特定的比例。
 ---
 
 # Zoom Slides

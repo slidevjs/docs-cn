@@ -1,7 +1,7 @@
 ---
-tags: [layout]
+tags: [布局]
 description: |
-  Move, resize, and rotate elements by dragging them with the mouse.
+  通过用鼠标拖动来移动和旋转元素及调整大小。
 ---
 
 # Draggable Elements

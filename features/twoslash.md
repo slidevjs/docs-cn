@@ -4,9 +4,9 @@ depends:
 relates:
   - TwoSlash: https://twoslash.netlify.app/
 since: v0.46.0
-tags: [codeblock]
+tags: [代码块]
 description: |
-  A powerful tool for rendering TypeScript code blocks with type information on hover or inlined.
+  一个强大的工具，用于在悬停或内联时渲染带有类型信息的 TypeScript 代码块。
 ---
 
 # TwoSlash Integration

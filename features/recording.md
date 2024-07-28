@@ -4,9 +4,9 @@ depends:
 relates:
   - RecordRTC: https://github.com/muaz-khan/RecordRTC
   - WebRTC API: https://webrtc.org/
-tags: [presenter, tool]
+tags: [演讲者, 工具]
 description: |
-  Record your presentation with the built-in camera view and recording feature.
+  在内置的摄像头调用及录屏功能加持下录制你的演示。
 ---
 
 # Recording

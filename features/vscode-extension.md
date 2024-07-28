@@ -3,9 +3,9 @@ relates:
   - VS Code: https://code.visualstudio.com/
   - View in Marketplace: https://marketplace.visualstudio.com/items?itemName=antfu.slidev
   - View in OVSX: https://open-vsx.org/extension/antfu/slidev
-tags: [editor]
+tags: [编辑器]
 description: |
-  Help you better organize your slides and have a quick overview of them.
+  帮助你更好的组织你的幻灯片并进行快速浏览。
 ---
 
 # VS Code Extension

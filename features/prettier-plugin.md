@@ -3,9 +3,9 @@ relates:
   - features/block-frontmatter
   - GitHub Repo: https://github.com/slidevjs/prettier-plugin
   - Prettier: https://prettier.io/
-tags: [editor]
+tags: [编辑器]
 description: |
-  Use the Prettier plugin to format your slides.
+  使用 Prettier 插件来格式化你的幻灯片。
 ---
 
 # Prettier Plugin

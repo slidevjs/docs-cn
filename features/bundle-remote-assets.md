@@ -1,7 +1,7 @@
 ---
 relates:
   - vite-plugin-remote-assets: https://github.com/antfu/vite-plugin-remote-assets
-tags: [build]
+tags: [构建]
 description: |
   Download and bundle remote assets when building your slides.
 ---

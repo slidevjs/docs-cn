@@ -2,9 +2,9 @@
 relates:
   - UnoCSS Variants: https://unocss.dev/config/variants#variants
 since: v0.48.0
-tags: [navigation, styling]
+tags: [导航, 样式]
 description: |
-  Apply different styles and animations based on the navigation direction.
+  根据幻灯片放映方向应用不同的样式和动画。
 ---
 
 # Navigation Direction Variants

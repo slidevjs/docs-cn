@@ -3,9 +3,9 @@ depends:
   - guide/ui#navigation-actions
 relates:
   - features/vscode-extension
-tags: [editor]
+tags: [编辑器]
 description: |
-  Edit your slides source file alongside the presentation.
+  在放映中编辑你的幻灯片源文件。
 ---
 
 # Integrated Editor

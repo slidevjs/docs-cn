@@ -3,9 +3,9 @@ relates:
   - Nuxt's MDC Syntax: https://content.nuxt.com/usage/markdown
   - markdown-it-mdc: https://github.com/antfu/markdown-it-mdc
 since: v0.43.0
-tags: [syntax, styling]
+tags: [语法, 样式]
 description: |
-  A powerful syntax to enhance your markdown content with components and styles.
+  一种强大的语法，用组件和样式增强你的 markdown 内容。
 ---
 
 # MDC Syntax

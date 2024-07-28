@@ -1,9 +1,9 @@
 ---
 depends:
   - guide/syntax#code-block
-tags: [codeblock, layout]
+tags: [代码块, 布局]
 description: |
-  Set a maximum height for a code block and enable scrolling.
+  为一个代码块设定最大高度并启用滚动。
 ---
 
 # Max Height

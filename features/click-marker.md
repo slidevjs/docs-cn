@@ -3,7 +3,7 @@ depends:
   - guide/syntax#notes
   - guide/animations
 since: v0.48.0
-tags: [presenter, animation]
+tags: [演讲者, 动画]
 description: |
   Highlighting notes and auto-scrolling to the active section of notes.
 ---

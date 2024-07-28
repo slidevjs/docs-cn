@@ -5,9 +5,10 @@ depends:
 relates:
   - Shiki Magic Move: https://github.com/shikijs/shiki-magic-move
 since: v0.48.0
-tags: [codeblock, animation]
+tags: [代码块, 动画]
 description: |
   Enable granular transition between code changes, similar to Keynote's Magic Move.
+  启用代码变化时的细粒度过渡，类似于 Keynote 中的 Magic Move 效果。
 ---
 
 # Shiki Magic Move

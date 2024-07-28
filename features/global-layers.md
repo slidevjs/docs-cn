@@ -1,7 +1,7 @@
 ---
-tags: [navigation, layout]
+tags: [导航, 布局]
 description: |
-  Create custom components that persist across slides.
+  创建跨幻灯片存在的自定义组件。
 ---
 
 # Global Layers

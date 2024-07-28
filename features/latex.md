@@ -2,9 +2,9 @@
 relates:
   - Demo: /demo/starter/11
   - KaTeX: https://katex.org/
-tags: [codeblock, syntax]
+tags: [代码块, 语法]
 description: |
-  Slidev comes with LaTeX support out-of-box, powered by KaTeX.
+  在 KaTex 驱动下，Slidev 开箱即用地支持 LaTex。
 ---
 
 # LaTeX

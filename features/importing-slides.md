@@ -1,9 +1,9 @@
 ---
 relates:
   - features/frontmatter-merging
-tags: [syntax]
+tags: [语法]
 description: |
-  Split your `slides.md` into multiple files for better reusability and organization.
+  将你的 `slides.md` 分割成多个文件来获得更好的可复用性和组织性。
 ---
 
 # Importing Slides

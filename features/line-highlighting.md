@@ -2,9 +2,9 @@
 depends:
   - guide/syntax#code-block
   - guide/animations
-tags: [codeblock, animation]
+tags: [代码块, 动画]
 description: |
-  Highlight specific lines in code blocks based on clicks.
+  根据点击次数高亮显示代码块中的特定行。
 ---
 
 # Line Highlighting

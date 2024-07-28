@@ -3,9 +3,9 @@ relates:
   - features/monaco-write
   - features/monaco-editor
 since: v0.47.0
-tags: [codeblock, syntax]
+tags: [代码块, 语法]
 description: |
-  Import code snippets from existing files into your slides.
+  将现有文件中的代码片段导入你的幻灯片。
 ---
 
 # Import Code Snippets

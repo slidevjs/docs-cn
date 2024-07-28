@@ -4,9 +4,9 @@ relates:
   - Mermaid Live Editor: https://mermaid.live/
   - Demo Slide: https://sli.dev/demo/starter/12
   - features/plantuml
-tags: [diagram]
+tags: [图表]
 description: |
-  Create diagrams/graphs from textual descriptions, powered by Mermaid.
+  在 Mermaid 的驱动下，通过文本描述创建图表。
 ---
 
 # Mermaid.js Diagrams

@@ -2,9 +2,9 @@
 relates:
   - Vue's <style scoped>: https://vue-loader.vuejs.org/guide/scoped-css.html
   - UnoCSS directives: https://unocss.dev/transformers/directives
-tags: [styling, syntax]
+tags: [样式, 语法]
 description: |
-  Define styles for only the current slide.
+  只为当前幻灯片定义样式。
 ---
 
 # Slide Scope Styles

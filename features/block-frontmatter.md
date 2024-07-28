@@ -3,7 +3,7 @@ depends:
   - guide/syntax
 relates:
   - features/prettier-plugin
-tags: [syntax]
+tags: [语法]
 description: |
   Use a YAML code block as the frontmatter.
 ---

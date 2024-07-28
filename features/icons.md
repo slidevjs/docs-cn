@@ -5,27 +5,29 @@ relates:
   - unplugin-icons: https://github.com/antfu/unplugin-icons
 tags: [components]
 description: |
-  Use icons from virtually all open-source icon sets directly in your markdown.
+  直接在 markdown 中使用几乎所有开源图标集中的图标。
 ---
 
-# Icons
+# 图标
 
-Slidev allows you to have access to virtually all open-source icon sets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
+Slidev 让你能在安装相应的包后，**直接**在 markdown 中访问几乎所有开源图标集。
 
-The naming follows [Iconify](https://iconify.design/)'s convention of `{collection-name}-{icon-name}`. For example:
+由 [`unplugin-icons`](https://github.com/antfu/unplugin-icons) 及 [Iconify](https://iconify.design/) 驱动。
 
-- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
-- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
-- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
+命名遵循 [Iconify](https://iconify.design/) 的约定 `{图标集名}-{图标名}`，例如：
+
+- `<mdi-account-circle />` - <mdi-account-circle /> 出自 [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
+- `<carbon-badge />` - <carbon-badge /> 出自 [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
+- `<uim-rocket />` - <uim-rocket /> 出自 [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
 - `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji) - [`@iconify-json/twemoji`](https://npmjs.com/package/@iconify-json/twemoji)
-- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
-- And much more...
+- `<logos-vue />` - <logos-vue /> 出自 [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
+- 等等......
 
-Browse and search for all the icons available with [Icônes](https://icones.js.org/).
+你可以在 [Icônes](https://icones.js.org/) 预览和搜索所有的图标
 
-### Styling Icons
+### 为图标添加样式
 
-You can style the icons just like other HTML elements. For example:
+你可以像其他 HTML 元素一样为图标添加样式，例如：
 
 ```html
 <uim-rocket />

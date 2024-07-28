@@ -1,9 +1,9 @@
 ---
 depends:
   - guide/syntax#code-block
-tags: [codeblock]
+tags: [代码块]
 description: |
-  Enable line numbering for all code blocks across the slides or individually.
+  启用代码块中的行号。你可以选择为所有或者特定的代码块启用此特性。
 ---
 
 # Line Numbers

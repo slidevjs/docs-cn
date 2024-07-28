@@ -3,7 +3,7 @@ relates:
   - guide/faq#adjust-size
   - features/zoom-slide
   - features/transform-component
-tags: [layout]
+tags: [布局]
 description: |
   Set the size for all your slides.
 ---
