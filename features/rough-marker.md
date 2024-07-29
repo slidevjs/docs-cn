@@ -4,9 +4,9 @@ depends:
 relates:
   - Rough Notation: https://github.com/linkstrifer/react-rough-notation
 since: v0.48.0
-tags: [drawing, animation]
+tags: [绘图, 动画]
 description: |
-  Integrate Rough Notation to allow marking or highlighting elements in your slides.
+  集成 Rough Notation 来在你的幻灯片中标记或突出显示元素。
 ---
 
 # Rough Markers

@@ -1,12 +1,12 @@
 ---
 relates:
   - Vue's Named Slots: https://v3.vuejs.org/guide/component-slots.html
-tags: [layout, syntax]
+tags: [布局, 语法]
 description: |
-  A syntax sugar for named slots in layouts.
+  针对布局中具名插槽的语法糖。
 ---
 
-# Slot Sugar for Layouts
+# 布局插槽语法糖
 
 Some layouts can provide multiple contributing points using [Vue's named slots](https://vuejs.org/guide/components/slots.html).
 

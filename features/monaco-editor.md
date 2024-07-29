@@ -4,9 +4,9 @@ depends:
 relates:
   - Monaco Editor: https://microsoft.github.io/monaco-editor/
   - Configure Monaco Editor: /custom/config-monaco
-tags: [codeblock, editor]
+tags: [代码块, 编辑器]
 description: |
-  Turn code blocks into fully-featured editors, or generate a diff between two code blocks.
+  将代码块变为功能齐全的编辑器，或者在两个代码块间生成 diff。
 ---
 
 # Monaco Editor

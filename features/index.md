@@ -40,11 +40,11 @@ function removeTag(tag: string) {
 }
 </script>
 
-# Features
+# 特性
 
-This is a list of all the individual features that Slidev provides. Each feature can be used independently and is optional.
+这是 Slidev 提供的所有特性的列表。每个特性都可以独立使用，并且是可选的。
 
-You can also read <LinkInline link="guide/index" /> to learn the features by topic.
+您还可以阅读 <LinkInline link=“guide/index”/> 分类学习这些特性。
 
 <div flex items-center mt-6 gap-6>
   <div
@@ -71,10 +71,10 @@ You can also read <LinkInline link="guide/index" /> to learn the features by top
 <FeaturesOverview :features="filteredFeatures" />
 
 <div v-if="filteredFeatures.length === 0" class="w-full mt-6 op-80 flex flex-col items-center">
-  No results found
+  未找到结果
   <button class="block select-button flex-inline gap-1 items-center px-2 py-1 hover:bg-gray-400/10 rounded" @click="resetFilters()">
     <carbon:filter-remove />
-    Clear Filters
+    清空过滤器
   </button>
 </div>
 

@@ -3,12 +3,12 @@ relates:
   - guide/faq#adjust-size
   - features/canvas-size
   - features/zoom-slide
-tags: [layout]
+tags: [布局]
 description: |
-  A component for scaling some elements.
+  一个用于缩放元素的组件。
 ---
 
-# The `Transform` Component
+# `Transform` 组件
 
 The `Transform` component allows you to scale the size of the elements on your slides:
 

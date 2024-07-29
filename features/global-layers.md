@@ -1,10 +1,10 @@
 ---
-tags: [navigation, layout]
+tags: [导航, 布局]
 description: |
-  Create custom components that persist across slides.
+  为所有幻灯片创建图层。
 ---
 
-# Global Layers
+# 全局图层
 
 Global layers allow you to have custom components that **persist** across slides. This could be useful for having footers, cross-slide animations, global effects, etc.
 

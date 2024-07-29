@@ -3,12 +3,12 @@ relates:
   - features/monaco-write
   - features/monaco-editor
 since: v0.47.0
-tags: [codeblock, syntax]
+tags: [代码块, 语法]
 description: |
-  Import code snippets from existing files into your slides.
+  将文件中的代码片段导入你的幻灯片。
 ---
 
-# Import Code Snippets
+# 引入代码片段
 
 You can import code snippets from existing files via the following syntax:
 

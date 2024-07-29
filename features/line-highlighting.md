@@ -2,12 +2,12 @@
 depends:
   - guide/syntax#code-block
   - guide/animations
-tags: [codeblock, animation]
+tags: [代码块, 动画]
 description: |
-  Highlight specific lines in code blocks based on clicks.
+  根据点击次数高亮显示代码块中的特定行。
 ---
 
-# Line Highlighting
+# 高亮代码行
 
 To highlight specific lines, simply add line numbers within brackets `{}`. Line numbers start counting from 1 by default.
 

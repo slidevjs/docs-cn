@@ -3,12 +3,12 @@ relates:
   - guide/faq#adjust-size
   - features/zoom-slide
   - features/transform-component
-tags: [layout]
+tags: [布局]
 description: |
-  Set the size for all your slides.
+  设置所有幻灯片的大小。
 ---
 
-# Slide Canvas Size
+# 幻灯片大小
 
 Slidev allows you to set the size of the slide canvas via the `canvasWidth` and `aspectRatio` options in the headmatter:
 

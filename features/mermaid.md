@@ -4,12 +4,12 @@ relates:
   - Mermaid Live Editor: https://mermaid.live/
   - Demo Slide: https://sli.dev/demo/starter/12
   - features/plantuml
-tags: [diagram]
+tags: [图表]
 description: |
-  Create diagrams/graphs from textual descriptions, powered by Mermaid.
+  在 Mermaid 的驱动下，通过文本描述创建图表。
 ---
 
-# Mermaid.js Diagrams
+# Mermaid.js 图表
 
 You can also create diagrams/graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
 

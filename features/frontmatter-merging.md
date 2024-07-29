@@ -2,9 +2,9 @@
 depends:
   - guide/syntax#importing-slides
   - features/importing-slides
-tags: [syntax]
+tags: [语法]
 description: |
-  Merge frontmatter from multiple markdown files.
+  从不同的 Markdown 文件中合并 frontmatter。
 ---
 
 # Frontmatter Merging

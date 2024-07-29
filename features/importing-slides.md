@@ -1,12 +1,12 @@
 ---
 relates:
   - features/frontmatter-merging
-tags: [syntax]
+tags: [语法]
 description: |
-  Split your `slides.md` into multiple files for better reusability and organization.
+  将你的幻灯片分割成多个文件来获得更好的可复用性和组织性。
 ---
 
-# Importing Slides
+# 引入幻灯片
 
 You can split your `slides.md` into multiple files for better reusability and organization. To do this, you can use the `src` frontmatter option to specify the path to the external markdown file. For example:
 

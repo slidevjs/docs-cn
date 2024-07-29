@@ -2,12 +2,12 @@
 relates:
   - Vue's <style scoped>: https://vue-loader.vuejs.org/guide/scoped-css.html
   - UnoCSS directives: https://unocss.dev/transformers/directives
-tags: [styling, syntax]
+tags: [样式, 语法]
 description: |
-  Define styles for only the current slide.
+  定义仅在当前幻灯片生效的样式。
 ---
 
-# Slide Scope Styles
+# 幻灯片专属样式
 
 You can use the `<style>` tag in your Markdown to define styles for **only the current slide**.
 

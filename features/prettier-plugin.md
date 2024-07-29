@@ -3,12 +3,12 @@ relates:
   - features/block-frontmatter
   - GitHub Repo: https://github.com/slidevjs/prettier-plugin
   - Prettier: https://prettier.io/
-tags: [editor]
+tags: [编辑器]
 description: |
-  Use the Prettier plugin to format your slides.
+  使用 Prettier.js 插件来格式化你的幻灯片。
 ---
 
-# Prettier Plugin
+# Prettier.js 插件
 
 The Slidev's syntax may be incompatible with the default Markdown parser of [Prettier](https://prettier.io/). To solve this, Slidev provides a Prettier plugin to format your slides. You can use it with your favorite editor that supports Prettier.
 

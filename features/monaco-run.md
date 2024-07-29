@@ -5,12 +5,12 @@ depends:
 relates:
   - Custom Code Runners: /custom/config-code-runners
 since: v0.48.0
-tags: [codeblock, editor]
+tags: [代码块, 编辑器]
 description: |
-  Run code directly in the editor and see the result.
+  直接在编辑器中运行代码并获取结果。
 ---
 
-# Monaco Runner
+# Monaco 代码运行器
 
 Slidev also provides the Monaco Runner Editor, which allows you to run the code directly in the editor and see the result. Use `{monaco-run}` to turn the block into a Monaco Runner Editor.
 

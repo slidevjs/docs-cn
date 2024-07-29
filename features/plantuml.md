@@ -4,12 +4,12 @@ relates:
   - Plant UML Live Editor: https://plantuml.com/plantuml
   - Example side: https://sli.dev/demo/starter/12
   - features/mermaid
-tags: [diagram]
+tags: [图表]
 description: |
-  Create diagrams from textual descriptions, powered by PlantUML.
+  在 PlantUML 驱动下，通过文本描述创建图表。
 ---
 
-# PlantUML Diagrams
+# PlantUML 图表
 
 You can create PlantUML diagrams easily in your slides, for example:
 
