@@ -8,7 +8,7 @@ description: |
   帮助你更好的组织你的幻灯片并进行快速浏览。
 ---
 
-# VS Code Extension
+# VS Code 拓展
 
 <p align="center">
     <a href="https://github.com/slidevjs/slidev" target="_blank">

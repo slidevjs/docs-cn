@@ -5,10 +5,10 @@ relates:
   - Prettier: https://prettier.io/
 tags: [编辑器]
 description: |
-  使用 Prettier 插件来格式化你的幻灯片。
+  使用 Prettier.js 插件来格式化你的幻灯片。
 ---
 
-# Prettier Plugin
+# Prettier.js 插件
 
 The Slidev's syntax may be incompatible with the default Markdown parser of [Prettier](https://prettier.io/). To solve this, Slidev provides a Prettier plugin to format your slides. You can use it with your favorite editor that supports Prettier.
 

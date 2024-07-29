@@ -3,10 +3,10 @@ relates:
   - vite-plugin-remote-assets: https://github.com/antfu/vite-plugin-remote-assets
 tags: [构建]
 description: |
-  Download and bundle remote assets when building your slides.
+  在构建时下载和打包所有远程资源。
 ---
 
-# Bundle Remote Assets
+# 打包远程资源
 
 Just like you would do in markdown, you can use images pointing to a remote or local URL.
 

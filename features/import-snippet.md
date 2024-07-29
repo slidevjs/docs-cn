@@ -5,10 +5,10 @@ relates:
 since: v0.47.0
 tags: [代码块, 语法]
 description: |
-  将现有文件中的代码片段导入你的幻灯片。
+  将文件中的代码片段导入你的幻灯片。
 ---
 
-# Import Code Snippets
+# 引入代码片段
 
 You can import code snippets from existing files via the following syntax:
 

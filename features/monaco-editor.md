@@ -6,7 +6,7 @@ relates:
   - Configure Monaco Editor: /custom/config-monaco
 tags: [代码块, 编辑器]
 description: |
-  将代码块变为功能齐全的编辑器，或者在两个代码块间生成差异。
+  将代码块变为功能齐全的编辑器，或者在两个代码块间生成 diff。
 ---
 
 # Monaco Editor

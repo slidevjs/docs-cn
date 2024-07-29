@@ -7,7 +7,7 @@ description: |
   根据幻灯片放映方向应用不同的样式和动画。
 ---
 
-# Navigation Direction Variants
+# 基于导航方向的样式
 
 You may want to apply different classes based on whether it's navigating forward or backward. The `.slidev-nav-go-forward` or `.slidev-nav-go-backward` class will be applied to the slide container when navigating, and you can use them to apply different styles or animations:
 

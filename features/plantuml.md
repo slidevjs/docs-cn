@@ -9,7 +9,7 @@ description: |
   在 PlantUML 驱动下，通过文本描述创建图表。
 ---
 
-# PlantUML Diagrams
+# PlantUML 图表
 
 You can create PlantUML diagrams easily in your slides, for example:
 

@@ -1,9 +1,9 @@
 ---
 depends:
   - guide/theme-addon
-tags: [主题, cli]
+tags: [主题, CLI]
 description: |
-  从你的项目中弹出一个已安装的主题以进行自定义。
+  项目中弹出已安装的主题以进行自定义。
 ---
 
 # Eject Theme

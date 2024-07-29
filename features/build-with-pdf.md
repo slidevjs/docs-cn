@@ -7,10 +7,10 @@ relates:
   - Headmatter export options: /custom/#headmatter
 tags: [导出, 构建]
 description: |
-  Generate a downloadable PDF along with your slides build.
+  在构建时生成可供下载的 PDF。
 ---
 
-# Generate PDF when Building
+# 在构建时生成 PDF
 
 You can provide a downloadable PDF in your built slides with the following config in headmatter:
 

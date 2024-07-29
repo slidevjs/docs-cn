@@ -7,7 +7,7 @@ description: |
   根据点击次数高亮显示代码块中的特定行。
 ---
 
-# Line Highlighting
+# 高亮代码行
 
 To highlight specific lines, simply add line numbers within brackets `{}`. Line numbers start counting from 1 by default.
 

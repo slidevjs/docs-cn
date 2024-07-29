@@ -3,7 +3,7 @@ depends:
   - guide/global-context
 tags: [客户端 api]
 description: |
-  用于管理幻灯片生命周期的钩子。
+  用于侦听幻灯片生命周期的 hooks。
 ---
 
 # Slide Hooks

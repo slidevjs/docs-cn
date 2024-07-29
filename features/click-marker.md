@@ -5,10 +5,10 @@ depends:
 since: v0.48.0
 tags: [演讲者, 动画]
 description: |
-  Highlighting notes and auto-scrolling to the active section of notes.
+  根据点击动画高亮演讲者笔记。
 ---
 
-# Click Markers
+# 笔记的动画标记
 
 For some slides you might have longer notes that could be hard to find your place. Slidev supports click markers that allow highlighting and auto-scrolling to the section of notes from your corresponding content. Put `[click]` markers in your notes for the timing you need to go to another [click](/guide/animations#click-animation), Slidev divides the content between the click markers and highlights it in presenter notes, synchronized with your slide progress.
 

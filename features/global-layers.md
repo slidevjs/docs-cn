@@ -1,10 +1,10 @@
 ---
 tags: [导航, 布局]
 description: |
-  创建跨幻灯片存在的自定义组件。
+  为所有幻灯片创建图层。
 ---
 
-# Global Layers
+# 全局图层
 
 Global layers allow you to have custom components that **persist** across slides. This could be useful for having footers, cross-slide animations, global effects, etc.
 

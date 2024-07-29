@@ -5,10 +5,10 @@ relates:
   - features/prettier-plugin
 tags: [语法]
 description: |
-  Use a YAML code block as the frontmatter.
+  使用单独的 YAML 代码块作为 frontmatter
 ---
 
-# Block Frontmatter
+# 代码块形式的 frontmatter
 
 The usual way to define frontmatters of slides is concise, but may lack of highlighting and formatter support. To solve this, you can use a YAML block at the very beginning of the slide content as the frontmatter of the slide:
 

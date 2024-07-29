@@ -9,7 +9,7 @@ description: |
   一个强大的工具，用于在悬停或内联时渲染带有类型信息的 TypeScript 代码块。
 ---
 
-# TwoSlash Integration
+# TwoSlash 集成
 
 [TwoSlash](https://twoslash.netlify.app/) is a powerful tool for rendering TypeScript code blocks with type information on hover or inlined. It's quite useful for preparing slides for JavaScript/TypeScript-related topics.
 

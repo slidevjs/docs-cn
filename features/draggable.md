@@ -1,10 +1,10 @@
 ---
 tags: [布局]
 description: |
-  通过用鼠标拖动来移动和旋转元素及调整大小。
+  可以用鼠标拖动来移动、旋转和调整大小的元素。
 ---
 
-# Draggable Elements
+# 可拖拽元素
 
 Draggable elements give you the ability to move, resize, and rotate elements by dragging them with the mouse. This is useful for creating floating elements in your slides.
 

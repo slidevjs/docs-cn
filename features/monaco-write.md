@@ -11,7 +11,7 @@ description: |
   一个 monaco 编辑器，使你能够直接在幻灯片中写代码并保存到文件中。
 ---
 
-# Writable Monaco Editor
+# 写回的 Monaco Editor
 
 You can also use the [Import Code Snippets](#import-code-snippets) syntax combined with the `{monaco-write}` directive, to link your Monaco Editor with a file on your filesystem. This will allow you to edit the code directly in the editor and save the changes back to the file.
 

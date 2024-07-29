@@ -4,7 +4,7 @@ depends:
   - features/importing-slides
 tags: [语法]
 description: |
-  从不同 markdown 文件中合并 frontmatter。
+  从不同的 Markdown 文件中合并 frontmatter。
 ---
 
 # Frontmatter Merging

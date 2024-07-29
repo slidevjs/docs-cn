@@ -4,10 +4,10 @@ relates:
   - UnoCSS directives: https://unocss.dev/transformers/directives
 tags: [样式, 语法]
 description: |
-  只为当前幻灯片定义样式。
+  定义仅在当前幻灯片生效的样式。
 ---
 
-# Slide Scope Styles
+# 幻灯片专属样式
 
 You can use the `<style>` tag in your Markdown to define styles for **only the current slide**.
 

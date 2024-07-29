@@ -9,7 +9,7 @@ description: |
   在内置的摄像头调用及录屏功能加持下录制你的演示。
 ---
 
-# Recording
+# 录制工具
 
 Slidev comes with a built-in camera view and recording feature. They make it simple for you to record your presentation without having to switch between other recording tools while delivering a presentation.
 

@@ -8,7 +8,7 @@ description: |
   一个用于缩放元素的组件。
 ---
 
-# The `Transform` Component
+# `Transform` 组件
 
 The `Transform` component allows you to scale the size of the elements on your slides:
 

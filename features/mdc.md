@@ -5,10 +5,10 @@ relates:
 since: v0.43.0
 tags: [语法, 样式]
 description: |
-  一种强大的语法，用组件和样式增强你的 markdown 内容。
+  一种强大的语法，用组件和样式增强 Markdown 内容。
 ---
 
-# MDC Syntax
+# MDC 语法
 
 Slidev supports optional [MDC (Markdown Components) Syntax](https://content.nuxt.com/usage/markdown) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
 

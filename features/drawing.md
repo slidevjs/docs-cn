@@ -3,9 +3,9 @@ depends:
   - guide/ui#navigation-bar
 relates:
   - drauu: https://github.com/antfu/drauu
-tags: [绘画]
+tags: [绘图]
 description: |
-  轻松地在你的幻灯片中绘画及批注。
+  在幻灯片中绘图和批注。
 ---
 
 # Drawing & Annotations

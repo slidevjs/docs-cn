@@ -9,7 +9,7 @@ description: |
   在 Mermaid 的驱动下，通过文本描述创建图表。
 ---
 
-# Mermaid.js Diagrams
+# Mermaid.js 图表
 
 You can also create diagrams/graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
 

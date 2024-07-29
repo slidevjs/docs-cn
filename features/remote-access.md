@@ -8,7 +8,7 @@ description: |
   在 Slidev 的远程访问特性加持下远程访问你的演示。
 ---
 
-# Remote Access
+# 远程访问
 
 You can run your presentation with remote access by using the `--remote` flag:
 

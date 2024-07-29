@@ -8,7 +8,7 @@ description: |
   将幻灯片内容缩放到一个特定的比例。
 ---
 
-# Zoom Slides
+# 缩放幻灯片
 
 You may find some slides in your presentation too spacious or too crowded. Slidev provides a `zoom` option for each slide that allows you to scale the content of a slide:
 

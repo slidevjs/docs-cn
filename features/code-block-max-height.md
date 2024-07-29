@@ -6,7 +6,7 @@ description: |
   为一个代码块设定最大高度并启用滚动。
 ---
 
-# Max Height
+# 代码块最大高度
 
 If the code doesn't fit into one slide, you use the `maxHeight` to set a fixed height and enable scrolling:
 
