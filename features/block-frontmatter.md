@@ -10,7 +10,7 @@ description: |
 
 # 代码块形式的 frontmatter
 
-The usual way to define frontmatters of slides is concise, but may lack of highlighting and formatter support. To solve this, you can use a YAML block at the very beginning of the slide content as the frontmatter of the slide:
+定义每个 slide 的 frontmatter 的一般方法很简洁，但是可能缺乏高亮显示与格式化的支持。要解决这个问题，你可以在 slide（单页幻灯片） 内容的开头用一个 YAML 代码块作为它的 frontmatter：
 
 ````md
 ---
@@ -32,8 +32,8 @@ layout: quote
 # Slide 3
 ````
 
-::: warning About headmatter
+::: warning 关于 headmatter
 
-Headmatter in Slidev is exactly the usual called "frontmatter" of the a Markdown file, which is supported by most of the Markdown editors and formatters. So you can't use a YAML block as the headmatter of the whole slide deck.
+在 Slidev 中，headmatter 正是 Markdown 文件中通常所说的“frontmatter”，大多数 Markdown 编辑器和格式化工具都支持它。因此，你不能将整个幻灯片集的 Headmatter 用 YAML 块来表示。
 
 :::
