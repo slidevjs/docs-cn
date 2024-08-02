@@ -10,23 +10,23 @@ description: |
 
 # 幻灯片大小
 
-Slidev allows you to set the size of the slide canvas via the `canvasWidth` and `aspectRatio` options in the headmatter:
+Slidev 允许你通过 headmatter 中的 canvasWidth 和 aspectRatio 选项来设置幻灯片 canvas 的大小：
 
 ```md
 ---
-# aspect ratio for the slides
+# 幻灯片的宽高比
 aspectRatio: 16/9
-# real width of the canvas, unit in px
+# 幻灯片的实际宽度，以 px 为单位
 canvasWidth: 980
 ---
 
-# Your slides here
+# 以下为 slide 内容
 ```
 
-To scale several slides in your presentation, you can use the `zoom` option:
+要缩放演示文稿中的多个幻灯片，你可以使用 `zoom` 选项：
 
 <LinkCard link="features/zoom-slide" />
 
-To adjust the size of some elements on your slides, you can use the `Transform` component:
+要调整幻灯片上某些元素的大小，你可以使用 `Transform` 组件：
 
 <LinkCard link="features/transform-component" />

@@ -8,7 +8,7 @@ description: |
 
 # 代码块最大高度
 
-If the code doesn't fit into one slide, you use the `maxHeight` to set a fixed height and enable scrolling:
+如果代码无法适应一个幻灯片，你可以使用 `maxHeight` 来设置一个固定的高度并启用滚动：
 
 ````md
 ```ts {2|3|7|12}{maxHeight:'100px'}
@@ -18,12 +18,12 @@ function add(
 ) {
   return computed(() => unref(a) + unref(b))
 }
-/// ...as many lines as you want
+/// ...很多行代码
 const c = add(1, 2)
 ```
 ````
 
-Note that you can use `{*}` as a placeholder of <LinkInline link="features/line-highlighting" />:
+请注意你可以使用 `{*}` 作为 <LinkInline link="features/line-highlighting" /> 的占位符:
 
 ````md
 ```ts {*}{maxHeight:'100px'}
