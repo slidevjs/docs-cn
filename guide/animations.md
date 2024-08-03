@@ -4,14 +4,14 @@ outline: deep
 
 # 动画指南
 
-Animation is an essential part of slide presentations. Slidev provides a variety of ways to animate your slides, from the simple to the complex. This guide will show you how to use them effectively.
+动画是幻灯片演示的重要组成部分。Slidev 提供了从简单到复杂的各种幻灯片动画制作方法。本指南将告诉你如何有效地使用它们。
 
 ## Click Animation
 
-A "**click**" can be considered as the unit of animation steps in slides. A slide can have one or more clicks, and each click can trigger one or more animations - for example, revealing or hiding elements.
+每个 "**点击**" 可以被视为幻灯片中动画步骤的单位。一张幻灯片可以有一次或多次单击，每次点击都可以触发一个或多个动画 - 例如，显示或隐藏元素。
 
 > [!NOTE]
-> Since v0.48.0, we've rewritten the click animations system with much more consistent behaviors. It might change the behaviors of your existing slides in edge cases. While this page is showing the new click system, you can find more details about the refactor in [#1279](https://github.com/slidevjs/slidev/pull/1279).
+> 自 v0.48.0 版起，我们重写了点击动画系统，使其行为更加一致。在边缘情况下，它可能会改变现有幻灯片的行为。本页展示的是新的点击系统，您可以在 [#1279](https://github.com/slidevjs/slidev/pull/1279) 中找到有关重构的更多细节。
 
 ### `v-click`
 
