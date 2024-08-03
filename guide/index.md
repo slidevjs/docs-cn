@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# 快速上手
+# 快速上手 {#getting-started}
 
 Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> 是一个为开发者设计的基于 Web 的幻灯片制作工具。它帮助您以 Markdown 的形式专注于编写幻灯片的内容，并制作出具有交互式演示功能的、高度可自定义的幻灯片。
 
@@ -32,13 +32,13 @@ Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> 是一个为开发者设计的�
 
 <!-- <FeaturesAnimation /> -->
 
-## 创建幻灯片 {#create}
+## 创建幻灯片 {#create-slides}
 
-### 在浏览器中创建 {#create-browser}
+### 在浏览器中创建 {#try-it-online}
 
 通过 StackBlitz 在浏览器中创建幻灯片: [sli.dev/new](https://sli.dev/new)
 
-### 在本地创建 {#create-local}
+### 在本地创建 {#create-locally}
 
 > 需要先安装 [Node.js](https://nodejs.org) >= 18.0
 
@@ -90,15 +90,15 @@ slidev slides.md
 
 ::::
 
-## 基本命令 {#commmands}
+## 基本命令 {#basic-commands}
 
 以下是 Slidev 的一些常用命令：
 
-- `slidev` - Start the dev server. See [the dev command](../builtin/cli#dev).
-- `slidev export` - Export the slides to PDF, PPTX, or PNGs. See <LinkInline link="guide/exporting" />.
-- `slidev build` - Build the slides as a static web application. See <LinkInline link="guide/hosting" />.
-- `slidev format` - Format the slides. See [the format command](../builtin/cli#format).
-- `slidev --help` - Show the help message
+- `slidev` - 启动开发服务器。细节请参见 [dev 命令](../builtin/cli#dev)
+- `slidev export` - 将幻灯片导出为 PDF、PPTX 或 PNG 文件。细节请参见 <LinkInline link="guide/exporting" />
+- `slidev build` - 将幻灯片构建为静态网页。细节请参见 <LinkInline link="guide/hosting" />
+- `slidev format` - 将幻灯片格式化。细节请参见 [format 命令](../builtin/cli#format)
+- `slidev --help` - 显示帮助信息
 
 To run these commands, you can add them to your `package.json` scripts (which has been done for you if the project was created via `npm init slidev`):
 
@@ -126,7 +126,7 @@ To run these commands, you can add them to your `package.json` scripts (which ha
 <LinkCard link="features/side-editor" />
 <LinkCard link="features/prettier-plugin" />
 
-## 加入社区 {#community}
+## 加入社区 {#join-the-community}
 
 欢迎加入我们的 [Discord 服务器](https://chat.sli.dev/)，获取帮助、分享你的幻灯片，或者讨论关于 Slidev 的任何事情。
 
