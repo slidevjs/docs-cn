@@ -9,10 +9,10 @@ description: |
 
 # 基于导航方向的样式
 
-你可能希望根据幻灯片反应方向来应用不同的类。 `.slidev-nav-go-forward` 或 `.slidev-nav-go-backward` 类将在放映时相应应用于幻灯片容器, 因而你可以用他们来实现不同的样式或动画：
+你可能希望根据滑动幻灯片的方向来应用不同的类。 `.slidev-nav-go-forward` 或 `.slidev-nav-go-backward` 类将在放映时相应应用于幻灯片容器, 因而你可以用他们来实现不同的样式或动画：
 
 ```css
-/* 示例: 顺序时延迟，而在逆序时不生效 */
+/* 示例：向前切换幻灯片使延时，向后时不生效 */
 .slidev-nav-go-forward .slidev-vclick-target {
   transition-delay: 500ms;
 }
@@ -28,4 +28,4 @@ description: |
 <div v-click class="transition forward:delay-300">元素</div> // [!code ++]
 ```
 
-在上方的示例中，动画仅在顺序播放时延迟。
+在上方的示例中，动画仅在向前切换幻灯片时延迟。
