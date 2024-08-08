@@ -10,50 +10,51 @@ description: |
 
 # 远程访问
 
-You can run your presentation with remote access by using the `--remote` flag:
+你可以使用 `--remote` 选项以远程访问的方式运行演示文稿：
 
 ::: code-group
 
 ```bash [npm]
 npm run dev -- --remote
-# i.e. slidev --remote
+# 等同于 slidev --remote
 ```
 
 ```bash [pnpm]
 pnpm dev -- --remote
-# i.e. slidev --remote
+# 等同于 slidev --remote
 ```
 
 ```bash [yarn]
 yarn dev --remote
-# i.e. slidev --remote
+# 等同于 slidev --remote
 ```
 
 :::
 
-## Password Protection
+## 密码保护
 
-If you want to share your slides but don't want other people to access the presenter mode, you can pass a password to the option, i.e. `--remote=your_password`. Then the password is required when accessing the presenter mode.
+如果你想分享幻灯片，但不想让其他人访问演示者模式，你可以向该选项传递密码，即`--remote=your_password`。然后，访问演示者模式时需要密码。
 
-## Remote Tunnel
 
-You can open a [Cloudflare Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) to expose your local server to the internet. This way, you can share your slides with others without setting up a server.
+## 远程隧道
+
+你可以开启一个 [Cloudflare Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) 将你的本地服务器开放到公网（内网穿透）。这样，你就可以在不搭建服务端的情况下与他人共享幻灯片。
 
 ::: code-group
 
 ```bash [npm]
 npm run dev -- --remote --tunnel
-# i.e. slidev --remote --tunnel
+# 等同于 slidev --remote --tunnel
 ```
 
 ```bash [pnpm]
 pnpm dev -- --remote --tunnel
-# i.e. slidev --remote --tunnel
+# 等同于 slidev --remote --tunnel
 ```
 
 ```bash [yarn]
 yarn dev --remote --tunnel
-# i.e. slidev --remote --tunnel
+# 等同于 slidev --remote --tunnel
 ```
 
 :::

@@ -10,7 +10,7 @@ description: |
 
 # `Transform` 组件
 
-The `Transform` component allows you to scale the size of the elements on your slides:
+`Transform` 组件允许你缩放你幻灯片中的元素大小。
 
 ```md
 <Transform :scale="0.5">
@@ -18,12 +18,12 @@ The `Transform` component allows you to scale the size of the elements on your s
 </Transform>
 ```
 
-This is useful when you want to adjust the size of some elements on your slides without affecting the layout of the entire slide.
+这在你想要调整部分元素的大小又不希望改变整个幻灯片布局时很有帮助。
 
-To scale all the slides in your presentation, you can set the slide canvas size:
+如要缩放所有的幻灯片，你可以设置幻灯片的 canvas 大小：
 
 <LinkCard link="features/canvas-size" />
 
-To scale several slides in your presentation, you can use the `zoom` option:
+如要缩放多张幻灯片，你可以考虑使用 `zoom` 选项：
 
 <LinkCard link="features/zoom-slide" />

@@ -23,16 +23,16 @@ description: |
   <img inline src="https://img.shields.io/visual-studio-marketplace/d/antfu.slidev.svg?color=2B90B6" alt="Visual Studio Marketplace Downloads" />
 </a>
 
-The VS Code extension provides some features to help you better organize your slides and have a quick overview of them.
+Slidev 的 VS Code 扩展提供了一些特性来帮助你更好的组织你的幻灯片并进行快速浏览。
 
-### Features
+### 特性
 
-- Preview slides in the side panel
-- Slides tree view
-- Re-ordering slides
-- Folding for slide blocks
-- Multiple slides project support
-- Start the dev server with one click
+- 在侧边面板中预览幻灯片
+- 幻灯片树形图
+- 为幻灯片重新排序
+- 幻灯片块的折叠
+- 多幻灯片项目支持
+- 一键启动开发服务器
 
 ![](https://github.com/slidevjs/slidev/assets/63178754/2c9ba01a-d21f-4b33-b6b6-4e249873f865)
 
@@ -40,23 +40,23 @@ The VS Code extension provides some features to help you better organize your sl
 
 <TheTweet id="1789684139152810151" />
 
-### Installation
+### 安装
 
-You can install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=antfu.slidev) or the [Open VSX Registry](https://open-vsx.org/extension/antfu/slidev).
+你可以从 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=antfu.slidev) 或者 [Open VSX Registry](https://open-vsx.org/extension/antfu/slidev) 中安装扩展
 
-### Usage
+### 用法
 
-Click the `Slidev` icon in the activity bar to open the **Slidev panel**. In the Slidev panel, you can see the projects tree view, slides tree view, and the preview webview.
+单击活动栏中的 `Slidev` 图标打开**Slidev面板**。在Slidev面板中，你可以看到项目树形图、幻灯片树形图和预览 webview。
 
-In the **projects tree view**, you can see all the Slidev projects in your workspace. You can click the item to open the corresponding file, and click the <codicon-eye /> icon over it to switch the active project. The <codicon-add /> icon allows you to load a slides project that wasn't scanned automatically.
+在**项目树形图**中，你可以看到工作区中的所有 Slidev 项目。你可以单击该项目以打开相应的文件，然后单击其上的 <codicon-eye/> 图标以切换当前项目。<codicon-add/> 图标允许你加载未自动扫描的幻灯片项目。
 
-In the **slides tree view**, you can see all the slides in the active project. You can click the item to move your cursor to the slide in the editor, and drag and drop to reorder the slides.
+在**幻灯片树形图**中，你可以看到当前项目中的所有幻灯片。你可以单击该项目将光标移动到编辑器中的幻灯片上，然后拖放以重新排序幻灯片。
 
-In the **preview webview**, you can click the <codicon-run-all /> icon to start the dev server and click the <codicon-globe /> icon to open the slides in the browser. Toggle <codicon-lock /> icon to sync/unsync the preview navigation with the editor cursor.
+在**webview预览**中，你可以单击 <codicon-run-all/> 图标启动开发服务器，然后单击 <codico-globe/> 图标在浏览器中打开幻灯片。切换 <codicon-lock/> 图标以将预览导航与编辑器光标同步/取消同步。
 
-There are also some **commands** you can use. Type `Slidev` in the command palette to see them.
+你还可以使用一些**命令**。在命令面板中键入 `Slidev` 以查看它们。
 
-You can add glob patterns to the `slidev.include` configuration to include files as Slidev entries. The default value is `["**/*.md"]`. Example:
+你可以将 glob 模式添加 `slidev.include` 配置中，以将文件作为 Slidev 条目包含在内。默认值为`[“**/*.md”]`。例子：
 
 ```json
 {

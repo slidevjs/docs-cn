@@ -9,7 +9,7 @@ description: |
 
 # 合并 Frontmatter
 
-你可以为主入口点和外部 markdown 页面提供 frontmatter。如果其中有相同的 key，**主入口点的 key 拥有更高的优先级**。例如：
+你可以为主入口点和外部 Markdown 页面提供 frontmatter。如果其中有相同的 key，**主入口点的 key 拥有更高的优先级**。例如：
 
 ::: code-group
 
