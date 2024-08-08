@@ -9,7 +9,7 @@ description: |
 
 # 高亮代码行
 
-To highlight specific lines, simply add line numbers within brackets `{}`. Line numbers start counting from 1 by default.
+要想高亮特定行，只需在括号 `{}` 中添加行号即可。行号默认从 1 开始。
 
 ````md
 ```ts {2,3}
@@ -22,9 +22,9 @@ function add(
 ```
 ````
 
-## Dynamic Line Highlighting
+## 动态逐行高亮
 
-To change what's highlighted with multiple clicks, you can use `|` to separate each stage:
+要更改多次点击中高亮的内容，可以使用 `|` 分隔每个阶段：
 
 ````md
 ```ts {2-3|5|all}
@@ -37,9 +37,9 @@ function add(
 ```
 ````
 
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block.
+这会首先高亮 `a: Ref<number> | number` and `b: Ref<number> | number`，然后在点击一次后是 `return computed(() => unref(a) + unref(b))` ，最终高亮整个块。
 
-You can set the line number to `hide` to hide the code block or `none` to not highlight any line:
+你可以将行号设置为 `hide` 以隐藏代码块，或设置为 `none` 以不突出显示任何行：
 
 ````md
 ```ts {hide|none}
@@ -53,5 +53,5 @@ function add(
 ````
 
 ::: tip
-Learn more in the [click animations guide](/guide/animations#positioning).
+你可以在 [点击动画指南](/guide/animations#positioning) 中了解更多。
 :::

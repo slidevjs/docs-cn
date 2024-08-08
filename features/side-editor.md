@@ -10,8 +10,8 @@ description: |
 
 # 内嵌编辑器
 
-Slidev comes with an integrated editor that will instantly reload and save the changes to your file.
+Slidev 附带了一个集成编辑器，可以立即重载并保存对文件的更改。
 
-Click the <carbon-edit class="inline-icon-btn"/> button on the navigation panel to open it.
+点击导航栏中的 <carbon-edit class="inline-icon-btn"/> 来打开它。
 
 ![](/screenshots/integrated-editor.png)

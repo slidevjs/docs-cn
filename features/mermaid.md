@@ -11,9 +11,9 @@ description: |
 
 # Mermaid.js 图表
 
-You can also create diagrams/graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
+你可以基于 [Mermaid](https://mermaid-js.github.io/mermaid) 从 markdown 中的文本描述创建图表/图形。
 
-Code blocks marked as `mermaid` will be converted to diagrams, for example:
+被标记为 `mermaid`的代码块将被转换为图标，例如：
 
 ````md
 ```mermaid
@@ -23,7 +23,7 @@ sequenceDiagram
 ```
 ````
 
-You can further pass an options object to it to specify the scaling and theming. The syntax of the object is a JavaScript object literal, you will need to add quotes (`'`) for strings and use comma (`,`) between keys.
+你可以进一步将选项对象传递给它，以指定缩放和主题。对象的语法是 JavaScript 对象字面量，你需要为字符串添加引号(`'`)，并在键之间使用逗号(`,`)。
 
 ````md
 ```mermaid {theme: 'neutral', scale: 0.8}
@@ -34,4 +34,4 @@ C -->|Two| E[Result 2]
 ```
 ````
 
-Visit the [Mermaid Website](http://mermaid.js.org/) for more information.
+参阅 [Mermaid Website](http://mermaid.js.org/) 以获取更多细节。

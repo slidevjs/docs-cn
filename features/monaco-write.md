@@ -11,12 +11,12 @@ description: |
   一个 monaco 编辑器，使你能够直接在幻灯片中写代码并保存到文件中。
 ---
 
-# 写回的 Monaco Editor
+# 可写的 Monaco Editor
 
-You can also use the [Import Code Snippets](#import-code-snippets) syntax combined with the `{monaco-write}` directive, to link your Monaco Editor with a file on your filesystem. This will allow you to edit the code directly in the editor and save the changes back to the file.
+你可以使用 [引入代码片段](#import-code-snippets) 语法结合 `{monaco-write}` 指令，将 Monaco 编辑器与本地文件系统上的文件链接起来。这将允许你直接在此编辑器中编辑代码，并将更改保存回文件。
 
 ```md
 <<< ./some-file.ts {monaco-write}
 ```
 
-When using this, be sure to back up your files beforehand, as the changes will be saved directly to the file.
+在使用此特性时，因为改动会被直接保存到文件，请确保你已经提前备份了相关文件。

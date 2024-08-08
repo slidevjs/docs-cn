@@ -34,6 +34,6 @@ layout: quote
 
 ::: warning 关于 headmatter 是什么
 
-在 Slidev 中，headmatter 正是 Markdown 文件中通常所说的 “frontmatter”，大多数 Markdown 编辑器和格式化工具都支持它。因此，你不能将整个幻灯片集的 headmatter 用 YAML 块来表示。
+在 Slidev 中，headmatter 正是 Markdown 文件中通常所说的 “frontmatter”，大多数 markdown 编辑器和格式化工具都支持它。因此，你不能将整个幻灯片集的 headmatter 用 YAML 块来表示。
 
 :::
