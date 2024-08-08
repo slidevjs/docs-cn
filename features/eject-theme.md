@@ -6,15 +6,15 @@ description: |
   项目中弹出已安装的主题以进行自定义。
 ---
 
-# Eject Theme
+# 弹出主题
 
-If you want to get full control of the current theme, you can **eject** it to your local file system and modify it as you want. By running the following command
+如果你想对当前的主题拥有完全的掌控，你可以将它 **弹出**（eject）到本地的文件系统，并且随心所欲地修改它。可以使用以下命令：
 
 ```bash
 $ slidev theme eject
 ```
 
-It will eject the theme you are using currently into `./theme`, and change your frontmatter to
+这会将你当前使用的主题弹出到 `./theme` 目录下，然后自动将你的 frontmatter 修改为：
 
 ```yaml
 ---
@@ -22,6 +22,6 @@ theme: ./theme
 ---
 ```
 
-This could also be helpful if you want to make a theme based on an existing one. If you do, remember to mention the original theme and the author :)
+如果你想在现有的主题上制作主题，这样会很方便。当然如果你这么做了，记得标明原主题和作者哦 :)
 
-For more options of the `theme` command, please refer to the [Theme Command](../builtin/cli#theme) section.
+关于命令 `theme` 的更多选项，请参考 [Theme 命令](../builtin/cli#theme) 部分
