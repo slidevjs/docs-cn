@@ -7,9 +7,9 @@ description: |
   从不同的 Markdown 文件中合并 frontmatter。
 ---
 
-# Frontmatter Merging
+# 合并 Frontmatter
 
-You can provide frontmatter instructions from both your main entry and external markdown pages. If there are duplicate keys in them, the ones from the **main entry have the higher priority**. For example:
+你可以为主入口点和外部 markdown 页面提供 frontmatter。如果其中有相同的 key，**主入口点的 key 拥有更高的优先级**。例如：
 
 ::: code-group
 
@@ -27,15 +27,14 @@ layout: cover
 background: https://sli.dev/foo.png // [!code highlight]
 ---
 
-# Cover
+# 封面
 
-Cover Page
+这是一个封面页
 ```
 
 :::
 
-They will end up being equivalent to the following page:
-
+其效果最终与下述页面相同：
 ```md
 ---
 layout: cover
@@ -43,7 +42,7 @@ background: https://sli.dev/bar.png // [!code highlight]
 class: text-center
 ---
 
-# Cover
+# 封面
 
-Cover Page
+这是一个封面页
 ```
