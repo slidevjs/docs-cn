@@ -16,11 +16,11 @@ import { onSlideEnter, onSlideLeave, useIsSlideActive } from '@slidev/client'
 const isActive = useIsSlideActive()
 
 onSlideEnter(() => {
-  /* 将会在幻灯片活跃时被调用 */
+  /* 将会在进入该幻灯片时被调用 */
 })
 
 onSlideLeave(() => {
-  /* 将会在幻灯片不再活跃时被调用 */
+  /* 将会在离开该幻灯片时被调用 */
 })
 ```
 

@@ -17,7 +17,7 @@ description: |
 ```md [./slides.md]
 # 标题
 
-这是一个正常的页面
+这是一个普通的页面
 
 ---
 src: ./pages/toc.md // [!code highlight]

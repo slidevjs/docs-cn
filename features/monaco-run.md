@@ -14,7 +14,6 @@ description: |
 
 Slidev 还提供了 Monaco Runner 编辑器，它允许你直接在编辑器中运行代码并查看结果。使用`{monaco-run}`将块转换为 Monaco Runner 编辑器。
 
-
 ````md
 ```ts {monaco-run}
 function distance(x: number, y: number) {
@@ -31,7 +30,7 @@ console.log(distance(3, 4))
 
 ````md
 ```ts {monaco-run} {autorun:false}
-console.log('点击 play 按钮来运行我')
+console.log('请点击右上角的运行按钮')
 ```
 ````
 
@@ -39,8 +38,8 @@ console.log('点击 play 按钮来运行我')
 
 ````md
 ```ts {monaco-run} {showOutputAt:'+1'}
-console.log('点击一次后显示。')
+console.log('一步动画后后显示该结果')
 ```
 ````
 
-目前，Slidev 支持开箱即用地运行 JavaScript 和 TypeScript 代码。有关自定义语言支持，请参阅 [自定义代码运行程序](/custom/config-code-runners)。
+目前，Slidev 内置支持运行 JavaScript 和 TypeScript 代码。若要运行自定义语言，请参阅 [自定义代码运行程序](/custom/config-code-runners)。

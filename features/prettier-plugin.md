@@ -1,8 +1,8 @@
 ---
 relates:
   - features/block-frontmatter
-  - GitHub Repo: https://github.com/slidevjs/prettier-plugin
-  - Prettier: https://prettier.io/
+  - 插件的 GitHub 仓库: https://github.com/slidevjs/prettier-plugin
+  - Prettier.js 官网: https://prettier.io/
 tags: [编辑器]
 description: |
   使用 Prettier.js 插件来格式化你的幻灯片。
@@ -48,5 +48,4 @@ yarn add -D prettier prettier-plugin-slidev
 }
 ```
 
-请注意，仅指定 `插件` 是不够的，因为 Slidev 和常见的 Markdown 文件共享相同的文件扩展名 `.md`。
-
+请注意，仅指定 `plugins` 是不够的，因为 Slidev 和常见的 Markdown 文件共享相同的文件扩展名 `.md`。

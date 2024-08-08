@@ -38,7 +38,7 @@ yarn dev --remote
 
 ## 远程隧道
 
-你可以开启一个 [Cloudflare 快速隧道](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) 将你的本地服务器开放到公网（内网穿透）。这样，你就可以在不搭建服务端的情况下与他人共享幻灯片。
+你可以开启一个 [Cloudflare Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) 将你的本地服务器开放到公网（内网穿透）。这样，你就可以在不搭建服务端的情况下与他人共享幻灯片。
 
 ::: code-group
 

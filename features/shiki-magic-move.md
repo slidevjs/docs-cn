@@ -12,12 +12,11 @@ description: |
 
 # Shiki Magic Move
 
-[Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) 让你能够控制代码变化时的细粒度过渡，类似于 Keynote 中的 Magic Move 效果。
-你可以去 [the playground](https://shiki-magic-move.netlify.app/) 看看它是如何工作的。
+[Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) 让你能够控制代码变化时的细粒度过渡，类似于 Keynote 中的 Magic Move 效果。在 [此处](https://shiki-magic-move.netlify.app/) 查看它是如何工作的。
 
 <video src="https://github.com/slidevjs/slidev/assets/11247099/79927794-27ba-4342-9911-9996cec889d6" controls rounded shadow w-full></video>
 
-在 Slidev 中，我们将 Magic Move 绑定到 [点击事件](/guide/animations#click-animation) 中。它的语法是用<code>````md magic-move</code> （注意**四个反引号**）包裹代表每个步骤的代码块。这将被转换为一个代码快，在你的每次点击中进行变换。
+在 Slidev 中，我们将 Magic Move 绑定到 [点击事件](/guide/animations#click-animation) 中。它的语法是用<code>````md magic-move</code> 包裹代表每个步骤的代码块（注意是**四个反引号**）。这将被转换为一个根据动画步骤变化的代码快。
 
 `````md
 ````md magic-move
@@ -44,7 +43,7 @@ function add() {
 }
 ```
 
-这是间被忽略的非代码块，你可以添加一些注释。
+在代码块之间的内容会被忽略，可以作为注释。
 
 ```js {*}{lines: false} // [!code hl]
 let count = 1

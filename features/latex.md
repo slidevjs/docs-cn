@@ -9,17 +9,17 @@ description: |
 
 # LaTeX
 
-Slidev 开箱即有对 LaTeX 的支持，得益于 [KaTeX](https://katex.org/)。
+Slidev 开箱即用地支持 LaTeX，基于 [KaTeX](https://katex.org/)。
 
-## 内联
+## 行内公式 {#inline}
 
-在你的 LaTeX 语法左右各加一个 `$`，用于内联渲染。
+在 LaTeX 公式左右各加一个 `$`，以渲染行内公式。
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-## 块
+## 块级公式 {#block}
 
 当使用两个 (`$$`) 时，会进行块级渲染。这种模式会使用更大的符号，并将结果居中。
 
@@ -51,12 +51,10 @@ $$
 
 LaTeX 块也可以使用 [代码块](#line-highlighting) 的 `at` 和 `finally` 选项。
 
-
 ## 化学方程式
 
 为了能够呈现化学方程式，需要加载 KaTeX 的扩展 [mhchem](https://github.com/KaTeX/KaTeX/tree/main/contrib/mhchem)。
 
-Create `vite.config.ts` with the following content:
 创建包含以下内容的 `vite.config.ts` ：
 
 ```ts
@@ -73,7 +71,7 @@ $$
 $$
 ```
 
-了解更多： [Syntax](https://mhchem.github.io/MathJax-mhchem)
+了解更多： [mhchem 语法](https://mhchem.github.io/MathJax-mhchem)
 
 ---
 

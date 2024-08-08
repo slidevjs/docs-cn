@@ -1,6 +1,6 @@
 ---
 relates:
-  - Nuxt's MDC Syntax: https://content.nuxt.com/usage/markdown
+  - Nuxt 的 MDC 语法指南: https://content.nuxt.com/usage/markdown
   - markdown-it-mdc: https://github.com/antfu/markdown-it-mdc
 since: v0.43.0
 tags: [语法, 样式]
@@ -24,7 +24,7 @@ mdc: true
 ![](/image.png){width=500px lazy}
 
 ::block-component{prop="value"}
-一个 **默认的** 插槽
+**default** 插槽的内容
 ::
 ```
 

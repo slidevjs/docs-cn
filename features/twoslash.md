@@ -13,7 +13,6 @@ description: |
 
 [TwoSlash](https://twoslash.netlify.app/) 是一个强大的工具，用于在悬停或内联时呈现带有类型信息的 TypeScript 代码块。它对于为 JavaScript/TypeScript 相关主题准备幻灯片非常有用。
 
-
 要使用它，你可以在代码块的 语言id 中添加 `twoslash`：
 
 ````md
@@ -34,5 +33,4 @@ const count = ref(0)
 //            ^?
 ```
 
-<!-- 弹出窗口以防与下方内容重叠 -->
 <div class="py-20" />

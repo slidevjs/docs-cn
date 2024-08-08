@@ -1,8 +1,8 @@
 ---
 relates:
   - Plant UML: https://plantuml.com/
-  - Plant UML Live Editor: https://plantuml.com/plantuml
-  - Example side: https://sli.dev/demo/starter/12
+  - Plant UML 在线编辑器: https://plantuml.com/plantuml
+  - Demo: https://sli.dev/demo/starter/12
   - features/mermaid
 tags: [图表]
 description: |
@@ -21,8 +21,6 @@ Alice -> Bob : Hello!
 ```
 ````
 
-默认情况下,这部分源代码将被发送到 [https://www.plantuml.com/plantuml](https://www.plantuml.com/plantuml) 进行渲染渲染。你也可以通过在 [Slidev 配置](../custom/index#headmatter) 中设置 `plantUmlServer` 来设置自己的服务器。
-
-Visit the [PlantUML Website](https://plantuml.com/) for more information.
+默认情况下,这部分源代码将被发送到 [https://www.plantuml.com/plantuml](https://www.plantuml.com/plantuml) 进行渲染渲染。你也可以通过在 [headmatter](../custom/index#headmatter) 中设置 `plantUmlServer` 来设置自己的服务器。
 
 参阅 [PlantUML官网](https://plantuml.com/) 了解更多信息。
