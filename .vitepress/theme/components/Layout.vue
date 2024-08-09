@@ -31,7 +31,7 @@ const route = useRoute()
       <div flex="~ col gap-2">
         <div v-if="route.data?.frontmatter?.tags" class="bg-$vp-c-bg-soft p4 rounded-lg" flex="~ col gap-2">
           <div font-bold text-sm op75>
-            Tags
+            标签
           </div>
           <div flex="~ wrap gap-2">
             <FeatureTag v-for="tag in route.data.frontmatter.tags" :key="tag" :tag="tag" />
@@ -39,7 +39,7 @@ const route = useRoute()
         </div>
         <div v-if="route.data?.frontmatter?.since" class="bg-$vp-c-bg-soft px2 pb2 rounded-lg" flex="~ col gap-1">
           <div font-bold text-sm op75 px2 pt4>
-            Since
+            要求版本
           </div>
           <VPMenuLink
             :item="{

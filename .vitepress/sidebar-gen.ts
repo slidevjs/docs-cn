@@ -4,7 +4,7 @@ import fg from 'fast-glob'
 import type { DefaultTheme } from 'vitepress'
 import graymatter from 'gray-matter'
 
-const root = fileURLToPath(new URL('../../', import.meta.url))
+const root = fileURLToPath(new URL('../', import.meta.url))
 
 interface ParsedFile {
   filepath: string
@@ -15,7 +15,7 @@ interface ParsedFile {
 
 function parseFile(file: string) {
   const filepath = join(root, file)
-  const path = file.replace('docs/', '').replace('.md', '')
+  const path = file.replace('.md', '')
   const matter = graymatter.read(filepath)
   const title = matter.data.title || matter.content.match(/^#\s+(.*)/m)?.[1] || path
   return {
@@ -30,7 +30,7 @@ export async function getSidebarObject() {
   const map: Record<string, DefaultTheme.SidebarItem[]> = {}
 
   const parsedFeatures: ParsedFile[] = await fg([
-    'docs/features/*.md',
+    'features/*.md',
   ], {
     onlyFiles: true,
     cwd: root,
@@ -38,7 +38,7 @@ export async function getSidebarObject() {
     .then(files => files.map(parseFile))
 
   const parsedGuides: ParsedFile[] = await fg([
-    'docs/guide/*.md',
+    'guide/*.md',
   ], {
     onlyFiles: true,
     cwd: root,
@@ -108,7 +108,7 @@ export async function getSidebarObject() {
 
     if (matter.data.depends) {
       items.push({
-        text: 'Depends on',
+        text: '基于',
         items: matter.data.depends.flatMap(frontmatterToSidebarItem),
       })
     }
@@ -125,7 +125,7 @@ export async function getSidebarObject() {
 
     if (derives.length) {
       items.push({
-        text: 'Derives',
+        text: '派生功能',
         items: derives.flatMap(frontmatterToSidebarItem),
       })
     }
