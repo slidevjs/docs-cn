@@ -4,13 +4,13 @@ outline: deep
 
 # 语法
 
-Slidev's slides are written as Markdown files, which are called **Slidev Markdown**s. A presentation has a Slidev Markdown as its entry, which is `./slides.md` by default, but you can change it by passing the file path as an argument to [the CLI commands](../builtin/cli).
+Slidev 的幻灯片是用 Markdown 文件编写的，称为 **Slidev Markdown**。演示文稿由一个 Slidev Markdown 作为入口点，该文件默认为 `./slides.md`，你可以将文件路径作为参数传递给 [CLI 命令](../builtin/cli) 来使用别的文件。
 
-In a Slidev Markdown, not only [the basic Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used as usual, Slidev also provides additional features to enhance your slides. This section covers the syntax introduced by Slidev. Please make sure you know the basic Markdown syntax before reading this guide.
+在 Slidev Markdown 中，不仅可以像平常一样使用 [基本的 Markdown 功能](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，Slidev 还提供了额外的功能来增强你的幻灯片。本节介绍了 Slidev 引入的语法。请确保你了解基本的 Markdown 语法后再阅读本指南。
 
 ## 分隔符 {#slide-separators}
 
-Use `---` padded with a new line to separate your slides.
+使用在两侧留有空行的 `---` 来分隔幻灯片：
 
 ````md {5,15}
 # Title
@@ -21,7 +21,7 @@ Hello, **Slidev**!
 
 # Slide 2
 
-Use code blocks for highlighting:
+使用代码块来高亮代码：
 
 ```ts
 console.log('Hello, World!')
@@ -31,7 +31,7 @@ console.log('Hello, World!')
 
 # Slide 3
 
-Use UnoCSS classes and Vue components to style and enrich your slides:
+使用 UnoCSS 类和 Vue 组件来为你的幻灯片添加样式和丰富内容：
 
 <div class="p-3">
   <Tweet id="..." />
@@ -40,7 +40,7 @@ Use UnoCSS classes and Vue components to style and enrich your slides:
 
 ## Frontmatter 和 Headmatter {#frontmatter}
 
-At the beginning of each slide, you can add an optional [frontmatter](https://jekyllrb.com/docs/front-matter/) to configure the slide. The first frontmatter block is called **headmatter** and can configure the whole slide deck. The rest are **frontmatters** for individual slides. Texts in the headmatter or the frontmatter should be an object in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+在每张幻灯片的开头，你可以添加一个可选的 [frontmatter](https://jekyllrb.com/docs/front-matter/) 来配置幻灯片。第一个 frontmatter 块称为 **headmatter**，可以配置整个幻灯片集。其余的是用于单个幻灯片的 **frontmatters**。headmatter 或 frontmatter 中的文本应是 [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) 格式的对象。例如：
 
 <!-- eslint-skip -->
 
@@ -50,9 +50,9 @@ theme: seriph
 title: Welcome to Slidev
 ---
 
-# Slide 1
+# 第一页
 
-The frontmatter of this slide is also the headmatter
+第一页的 frontmatter 也是整个演示文稿的 headmatter
 
 ---
 layout: center
@@ -60,66 +60,64 @@ background: /background-1.png
 class: text-white
 ---
 
-# Slide 2
+# 第二页
 
-A page with the layout `center` and a background image
-
----
-
-# Slide 3
-
-A page without frontmatter
-
----
-src: ./pages/4.md  # This slide only contains a frontmatter
----
+本页的布局是 `center`，背景是一张图片
 
 ---
 
-# Slide 5
+# 第三页
+
+本页没有 frontmatter
+
+---
+src: ./pages/4.md  # 本页只包含 frontmatter
+---
+
+---
+
+# 第五页
 ```
 
-Configurations you can set are described in the [Slides deck configurations](/custom/#headmatter) and [Per slide configurations](/custom/#frontmatter) sections.
+具体的配置项请参考 [演示文稿的配置](/custom/#headmatter) 和 [每个幻灯片的配置](/custom/#frontmatter) 部分。
 
-To make the headmatter more readable, you can installed the VSCode extension:
+你还可以安装 VSCode 扩展来使 headmatter 更易读：
 
 <LinkCard link="features/vscode-extension" />
 
-Also, there is another possible frontmatter format:
+还可以使用另一种 frontmatter 格式：
 
 <LinkCard link="features/block-frontmatter" />
 
 ## 备注 {#notes}
 
-You can also create presenter notes for each slide. They will show up in [Presenter Mode](../guide/ui#presenter-mode) for you to reference during presentations.
-
-The comment blocks at the end of each slide are treated as the note of the slide:
+每张幻灯片的末尾的注释块（若有），将被视为幻灯片的备注。它们将在 [演讲者模式](../guide/ui#presenter-mode) 中显示，以供您在演示过程中参考。
 
 ```md {9,19-21}
 ---
 layout: cover
 ---
 
-# Page 1
+# 第一页
 
-This is the cover page.
+封面页
 
-<!-- This is a **note** -->
+<!-- 这是一段 **备注** -->
 
 ---
 
-# Page 2
+# 第二页
 
-<!-- This is NOT a note because it is not at the end of the slide -->
+<!-- 这不是备注，因为它不在幻灯片末尾 -->
 
-The second page
+第二页的内容
 
 <!--
-This is _another_ note
+这是另一段备注
 -->
 ```
 
-Basic Markdown and HTML are also supported in notes and will be rendered.
+备注中也支持渲染 Markdown 和 HTML。
 
 <SeeAlso :links="[
   'features/click-marker',
@@ -127,7 +125,7 @@ Basic Markdown and HTML are also supported in notes and will be rendered.
 
 ## 代码块 {#code-block}
 
-One big reason that led to the creation of Slidev was the need to perfectly display code in slides. Consequently, you can use Markdown-flavored code blocks to highlight your code.
+创建 Slidev 的一个重要原因是需要在幻灯片中完美地显示代码。在 Slidev 中，你可以使用 Markdown 风格的代码块来高亮你的代码。
 
 ````md
 ```ts
@@ -135,9 +133,9 @@ console.log('Hello, World!')
 ```
 ````
 
-Slidev has [Shiki](https://github.com/shikijs/shiki) built in as the syntax highlighter. Refer to [Configure Shiki](/custom/config-highlighter) for more details.
+Slidev 使用 [Shiki](https://github.com/shikijs/shiki) 作为语法高亮器。有关更多详细信息，请参阅 [配置 Shiki](/custom/config-highlighter)。
 
-More about code blocks:
+与代码块相关的更多内容：
 
 <LinkCard link="features/code-block-line-numbers" />
 <LinkCard link="features/code-block-max-height" />
@@ -151,26 +149,26 @@ More about code blocks:
 
 ## Latex 公式块 {#latex-block}
 
-Slidev supports LaTeX blocks for mathematical and chemical formulas:
+Slidev 支持用于渲染数学和化学公式的 LaTeX 公式块：
 
 <LinkCard link="features/latex" />
 
 ## 图表 {#diagrams}
 
-Slidev supports [Mermaid.js](http://mermaid.js.org/) and [PlantUML](https://plantuml.com/) for creating diagrams from text:
+Slidev 支持使用 [Mermaid.js](http://mermaid.js.org/) 和 [PlantUML](https://plantuml.com/)，以文本形式创建图表：
 
 <LinkCard link="features/mermaid" />
 <LinkCard link="features/plantuml" />
 
 ## MDC 语法 {#mdc-syntax}
 
-MDC Syntax is the easiest way to apply styles and classes to elements:
+MDC 语法是将样式和类应用于元素的最简单方法：
 
 <LinkCard link="features/mdc" />
 
 ## Scoped CSS {#scoped-css}
 
-You can use scoped CSS to style your slides:
+Scoped CSS 可以用来为你的幻灯片添加样式：
 
 <LinkCard link="features/slide-scope-style" />
 
