@@ -44,7 +44,7 @@ function removeTag(tag: string) {
 
 这是 Slidev 提供的所有特性的列表。每个特性都可以独立使用，并且是可选的。
 
-您还可以阅读 <LinkInline link="guide/index"/> 分类学习这些特性。
+你还可以阅读 <LinkInline link="guide/index"/> 分类学习这些特性。
 
 <div flex items-center mt-6 gap-6>
   <div
