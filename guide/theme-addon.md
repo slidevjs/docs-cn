@@ -1,10 +1,10 @@
 # 主题和插件
 
-A slides project can have one theme and multiple addons. All of them can provide styles, components, layouts, and other configs to your slides project.
+一个幻灯片项目可以有一个主题和多个插件。它们可以为你的幻灯片项目提供样式、组件、布局和其他配置。
 
 ## 使用主题 {#use-theme}
 
-Changing the theme in Slidev is surprisingly easy. All you need to do is to add the `theme` option in your [headmatter](../custom/index#headmatter):
+在 Slidev 中更换主题非常简单。你只需要在 [headmatter](../custom/index#headmatter) 中添加 `theme` 选项：
 
 ```md
 ---
@@ -14,18 +14,18 @@ theme: seriph
 # The first slide
 ```
 
-You can find the list of official themes and community themes in the [Themes Gallery](../resources/theme-gallery).
+你可以在 [主题合集] 中找到官方主题和社区主题。
 
-::: info Theme name convention
+::: info 主题名称的规范
 
-- You can also pass a relative or absolute path to a local theme folder, like `../my-theme`
-- You can always use the full package name as the theme name
-- If the theme is [official](../resources/theme-gallery#official-themes) or is named like `slidev-theme-name`, you can omit the `slidev-theme-` prefix
-- For scoped packages like `@org/slidev-theme-name`, the full package name is required
+- 你可以使用相对或绝对路径指定本地主题文件夹，例如 `../my-theme`
+- 你也可以直接使用完整的包名作为主题名称
+- 如果主题是[官方主题](../resources/theme-gallery#official-themes)或者命名为 `slidev-theme-name`，你可以省略 `slidev-theme-` 前缀
+- 对于作用域包，如 `@org/slidev-theme-name`，需要使用完整的包名
 
 :::
 
-You can start the server and will be prompted to install the theme after a confirmation.
+启动服务器后，你将会看到如下提示，选择同意即可安装该主题：
 
 <div class="language-md text-xs pl-6">
 <pre style="overflow: hidden; text-wrap: pretty;">
@@ -33,13 +33,13 @@ You can start the server and will be prompted to install the theme after a confi
 </pre>
 </div>
 
-or install the theme manually via:
+或者，你也可以手动安装主题：
 
 ```bash
 $ npm install @slidev/theme-seriph
 ```
 
-And that's all, enjoy the new theme! For more details about the usage, you can refer to the theme's README.
+这就是使用主题的全部步骤！如果你想要更多关于主题的细节，可以查看主题的 README。
 
 <SeeAlso :links="[
   'features/eject-theme',
@@ -47,9 +47,9 @@ And that's all, enjoy the new theme! For more details about the usage, you can r
 
 ## 使用插件 {#use-addon}
 
-Addons are similar to themes, but they are more flexible and can be used to add extra features to your slides project. You can add multiple addons to your project, and they can be used to add extra features to your slides project.
+插件和主题类似，但更加灵活，可以用来为你的幻灯片项目添加额外的功能。你可以为你的项目添加多个插件，它们可以用来添加额外的功能。
 
-To use an addon, you can add the `addons` option in your [headmatter](../custom/index#headmatter):
+要使用插件，你可以在 [headmatter](../custom/index#headmatter) 中添加 `addons` 选项：
 
 ```md
 ---
@@ -59,4 +59,4 @@ addons:
 ---
 ```
 
-You can find the list of official addons and community addons in the [Addons Gallery](../resources/addon-gallery).
+你可以在 [插件合集](../resources/addon-gallery) 中找到官方插件和社区插件。
