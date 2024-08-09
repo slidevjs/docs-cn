@@ -1,17 +1,17 @@
 # 全局上下文
 
-Slidev injects several global context values for advanced navigation controls.
+Slidev 注入了一些全局上下文。它们可用于高级导航控制。
 
-## 直接使用
+## 直接使用 {#direct-usage}
 
-You can access them directly in your slides or components:
+你可以直接在你的幻灯片或组件中访问它们：
 
 ```md
 <!-- slides.md -->
 
 # Page 1
 
-Current page is: {{ $nav.currentPage }}
+当前正在查看第 {{ $nav.currentPage }} 页
 ```
 
 ```vue
@@ -20,19 +20,19 @@ Current page is: {{ $nav.currentPage }}
 <template>
   <div>Title: {{ $slidev.configs.title }}</div>
   <button @click="$nav.next">
-    Next Click
+    下一步动画
   </button>
   <button @click="$nav.nextSlide">
-    Next Slide
+    下一张幻灯片
   </button>
 </template>
 ```
 
-## 通过 Composable 使用
+## 通过 Composable 使用 {#composable-usage}
 
-> Available since v0.48.0
+> 自 v0.48.0 起可用
 
-If you want to get the context programmatically (also type-safely), you can import composables from `@slidev/client`:
+如果你想以编程方式获取上下文（也是类型安全的），你可以从 `@slidev/client` 导入 composable：
 
 ```vue
 <script setup>
@@ -49,96 +49,97 @@ onSlideLeave(() => { /* ... */ })
 ```
 
 > [!NOTE]
-> Previously, you might see the usage of importing nested modules like `import { isDark } from '@slidev/client/logic/dark.ts'`, this is **NOT RECOMMENDED** as they are internal implementation details and may change in the future. Always use the public APIs from `@slidev/client` if possible.
+> 之前，你可能看到过导入嵌套模块的用法，例如 `import { isDark } from '@slidev/client/logic/dark.ts'`，这是**不推荐**的，因为它们是内部实现细节，可能会在未来更改。如果可能的话，请始终使用 `@slidev/client` 中的公共 API。
 
 ::: warning
 
-When the `useSlideContext` composable is used in a file, the automatic injection of `$slidev` will be disabled. You need to manually get the `$slidev` object to the `useSlideContext` function.
+当使用 `useSlideContext` 时，将禁用自动注入 `$slidev`。你需要手动将 `$slidev` 对象传递给 `useSlideContext` 函数。
 
 :::
 
 <SeeAlso :links="['features/slide-hook']" />
 
-## Properties
+## 注入的属性 {#properties}
 
-### `$slidev`
+### `$slidev` {#slidev}
 
-The global context object.
+全局上下文对象。
 
-### `$frontmatter`
+### `$frontmatter` {#frontmatter}
 
-The frontmatter object of the current slide. Note that this is empty for components out of the slides like <LinkInline link="features/global-layers" />.
+当前幻灯片的 frontmatter 对象。注意这对于幻灯片之外的组件（如 <LinkInline link="features/global-layers" />）是空的。
 
-### `$clicks`
+### `$clicks` {#clicks}
 
-`$clicks` hold the number of clicks on the current slide. Can be used conditionally to show different content on clicks.
+该属性表示当前幻灯片上的点击次数。可以用于根据点击次数显示不同的内容：
 
 ```html
 <div v-if="$clicks > 3">Content</div>
 ```
 
-See the <LinkInline link="guide/animations" /> guide for more information.
+参阅 <LinkInline link="guide/animations" /> 了解更多关于点击动画的信息。
 
-### `$nav`
+### `$nav` {#nav}
 
-A reactive object holding the properties and controls of the slide navigation. For examples:
+一个响应式对象，包含幻灯片导航的属性和控制：
 
 ```js
-$nav.next() // go next step
-$nav.nextSlide() // go next slide (skip clicks)
-$nav.go(10) // go slide #10
+$nav.next() // 下一步动画
+$nav.nextSlide() // 下一张幻灯片，跳过动画
+$nav.go(10) // 跳转到第 10 页
 
-$nav.currentPage // current slide number
-$nav.currentLayout // current layout name
+$nav.currentPage // 当前页码
+$nav.currentLayout // 当前幻灯片的布局
 ```
 
-For more properties available, refer to the [`SlidevContextNav` interface](https://github.com/slidevjs/slidev/blob/main/packages/client/composables/useNav.ts).
+请参阅 [`SlidevContextNav` interface](https://github.com/slidevjs/slidev/blob/main/packages/client/composables/useNav.ts) 以了解更多细节。
 
-### `$page`
+### `$page` {#page}
 
-`$page` holds the number of the current page, 1-indexed.
+`$page` 保存当前页的页码，从 1 开始。
 
 ```md
-Page: {{ $page }}
+这是第 {{ $page }} 页
 
-Is current page active: {{ $page === $nav.currentPage }}
+正在查看该页吗? {{ $page === $nav.currentPage }}
 ```
 
-> [!Note] > `$nav.clicks` is a global state while `$clicks` is the local clicks number for each slide.
+> [!Note]
+> `$nav.clicks` 是全局导航状态，而 `$clicks` 是每张幻灯片的自己的点击次数。
 
-### `$renderContext`
+### `$renderContext` {#render-context}
 
-`$renderContext` holds the current render context, which can be `slide`, `overview`, `presenter` or `previewNext`
+`$renderContext` 保存当前的渲染上下文，可以是 `slide`, `overview`, `presenter` 或 `previewNext`。
 
 ```md
 <div v-if="['slide', 'presenter'].includes($renderContext)">
-  This content will only be rendered in main slides view
+  该内容仅在主幻灯片视图中呈现
 </div>
 ```
 
-You can also use the [`<RenderWhen>` component](../builtin/components#renderwhen).
+你还可以使用 [`<RenderWhen>` 组件](../builtin/components#renderwhen)。
 
-### `$slidev.configs`
+### `$slidev.configs` {#configs}
 
-A reactive object holding the configurations for the slide project. For example:
+一个响应式对象，保存幻灯片项目的配置。例如：
 
 ```md
 ---
 title: My First Slidev!
 ---
 
-# Page 1
+# 第一页
 
 ---
 
-# Any Page
+# 其他任何页面
 
 {{ $slidev.configs.title }} // 'My First Slidev!'
 ```
 
-### `$slidev.themeConfigs`
+### `$slidev.themeConfigs` {#theme-configs}
 
-A reactive object holding the parsed theme configurations:
+一个响应式对象，保存解析后的主题配置：
 
 ```yaml
 ---
@@ -148,15 +149,15 @@ themeConfig:
 ---
 ```
 
-Then the theme can access the primary color like:
+然后，主题可以像这样访问主要颜色：
 
 ```md
 {{ $slidev.themeConfigs.primary }} // '#213435'
 ```
 
-## Types
+## 类型支持 {#types}
 
-If you want to get a type programmatically, you can import types like `TocItem` from `@slidev/types`:
+可以从 `@slidev/types` 导入 `TocItem` 等类型信息：
 
 ```vue
 <script setup>
