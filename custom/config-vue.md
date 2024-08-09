@@ -1,8 +1,4 @@
----
-title: 配置 Vue
----
-
-# 配置 Vue {#configure-vue}
+# Configure Vue App
 
 <Environment type="client" />
 
@@ -10,7 +6,12 @@ Slidev 基于 [Vue 3](https://v3.vuejs.org/) 来渲染应用。你可以针对�
 
 创建 `./setup/main.ts` 文件，其内容如下：
 
-```ts
+<!-- eslint-disable import/first -->
+
+```ts twoslash
+import type { Plugin } from 'vue'
+declare const YourPlugin: Plugin
+// ---cut---
 import { defineAppSetup } from '@slidev/types'
 
 export default defineAppSetup(({ app, router }) => {

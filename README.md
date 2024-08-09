@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-<a href="https://sli.dev" target="_blank">
+<a href="https://cn.sli.dev" target="_blank">
 <img src="https://sli.dev/logo-title.png" alt="Slidev" height="250" width="250"/>
 </a>
 </p>
@@ -17,27 +17,6 @@
 <br>
 <a href="https://github.com/slidevjs/slidev" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/slidevjs/slidev?style=social"></a>
 </p>
-
-<br>
-<p align="center">
-  <b>简体中文</b> ｜ <a href="https://github.com/slidevjs/slidev#readme">English</a>
-</p>
-<br>
-
-## 翻译版本
-
-| | 仓库 | 地址 | 维护者 |
-|---|---|---:|---|
-| English        | [docs](https://github.com/slidevjs/slidev/tree/main/docs)       |       [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu)                                    |
-| 简体中文       | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) | [@QC-L](https://github.com/QC-L) [@Ivocin](https://github.com/Ivocin) |
-| Français       | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) | [@ArthurDanjou](https://github.com/ArthurDanjou)                      |
-| Español        | [docs-es](https://github.com/slidevjs/docs-es) | [es.sli.dev](https://es.sli.dev) | [@owlnai](https://github.com/owlnai)                                  |
-| Русский        | [docs-ru](https://github.com/slidevjs/docs-ru) | [ru.sli.dev](https://ru.sli.dev) | [@xesjkeee](https://github.com/xesjkeee)                              |
-| Việt Nam       | [docs-vn](https://github.com/slidevjs/docs-vn) | [vn.sli.dev](https://vn.sli.dev) | [@bongudth](https://github.com/bongudth)                              |
-| Deutsch        | [docs-de](https://github.com/slidevjs/docs-de) | [de.sli.dev](https://de.sli.dev) | [@fabiankachlock](https://github.com/fabiankachlock)                  |
-| Português (BR) | [docs-br](https://github.com/slidevjs/docs-br) | [br.sli.dev](https://br.sli.dev) | [@luisfelipesdn12](https://github.com/luisfelipesdn12)                |
-| Ελληνικά       | [docs-el](https://github.com/slidevjs/docs-el) | [el.sli.dev](https://el.sli.dev) | [@GeopJr](https://github.com/GeopJr)                                  |
-| 日本語         | [docs-ja](https://github.com/slidevjs/docs-el) | [ja.sli.dev](https://ja.sli.dev) | [@IkumaTadokoro](https://github.com/IkumaTadokoro)                    |
 
 ## Slidev 中文文档
 
@@ -60,16 +39,11 @@
 
 目前 Slidev 中文文档翻译已全部完成。
 
-**同步原理**：[印记中文](https://github.com/docschina) 的机器人每天会拉取 [Slidev 的英文文档](https://github.com/slidevjs/docs) 的内容，然后自动合并到 `main` 或 PR 到 `main` 分支。
-
-**仓库维护者**需要**每天**检查该类型的 PR：
-
-- 如无冲突，会自动 merge 到 `main` 分支中；
-- 若有冲突，需要先解决 PR 中的冲突，再 merge 到 `main` 分支中。
+**同步原理**：每天，[主仓库](https://github.com/slidevjs/slidev)的 `docs` 目录会被提取到本仓库的 `upstream` 分支。本仓库的 `sync` 分支会在需要时从 `main` 和 `upstream` 分支合并，并在完成翻译后发起 PR 到主仓库的 `main` 分支。
 
 ### 📝 参与贡献
 
-贡献者首先 fork 本仓库，基于 `main` 创建新的翻译分支，进行翻译。翻译完成后，发起到 `main` 的 PR，等待 review，review 通过，仓库维护者将 PR merge。
+感谢您的参与！若要修正翻译错误，请向 main 分支提交 PR；若要帮助翻译新增内容，请向 sync 分支提交 PR；若英文原版即有须有修改住处，请向[主仓库](https://github.com/slidevjs/slidev)提交 PR。
 
 若需要本地预览网站效果，可执行如下命令：
 
@@ -83,9 +57,9 @@ $ pnpm i
 $ pnpm run dev
 ```
 
-接着访问 `http://localhost:3000`，即可。
+接着访问提示的网址（一般为 `http://localhost:5173/`）即可。
 
-或者安装 [基于 VSCode 的 Vite 插件](https://marketplace.visualstudio.com/items?itemName=antfu.vite) 进行编辑。
+或者安装 [VSCode 的 Vite 插件](https://marketplace.visualstudio.com/items?itemName=antfu.vite) 快速启动开发服务器。
 
 ### 贡献者
 
