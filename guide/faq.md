@@ -4,32 +4,32 @@ outline: deep
 
 # 常见问答
 
-## Assets Handling {#assets-handling}
+## 处理静态资源 {#assets-handling}
 
-You may use static assets like images and videos in your slides. Since Slidev is based on Vite, you can import them directly in your markdown files.
+你可以在幻灯片中使用静态资源，如图片和视频。由于 Slidev 基于 Vite，你可以直接在 Markdown 文件中导入它们。
 
-URLs that can be statically analyzed as assets can use relative paths:
+可用被静态分析的 URL 可以使用相对路径：
 
 ```md
 ![alt](./image.png)
 <img src="./image.png" />
 ```
 
-In the above case, the URLs will be resolved to `/BASE_URL/assets/image.png` after build.
+在上例中，URL 将在构建时被解析为 `/BASE_URL/assets/image.png`。
 
-However, relative paths in frontmatter and other components will be broken after build:
+但是，frontmatter 和其他组件中的相对路径在构建后将会失效：
 
 ```md
 ---
-background: ./image.png  # Broken after build
+background: ./image.png  # 构建后可能会失效
 ---
 
 <Comp src="./image.png" />
 ```
 
-In the above case, the URLs are not statically analyzable and will be preserved as-is, which will result in 404 errors after build.
+上例中的两个 URL 不会被静态分析，构建后将保留原样，这将导致构建后的 404 错误。
 
-To solve this, you can place these assets in the [public folder](TODO:) and use an absolute path to import them:
+要解决这个问题，你可以将这些资源放在 [public 文件夹](../custom/directory-structure#public) 中，并使用绝对路径导入它们：
 
 ```md
 ---
@@ -39,25 +39,25 @@ background: /image.png
 <Comp src="/image.png" />
 ```
 
-For more details, refer to [Vite's documentation](https://vitejs.dev/guide/assets.html).
+更多细节请参阅 [Vite 的文档](https://cn.vitejs.dev/guide/assets.html).
 
-## Positioning {#positioning}
+## 定位元素 {#positioning}
 
-Since Slidev is web-based, CSS is the primary way to position elements. Here are some useful tips for position elements:
+Slidev 基于 Web，CSS 是定位元素的主要方式。以下是一些有用的定位元素的技巧：
 
-### Grids And Flexboxes
+### Grids 和 Flexboxes {#grids-and-flexboxes}
 
-You can use CSS Grids to create complex layouts:
+可以使用 CSS Grids 来创建复杂的布局：
 
 ::: code-group
 
 ```md [Two columns]
 <div class="grid grid-cols-2 gap-4">
   <div>
-    The first column
+    第一列
   </div>
   <div>
-    The second column
+    第二列
   </div>
 </div>
 ```
@@ -65,65 +65,70 @@ You can use CSS Grids to create complex layouts:
 ```md [Complex case]
 <div class="grid grid-cols-[200px_1fr_10%] gap-4">
   <div>
-    The first column (200px)
+    第一列 (200px)
   </div>
   <div>
-    The second column (auto fit)
+    第二列 (auto fit)
   </div>
   <div>
-    The third column (10% width to parent container)
+    第三列 (10% width to parent container)
   </div>
 </div>
 ```
 
 :::
 
-And use Flexboxes to create more responsive layouts:
+或使用 Flexboxes 来创建更具响应性的布局：
 
 ::: code-group
 
 ```md [Horizontal]
 <div class="flex items-center">
-
+  <div>
+    第一块
+  </div>
+  <div>
+    第二块
+  </div>
 </div>
 ```
 
 ```md [Vertical]
 <div class="flex flex-col items-center">
   <div>
-    Centered content
+    居中的内容
   </div>
 </div>
 ```
 
 :::
 
-Learn more: [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), or even [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/),
+了解更多：[CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)，[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，以及 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)。
 
-### Absolute Position
+### 绝对定位 {#absolute-positioning}
 
-You can use UnoCSS to position elements absolutely:
+可以使用 UnoCSS 来绝对定位元素：
 
 ```md
 <div class="absolute left-30px bottom-30px">
-  This is a left-bottom aligned footer
+  这是一个在左下角的页脚
 </div>
 ```
 
-Or use the draggable elements feature:
+或者使用可拖动元素的功能：
 
 <LinkCard link="features/draggable" />
 
-## Adjust Sizes {#adjust-size}
+## 调整大小 {#adjust-size}
 
-- Adjust all slides's size:
+- 调整所有幻灯片的大小：
 
 <LinkCard link="features/canvas-size" />
 
-- Adjust several slides' size:
+- 调整某几张幻灯片的大小：
 
 <LinkCard link="features/zoom-slide" />
 
-- Adjust some elements' size:
+- 调整一些元素的大小：
 
 <LinkCard link="features/transform-component" />
