@@ -48,10 +48,10 @@ export async function getSidebarObject() {
   parsedFeatures.forEach(({ matter, path }) => {
     const items: DefaultTheme.SidebarItem[] = [
       {
-        text: 'Back to',
+        text: '返回',
         items: [
           {
-            text: 'All Features',
+            text: '功能列表',
             link: '/features',
           },
         ],
@@ -115,7 +115,7 @@ export async function getSidebarObject() {
 
     if (matter.data.relates) {
       items.push({
-        text: 'Related to',
+        text: '相关链接',
         items: matter.data.relates.flatMap(frontmatterToSidebarItem),
       })
     }

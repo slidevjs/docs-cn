@@ -1,6 +1,6 @@
 ---
 relates:
-  - Vue's <style scoped>: https://vue-loader.vuejs.org/guide/scoped-css.html
+  - Vue 的 <style scoped>: https://vue-loader.vuejs.org/guide/scoped-css.html
   - UnoCSS directives: https://unocss.dev/transformers/directives
 tags: [样式, 语法]
 description: |

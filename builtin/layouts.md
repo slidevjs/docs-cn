@@ -1,8 +1,8 @@
 # 内置布局
 
-This page lists all the built-in layouts provided by Slidev. These layouts can be used via the `layout` option in the frontmatters of your slides.
+本页列出了 Slidev 提供的所有内置布局。这些布局可以通过幻灯片的 frontmatter 中的 `layout` 选项来使用。
 
-Note that <LinkInline link="guide/theme-addon" /> may provide additional layouts or override the existing ones. To add your own layouts, see <LinkInline link="guide/write-layout" />.
+需要注意的是，<LinkInline link="guide/theme-addon" /> 可以提供额外的布局。要添加自己的布局，请参见 <LinkInline link="guide/write-layout" />。
 
 ## `center`
 
@@ -135,7 +135,7 @@ class: my-cool-content-on-the-left
 
 ## `iframe`
 
-Shows a web page as the main content of the page.
+幻灯片的内容是嵌入的网页。
 
 ### Usage
 
