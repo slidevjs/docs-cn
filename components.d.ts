@@ -15,6 +15,7 @@ declare module 'vue' {
     'Carbon:chevronRight': typeof import('~icons/carbon/chevron-right')['default']
     'Carbon:close': typeof import('~icons/carbon/close')['default']
     'Carbon:filterRemove': typeof import('~icons/carbon/filter-remove')['default']
+    'Carbon:logoTwitter': typeof import('~icons/carbon/logo-twitter')['default']
     'Carbon:reset': typeof import('~icons/carbon/reset')['default']
     'Carbon:search': typeof import('~icons/carbon/search')['default']
     'Carbon:tag': typeof import('~icons/carbon/tag')['default']
