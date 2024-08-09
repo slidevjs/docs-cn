@@ -1,14 +1,14 @@
 # 内置组件
 
-This page lists all the built-in components provided by Slidev. These components can be **directly** used in your slides.
+本页列出了 Slidev 的所有内置组件。这些组件可以在你的幻灯片中**直接**使用，无需显式导入。
 
-Note that <LinkInline link="guide/theme-addon" /> can provide additional components. To add your own components, see <LinkInline link="guide/component#write" />.
+需要注意的是，<LinkInline link="guide/theme-addon" /> 可以提供额外的组件。要添加自己的组件，请参见 <LinkInline link="guide/component#write" />。
 
 ## `Arrow`
 
 绘制一个箭头。
 
-### Usage
+### 使用方式
 
 ```md
 <Arrow x1="10" y1="20" x2="100" y2="200" />
@@ -32,13 +32,13 @@ Note that <LinkInline link="guide/theme-addon" /> can provide additional compone
 
 ## `VDragArrow`
 
-An `Arrow` component that can be dragged.
+类似 `Arrow` 组件，但可以拖动。
 
-### Usage
+### 使用方式
 
 <LinkCard link="features/draggable#draggable-arrow" />
 
-Parameters not related to position are the same as [the `Arrow` component](#arrow).
+与箭头位置无关的参数与 [`Arrow` 组件](#arrow) 相同。
 
 ## `AutoFitText`
 
@@ -46,7 +46,7 @@ Parameters not related to position are the same as [the `Arrow` component](#arro
 
 字体大小会自动适应内容的方框。类似于 PowerPoint 或 Keynote 的文本框。
 
-### 用法 {#auto-fit-text-usage}
+### 用法 {#auto-fit-text-使用方式}
 
 ```md
 <AutoFitText :max="200" :min="100" modelValue="Some text"/>
@@ -62,7 +62,7 @@ Parameters not related to position are the same as [the `Arrow` component](#arro
 
 你可以使用它来根据活动的亮色或暗色主题，显示一种或另一种内容。
 
-### 用法 {#light-or-dark-usage}
+### 用法 {#light-or-dark-使用方式}
 
 与 `#dark` 和 `#light` 插槽一起使用：
 
@@ -107,7 +107,7 @@ Parameters not related to position are the same as [the `Arrow` component](#arro
 
 插入一个链接，你可以用它来导航到一个指定的幻灯片。
 
-### Usage
+### 使用方式
 
 ```md
 <Link to="42">Go to slide 42</Link>
@@ -138,7 +138,7 @@ Renders "Powered by Slidev" with a link to the Slidev website.
 
 插槽仅在上下文满足条件时（如处于演示者视图中时）才会渲染。
 
-### Usage
+### 使用方式
 
 ```md
 <RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
@@ -146,17 +146,16 @@ Renders "Powered by Slidev" with a link to the Slidev website.
 
 Context type: `'main' | 'visible' | 'print' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
 
-Parameters:
+Props:
 
-- `context` (`Context | Context[]`): a context or array of contexts you want to check for
-  - `'main'`: Render in slides and presenter view (equivalent to ['slide', 'presenter']),
-  - `'visible'`: Render the content if it is visible
-  - `'print'`: Render in print mode
-  - `'slide'`: Render in slides
-  - `'overview'`: Render in overview
-  - `'presenter'`: Render in presenter view
-  - `'previewNext'`: Render in presenter's next slide view
-  - `'previewPrevious'`: Render in presenter's previous slide view
+- `context` (`Context | Context[]`): 要求的渲染上下文或渲染上下文数组
+  - `'main'`: 在幻灯片和演示者视图中渲染（相当于 ['slide', 'presenter']）,
+  - `'visible'`: 如果当前可见则渲染
+  - `'print'`: 在打印模式下渲染
+  - `'slide'`: 在普通播放模式中渲染
+  - `'overview'`: 在概览中渲染
+  - `'presenter'`: 在演示者视图中渲染
+  - `'previewNext'`: 在演示者的下一张幻灯片视图中渲染
 
 Slots:
 
@@ -167,7 +166,7 @@ Slots:
 
 当前幻灯片编号。
 
-### Usage
+### 使用方式
 
 ```md
 <SlideCurrentNo />
@@ -177,7 +176,7 @@ Slots:
 
 幻灯片总数。
 
-### Usage
+### 使用方式
 
 ```md
 <SlidesTotal />
@@ -198,7 +197,7 @@ level: 2
 ---
 ```
 
-### Usage
+### 使用方式
 
 `<TitleRenderer>` 组件是一个虚拟组件，可以使用以下方式导入：
 
@@ -212,7 +211,7 @@ import TitleRenderer from '#slidev/title-renderer'
 <TitleRenderer no="42" />
 ```
 
-Parameters:
+Props:
 
 - `no` (`string | number`): 显示标题的幻灯片编号（幻灯片从 `1` 开始）
 
@@ -231,7 +230,7 @@ hideInToc: true
 
 标题使用 [`<Titles>` 组件](#titles) 来展示。
 
-### Usage
+### 使用方式
 
 ```md
 <Toc />
@@ -250,9 +249,9 @@ hideInToc: true
 
 ## `Transform`
 
-Apply scaling or transforming to elements.
+为元素应用缩放变换。
 
-### Usage
+### 使用方式
 
 ```md
 <Transform :scale="0.5">
@@ -260,22 +259,22 @@ Apply scaling or transforming to elements.
 </Transform>
 ```
 
-Parameters:
+Props:
 
 - `scale` (`number | string`, 默认为 `1`): 大小比例
-- `origin` (`string`, 默认为 `'top left'`): 位置
+- `origin` (`string`, 默认为 `'top left'`): 原点位置
 
 ## `Tweet`
 
 嵌入一条推文。
 
-### Usage
+### 使用方式
 
 ```md
 <Tweet id="20" />
 ```
 
-Parameters:
+Props:
 
 - `id` (`number | string`, 必要值): 推文 id
 - `scale` (`number | string`, 默认为: `1`): 大小比例
@@ -288,13 +287,13 @@ Parameters:
 
 ## `VSwitch`
 
-Switch between multiple slots based on clicks.
+根据点击动画切换显示的插槽。
 
 <LinkCard link="guide/animations#enter-leave" />
 
-- If the `unmount` prop is set to `true`, the previous slot will be unmounted when switching to the next slot. Default is `false`.
-- Use the `tag` and `childTag` props to change the default tag of the component and its children. Default is `div`.
-- Use the `transition` prop to change the transition effect. Default is `false` (disabled).
+- 当 `unmount` 属性设置为 `true` 时，切换到下一个插槽时，上一个插槽的内容将被卸载。默认为 `false`。
+- 使用 `tag` 和 `childTag` 属性来更改组件及其子元素的默认标签。默认为 `div`。
+- 使用 `transition` 属性来更改过渡效果。默认为 `false`（禁用）。
 
 ## `VDrag`
 
@@ -302,9 +301,9 @@ Switch between multiple slots based on clicks.
 
 ## `SlidevVideo`
 
-Embed a video.
+嵌入一个视频。
 
-### Usage
+### 使用方式
 
 ```md
 <SlidevVideo v-click autoplay controls>
@@ -312,47 +311,48 @@ Embed a video.
   <source src="/myMovie.mp4" type="video/mp4" />
   <source src="/myMovie.webm" type="video/webm" />
   <p>
-    Your browser does not support videos. You may download it
-    <a href="/myMovie.mp4">here</a>.
+    你的浏览器不支持播放该视频，请点击
+    <a href="/myMovie.mp4">此处</a>
+    下载。
   </p>
 </SlidevVideo>
 ```
 
-Check [HTML video element's doc](https://developer.mozilla.org/docs/Web/HTML/Element/Video) to see what can be included in this component's slot.
+查阅 [HTML video 元素文档](https://developer.mozilla.org/docs/Web/HTML/Element/Video) 以了解可以包含在此组件插槽中的内容。
 
-Parameters:
+Props:
 
-- `controls` (`boolean`, default: `false`): show the video controls
-- `autoplay` (`boolean | 'once'`, default: `false`):
-  - `true` or `'once'`: start the video only once and does not restart it once ended or paused
-  - `false`: never automatically start the video (rely on `controls` instead)
-- `autoreset` (`'slide' | 'click'`, default: `undefined`):
-  - `'slide'`: go back to the start of the video when going back to the slide
-  - `'click'`: go back to the start of the video when going back to the component's click turn
-- `poster` (`string | undefined`, default: `undefined`):
-  - The source of the image to print when the video is not playing.
-- `printPoster` (`string | undefined`, default: `undefined`):
-  - The override for `poster` when printing.
-- `timestamp` (`string | number`, default: `0`):
-  - The starting time of the video in seconds.
-- `printTimestamp` (`string | number | 'last' | undefined`, default: `undefined`):
-  - The override for `timestamp` when printing.
+- `controls` (`boolean`, 默认为 `false`): 显示视频控件
+- `autoplay` (`boolean | 'once'`, 默认为 `false`):
+  - `true` 或 `'once'`: 仅播放一次视频，结束或暂停后不会重新开始
+  - `false`: 从不自动播放视频（依赖于 `controls`）
+- `autoreset` (`'slide' | 'click'`, 默认为 `undefined`):
+  - `'slide'`: 返回到幻灯片时重新开始视频
+  - `'click'`: 返回到组件的点击轮次时重新开始视频
+- `poster` (`string | undefined`, 默认为 `undefined`):
+  - 视频未播放时显示的图像源。
+- `printPoster` (`string | undefined`, 默认为 `undefined`):
+  - 打印时 `poster` 的覆盖。
+- `timestamp` (`string | number`, 默认为 `0`):
+  - 视频的开始时间（秒）。
+- `printTimestamp` (`string | number | 'last' | undefined`, 默认为 `undefined`):
+  - 打印时 `timestamp` 的覆盖。
 
 ::: warning
-When exporting, the video may fail to load because Chromium does not support some video formats. In this case, you can specify the executable path of the browser. See [Chromium executable path](/guide/exporting.html#executable-path) for more information.
+在导出时，视频可能无法加载，因为 Chromium 不支持某些视频格式。在这种情况下，你可以指定浏览器的可执行路径。更多信息请参见 [配置 Chromium 可执行路径](/guide/exporting.html#executable-path)。
 :::
 
 ## `Youtube`
 
 嵌入 YouTube 视频。
 
-### Usage
+### 使用方式
 
 ```md
 <Youtube id="luoMHjh-XcQ" />
 ```
 
-Parameters:
+Props:
 
 - `id` (`string`, 必要值): YouTube 视频 id
 - `width` (`number`): 视频宽度

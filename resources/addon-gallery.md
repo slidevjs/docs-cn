@@ -8,9 +8,9 @@ import AddonGallery from '../.vitepress/theme/components/AddonGallery.vue'
 
 # 插件合集
 
-Browse awesome addons available for Slidev here.
+此处是 Slidev 超棒的插件合集。
 
-Read more about <LinkInline link="guide/theme-addon#use-addon" /> to use them, and <LinkInline link="guide/write-addon" /> to create your own addon.
+可以阅读 <LinkInline link="guide/theme-addon#use-addon" /> 来了解如何使用它们，或者阅读 <LinkInline link="guide/write-addon" /> 来创建自己的插件。
 
 ## 官方插件 {#official-addons}
 
@@ -20,7 +20,7 @@ Read more about <LinkInline link="guide/theme-addon#use-addon" /> to use them, a
 
 ## 社区插件 {#community-addons}
 
-Here are the curated addons made by the community.
+下列是精选的社区插件。
 
 <!-- Edit in ./docs/.vitepress/addons.ts -->
 <ClientOnly>
@@ -29,4 +29,4 @@ Here are the curated addons made by the community.
 
 ## 更多插件 {#more-addons}
 
-Find all the [addons available on NPM](https://www.npmjs.com/search?q=keywords%3Aslidev-addon).
+[在 NPM 上](https://www.npmjs.com/search?q=keywords%3Aslidev-addon)查找所有已发布的插件。

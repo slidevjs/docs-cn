@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-<a href="https://sli.dev" target="_blank">
+<a href="https://cn.sli.dev" target="_blank">
 <img src="https://sli.dev/logo-title.png" alt="Slidev" height="250" width="250"/>
 </a>
 </p>
@@ -17,25 +17,6 @@
 <br>
 <a href="https://github.com/slidevjs/slidev" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/slidevjs/slidev?style=social"></a>
 </p>
-
-## 翻译版本
-
-> [!WARNING]
->
-> Translations with strikethroughs are no longer maintained. The content is outdated and not encouraged to refer.
-
-|                           | Repo                                           |                             Site | Maintainers                                                           |
-| ------------------------- | ---------------------------------------------- | -------------------------------: | --------------------------------------------------------------------- |
-| English                   | [docs](https://github.com/slidevjs/docs)       |       [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu)                                    |
-| 简体中文                  | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) | [@QC-L](https://github.com/QC-L) [@Ivocin](https://github.com/Ivocin) |
-| <del>Français</del>       | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) | [@ArthurDanjou](https://github.com/ArthurDanjou)                      |
-| <del>Español</del>        | [docs-es](https://github.com/slidevjs/docs-es) | [es.sli.dev](https://es.sli.dev) | [@owlnai](https://github.com/owlnai)                                  |
-| <del>Русский</del>        | [docs-ru](https://github.com/slidevjs/docs-ru) | [ru.sli.dev](https://ru.sli.dev) | [@xesjkeee](https://github.com/xesjkeee)                              |
-| <del>Việt Nam</del>       | [docs-vn](https://github.com/slidevjs/docs-vn) | [vn.sli.dev](https://vn.sli.dev) | [@bongudth](https://github.com/bongudth)                              |
-| <del>Deutsch</del>        | [docs-de](https://github.com/slidevjs/docs-de) | [de.sli.dev](https://de.sli.dev) | [@fabiankachlock](https://github.com/fabiankachlock)                  |
-| <del>Português (BR)</del> | [docs-br](https://github.com/slidevjs/docs-br) | [br.sli.dev](https://br.sli.dev) | [@luisfelipesdn12](https://github.com/luisfelipesdn12)                |
-| <del>Ελληνικά</del>       | [docs-el](https://github.com/slidevjs/docs-el) | [el.sli.dev](https://el.sli.dev) | [@GeopJr](https://github.com/GeopJr)                                  |
-| <del>日本語</del>         | [docs-ja](https://github.com/slidevjs/docs-el) | [ja.sli.dev](https://ja.sli.dev) | [@IkumaTadokoro](https://github.com/IkumaTadokoro)                    |                    |
 
 ## Slidev 中文文档
 
@@ -96,10 +77,3 @@ $ pnpm run dev
 | [![jacob-lcs](https://avatars.githubusercontent.com/u/40483898?s=120&v=4)](https://github.com/jacob-lcs) | [![iDestin](https://avatars.githubusercontent.com/u/36811055?s=120&v=4)](https://github.com/iDestin) | [<img src="https://avatars.githubusercontent.com/u/42465692?s=120&v=4" width="120" height="120">](https://github.com/raintygao) | [![zrr1999](https://avatars.githubusercontent.com/u/46243324?s=120&v=4)](https://github.com/zrr1999) |[![KimYangOfCat](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat) |[![KnowsCount](https://avatars.githubusercontent.com/u/56480008?s=120&v=4)](https://github.com/KnowsCount) | 
 | ZhengX |
 |[![Megrax](https://avatars.githubusercontent.com/u/56376387?s=120&v=4)](https://github.com/Megrax) |
-# [sli.dev](https://sli.dev)
-
-Documentation for [Slidev](https://github.com/slidevjs/slidev)
-
-## Help on Translating
-
-Please join our [Discord Server](https://chat.sli.dev) and contact the maintainers.

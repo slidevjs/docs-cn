@@ -516,7 +516,7 @@ export const community: ThemeInfo[] = [
     id: '',
     link: 'https://github.com/slidevjs/docs/edit/main/.vitepress/themes.ts',
     name: 'Yours?',
-    description: 'Submit your theme to be list here!',
+    description: '点击此处分享你的主题',
     author: {
       name: '',
     },

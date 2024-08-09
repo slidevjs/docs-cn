@@ -1,6 +1,6 @@
 ---
 relates:
-  - Vue's Named Slots: https://v3.vuejs.org/guide/component-slots.html
+  - Vue's 具名插槽: https://cn.vuejs.org/guide/components/slots#named-slots
 tags: [布局, 语法]
 description: |
   针对布局中具名插槽的语法糖。

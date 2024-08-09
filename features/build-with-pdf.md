@@ -3,8 +3,8 @@ depends:
   - guide/exporting
   - guide/hosting
 relates:
-  - CLI export options: /builtin/cli#export
-  - Headmatter export options: /custom/#headmatter
+  - CLI export 命令: /builtin/cli#export
+  - Headmatter: /custom/#headmatter
 tags: [导出, 构建]
 description: |
   在构建时生成可供下载的 PDF。

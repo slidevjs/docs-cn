@@ -12,7 +12,7 @@ function myCodeblock(ctx: MarkdownTransformContext) {
   console.log('index in presentation', ctx.slide.index)
   ctx.s.replace(
     /^```myblock *(\{[^\n]*\})?\n([\s\S]+?)\n```/gm,
-    (full, options = '', code = '') => {
+    (full: string, options = '', code = '') => {
       return `...`
     },
   )

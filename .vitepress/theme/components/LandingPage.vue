@@ -9,7 +9,7 @@
         为开发者打造的演示文稿工具
       </h2>
       <div flex="~ gap-3 justify-center" p4 mt-5>
-        <a href="/guide/" class="bg-$vp-c-brand-3 text-white! no-underline! px5 py3 text-xl font-bold rounded-xl hover:bg-$vp-c-brand-1">开始</a>
+        <a href="/guide/" class="bg-$vp-c-brand-3 text-white! no-underline! px5 py3 text-xl font-bold rounded-xl hover:bg-$vp-c-brand-1">快速上手</a>
         <a href="/guide/why" class="bg-$vp-c-gray-1 text-white! no-underline! px5 py3 text-xl font-bold rounded-2xl hover:bg-$vp-c-brand-1">为什么选 Slidev</a>
       </div>
     </div>

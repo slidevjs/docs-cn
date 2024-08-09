@@ -40,11 +40,11 @@ function removeTag(tag: string) {
 }
 </script>
 
-# 特性
+# 功能列表
 
-这是 Slidev 提供的所有特性的列表。每个特性都可以独立使用，并且是可选的。
+本页是 Slidev 提供的相对独立的功能列表。每一个功能都可以在有需要的时候单独使用，使你的幻灯片更加精彩。
 
-你还可以阅读 <LinkInline link="guide/index"/> 分类学习这些特性。
+如果你想按主题了解这些功能，也可以阅读 <LinkInline link="guide/index" />。
 
 <div flex items-center mt-6 gap-6>
   <div
@@ -71,10 +71,10 @@ function removeTag(tag: string) {
 <FeaturesOverview :features="filteredFeatures" />
 
 <div v-if="filteredFeatures.length === 0" class="w-full mt-6 op-80 flex flex-col items-center">
-  未找到结果
+  找不到匹配的功能
   <button class="block select-button flex-inline gap-1 items-center px-2 py-1 hover:bg-gray-400/10 rounded" @click="resetFilters()">
     <carbon:filter-remove />
-    清空过滤器
+    清空搜索条件
   </button>
 </div>
 

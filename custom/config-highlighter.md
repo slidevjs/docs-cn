@@ -73,4 +73,4 @@ export default defineShikiSetup(() => {
 Prism 已被 Slidev 停止支持，并且将在未来版本中被移除。请考虑更换到 Shiki
 :::
 
-如果要配置你的 Prism，你可以引入相应的主题 CSS，或者使用 [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) 来进行亮/暗模式下的主题配置。请参考相应文档以了解更多细节。
+如果要配置 Prism，你可以引入相应的主题 CSS，或者使用 [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) 来进行亮/暗模式下的主题配置。请参考相应文档以了解更多细节。
