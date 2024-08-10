@@ -58,7 +58,7 @@ Slidev 的幻灯片支持导出为 PDF、PPTX 和图片格式，也可以通过�
 
 Slidev 以 Web 为平台的展示您的幻灯片，因此任何可以在 Web 应用中实现的功能都可以应用到您的幻灯片中。例如，WebGL、API 请求、iframe 等。您的想象力在 Slidev 有着自由发挥的空间。
 
-> 了解更多：[Customization](../custom/)
+> 了解更多：[自定义配置](../custom/)
 
 ## 与其他工具的比较
 
