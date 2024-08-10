@@ -69,7 +69,7 @@ $ pnpm run dev
 
 | _Kerman | wemsx | XiaoDong | 诺墨 |
 | :-: | :-: | :-: | :-: |
-| [![](https://github.com/kermanx.png)](https://github.com/kermanx) | [![](https://github.com/wemsx.png)](https://github.com/wemsx) | [![](https://github.com/xiaodong2008.png)](https://github.com/xiaodong2008) | [![](https://github.com/normal-coder.png)](https://github.com/normal-coder) |
+| [![](https://avatars.githubusercontent.com/u/63178754?s=120&v=4)](https://github.com/kermanx) | [![](https://avatars.githubusercontent.com/u/84974015?s=120&v=4)](https://github.com/wemsx) | [![](https://avatars.githubusercontent.com/u/84657208?s=120&v=4)](https://github.com/xiaodong2008) | [![](https://avatars.githubusercontent.com/u/6902432?s=120&v=4)](https://github.com/normal-coder) |
 
 初版文档：
 
