@@ -100,8 +100,6 @@ slidev slides.md
 - `slidev format` - 将幻灯片格式化。细节请参见 [format 命令](../builtin/cli#format)
 - `slidev --help` - 显示帮助信息
 
-To run these commands, you can add them to your `package.json` scripts (which has been done for you if the project was created via `npm init slidev`):
-
 你可以将这些命令添加到你的 `package.json` 的 `scripts` 字段中，来更方便地运行它们（如果幻灯片项目是通过 `npm init slidev` 创建的，则可以跳过这一步）：
 
 ```json

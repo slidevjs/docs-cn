@@ -55,7 +55,7 @@ npm run slidev -- --remote --port 8080 --open
 选项：
 
 - `--out`, `-o` (`string`, 默认值: `dist`): 输出目录
-- `--base` (`string`, 默认值: `/`): 基本 URL (参考 https://cli.vuejs.org/config/#publicpath)
+- `--base` (`string`, 默认值: `/`): 基本 URL (参考 https://vitejs.dev/config/shared-options.html#base)
 - `--download` (`boolean`, 默认值: `false`): 允许在构建后下载相应 幻灯片的 PDF 文件
 - `--theme`, `-t` (`string`): 覆盖文件中设定的主题
 

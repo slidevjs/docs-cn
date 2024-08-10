@@ -65,7 +65,7 @@ controls rounded shadow></video>
 
 <LinkCard link="features/drawing" />
 
-## Recording UI {#recording}
+## 录制工具 {#recording}
 
 请参阅:
 

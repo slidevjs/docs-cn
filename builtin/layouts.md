@@ -32,7 +32,7 @@
 
 在屏幕左侧展示图片，屏幕右侧展示内容。
 
-### Usage
+### 用法
 
 ```yaml
 ---
@@ -50,7 +50,7 @@ class: my-cool-content-on-the-right
 
 在屏幕右侧展示图片，屏幕左侧展示内容。
 
-### Usage
+### 用法
 
 ```yaml
 ---
@@ -68,7 +68,7 @@ class: my-cool-content-on-the-left
 
 将图片作为页面的主要内容进行展示。
 
-### Usage
+### 用法
 
 ```yaml
 ---
@@ -101,7 +101,7 @@ backgroundSize: 20em 70%
 
 在屏幕左侧通过 `<iframe>` 元素显示网页，内容将位于右侧。
 
-### Usage
+### 用法
 
 ```yaml
 ---
@@ -119,7 +119,7 @@ class: my-cool-content-on-the-right
 
 在屏幕右侧通过 `<iframe>` 元素显示网页，内容将位于左侧。
 
-### Usage
+### 用法
 
 ```yaml
 ---
@@ -137,7 +137,7 @@ class: my-cool-content-on-the-left
 
 幻灯片的内容是嵌入的网页。
 
-### Usage
+### 用法
 
 ```yaml
 ---
@@ -172,7 +172,7 @@ url: https://github.com/slidevjs/slidev
 
 将页面内容分为两列。
 
-### Usage
+### 用法
 
 ```md
 ---
@@ -194,7 +194,7 @@ This shows on the right
 
 将页面内容分为两列，上方和下方的内容分开，第二行将左右两列分开。
 
-### Usage
+### 用法
 
 ```md
 ---
