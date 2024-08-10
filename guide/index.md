@@ -2,43 +2,47 @@
 outline: deep
 ---
 
-# 开始使用 {#getting-started}
+# 快速上手 {#getting-started}
 
-Slidev <sup>(slide + dev, **/slʌɪdɪv/**)</sup> 是基于 Web 的幻灯片制作和演示工具。它旨在让开发者专注在 Markdown 中编写内容，同时拥有支持 HTML 和 Vue 组件的能力，并且能够呈现像素级完美的布局，还在你的演讲稿中内置了互动的演示样例。
+Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> 是一个为开发者设计的基于 Web 的幻灯片制作工具。它帮助您以 Markdown 的形式专注于编写幻灯片的内容，并制作出具有交互式演示功能的、高度可自定义的幻灯片。
 
-它使用了功能丰富的 markdown 文件来生成精美的幻灯片，具有即时重载的体验。它还拥有很多内置的集成功能，如实时编码、导出 PDF、演讲录制等。由于 Slidev 是由 web 驱动的，因此你可以使用它进行任何操作 —— 具有无限的可能性。
+::: tip
 
-你可以在 [为什么选 Slidev](/guide/why) 部分了解更多关于本项目的设计初衷。
+你可以在 <LinkInline link="guide/why" /> 部分了解更多关于本项目的设计初衷。
 
-### 功能 {#features}
+:::
 
-- 📝 [**Markdown 支持**](/guide/syntax.html) —— 使用你最喜欢的编辑器和工作流编写 Markdown 文件
-- 🧑‍💻 [**开发者友好**](/guide/syntax.html#code-blocks) —— 内置代码高亮、实时编码等功能
-- 🎨 [**可定制主题**](/themes/gallery.html) —— 以 npm 包的形式共享、使用主题
-- 🌈 [**灵活样式**](/guide/syntax.html#embedded-styles) —— 使用 [Windi CSS](https://windicss.org/) 按需使用的实用类和 [UnoCSS](https://github.com/unocss/unocss)
-- 🤹 [**可交互**](/custom/directory-structure.html#components) —— 无缝嵌入 Vue 组件
-- 🎙 [**演讲者模式**](/guide/presenter-mode.html) —— 可以使用另一个窗口，甚至是你的手机来控制幻灯片
-- 🎨 [**绘图**](/guide/drawing.html) - 在你的幻灯片上进行绘图和批注
-- 🧮 [**LaTeX 支持**](/guide/syntax.html#latex) —— 内置了对 LaTeX 数学公式的支持
-- 📰 [**图表支持**](/guide/syntax.html#diagrams) —— 使用文本描述语言创建图表
-- 🌟 [**图标**](/guide/syntax.html#icons) —— 能够直接从任意图标库中获取图标
-- 💻 [**编辑器**](/guide/editors.html) —— 集成的编辑器，或者使用 [VS Code 扩展](https://github.com/slidevjs/slidev-vscode)
-- 🎥 [**演讲录制**](/guide/recording.html) —— 内置录制功能和摄像头视图
-- 📤 [**跨平台**](/guide/exporting.html) —— 能够导出 PDF、PNG 文件，甚至是一个可以托管的单页应用
-- ⚡️ [**快速**](https://vitejs.dev) —— 基于 [Vite](https://vitejs.dev) 的即时重载
-- 🛠 [**可配置**](/custom/config-vite.html) —— 支持使用 Vite 插件、Vue 组件以及任何的 npm 包
+<!--
+- 📝 [**Markdown-based**](/guide/syntax) - focus on content and use your favorite editor
+- 🧑‍💻 [**Developer Friendly**](/guide/syntax#code-blocks) - built-in code highlighting, live coding, etc.
+- 🎨 [**Themable**](/resources/theme-gallery) - theme can be shared and used with npm packages
+- 🌈 [**Stylish**](/guide/syntax#embedded-styles) - on-demand utilities via [UnoCSS](https://github.com/unocss/unocss).
+- 🤹 [**Interactive**](/custom/directory-structure#components) - embedding Vue components seamlessly
+- 🎙 [**Presenter Mode**](/guide/ui#presenter-mode) - use another window, or even your phone to control your slides
+- 🎨 [**Drawing**](/features/drawing) - draw and annotate on your slides
+- 🧮 [**LaTeX**](/guide/syntax#latex) - built-in LaTeX math equations support
+- 📰 [**Diagrams**](/guide/syntax#diagrams) - creates diagrams using textual descriptions with [Mermaid.js](https://mermaid.js.org/)
+- 🌟 [**Icons**](/guide/syntax#icons) - access to icons from any icon set directly
+- 💻 [**Editor**](/guide/index#editor) - integrated editor, or the [VSCode extension](/features/vscode-extension)
+- 🎥 [**Recording**](/features/recording) - built-in recording and camera view
+- 📤 [**Portable**](/guide/exporting) - export into PDF, PNGs, or PPTX
+- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
+- 🛠 [**Hackable**](/custom/) - using Vite plugins, Vue components, or any npm packages
+-->
 
-### 搭建你的第一个演讲稿 {#scaffolding-your-first-presentation}
+<!-- <FeaturesAnimation /> -->
 
-<br>
+## 创建幻灯片 {#create-slides}
 
-#### 在线试用 {#try-it-online}
+### 在浏览器中创建 {#try-it-online}
 
-[sli.dev/new](https://sli.dev/new)
+通过 StackBlitz 在浏览器中创建幻灯片: [sli.dev/new](https://sli.dev/new)
 
-[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://sli.dev/new)
+### 在本地创建 {#create-locally}
 
-#### 本地创建 {#create-locally}
+> 需要先安装 [Node.js](https://nodejs.org) >= 18.0
+
+在终端运行以下命令来创建一个新的 Slidev 项目：
 
 ::: code-group
 
@@ -46,78 +50,97 @@ Slidev <sup>(slide + dev, **/slʌɪdɪv/**)</sup> 是基于 Web 的幻灯片制�
 npm init slidev@latest
 ```
 
-```bash [yarn]
-yarn create slidev
-```
-
 ```bash [pnpm]
 pnpm create slidev
 ```
 
+```bash [yarn]
+yarn create slidev
+```
+
 :::
 
-根据提示开始创建你的幻灯片吧！想要了解更多关于 Markdown 的语法，请阅读 [语法指南](/guide/syntax)。
+根据指引，输入项目名称并按照提示完成项目创建。幻灯片内容在 `slides.md` 文件中，初始内容包含了 Slidev 的大部分功能的演示。关于幻灯片 Markdown 语法的更多信息，请查看 <LinkInline link="guide/syntax" />。
 
-### 命令行界面 {#command-line-interface}
+:::: details 单文件模式 (不推荐)
 
-在安装了 Slidev 的项目里，你可以在你的 npm scripts 里使用 `slidev` 命令。
+如果你不想创建一个 Node.js 包来管理你的幻灯片，可以选择全局安装 Slidev CLI:
+
+::: code-group
+
+```bash [npm]
+npm i -g @slidev/cli
+```
+
+```bash [pnpm]
+pnpm i -g @slidev/cli
+```
+
+```bash [yarn]
+yarn global add @slidev/cli
+```
+
+:::
+
+然后，你可以通过以下命令创建并启动幻灯片:
+
+```bash
+slidev slides.md
+```
+
+::::
+
+## 基本命令 {#basic-commands}
+
+以下是 Slidev 的一些常用命令：
+
+- `slidev` - 启动开发服务器。细节请参见 [dev 命令](../builtin/cli#dev)
+- `slidev export` - 将幻灯片导出为 PDF、PPTX 或 PNG 文件。细节请参见 <LinkInline link="guide/exporting" />
+- `slidev build` - 将幻灯片构建为静态网页。细节请参见 <LinkInline link="guide/hosting" />
+- `slidev format` - 将幻灯片格式化。细节请参见 [format 命令](../builtin/cli#format)
+- `slidev --help` - 显示帮助信息
+
+你可以将这些命令添加到你的 `package.json` 的 `scripts` 字段中，来更方便地运行它们（如果幻灯片项目是通过 `npm init slidev` 创建的，则可以跳过这一步）：
 
 ```json
 {
   "scripts": {
-    "dev": "slidev", //  启动 dev server
-    "build": "slidev build", // 构建生产环境的单页面应用
-    "export": "slidev export" // 将幻灯片导出为 pdf 格式
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
   }
 }
 ```
 
-或者，你也可以使用 [`npx`](https://www.npmjs.com/package/npx)
+这样，你就可以通过 `npm run dev`、`npm run build` 和 `npm run export` 来运行这些命令了。
 
-```bash
-$ npx slidev
-```
+关于 CLI 的更多信息，请查看 [CLI 指南](../builtin/cli)。
 
-执行 `slidev --help` 命令获取更多选项的详细信息。
+## 配置编辑器 {#editor}
 
-## Markdown 语法 {#markdown-syntax}
+因为 Slidev 使用 Markdown 作为幻灯片的基本格式，你可以使用任何你喜欢的编辑器来开发你的幻灯片。我们也提供了一些工具来帮助你更方便地开发幻灯片：
 
-Slidev 会读取位于项目根目录的 `slides.md` 文件，并将其转换为幻灯片。每当你修改 Markdown 文件，幻灯片的内容都会立刻随之更新。例如：
+<LinkCard link="features/vscode-extension" />
+<LinkCard link="features/side-editor" />
+<LinkCard link="features/prettier-plugin" />
 
-````md
-# Slidev
+## 加入社区 {#join-the-community}
 
-Hello World
+欢迎加入我们的 [Discord 服务器](https://chat.sli.dev/)，获取帮助、分享你的幻灯片，或者讨论关于 Slidev 的任何事情。
 
----
+如果你遇到了疑似 bug 的问题，欢迎在 [GitHub](https://github.com/slidevjs/slidev/issues/new/choose) 上开一个 issue。
 
-# 第 2 页
+## 技术栈 {#tech-stack}
 
-直接使用代码块，能够实现代码高亮
+Slidev 基于以下工具和技术构建：
 
-```ts
-console.log('Hello, World!')
-```
-
----
-
-# 第 3 页
-
-````
-
-请阅读 [语法指南](/guide/syntax) 获取更多关于 Slidev Markdown 语法的内容。
-
-### 技术栈 {#tech-stack}
-
-Slidev 使用了如下的工具和技术：
-
-- [Vite](https://vitejs.dev) —— 一款极速的前端工具
-- 基于 [Vue 3](https://v3.vuejs.org/) 的 [Markdown](https://daringfireball.net/projects/markdown/syntax) —— 专注内容的同时，具备 HTML 和 Vue 组件的能力
-- [Windi CSS](https://github.com/windicss/windicss) 或 [UnoCSS](https://github.com/unocss/unocss) —— 按需、实用类优先的 CSS 框架，轻松定制你的幻灯片样式
-- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) —— 具有实时编码能力的一流代码片段支持
-- [RecordRTC](https://recordrtc.org) —— 内置录制功能和摄像头视图
-- [VueUse](https://vueuse.org) 家族 ——  [`@vueuse/core`](https://github.com/vueuse/vueuse)、[`@vueuse/head`](https://github.com/vueuse/head)、[`@vueuse/motion`](https://github.com/vueuse/motion) 等
-- [Iconify](https://iconify.design/) —— 图标库集合
-- [Drauu](https://github.com/antfu/drauu) - 支持绘图和批注
-- [KaTeX](https://katex.org/) —— LaTeX 数学渲染
-- [Mermaid](https://mermaid-js.github.io/mermaid) —— 文本描述语言创建图表
+- [Vite](https://vitejs.dev) - 一款极速响应的下一代的前端工具链
+- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - 用于编写幻灯片内容
+- [UnoCSS](https://github.com/unocss/unocss) - 帮助快速构建幻灯片样式
+- [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - 为在幻灯片中嵌入代码提供一流支持
+- [RecordRTC](https://recordrtc.org) - 内置的录制工具和摄像头视图
+- [VueUse](https://vueuse.org) 系列 - [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), 等等
+- [Iconify](https://iconify.design/) - 用图标集丰富你的幻灯片
+- [Drauu](https://github.com/antfu/drauu) - 用于在幻灯片上绘图和批注
+- [KaTeX](https://katex.org/) - 用于渲染 LaTeX 数学公式
+- [Mermaid](https://mermaid-js.github.io/mermaid) - 基于文本的图表绘制工具

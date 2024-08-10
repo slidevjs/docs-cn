@@ -1,14 +1,14 @@
----
-title: 组件
----
+# 内置组件
 
-# 组件 {#components}
+本页列出了 Slidev 的所有内置组件。这些组件可以在你的幻灯片中**直接**使用，无需显式导入。
 
-### `Arrow`
+需要注意的是，<LinkInline link="guide/theme-addon" /> 可以提供额外的组件。要添加自己的组件，请参见 <LinkInline link="guide/component#write" />。
+
+## `Arrow`
 
 绘制一个箭头。
 
-#### 用法 {#arrow-usage}
+### 使用方式
 
 ```md
 <Arrow x1="10" y1="20" x2="100" y2="200" />
@@ -28,14 +28,25 @@ title: 组件
 - `y2` (`string | number`, 必要值): 终点 y 位置
 - `width` (`string | number`, 默认为: `2`): 线宽
 - `color` (`string`, 默认为: `'currentColor'`): 颜色
+- `two-way` (`boolean`, default: `false`): draw a two-way arrow
 
-### `AutoFitText`
+## `VDragArrow`
+
+类似 `Arrow` 组件，但可以拖动。
+
+### 使用方式
+
+<LinkCard link="features/draggable#draggable-arrow" />
+
+与箭头位置无关的参数与 [`Arrow` 组件](#arrow) 相同。
+
+## `AutoFitText`
 
 > 实验性功能
 
 字体大小会自动适应内容的方框。类似于 PowerPoint 或 Keynote 的文本框。
 
-#### 用法 {#auto-fit-text-usage}
+### 用法 {#auto-fit-text-使用方式}
 
 ```md
 <AutoFitText :max="200" :min="100" modelValue="Some text"/>
@@ -47,11 +58,11 @@ title: 组件
 - `min` (`string | number`, 默认为: `30`): 最小字体大小
 - `modelValue` (`string`, 默认为: `''`): 文本内容
 
-### `LightOrDark`
+## `LightOrDark`
 
 你可以使用它来根据活动的亮色或暗色主题，显示一种或另一种内容。
 
-#### 用法 {#light-or-dark-usage}
+### 用法 {#light-or-dark-使用方式}
 
 与 `#dark` 和 `#light` 插槽一起使用：
 
@@ -92,11 +103,11 @@ title: 组件
 </LightOrDark>
 ```
 
-### `Link` {#link}
+## `Link`
 
 插入一个链接，你可以用它来导航到一个指定的幻灯片。
 
-#### 用法 {#link-usage}
+### 使用方式
 
 ```md
 <Link to="42">Go to slide 42</Link>
@@ -119,43 +130,59 @@ routeAlias: solutions
 # Now some solutions!
 ```
 
-### `RenderWhen`
+## `PoweredBySlidev`
+
+Renders "Powered by Slidev" with a link to the Slidev website.
+
+## `RenderWhen`
 
 插槽仅在上下文满足条件时（如处于演示者视图中时）才会渲染。
 
-#### 用法 {#render-when-usage}
+### 使用方式
 
 ```md
 <RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
 ```
 
-上下文类型: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+Context type: `'main' | 'visible' | 'print' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
 
-参数:
+Props:
 
-- `context` (`Context | Context[]`): 渲染插槽的上下文或上下文数组
+- `context` (`Context | Context[]`): 要求的渲染上下文或渲染上下文数组
+  - `'main'`: 在幻灯片和演示者视图中渲染（相当于 ['slide', 'presenter']）,
+  - `'visible'`: 如果当前可见则渲染
+  - `'print'`: 在打印模式下渲染
+  - `'slide'`: 在普通播放模式中渲染
+  - `'overview'`: 在概览中渲染
+  - `'presenter'`: 在演示者视图中渲染
+  - `'previewNext'`: 在演示者的下一张幻灯片视图中渲染
 
-### `SlideCurrentNo`
+Slots:
+
+- `#default`: Rendered when the context matches
+- `#fallback`: Rendered when the context does not match
+
+## `SlideCurrentNo`
 
 当前幻灯片编号。
 
-#### 用法 {#slide-current-no-usage}
+### 使用方式
 
 ```md
 <SlideCurrentNo />
 ```
 
-### `SlidesTotal`
+## `SlidesTotal`
 
 幻灯片总数。
 
-#### 用法 {#slides-total-usage}
+### 使用方式
 
 ```md
 <SlidesTotal />
 ```
 
-### `Titles` {#titles}
+## `TitleRenderer`
 
 在一个被解析为 HTML 的幻灯片中插入主标题
 
@@ -170,29 +197,30 @@ level: 2
 ---
 ```
 
-#### 用法 {#titles-usage}
+### 使用方式
 
-`<Titles>` 组件是一个虚拟组件，可以使用以下方式导入：
+`<TitleRenderer>` 组件是一个虚拟组件，可以使用以下方式导入：
 
 ```js
-import Titles from '/@slidev/titles.md'
+import TitleRenderer from '#slidev/title-renderer'
 ```
 
 然后像这样使用：
 
 ```md
-<Titles no="42" />
+<TitleRenderer no="42" />
 ```
 
-参数：
+Props:
 
 - `no` (`string | number`): 显示标题的幻灯片编号（幻灯片从 `1` 开始）
 
-### `Toc`
+## `Toc`
 
 插入目录
 
-如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用如下属性：
+如果你想让一张幻灯片不出现在 `<Toc>` 组件中，你可以在幻灯片的 matter 块中使用 `hideInToc` 属性：
+
 
 ```yml
 ---
@@ -202,7 +230,7 @@ hideInToc: true
 
 标题使用 [`<Titles>` 组件](#titles) 来展示。
 
-#### 用法 {#toc-usage}
+### 使用方式
 
 ```md
 <Toc />
@@ -219,11 +247,11 @@ hideInToc: true
   - `'onlyCurrentTree'`: 仅显示当前树中的项目（活动项目、活动项目的父项和子项）
   - `'onlySiblings'`: 仅显示当前树中的项目及其直系同级项目
 
-### `Transform`
+## `Transform`
 
-对元素进行缩放或变换。
+为元素应用缩放变换。
 
-#### Usage
+### 使用方式
 
 ```md
 <Transform :scale="0.5">
@@ -231,58 +259,103 @@ hideInToc: true
 </Transform>
 ```
 
-Parameters:
+Props:
 
 - `scale` (`number | string`, 默认为 `1`): 大小比例
-- `origin` (`string`, 默认为 `'top left'`): 位置
+- `origin` (`string`, 默认为 `'top left'`): 原点位置
 
-### `Tweet`
+## `Tweet`
 
 嵌入一条推文。
 
-#### Usage
+### 使用方式
 
 ```md
 <Tweet id="20" />
 ```
 
-参数:
+Props:
 
 - `id` (`number | string`, 必要值): 推文 id
 - `scale` (`number | string`, 默认为: `1`): 大小比例
 - `conversation` (`string`, 默认为: `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 - `cards` (`'hidden' | 'visible'`, 默认为: `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
-### `VAfter`, `VClick` and `VClicks`
+## `VAfter`, `VClick` and `VClicks`
 
-请见 https://sli.dev/guide/animations.html
+<LinkCard link="guide/animations#click-animation" />
 
-### `Youtube`
+## `VSwitch`
+
+根据点击动画切换显示的插槽。
+
+<LinkCard link="guide/animations#enter-leave" />
+
+- 当 `unmount` 属性设置为 `true` 时，切换到下一个插槽时，上一个插槽的内容将被卸载。默认为 `false`。
+- 使用 `tag` 和 `childTag` 属性来更改组件及其子元素的默认标签。默认为 `div`。
+- 使用 `transition` 属性来更改过渡效果。默认为 `false`（禁用）。
+
+## `VDrag`
+
+<LinkCard link="features/draggable" />
+
+## `SlidevVideo`
+
+嵌入一个视频。
+
+### 使用方式
+
+```md
+<SlidevVideo v-click autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/myMovie.mp4" type="video/mp4" />
+  <source src="/myMovie.webm" type="video/webm" />
+  <p>
+    你的浏览器不支持播放该视频，请点击
+    <a href="/myMovie.mp4">此处</a>
+    下载。
+  </p>
+</SlidevVideo>
+```
+
+查阅 [HTML video 元素文档](https://developer.mozilla.org/docs/Web/HTML/Element/Video) 以了解可以包含在此组件插槽中的内容。
+
+Props:
+
+- `controls` (`boolean`, 默认为 `false`): 显示视频控件
+- `autoplay` (`boolean | 'once'`, 默认为 `false`):
+  - `true` 或 `'once'`: 仅播放一次视频，结束或暂停后不会重新开始
+  - `false`: 从不自动播放视频（依赖于 `controls`）
+- `autoreset` (`'slide' | 'click'`, 默认为 `undefined`):
+  - `'slide'`: 返回到幻灯片时重新开始视频
+  - `'click'`: 返回到组件的点击轮次时重新开始视频
+- `poster` (`string | undefined`, 默认为 `undefined`):
+  - 视频未播放时显示的图像源。
+- `printPoster` (`string | undefined`, 默认为 `undefined`):
+  - 打印时 `poster` 的覆盖。
+- `timestamp` (`string | number`, 默认为 `0`):
+  - 视频的开始时间（秒）。
+- `printTimestamp` (`string | number | 'last' | undefined`, 默认为 `undefined`):
+  - 打印时 `timestamp` 的覆盖。
+
+::: warning
+在导出时，视频可能无法加载，因为 Chromium 不支持某些视频格式。在这种情况下，你可以指定浏览器的可执行路径。更多信息请参见 [配置 Chromium 可执行路径](/guide/exporting.html#executable-path)。
+:::
+
+## `Youtube`
 
 嵌入 YouTube 视频。
 
-#### Usage
+### 使用方式
 
 ```md
 <Youtube id="luoMHjh-XcQ" />
 ```
 
-Parameters:
+Props:
 
 - `id` (`string`, 必要值): YouTube 视频 id
 - `width` (`number`): 视频宽度
 - `height` (`number`): 视频高度
 
 你还可以在 id 值中添加 `?start=1234`（其中 1234 为秒）来让视频在特定时间开始播放。
-
-## 自定义组件 {#custom-components}
-
-在你的项目根目录里创建一个 `components/` 文件夹，然后直接把你的自定义 Vue 组件放进去；然后你就可以在你的 markdown 文件里使用该组件了！
-
-欲了解更多，请参阅 [自定义](/custom/directory-structure#components) 章节。
-
-## 主题提供的组件 {#theme-provided-components}
-
-同时主题也可以提供组件。请阅读它们各自的文档，以知晓它们提供了什么。
-
-欲了解更多，请参阅 [路径结构](/custom/directory-structure) 章节。

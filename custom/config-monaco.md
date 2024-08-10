@@ -1,14 +1,10 @@
----
-title: 配置 Monaco
----
-
 # 配置 Monaco {#configure-monaco}
 
 <Environment type="client" />
 
 创建一份包含以下内容的 `./setup/monaco.ts` 文件：
 
-```ts
+```ts twoslash
 import { defineMonacoSetup } from '@slidev/types'
 
 export default defineMonacoSetup(async (monaco) => {
@@ -18,22 +14,7 @@ export default defineMonacoSetup(async (monaco) => {
 
 访问 [monaco-editor](https://github.com/Microsoft/monaco-editor) 了解更多关于 Monaco 配置的相关信息。
 
-## 用法 {#usage}
-
-如果你想在你的幻灯片中使用 Monaco， 只需添加 `{monaco}` 到你的代码片段中：
-
-````md
-```js {monaco} // [!code ++]
-const count = ref(1)
-const plusOne = computed(() => count.value + 1)
-
-console.log(plusOne.value) // 2
-
-plusOne.value++ // error
-```
-````
-
-## TypeScript Types
+## TypeScript 类型 {#typescript-types}
 
 当你使用 Monaco 编写 TypeScript 时，类型依赖将会自动安装到客户端.
 
@@ -46,11 +27,13 @@ const counter = ref(0)
 ```
 ````
 
-In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically. When deploy as SPA, those types will also be bundled for static hosting.
+在上面的例子中，确保 `vue` 和 `@vueuse/core` 作为 dependencies 或 devDependencies 安装在本地，Slidev 将处理其余部分，以使编辑器自动使用这些类型。当部署为 SPA 时，这些类型也将被打包用于静态托管。
 
-### Additional Types
 
-Slidev will scan all the monaco codeblocks in your slides and import the types for those used libraries for you. In case it missed some, you can explicitly specify extra packages to import the types for:
+### 附加类型 {#additional-types}
+
+Slidev 将扫描幻灯片中的所有 Monaco 代码块，并帮助你导入所用库的类型。如果它有遗漏遗漏，你可以显式指定额外的包来导入相应类型：
+
 
 ```md
 ---
@@ -60,9 +43,9 @@ monacoTypesAdditionalPackages:
 ---
 ```
 
-### Auto Type Acquisition
+### 自动类型获取 {#auto-type-acquisition}
 
-You can optionally switch to load types from CDN by setting the following headmatter:
+你可以通过在 headmatter 通过以下设置切换到从CDN加载类型：
 
 ```md
 ---
@@ -70,17 +53,19 @@ monacoTypesSource: ata
 ---
 ```
 
-This feature is powered by [`@typescript/ata`](https://github.com/microsoft/TypeScript-Website/tree/v2/packages/ata) and runs completely on the client-side.
+此功能由 [`@typescript/ata`](https://github.com/microsoft/TypeScript-Website/tree/v2/packages/ata) 提供支持并且完全在客户端上运行。
+
 
 ## 配置主题 {#configure-themes}
 
-Since v0.48.0, Monaco will reuse the Shiki theme you configured in [Shiki's setup file](/custom/highlighters#configure-shiki), powered by [`@shikijs/monaco`](https://shiki.style/packages/monaco). You don't need to worry about it anymore and it will have a consistent style with the rest of your code blocks.
+自 v0.48.0 起，在[`@shikijs/Monaco`](https://shiki.style/packages/monaco)驱动下，Monaco 将复用你在 [Shiki 的设置文件](/custom/config-highlighter#configure-shiki) 中配置的 Shiki 主题。它将与你的其他代码块保持一致的风格。
 
-## Configure the Editor
+## 配置编辑器 {#configure-the-editor}
 
-> Available since v0.43.0
+> 自 v0.43.0 起可用
 
-If you would like to customize the Monaco editor you may pass an `editorOptions` object that matches the [Monaco IEditorOptions](https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IEditorOptions.html) definition.
+如果你想自定义 Monaco 编辑器，可以传递一个匹配 [Monaco IEditorOptions](https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IEditorOptions.html) 定义的 `editorOptions` 对象。
+
 
 ````md
 ```ts {monaco} { editorOptions: { wordWrap:'on'} }
@@ -88,9 +73,9 @@ console.log('HelloWorld')
 ```
 ````
 
-Alternatively if you would like these options to be applied to every Monaco instance, you can return them in the `defineMonacoSetup` function
+或者，如果你想将这些选项应用于每个 Monaco 实例，你可以在 `defineMonacoSetup` 函数中返回它们
 
-```ts
+```ts twoslash
 // ./setup/monaco.ts
 import { defineMonacoSetup } from '@slidev/types'
 
@@ -103,12 +88,16 @@ export default defineMonacoSetup(() => {
 })
 ```
 
-## Disabling
+## 禁用 {#disabling}
 
-Since v0.48.0, Monaco editor is enabled by default and only be bundled when you use it. If you want to disable it, you can set `monaco` to `false` in the frontmatter of your slide:
+从v0.48.0开始，Monaco编辑器默认启用，但只你有使用到时才会被捆绑打包。如果你想禁用它，你可以在幻灯片的 frontmatter 中将 `Monaco` 设置为 `false`：
 
 ```yaml
 ---
-monaco: false # can also be `dev` or `build` tp conditionally enable it
+monaco: false # 也可以是 'dev' 或 'build' 来有条件地启用它
 ---
 ```
+
+## 配置代码运行器 {#configure-code-runners}
+
+要配置Monaco Runner如何运行代码，或添加对自定义语言的支持，请参考 [配置代码运行器](/custom/config-code-runners)。

@@ -1,10 +1,6 @@
----
-title: 项目结构
----
+# 目录结构 {#directory-structure}
 
-# 项目结构 {#directory-structure}
-
-Slidev 对项目结构进行了一些约定，以尽量减少配置项，使功能扩展更加灵活直观。
+Slidev 对目录结构进行了一些约定，以尽量减少配置项，并使功能扩展更加灵活直观。
 
 基本结构如下所示：
 
@@ -14,6 +10,7 @@ your-slidev/
   ├── layouts/          # 自定义布局
   ├── public/           # 静态资源
   ├── setup/            # 自定义 setup / hooks
+  ├── snippets/         # 代码片段
   ├── styles/           # 自定义样式
   ├── index.html        # 注入的 index.html
   ├── slides.md         # 幻灯片主入口
@@ -24,82 +21,28 @@ your-slidev/
 
 ## 组件 {#components}
 
-约定：`./components/*.{vue,js,ts,jsx,tsx,md}`
+约定路径: `./components/*.{vue,js,ts,jsx,tsx,md}`
 
-此目录中的组件可以在幻灯片的 Markdown 中直接使用，其组件名与文件名相同。
-
-示例：
-
-```bash
-your-slidev/
-  ├── ...
-  └── components/
-      ├── MyComponent.vue
-      └── HelloWorld.ts
-```
-
-```md
-<!-- slides.md -->
-
-# My Slide
-
-<MyComponent :count="4"/>
-
-<!-- both namings work -->
-
-<hello-world foo="bar">
-  Slot
-</hello-world>
-```
-
-此特性得益于 [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)。
-
-Slidev 还提供了一些 [内置组件](/builtin/components) 供你选择。
+<LinkCard link="guide/component" />
 
 ## 布局 {#layouts}
 
-约定：`./layouts/*.{vue,js,ts,jsx,tsx}`
+约定路径: `./layouts/*.{vue,js,ts,jsx,tsx}`
 
-```
-your-slidev/
-  ├── ...
-  └── layouts/
-      ├── cover.vue
-      └── my-cool-theme.vue
-```
-
-你可以为布局文件使用任何文件名。然后只需在你的 YAML 头部使用文件名引用你的布局。
-
-```yaml
----
-layout: my-cool-theme
----
-```
-
-如果你提供的布局与内置布局或主题布局重名的话，你的自定义布局将优先于内置/主题布局。优先级为 `本地 > 主题 > 内置`。
-
-在布局组件中，你可以使用 `<slot/>` 展示幻灯片内容。比如：
-
-```html
-<!-- default.vue -->
-<template>
-  <div class="slidev-layout default">
-    <slot />
-  </div>
-</template>
-```
+<LinkCard link="guide/layout" />
 
 ## 静态资源 {#public}
 
-约定：`./public/*`
+约定路径: `./public/*`
 
-开发过程中，此目录中的资源文件将在 `/` 下提供，并会按原样复制到 dist 目录的根目录中。欲了解更多，请参阅 [Vite 的 `public` 目录](https://cn.vitejs.dev/guide/assets.html#the-public-directory)。
+开发过程中，此目录中的资源文件将在 `/` 下提供，并会按原样复制到 dist 目录的根目录中。欲了解更多，请参阅 [处理静态资源](../guide/faq#assets-handling)。
 
 ## 样式 {#style}
 
-约定：`./style.css` | `./styles/index.{css,js,ts}`
+约定路径: `./style.css` | `./styles/index.{css,js,ts}`
 
-遵循上述约定的文件将被注入到 App 的根目录中。如果你需要引入多个 css 入口，你可以按如下方式创建结构并自行管理引入顺序。
+遵循上述约定路径的文件将被注入到 App 的根目录中。如果需要引入多个 css 入口，可以按如下方式创建结构并自行管理引入顺序。
+
 
 ```bash
 your-slidev/
@@ -119,11 +62,11 @@ import './code.css'
 import './layouts.css'
 ```
 
-样式得益于 [UnoCSS](https://unocss.dev/) 和 [PostCSS](https://postcss.org/)，你拥有开箱即用的 css 嵌套和 [at-directives](https://unocss.dev/transformers/directives#apply)。示例：
+得益于 [UnoCSS](https://unocss.dev/) 和 [PostCSS](https://postcss.org/)，样式中可以使用 css 嵌套和 [at-directives](https://unocss.dev/transformers/directives#apply)。示例：
 
 <!-- eslint-skip -->
 
-```less
+```css
 .slidev-layout {
   --uno: px-14 py-10 text-[1.1rem];
 
@@ -145,7 +88,7 @@ import './layouts.css'
 
 ## `index.html` {#index-html}
 
-约定：`index.html`
+约定路径: `index.html`
 
 `index.html` 提供了向主 `index.html` 中注入 meta 标签以及 scripts 标签的能力。
 
@@ -179,7 +122,7 @@ import './layouts.css'
 <body>
   <div id="app"></div>
   <script type="module" src="__ENTRY__"></script>
-  <!-- injected body -->
+  <!-- 注入的 body -->
   <script src="./your-scripts"></script>
 </body>
 </html>
@@ -187,6 +130,6 @@ import './layouts.css'
 
 ## 全局图层 {#global-layers}
 
-约定：`global-top.vue` | `global-bottom.vue`
+约定路径: `global-top.vue` | `global-bottom.vue` | `custom-nav-controls.vue` | `layouts/slide-top.vue` | `layouts/slide-bottom.vue`
 
-了解更多：[全局图层](/custom/global-layers)
+<LinkCard link="features/global-layers" />

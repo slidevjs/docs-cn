@@ -1,129 +1,134 @@
-# FAQ {#faq}
+---
+outline: deep
+---
 
-## Grids {#grids}
+# 常见问答
 
-由于 Slidev 基于 Web 运行，因此你可以使用任何想使用的布局方式。比如 [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)，[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，甚至是 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)，都可以完美兼容。
+## 处理静态资源 {#assets-handling}
 
-由于我们内置了 [UnoCSS](https://unocss.dev/)，你也可以参考使用如下方式：
+你可以在幻灯片中使用静态资源，如图片和视频。由于 Slidev 基于 Vite，你可以直接在 Markdown 文件中导入它们。
 
-```html
+可用被静态分析的 URL 可以使用相对路径：
+
+```md
+![alt](./image.png)
+<img src="./image.png" />
+```
+
+在上例中，URL 将在构建时被解析为 `/BASE_URL/assets/image.png`。
+
+但是，frontmatter 和其他组件中的相对路径在构建后将会失效：
+
+```md
+---
+background: ./image.png  # 构建后可能会失效
+---
+
+<Comp src="./image.png" />
+```
+
+上例中的两个 URL 不会被静态分析，构建后将保留原样，这将导致构建后的 404 错误。
+
+要解决这个问题，你可以将这些资源放在 [public 文件夹](../custom/directory-structure#public) 中，并使用绝对路径导入它们：
+
+```md
+---
+background: /image.png
+---
+
+<Comp src="/image.png" />
+```
+
+更多细节请参阅 [Vite 的文档](https://cn.vitejs.dev/guide/assets.html).
+
+## 定位元素 {#positioning}
+
+Slidev 基于 Web，CSS 是定位元素的主要方式。以下是一些有用的定位元素的技巧：
+
+### Grids 和 Flexboxes {#grids-and-flexboxes}
+
+可以使用 CSS Grids 来创建复杂的布局：
+
+::: code-group
+
+```md [Two columns]
 <div class="grid grid-cols-2 gap-4">
-<div>
-
-The first column
-
-</div>
-<div>
-
-The second column
-
-</div>
+  <div>
+    第一列
+  </div>
+  <div>
+    第二列
+  </div>
 </div>
 ```
 
-你甚至可以定制每一列的大小，比如：
-
-```html
+```md [Complex case]
 <div class="grid grid-cols-[200px_1fr_10%] gap-4">
-<div>
-
-The first column (200px)
-
-</div>
-<div>
-
-The second column (auto fit)
-
-</div>
-<div>
-
-The third column (10% width to parent container)
-
-</div>
+  <div>
+    第一列 (200px)
+  </div>
+  <div>
+    第二列 (auto fit)
+  </div>
+  <div>
+    第三列 (10% width to parent container)
+  </div>
 </div>
 ```
 
-## 定位 {#positioning}
+:::
 
-幻灯片被定义为固定尺寸（默认为 `980x552px`），并会跟随用户屏幕进行缩放。你可以安全地在你的幻灯片中使用绝对定位，因为它们会随着屏幕的缩放而变化。
+或使用 Flexboxes 来创建更具响应性的布局：
 
-例如：
+::: code-group
 
-```html
+```md [Horizontal]
+<div class="flex items-center">
+  <div>
+    第一块
+  </div>
+  <div>
+    第二块
+  </div>
+</div>
+```
+
+```md [Vertical]
+<div class="flex flex-col items-center">
+  <div>
+    居中的内容
+  </div>
+</div>
+```
+
+:::
+
+了解更多：[CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)，[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，以及 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)。
+
+### 绝对定位 {#absolute-positioning}
+
+可以使用 UnoCSS 来绝对定位元素：
+
+```md
 <div class="absolute left-30px bottom-30px">
-This is a left-bottom aligned footer
+  这是一个在左下角的页脚
 </div>
 ```
 
-如需改变 canvas 的实际尺寸，你可以在第一张幻灯片的 frontmatter 中传递 `canvasWidth` 选项：
+或者使用可拖动元素的功能：
 
-```yaml
----
-canvasWidth: 800
----
-```
+<LinkCard link="features/draggable" />
 
-## Font Size {#font-size}
+## 调整大小 {#adjust-size}
 
-如果你觉得幻灯片的字体过小，你可以通过如下方式进行调整：
+- 调整所有幻灯片的大小：
 
-### 覆盖本地样式 {#override-local-style}
+<LinkCard link="features/canvas-size" />
 
-你可以通过内联的 `<style>` 标签来覆盖每张幻灯片的样式。
+- 调整某几张幻灯片的大小：
 
-```md
-# Page 1
+<LinkCard link="features/zoom-slide" />
 
-<style>
-h1 {
-  font-size: 10em;
-}
-</style>
+- 调整一些元素的大小：
 
----
-
-# Page 2
-
-This will not be affected.
-```
-
-了解更多：[内联样式](/guide/syntax.html#embedded-styles)
-
-### 覆盖全局样式
-
-你可以通过创建 `./style.css` 文件的方式来提供自定义全局样式，例如：
-
-```css
-/* style.css */
-
-h1 {
-  font-size: 10em !important;
-}
-```
-
-了解更多：[全局样式](/custom/directory-structure.html#style)
-
-### Canvas 缩放 {#scale-the-canvas}
-
-改变画布的实际尺寸将缩放所有内容（文本、图片、组件等）以及幻灯片。
-
-```yaml
----
-# default: 980
-# 由于画布变小，视觉尺寸也会变大
-canvasWidth: 800
----
-```
-
-### 使用 Transform {#use-transform}
-
-我们提供了内置的 `<Transform />` 组件，它针对 CSS 的 transform 属性进行了简易封装。
-
-```md
-<Transform :scale="1.4">
-
-- Item 1
-- Item 2
-
-</Transform>
-```
+<LinkCard link="features/transform-component" />
