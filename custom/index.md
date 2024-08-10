@@ -160,7 +160,7 @@ dragPos: {} # 类型: Record<string,string>
 
 Slidev 使用特定的目录结构来减少配置的复杂度，并使功能扩展更加的灵活和直观。
 
-具体请参考 [目录结构](/custom/directory-structure) 章节。
+具体请参考 [目录结构](./directory-structure) 章节。
 
 ## 配置工具
 
