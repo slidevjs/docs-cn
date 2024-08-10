@@ -16,7 +16,7 @@ export default [
     link: '/custom/config-vite',
   },
   {
-    text: '配置 Vue',
+    text: '配置 Vue 实例',
     link: '/custom/config-vue',
   },
   {

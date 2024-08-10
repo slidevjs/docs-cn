@@ -2,7 +2,7 @@
 
 Slidev 使用 [Shiki](https://github.com/shikijs/shiki) ，一个基于 TextMate 语法，与 VS Code 一样准确的代码高亮器。它直接生成带样式的 HTML 元素，所以不需要引入额外的 CSS 文件。Shiki 自带了一系列 [内置主题](https://shiki.style/themes)。而在 Slidev 中，我们还提供内置的 [TwoSlash](#twoslash-integration) 功能。
 
-## 配置 Shiki
+## 配置 Shiki {#configure-shiki}
 
 <Environment type="both" />
 

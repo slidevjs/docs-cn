@@ -1,15 +1,17 @@
-# Configure Transformers
+# 配置自定义语法
 
 <Environment type="node" />
 
-This setup function allows you to define custom transformers for the markdown content of **each slide**. This is useful when you want to add custom Markdown syntax and render custom code blocks. To start, create a `./setup/transformers.ts` file with the following content:
+Slidev 支持自定义 Markdown 语法。通过这种方式，你可以为你的幻灯片添加自定义的 Markdown 语法，以及自定义代码块的渲染。
+
+首先，创建一个 `/setup/transformers.ts` 文件，内容如下：
 
 ````ts twoslash
 import type { MarkdownTransformContext } from '@slidev/types'
 import { defineTransformersSetup } from '@slidev/types'
 
 function myCodeblock(ctx: MarkdownTransformContext) {
-  console.log('index in presentation', ctx.slide.index)
+  console.log('在整个幻灯片中的索引：', ctx.slide.index)
   ctx.s.replace(
     /^```myblock *(\{[^\n]*\})?\n([\s\S]+?)\n```/gm,
     (full: string, options = '', code = '') => {
@@ -28,16 +30,16 @@ export default defineTransformersSetup(() => {
 })
 ````
 
-The return value should be the custom options for the transformers. The `pre`, `preCodeblock`, `postCodeblock`, and `post` are arrays of functions that will be called in order to transform the markdown content. The order of the transformers is:
+返回值是包含 `pre`、`preCodeblock`、`postCodeblock` 和 `post` 四个可选字段，每个字段的值是函数数组，将被调用以转换 Markdown 内容。它们的调用顺序为：
 
-1. `pre` from your project
-2. `pre` from addons and themes
-3. Import snippets syntax and Shiki magic move
-4. `preCodeblock` from your project
-5. `preCodeblock` from addons and themes
-6. Built-in special code blocks like Mermaid, Monaco and PlantUML
-7. `postCodeblock` from addons and themes
-8. `postCodeblock` from your project
-9. Other built-in transformers like code block wrapping
-10. `post` from addons and themes
-11. `post` from your project
+1. 来自你的项目的 `pre`
+2. 来自插件和主题的 `pre`
+3. 导入代码片段语法和 Shiki magic move
+4. 来自你的项目的 `preCodeblock`
+5. 来自插件和主题的 `preCodeblock`
+6. 内置的 Mermaid、Monaco 和 PlantUML 等特殊代码块
+7. 来自插件和主题的 `postCodeblock`
+8.  来自你的项目的 `postCodeblock`
+9. 其他内置的自定义语法，如代码块包装
+10. 来自插件和主题的 `post`
+11. 来自你的项目的 `post`
