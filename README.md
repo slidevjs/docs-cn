@@ -65,6 +65,14 @@ $ pnpm run dev
 
 感谢各位贡献者的付出（以下排名不分先后）：
 
+新版文档：
+
+| _Kerman | wemsx | XiaoDong | 诺墨 |
+| :-: | :-: | :-: | :-: |
+| [![](https://github.com/kermanx.png)](https://github.com/kermanx) | [![](https://github.com/wemsx.png)](https://github.com/wemsx) | [![](https://github.com/xiaodong2008.png)](https://github.com/xiaodong2008) | [![](https://github.com/normal-coder.png)](https://github.com/normal-coder) |
+
+初版文档：
+
 | Anthony Fu | QiChang Li | 清秋 | Chuck | Songhn | ArcherGu |
 | :-----: | :-------: | :-----: | :-----: | :-----: | :-----: |
 | [![antfu](https://avatars.githubusercontent.com/u/11247099?s=120&v=4)](https://github.com/antfu) | [![QC-L](https://avatars.githubusercontent.com/u/13861040?s=120&v=4)](https://github.com/QC-L) | [![Ivocin](https://avatars.githubusercontent.com/u/16836801?s=120&v=4)](https://github.com/Ivocin) | [![ChuanfengZhang](https://avatars.githubusercontent.com/u/18238800?s=120&v=4)](https://github.com/ChuanfengZhang) | [![songhn233](https://avatars.githubusercontent.com/u/47357585?s=120&v=4)](https://github.com/songhn233) | [![ArcherGu](https://avatars.githubusercontent.com/u/34826812?s=120&v=4)](https://github.com/ArcherGu) | [![KimYang](https://avatars.githubusercontent.com/u/32960305?s=120&v=4)](https://github.com/KimYangOfCat)|
