@@ -80,5 +80,5 @@ dragPos:
 <v-drag-arrow />
 ```
 
-你会得到一个可拖动的箭头元素。其他 props 与 [ `Arrow` 组件](/buildin/components#Arrow)相同。
+你会得到一个可拖动的箭头元素。其他 props 与 [`Arrow` 组件](/builtin/components#Arrow)相同。
 

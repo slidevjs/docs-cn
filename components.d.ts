@@ -42,7 +42,6 @@ declare module 'vue' {
     CodeBlockWrapper: typeof import('./.vitepress/@slidev/client/builtin/CodeBlockWrapper.vue')['default']
     CodiconAdd: typeof import('~icons/codicon/add')['default']
     CodiconEye: typeof import('~icons/codicon/eye')['default']
-    CodiconGlobe: typeof import('~icons/codicon/globe')['default']
     CodiconLock: typeof import('~icons/codicon/lock')['default']
     CodiconRunAll: typeof import('~icons/codicon/run-all')['default']
     Demo: typeof import('./.vitepress/theme/components/Demo.vue')['default']

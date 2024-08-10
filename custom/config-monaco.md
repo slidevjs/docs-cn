@@ -100,4 +100,4 @@ monaco: false # 也可以是 'dev' 或 'build' 来有条件地启用它
 
 ## 配置代码运行器 {#configure-code-runners}
 
-要配置Monaco Runner如何运行代码，或添加对自定义语言的支持，请参考 [配置代码运行器](/custom/config-code-unners)。
+要配置Monaco Runner如何运行代码，或添加对自定义语言的支持，请参考 [配置代码运行器](/custom/config-code-runners)。
