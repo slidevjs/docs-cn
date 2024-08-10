@@ -17,7 +17,7 @@ Slidev 已经内置了以下插件：
 - [vite-plugin-remote-assets](https://github.com/antfu/vite-plugin-remote-assets)
 - [unocss/vite](https://github.com/unocss/unocss/tree/main/packages/vite)
 
-如需对内置插件列表进行配置，先创建 `vite.config.ts`，其内容如下。请注意，Slidev 对这些插件有些[预设配置](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/vite/index.ts)，如下做法会覆盖其中一些配置，可能会导致应用崩溃。请将此功能视为**高级功能**，在继续操作前，请确保你知道自己在干什么。
+如需对内置插件列表进行配置，先创建 `vite.config.ts`，其内容如下。请注意，Slidev 对这些插件有些[预设配置](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/vite/index.ts)，如下做法会覆盖其中一些配置，可能会导致应用崩溃。请将此功能视为**高级功能**，在继续操作前，请确保了解配置的作用。
 
 <!-- eslint-disable import/first -->
 
@@ -48,8 +48,8 @@ export default defineConfig({
 了解更多：[类型定义](https://github.com/slidevjs/slidev/blob/main/packages/types/src/vite.ts#L11)
 
 ::: warning
-It is not allowed to re-add plugins that has been used internally be Slidev. For example, instead of
-Slidev 不允许重新添加已内置使用的插件。例如，你不应当这么做
+
+Slidev 中不可以重新添加已内置使用的插件。例如，以下配置将会导致错误：
 
 ```ts twoslash
 import { defineConfig } from 'vite'
@@ -64,5 +64,6 @@ export default defineConfig({
 })
 ```
 
-请将Vue选项传递给 `slidev.Vue` 字段，如上所述。
+请将Vue选项传递给 `slidev.vue` 字段，如上文所述。
+
 :::

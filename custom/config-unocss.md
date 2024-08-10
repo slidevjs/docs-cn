@@ -43,4 +43,4 @@ export default defineConfig({
 })
 ```
 
-了解更多 [UnoCSS 配置项](https://unocss.dev/guide/config-file)
+参见 [UnoCSS 配置文件](https://unocss.dev/guide/config-file) 以了解更多。

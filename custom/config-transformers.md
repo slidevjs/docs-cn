@@ -2,14 +2,16 @@
 
 <Environment type="node" />
 
-此设置功能允许你为 **每张幻灯片** 的标记内容定义自定义转换器。当你想添加自定义 Markdown 语法并呈现自定义代码块时，这很有用。首先，创建一个 `/setup/transformers.ts` 文件，内容如下：
+Slidev 支持自定义 Markdown 语法。通过这种方式，你可以为你的幻灯片添加自定义的 Markdown 语法，以及自定义代码块的渲染。
+
+首先，创建一个 `/setup/transformers.ts` 文件，内容如下：
 
 ````ts twoslash
 import type { MarkdownTransformContext } from '@slidev/types'
 import { defineTransformersSetup } from '@slidev/types'
 
 function myCodeblock(ctx: MarkdownTransformContext) {
-  console.log('index in presentation', ctx.slide.index)
+  console.log('在整个幻灯片中的索引：', ctx.slide.index)
   ctx.s.replace(
     /^```myblock *(\{[^\n]*\})?\n([\s\S]+?)\n```/gm,
     (full: string, options = '', code = '') => {
@@ -28,7 +30,7 @@ export default defineTransformersSetup(() => {
 })
 ````
 
-返回值应该是自定义语法的自定义选项。`pre`、`preCodeblock`、`postCodeblock`和`post`是函数数组，将被调用以转换 markdow n内容。自定义语法的顺序为：
+返回值是包含 `pre`、`preCodeblock`、`postCodeblock` 和 `post` 四个可选字段，每个字段的值是函数数组，将被调用以转换 Markdown 内容。它们的调用顺序为：
 
 1. 来自你的项目的 `pre`
 2. 来自插件和主题的 `pre`

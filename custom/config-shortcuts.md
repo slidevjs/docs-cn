@@ -31,8 +31,6 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 
 有关默认快捷键和导航操作，请参阅 [导航操作](../guide/ui#navigation-actions) 部分。
 
-
 ## 键盘绑定格式
 
-每个快捷键的 `key` 可以是字符串（例如 `Shift+Ctrl+a`）或cumputed 形式的布尔值。
-请参考 VueUse 的 [`useMagicKeys`](https://vueuse.org/core/useMagicKeys/) 以获取更多细节。
+每个快捷键的 `key` 可以是字符串（例如 `Shift+Ctrl+a`）或 Vue `computed` 形式的布尔值。请参考 VueUse 的 [`useMagicKeys`](https://vueuse.org/core/useMagicKeys/) 以获取更多细节。

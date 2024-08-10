@@ -1,7 +1,8 @@
 # 配置预解析器
 
 ::: info
-自定义预解析器不应该经常使用。通常，你可以使用[Transformers](./config-transformers)进行自定义语法。
+
+自定义的预解析器应尽可能少地使用。通常，你可以使用 [Transformers](./config-transformers) 进行自定义语法。
 
 :::
 
@@ -20,11 +21,12 @@ Slidev 通过三步解析演示文档(如 `slides.md`) :
 > 自 v0.37.0 起可用。
 
 ::: warning
-重要：当你修改预解析器配置时，需要停止并重新启动 slidev (重新启动可能不够)。
+
+重要：当你修改预解析器配置时，需要停止并重新启动 slidev。
+
 :::
 
 预解析器(上面的步骤 1)是高度可扩展的，并且允许为 md 文件实现自定义语法。扩展预解析器是一个**高级特性**，由于语法的隐式更改，它很容易破坏[编辑器集成](../features/side-editor)。
-
 
 要自定义它，请创建一个 `。/setup/prepareser.ts` 文件，内容如下：
 
@@ -123,7 +125,6 @@ export default definePreparserSetup(() => {
 
 ### 用例2：使用自定义 frontmatter 来包装幻灯片
 
-
 设想一种情况，你经常想要缩放您的一些幻灯片，但是仍然想要使用各种现有的布局，因此创建一个新的布局将不适合。例如，你可能希望按如下方式编写 `slides.md`：
 
 <!-- eslint-skip -->
@@ -157,9 +158,7 @@ see you next time
 
 在这里，我们在 `_scale` 处使用了下划线，以避免与现有的 frontmatter 属性发生可能的冲突（事实上，没有下划线的 `scale` 的情况会导致潜在的问题）。
 
-
 要处理这个 `_scale: ...`语法，在 frontmatter 中创建一个 `./setup/preparser.ts` 文件，内容如下：
-
 
 ```ts twoslash
 import { definePreparserSetup } from '@slidev/types'
@@ -182,5 +181,3 @@ export default definePreparserSetup(() => {
   ]
 })
 ```
-
-就是这样。

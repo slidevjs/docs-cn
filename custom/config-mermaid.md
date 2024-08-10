@@ -14,7 +14,7 @@ export default defineMermaidSetup(() => {
 })
 ```
 
-返回值应该是[Marimaid.js](https://mermaid.js.org/)的自定义配置。请参考其类型定义及 [Mermaid 的文档](http://mermaid.js.org/config/schema-docs/config.html) 来获取完整配置列表。
+返回值应该是 [Marimaid.js](https://mermaid.js.org/) 的自定义配置。完整配置列表请参考其类型定义及 [Mermaid 的文档](http://mermaid.js.org/config/schema-docs/config.html)。
 
 ## Custom theme/styles
 

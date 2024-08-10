@@ -20,6 +20,6 @@ export default defineAppSetup(({ app, router }) => {
 })
 ```
 
-这也可以作为你 Slidev 应用程序的主入口，在应用启动前做一些初始化操作。
+这也可以作为你 Slidev 应用程序的主入口，用于在应用启动前做一些初始化操作。
 
 了解更多：[Vue 应用实例 API](https://v3.vuejs.org/api/application-api.html#component)。

@@ -5,7 +5,7 @@
 将自定义页面添加到 Slidev。
 
 
-## 用法
+## 用法 {#usage}
 
 创建一份包含以下内容的 `./setup/routes.ts` 文件：
 
@@ -27,4 +27,4 @@ export default defineRoutesSetup((routes) => {
 })
 ```
 
-请参考 [Vue Router 文档](https://router.vuejs.org/) 来了解关于路由的更多细节
+请参考 [Vue Router 文档](https://router.vuejs.org/) 来了解关于路由的更多细节。
