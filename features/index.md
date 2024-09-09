@@ -56,7 +56,7 @@ function removeTag(tag: string) {
     <input
       v-model="search"
       type="search" text-base
-      placeholder="Search features..."
+      placeholder="查找功能..."
     />
   </div>
   <div

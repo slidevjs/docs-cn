@@ -229,8 +229,6 @@ clicks: 10
 
 ### 过渡效果 {#element-transitions}
 
-When you apply the `v-click` directive to your elements, it will attach the class name `slidev-vclick-target` to it. When the elements are hidden, the class name `slidev-vclick-hidden` will also be attached. For example:
-
 当 `v-click` 指令应用于元素时，元素会拥有 `slidev-vclick-target` 类名。当元素被隐藏时，还会附加类名 `slidev-vclick-hidden`。例如：
 
 ```html
@@ -301,8 +299,6 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以使用 
   Slidev
 </div>
 ```
-
-The text `Slidev` will move from `-80px` to its original position when entering the slide. When leaving, it will move to `80px`.
 
 上例中，当切换至这张幻灯片时，`Slidev` 几个字将从 `-80px` 移动到原始位置。当离开该幻灯片时，它将移动到 `80px`。
 
@@ -387,8 +383,6 @@ View Transitions API 提供了一种在不同 DOM 状态之间轻松创建动画
 :::warning
 实验性：并非所有浏览器都支持。在使用前请查看 [浏览器兼容性表](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#browser_compatibility)。
 :::
-
-You can use the `view-transition-name` CSS property to name view transitions, which creates connections between different page elements and smooth transitions when switching slides.
 
 可以使用 `view-transition-name` CSS 属性来命名 view transitions，它会在切换幻灯片时创建不同页面元素之间的连接，并实现平滑的过渡效果。
 
