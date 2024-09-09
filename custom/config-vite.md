@@ -24,7 +24,7 @@ Slidev 已经内置了以下插件：
 ```ts twoslash
 /// <reference types="@slidev/types" />
 import type MarkdownIt from 'markdown-it'
-declare const MyPlugin: (md: MarkdownIt) => void
+declare const MyPlugin: (md: any) => void
 // ---cut---
 import { defineConfig } from 'vite'
 
@@ -37,7 +37,7 @@ export default defineConfig({
       /* markdown-it 的选项 */
       markdownItSetup(md) {
         /* 自定义的 markdown-it 插件 */
-        md.use(MyPlugin/* ... */)
+        md.use(MyPlugin, /* ... */)
       },
     },
     /* 其他插件的选项 */

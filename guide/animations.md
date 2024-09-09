@@ -356,7 +356,7 @@ The text `Slidev` will move from `-80px` to its original position when entering 
 
 了解更多：[Demo](https://sli.dev/demo/starter/10) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
 
-## Slide Transitions
+## Slide Transitions {#slide-transitions}
 
 <div id="pages-transitions" />
 

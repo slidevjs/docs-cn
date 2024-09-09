@@ -91,7 +91,7 @@ src: ./pages/4.md  # 本页只包含 frontmatter
 
 ## 备注 {#notes}
 
-每张幻灯片的末尾的注释块（若有），将被视为幻灯片的备注。它们将在 [演讲者模式](../guide/ui#presenter-mode) 中显示，以供您在演示过程中参考。
+每张幻灯片的末尾的注释块（若有），将被视为幻灯片的备注。它们将在 <LinkInline link="guide/ui#presenter-mode" /> 中显示，以供您在演示过程中参考。
 
 ```md {9,19-21}
 ---
