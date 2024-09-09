@@ -105,7 +105,7 @@ Slidev 以 Web 为平台的展示您的幻灯片，因此任何可以在 Web 应
 
 ## 尝试使用 Slidev
 
-动手尝试胜于千言万语。查看 <LinkInline link="guide/index"/> 指南，即刻创建您的第一个 Slidev 项目。
+动手尝试胜于千言万语。查看 <LinkInline link="guide/"/> 指南，即刻创建您的第一个 Slidev 项目。
 
 或者您也可以通过下方的视频进行快速预览:
 

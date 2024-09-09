@@ -74,6 +74,7 @@ npm run slidev -- --remote --port 8080 --open
 - `--dark` (`boolean`, 默认值: `false`): 导出为暗黑模式
 - `--with-clicks`, `-c` (`boolean`, 默认值: `false`): 为每次点击分别导出 (参考 https://cn.sli.dev/guide/animations.html#click-animations).
 - `--theme`, `-t` (`string`): 覆盖文件中设定的主题
+- `--omit-background` (`boolean`, default: `false`): 不导出浏览器默认的背景色
 
 ## `slidev format [entry]` {#format}
 

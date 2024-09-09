@@ -352,7 +352,7 @@ Slidev 内置了 [@vueuse/motion](https://motion.vueuse.org/)。你可以使用 
 
 了解更多：[Demo](https://sli.dev/demo/starter/10) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
 
-## Slide Transitions
+## Slide Transitions {#slide-transitions}
 
 <div id="pages-transitions" />
 

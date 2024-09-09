@@ -26,7 +26,7 @@ $ slidev build --base /talks/my-cool-talk/
 
 参阅 [Vite 文档](https://cn.vitejs.dev/guide/build.html#public-base-path) 了解更多细节。
 
-### 输出目录 {#output}
+### 输出目录 {#output-directory}
 
 你可以通过 `--out` 选项更改输出目录：
 
