@@ -5,7 +5,7 @@ export const Guides = [
   },
   {
     text: '快速上手',
-    link: '/guide/index',
+    link: '/guide/',
   },
   {
     text: '语法',
