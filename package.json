@@ -10,19 +10,16 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "@antfu/utils": "catalog:",
-    "@vueuse/core": "catalog:",
-    "typeit": "catalog:"
+    "@antfu/utils": "^0.7.10",
+    "@vueuse/core": "^10.11.0",
+    "typeit": "8.1.0"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.230",
     "@shikijs/vitepress-twoslash": "^1.11.1",
-    "@slidev-old/client": "npm:@slidev/client@0.34.3",
-    "@slidev-old/parser": "npm:@slidev/parser@0.34.3",
-    "@slidev-old/theme-default": "npm:@slidev/theme-default@0.21.2",
-    "@slidev-old/types": "npm:@slidev/types@0.34.3",
     "@slidev/client": "latest",
     "@slidev/parser": "latest",
+    "@slidev/theme-default": "latest",
     "@slidev/types": "latest",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.14.11",
