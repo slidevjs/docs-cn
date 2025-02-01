@@ -179,17 +179,17 @@ $ slidev export --executable-path [path_to_chromium]
 $ slidev export --with-toc
 ```
 
-### Omit Background
+### 去除背景
 
-When exporting to PNGs, you can remove the default browser background by passing `--omit-background`:
+在导出为 PNG图像时，你可以通过传递 `--omit-background` 选项去除默认的浏览器背景：
 
 ```bash
 $ slidev export --omit-background
 ```
 
-The default browser background is the white background visible on all browser windows and is different than other backgrounds applied throughout the application using CSS styling. [See Playwright docs](https://playwright.dev/docs/api/class-page#page-screenshot-option-omit-background). You will then need to apply additional CSS styling to the application to reveal the transparency.
+默认浏览器背景是所有浏览器窗口上可见的白色背景。它与在整个应用中使用CSS样式呈现的其他背景不同。请参阅 [Playwright 的文档](https://playwright.dev/docs/api/class-page#page-screenshot-option-omit-background)。此外，你需要应用额外的CSS样式以显示透明度。
 
-Here is a basic example that covers all backgrounds in the application:
+以下是一个示例，覆盖了应用中的所有背景：
 
 ```css
 * {
