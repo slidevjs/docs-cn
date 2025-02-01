@@ -28,7 +28,7 @@
 - `y2` (`string | number`, 必要值): 终点 y 位置
 - `width` (`string | number`, 默认为: `2`): 线宽
 - `color` (`string`, 默认为: `'currentColor'`): 颜色
-- `two-way` (`boolean`, default: `false`): draw a two-way arrow
+- `two-way` (`boolean`, 默认为: `false`): 是否为双向箭头
 
 ## `VDragArrow`
 
@@ -60,7 +60,7 @@
 
 ## `LightOrDark`
 
-你可以使用它来根据活动的亮色或暗色主题，显示一种或另一种内容。
+你可以使用它来根据当前的主题色(亮色或暗色)，显示不同的内容。
 
 ### 用法 {#light-or-dark-使用方式}
 
@@ -68,8 +68,8 @@
 
 ```md
 <LightOrDark>
-  <template #dark>Dark mode is on</template>
-  <template #light>Light mode is on</template>
+  <template #dark>正在使用暗色主题</template>
+  <template #light>正在使用亮色主题</template>
 </LightOrDark>
 ```
 
@@ -110,7 +110,7 @@
 ### 使用方式
 
 ```md
-<Link to="42">Go to slide 42</Link>
+<Link to="42">跳转到第 42 张 slide</Link>
 <Link to="42" title="Go to slide 42"/>
 <Link to="solutions" title="Go to solutions"/>
 ```
@@ -127,12 +127,13 @@
 routeAlias: solutions
 ---
 
-# Now some solutions!
+# 现在来些解决方案！
 ```
 
 ## `PoweredBySlidev`
 
-Renders "Powered by Slidev" with a link to the Slidev website.
+添加一个带有指向 slidev 网站的 “Powered by Slidev” 标志到幻灯片信息中。
+你可以在导航栏中点击<carbon-information class="inline-icon-btn"/>来查看
 
 ## `RenderWhen`
 
@@ -141,12 +142,12 @@ Renders "Powered by Slidev" with a link to the Slidev website.
 ### 使用方式
 
 ```md
-<RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
+<RenderWhen context="presenter">这只会在演讲者视图中显示。</RenderWhen>
 ```
 
-Context type: `'main' | 'visible' | 'print' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+context 的类型: `'main' | 'visible' | 'print' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
 
-Props:
+尝试:
 
 - `context` (`Context | Context[]`): 要求的渲染上下文或渲染上下文数组
   - `'main'`: 在幻灯片和演示者视图中渲染（相当于 ['slide', 'presenter']）,
@@ -157,10 +158,10 @@ Props:
   - `'presenter'`: 在演示者视图中渲染
   - `'previewNext'`: 在演示者的下一张幻灯片视图中渲染
 
-Slots:
+插槽:
 
-- `#default`: Rendered when the context matches
-- `#fallback`: Rendered when the context does not match
+- `#default`: 在 context 符合时显示
+- `#fallback`: 在 context 不符合时显示
 
 ## `SlideCurrentNo`
 
@@ -192,7 +193,7 @@ Slots:
 
 ```yml
 ---
-title: Amazing slide title
+title: 一个令人惊叹的标题
 level: 2
 ---
 ```
@@ -211,7 +212,7 @@ import TitleRenderer from '#slidev/title-renderer'
 <TitleRenderer no="42" />
 ```
 
-Props:
+参数:
 
 - `no` (`string | number`): 显示标题的幻灯片编号（幻灯片从 `1` 开始）
 
@@ -259,7 +260,7 @@ hideInToc: true
 </Transform>
 ```
 
-Props:
+参数:
 
 - `scale` (`number | string`, 默认为 `1`): 大小比例
 - `origin` (`string`, 默认为 `'top left'`): 原点位置
@@ -274,7 +275,7 @@ Props:
 <Tweet id="20" />
 ```
 
-Props:
+参数:
 
 - `id` (`number | string`, 必要值): 推文 id
 - `scale` (`number | string`, 默认为: `1`): 大小比例
@@ -307,7 +308,7 @@ Props:
 
 ```md
 <SlidevVideo v-click autoplay controls>
-  <!-- Anything that can go in an HTML video element. -->
+  <!-- 可以加入 HTML video 元素中能包含的任何内容。 -->
   <source src="/myMovie.mp4" type="video/mp4" />
   <source src="/myMovie.webm" type="video/webm" />
   <p>
@@ -320,7 +321,7 @@ Props:
 
 查阅 [HTML video 元素文档](https://developer.mozilla.org/docs/Web/HTML/Element/Video) 以了解可以包含在此组件插槽中的内容。
 
-Props:
+参数:
 
 - `controls` (`boolean`, 默认为 `false`): 显示视频控件
 - `autoplay` (`boolean | 'once'`, 默认为 `false`):
