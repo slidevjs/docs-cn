@@ -28,7 +28,7 @@ Slidev 通过三步解析演示文档(如 `slides.md`) :
 
 预解析器(上面的步骤 1)是高度可扩展的，并且允许为 md 文件实现自定义语法。扩展预解析器是一个**高级特性**，由于语法的隐式更改，它很容易破坏[编辑器集成](../features/side-editor)。
 
-要自定义它，请创建一个 `。/setup/prepareser.ts` 文件，内容如下：
+要自定义它，请创建一个 `./setup/prepareser.ts` 文件，内容如下：
 
 ```ts twoslash
 import { definePreparserSetup } from '@slidev/types'
