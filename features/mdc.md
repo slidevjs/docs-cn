@@ -1,6 +1,6 @@
 ---
 relates:
-  - Nuxt 的 MDC 语法指南: https://content.nuxt.com/usage/markdown
+  - Nuxt 的 MDC 语法指南: https://content.nuxt.com/docs/files/markdown#mdc-syntax
   - markdown-it-mdc: https://github.com/antfu/markdown-it-mdc
 since: v0.43.0
 tags: [语法, 样式]
@@ -28,4 +28,4 @@ mdc: true
 ::
 ```
 
-请参阅 [MDC Syntax](https://content.nuxt.com/guide/writing/mdc) 了解更多。
+请参阅 [MDC Syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax) 了解更多。
