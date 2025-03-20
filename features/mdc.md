@@ -10,7 +10,7 @@ description: |
 
 # MDC 语法
 
-Slidev 支持可选的 [MDC (Markdown Components) 语法](https://content.nuxt.com/usage/markdown)，由 [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc) 驱动。
+Slidev 支持可选的 [MDC (Markdown Components) 语法](https://content.nuxt.com/docs/files/markdown#mdc-syntax)，由 [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc) 驱动。
 
 你可以通过在 markdown 文件的 frontmatter 中添加 `mdc:true` 来启用它。
 
