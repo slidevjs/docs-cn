@@ -14,7 +14,7 @@ theme: seriph
 # The first slide
 ```
 
-你可以在 [主题合集] 中找到官方主题和社区主题。
+你可以在 [主题合集](../resources/theme-gallery) 中找到官方主题和社区主题。
 
 ::: info 主题名称的规范
 
