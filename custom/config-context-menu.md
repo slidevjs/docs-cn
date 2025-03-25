@@ -1,4 +1,4 @@
-# Configure Context Menu
+# 配置右键菜单
 
 <Environment type="client" />
 
