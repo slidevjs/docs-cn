@@ -1,6 +1,4 @@
----
-title: 自定义
----
+# 自定义
 
 在 Slidev 中，从样式到工具都是完全可以自定义的。你可以对 [Vite](/custom/config-vite)、[UnoCSS](/custom/config-unocss)、[Monaco](/custom/config-monaco) 等工具进行自定义配置。
 
