@@ -53,7 +53,7 @@ onSlideLeave(() => { /* ... */ })
 
 ::: warning
 
-当使用 `useSlideContext` 时，将禁用自动注入 `$slidev`。你需要手动将 `$slidev` 对象传递给 `useSlideContext` 函数。
+当使用 `useSlideContext` 时，将禁用自动注入 `$slidev`。你需要手动从 `useSlideContext` 函数里获取 `$slidev`。
 
 :::
 
