@@ -282,7 +282,7 @@ hideInToc: true
 - `conversation` (`string`, 默认为: `'none'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 - `cards` (`'hidden' | 'visible'`, 默认为: `'visible'`): [推文内嵌参数](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
-## `VAfter`, `VClick` and `VClicks`
+## `VAfter`, `VClick` 以及 `VClicks`
 
 <LinkCard link="guide/animations#click-animation" />
 

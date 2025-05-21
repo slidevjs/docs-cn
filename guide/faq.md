@@ -51,7 +51,7 @@ Slidev 基于 Web，CSS 是定位元素的主要方式。以下是一些有用�
 
 ::: code-group
 
-```md [Two columns]
+```md [双栏]
 <div class="grid grid-cols-2 gap-4">
   <div>
     第一列
@@ -62,7 +62,7 @@ Slidev 基于 Web，CSS 是定位元素的主要方式。以下是一些有用�
 </div>
 ```
 
-```md [Complex case]
+```md [复杂布局]
 <div class="grid grid-cols-[200px_1fr_10%] gap-4">
   <div>
     第一列 (200px)
@@ -82,7 +82,7 @@ Slidev 基于 Web，CSS 是定位元素的主要方式。以下是一些有用�
 
 ::: code-group
 
-```md [Horizontal]
+```md [水平]
 <div class="flex items-center">
   <div>
     第一块
@@ -93,7 +93,7 @@ Slidev 基于 Web，CSS 是定位元素的主要方式。以下是一些有用�
 </div>
 ```
 
-```md [Vertical]
+```md [竖直]
 <div class="flex flex-col items-center">
   <div>
     居中的内容

@@ -38,10 +38,10 @@
 ---
 layout: image-left
 
-# the image source
+# 图片来源
 image: /path/to/the/image
 
-# a custom class name to the content
+# 内容的自定义 class 名称
 class: my-cool-content-on-the-right
 ---
 ```
@@ -56,10 +56,10 @@ class: my-cool-content-on-the-right
 ---
 layout: image-right
 
-# the image source
+# 图片来源
 image: /path/to/the/image
 
-# a custom class name to the content
+# 内容的自定义 class 名称
 class: my-cool-content-on-the-left
 ---
 ```
@@ -74,7 +74,7 @@ class: my-cool-content-on-the-left
 ---
 layout: image
 
-# the image source
+# 图片来源
 image: /path/to/the/image
 ---
 ```
@@ -107,10 +107,10 @@ backgroundSize: 20em 70%
 ---
 layout: iframe-left
 
-# the web page source
+# 网页来源
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# 内容的自定义 class 名称
 class: my-cool-content-on-the-right
 ---
 ```
@@ -125,10 +125,10 @@ class: my-cool-content-on-the-right
 ---
 layout: iframe-right
 
-# the web page source
+# 网页来源
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# 内容的自定义 class 名称
 class: my-cool-content-on-the-left
 ---
 ```
@@ -143,7 +143,7 @@ class: my-cool-content-on-the-left
 ---
 layout: iframe
 
-# the web page source
+# 网页来源
 url: https://github.com/slidevjs/slidev
 ---
 ```
@@ -179,15 +179,15 @@ url: https://github.com/slidevjs/slidev
 layout: two-cols
 ---
 
-# Left
+# 左
 
-This shows on the left
+这会在左边显示
 
 ::right::
 
-# Right
+# 右
 
-This shows on the right
+这会在右边显示
 ```
 
 ## `two-cols-header`
@@ -201,17 +201,17 @@ This shows on the right
 layout: two-cols-header
 ---
 
-This spans both
+这会横跨两侧
 
 ::left::
 
-# Left
+# 左
 
-This shows on the left
+这会在左边显示
 
 ::right::
 
-# Right
+# 右
 
-This shows on the right
+这会在右边显示
 ```
