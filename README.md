@@ -43,7 +43,7 @@
 
 ### 📝 参与贡献
 
-感谢您的参与！若要修正翻译错误，请向 main 分支提交 PR；若要帮助翻译新增内容，请向 sync 分支提交 PR；若英文原版即有须有修改住处，请向[主仓库](https://github.com/slidevjs/slidev)提交 PR。
+感谢您的参与！若要修正翻译错误，请向 main 分支提交 PR；若要帮助翻译新增内容，请向 sync 分支提交 PR；若英文原版即有需要修改之处，请向[主仓库](https://github.com/slidevjs/slidev)提交 PR。
 
 若需要本地预览网站效果，可执行如下命令：
 
