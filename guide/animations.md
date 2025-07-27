@@ -196,7 +196,7 @@ outline: deep
 
 ```md
 <div v-click.hide="[2, 4]">
-  在第 2 和 3 步时动画显示，之后隐藏。
+  在第 2 和 3 步时动画将隐藏。
 </div>
 <div v-click />
 <div v-click="'[+1, +1]'">
