@@ -30,14 +30,12 @@
 # 全局安装 pnpm
 npm i -g pnpm
 
-# 初始化仓库，当前文档运行依赖主仓库的 `pnpm workspace`
-git clone git@github.com:slidevjs/slidev.git
-cd slidev
+# 克隆中文文档仓库
 git clone git@github.com:slidevjs/docs-cn.git
 
 # 在主仓目录使用 pnpm 安装依赖，并启动文档
 pnpm i
-pnpm docs zh
+pnpm dev
 ```
 
 接着访问提示的网址（一般为 `http://localhost:5173/`）即可，你可以在 `docs-cn` 目录下对中文文档进行更新和翻译。
