@@ -22,31 +22,83 @@
 
 欢迎来到 Slidev 中文文档站点！本文档是 https://github.com/slidevjs/slidev/tree/main/docs 的中文翻译版本。
 
-如欲修改文档内容，请前往 [Slidev 仓库](https://github.com/slidevjs/slidev) 的 `docs` 目录进行编辑，然后提交 Pull Request。如欲修改翻译内容，请在该仓库提交 Pull Request。
-
-欢迎中文社区的朋友们加入我们的（半官方）QQ 群 978643067，讨论 Slidev 相关话题。
-
-
-
-### 📝 参与贡献
-
-感谢您的参与！若要修正翻译错误，请向 main 分支提交 PR；若要帮助翻译新增内容，请向 sync 分支提交 PR；若英文原版即有需要修改之处，请向[主仓库](https://github.com/slidevjs/slidev)提交 PR。
+### 开发预览
 
 若需要本地预览网站效果，可执行如下命令：
 
 ```bash
 # 全局安装 pnpm
-$ npm i -g pnpm
+npm i -g pnpm
 
-# 安装依赖，使用 pnpm
-$ pnpm i
-# 启动文档
-$ pnpm run dev
+# 初始化仓库，当前文档运行依赖主仓库的 `pnpm workspace`
+git clone git@github.com:slidevjs/slidev.git
+cd slidev
+git clone git@github.com:slidevjs/docs-cn.git
+
+# 在主仓目录使用 pnpm 安装依赖，并启动文档
+pnpm i
+pnpm docs zh
 ```
 
-接着访问提示的网址（一般为 `http://localhost:5173/`）即可。
+接着访问提示的网址（一般为 `http://localhost:5173/`）即可，你可以在 `docs-cn` 目录下对中文文档进行更新和翻译。
 
 或者安装 [VSCode 的 Vite 插件](https://marketplace.visualstudio.com/items?itemName=antfu.vite) 快速启动开发服务器。
+
+### 📨 如何与官网文档（英文）进行同步
+
+目前 Slidev 中文文档翻译已全部完成。欢迎中文社区的朋友们加入我们的（半官方）QQ 群 978643067，讨论 Slidev 相关话题。
+
+当前中文文档基于如下分支维护：
+
+- [slidev/slidev:main](https://github.com/slidevjs/slidev/tree/main): Slidev 主仓库，英文原版
+- [slidevjs/docs-cn:main](https://github.com/slidevjs/docs-cn/tree/main): Slidev 中文翻译主分支,对外发布
+- [slidevjs/docs-cn:upstream](https://github.com/slidevjs/docs-cn/tree/upstream): 每天自动从 [slidev/slidev:main](https://github.com/slidevjs/slidev/tree/main) 同步的英文文档
+
+> **文档翻译同步原理**：
+> 
+> 每天，主仓库 [slidev/slidev:main](https://github.com/slidevjs/slidev/tree/main) 的 `docs` 目录会通过 [GitHub Actions](./.github/workflows/autosync.yml) 自动提取到本仓库的 `upstream` 分支。经由人工不定期从 `upstream` 分支合并到 `main` 分支，完成同步、翻译、校对工作。
+
+### 📝 参与贡献
+
+感谢您的参与!
+
+- **翻译新增内容** / **修正翻译错误**: 请向 [slidevjs/docs-cn:main](https://github.com/slidevjs/docs-cn/tree/main) 分支提交 PR
+- **修改英文原版**: 请向 [slidevjs/slidev:main](https://github.com/slidevjs/slidev/tree/main) 提交 PR，修改会在下次自动同步时更新到 [slidevjs/docs-cn:upstream](https://github.com/slidevjs/docs-cn/tree/upstream) 分支
+
+#### 英文文档同步流程
+
+```
+slidevjs/slidev (英文)
+    ↓ 每天自动同步
+slidevjs/docs-cn:upstream 分支 (英文最新)
+    ↓ 更新到 Fork 或本地（应始终与 slidevjs/docs-cn:upstream 同步）
+Fork/本地 upstream 分支 (英文最新)
+```
+
+#### 中文文档同步/贡献流程
+
+```
+Fork/本地 main 分支（中文文档分支，应始终与 slidevjs/docs-cn:main 同步）
+    ↓ 检出新分支，命名参考 sync-cn-日期、如 sync-cn-20260101
+Fork/本地 sync-cn-202601 分支
+    ↓ 翻译完成后推送至 Fork 仓库，并向 slidevjs/docs-cn:main 提交 PR
+slidevjs/docs-cn:main (对外发布)
+```
+
+#### 提交规范
+
+请参考如下提交信息标题格式:
+
+```
+docs: correct translation errors in `guide/index.md`
+docs(features): translate new content in `mdc.md`
+```
+
+**提交前检查**:
+
+- [ ] 不包含对英文原版的扩展、删减或演绎
+- [ ] 已在本地预览验证
+- [ ] 选择了正确的目标分支
 
 ### 贡献者
 
