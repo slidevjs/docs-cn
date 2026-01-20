@@ -80,7 +80,7 @@ Fork/本地 upstream 分支 (英文最新)
 ```
 Fork/本地 main 分支（中文文档分支，应始终与 slidevjs/docs-cn:main 同步）
     ↓ 检出新分支，命名参考 sync-cn-日期、如 sync-cn-20260101
-Fork/本地 sync-cn-202601 分支
+Fork/本地 sync-cn-20260101 分支
     ↓ 翻译完成后推送至 Fork 仓库，并向 slidevjs/docs-cn:main 提交 PR
 slidevjs/docs-cn:main (对外发布)
 ```
